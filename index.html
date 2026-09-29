@@ -612,20 +612,22 @@ function setupRouteAC(){
     if(e.target!==input&&!(e.target&&e.target.closest&&e.target.closest('.ac-item')))box.hidden=true;
   });
 }
+function metroACBBox(){
+  try{
+    var cs=centers(),la1=90,la2=-90,ln1=180,ln2=-180,i,la,ln;
+    for(i=0;i<cs.length;i++){la=cs[i][2];ln=cs[i][3];
+      if(la<la1)la1=la;if(la>la2)la2=la;if(ln<ln1)ln1=ln;if(ln>ln2)ln2=ln;}
+    if(!cs.length)return null;
+    var m=0.12;
+    return (ln1-m)+','+(la1-m)+','+(ln2+m)+','+(la2+m);
+  }catch(e){return null}
+}
 function fetchRouteAC(q){
-  var c=null;
-  try{c=M().center;}catch(e){}
-  function bboxUrl(lat,lon,r){
-    return 'https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=10&bbox='+(lon-r)+','+(lat-r)+','+(lon+r)+','+(lat+r);
-  }
-  function run(url,wide){
-    fetch(url).then(function(r){return r.json()}).then(function(j){
-      var feats=(j&&j.features)||[];
-      if(!feats.length&&!wide&&c){run(bboxUrl(c[0],c[1],2.0),true);}
-      else renderRouteAC(feats);
-    }).catch(function(){});
-  }
-  run(c?bboxUrl(c[0],c[1],0.6):'https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=10&lat=36.16&lon=-86.78',false);
+  var bb=metroACBBox();
+  var url='https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=10'+(bb?('&bbox='+bb):'');
+  fetch(url).then(function(r){return r.json()}).then(function(j){
+    renderRouteAC((j&&j.features)||[]);
+  }).catch(function(){});
 }
 function renderRouteAC(feats){
   var box=document.getElementById('routeAC');
