@@ -613,11 +613,19 @@ function setupRouteAC(){
   });
 }
 function fetchRouteAC(q){
-  var url='https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=6';
-  try{var c=M().center;url+='&lat='+c[0]+'&lon='+c[1];}catch(e){}
-  fetch(url).then(function(r){return r.json()}).then(function(j){
-    renderRouteAC((j&&j.features)||[]);
-  }).catch(function(){});
+  var c=null;
+  try{c=M().center;}catch(e){}
+  function bboxUrl(lat,lon,r){
+    return 'https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=10&bbox='+(lon-r)+','+(lat-r)+','+(lon+r)+','+(lat+r);
+  }
+  function run(url,wide){
+    fetch(url).then(function(r){return r.json()}).then(function(j){
+      var feats=(j&&j.features)||[];
+      if(!feats.length&&!wide&&c){run(bboxUrl(c[0],c[1],2.0),true);}
+      else renderRouteAC(feats);
+    }).catch(function(){});
+  }
+  run(c?bboxUrl(c[0],c[1],0.6):'https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=10&lat=36.16&lon=-86.78',false);
 }
 function renderRouteAC(feats){
   var box=document.getElementById('routeAC');
