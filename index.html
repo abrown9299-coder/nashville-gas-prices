@@ -25,9 +25,16 @@ main{max-width:720px;margin:0 auto;padding:12px}
 .aaa-line{font-size:.8rem;opacity:.75}
 .callout{font-size:.85rem;font-weight:700}
 #rows tr[data-i]{cursor:pointer}
+#settingsOverlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px}
+#settingsOverlay[hidden]{display:none}
+.settings-sheet{background:#fff;border-radius:14px;padding:16px 18px;max-width:340px;width:100%;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.settings-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.settings-head button{border:1px solid #ccc;background:#f5f5f5;border-radius:8px;padding:6px 14px;font-size:.9rem;cursor:pointer}
+.nav-choices{display:flex;gap:14px;margin-top:8px;flex-wrap:wrap}
+.nav-choices label{font-size:.92rem;display:flex;gap:6px;align-items:center;cursor:pointer}
 .callout.down{color:#1b7f3b}.callout.up{color:#c0392b}.callout.flat{opacity:.65;font-weight:400}
 .trend-sub{font-size:.82rem;opacity:.65;margin:-2px 0 8px}
-@media(prefers-color-scheme:dark){body{background:#121212;color:#e8e8e8}.card{background:#1e1e1e}select{background:#2a2a2a;color:#e8e8e8;border-color:#444}td{border-color:#333}th{border-color:#444}.ppop a{color:#90caf9}.callout.down{color:#66bb6a}.callout.up{color:#ef9a9a}}
+@media(prefers-color-scheme:dark){body{background:#121212;color:#e8e8e8}.card{background:#1e1e1e}select{background:#2a2a2a;color:#e8e8e8;border-color:#444}td{border-color:#333}th{border-color:#444}.ppop a{color:#90caf9}.callout.down{color:#66bb6a}.callout.up{color:#ef9a9a}.settings-sheet{background:#1e1e1e}.settings-head button{background:#2a2a2a;border-color:#444;color:#e8e8e8}}
 #map{height:340px;border-radius:8px;z-index:0}.map-head{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}.map-head h2{margin:0;font-size:1rem}.map-head span{font-size:.78rem;opacity:.65}
 .controls{display:flex;align-items:center;gap:10px;margin-bottom:12px}.controls label{font-weight:600;font-size:.95rem}
 select{flex:1;font-size:1rem;padding:10px;border-radius:8px;border:1px solid #ccc;background:#fff;color:#1a1a1a;max-width:100%}
@@ -48,7 +55,8 @@ td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weig
 <body>
 <header><h1>🛢️ <span id="metroName">Nashville</span> Gas Prices</h1></header>
 <main>
-<div class="controls metro-row"><label for="metro">Metro:</label><select id="metro"></select><button class="refresh-btn" id="refreshBtn" type="button">↻ Refresh</button><span class="refresh-msg" id="refreshMsg"></span></div>
+<div class="controls metro-row"><label for="metro">Metro:</label><select id="metro"></select><button class="refresh-btn" id="refreshBtn" type="button">↻ Refresh</button><button class="refresh-btn" id="settingsBtn" type="button" aria-label="Settings">⚙</button><span class="refresh-msg" id="refreshMsg"></span></div>
+<div id="settingsOverlay" hidden><div class="settings-sheet" role="dialog" aria-label="Settings"><div class="settings-head"><b>Settings</b><button id="settingsClose" type="button">Done</button></div><div><span>Navigation app</span><div class="nav-choices"><label><input type="radio" name="navapp" value="apple"> Apple</label><label><input type="radio" name="navapp" value="google"> Google</label><label><input type="radio" name="navapp" value="waze"> Waze</label></div></div></div></div>
 <div class="avg-block"><span class="aaa-line" id="aaaLine" style="display:none"></span><br><span class="callout" id="calloutLine" style="display:none"></span></div>
 <div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
 <div class="controls"><label for="area">Top 10 for:</label><select id="area"></select></div>
@@ -141,13 +149,13 @@ function renderMap(slug){
     if(a[0]===slug)return;
     var s=a[2][0],best=s[6]===minP;
     addPricePin(s[4],s[5],s[6],best?' best':'',
-      '<div class="ppop"><b>#1 in '+esc(a[1])+'</b><br>'+esc(s[1])+'<br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="selectArea(\''+a[0]+'\');return false">View '+esc(a[1])+' top 10 →</a> · <a href="https://maps.apple.com/?daddr='+s[4]+','+s[5]+'" target="_blank" rel="noopener">Directions →</a></div>');
+      '<div class="ppop"><b>#1 in '+esc(a[1])+'</b><br>'+esc(s[1])+'<br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="selectArea(\''+a[0]+'\');return false">View '+esc(a[1])+' top 10 →</a> · <a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions →</a></div>');
   });
   if(slug!=='overall'){
     var v=getView(slug);
     if(v&&v[2])v[2].forEach(function(s,i){
       addPricePin(s[4],s[5],s[6],' mine',
-        '<div class="ppop"><b>#'+(i+1)+' in '+esc(v[1])+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="https://maps.apple.com/?daddr='+s[4]+','+s[5]+'" target="_blank" rel="noopener">Directions →</a></div>');
+        '<div class="ppop"><b>#'+(i+1)+' in '+esc(v[1])+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions →</a></div>');
     });
   }
 }
@@ -187,7 +195,7 @@ var curRows=[];
 function focusStation(i){
   var s=curRows[i];
   if(!s||!map||typeof s[4]!=='number'||typeof s[5]!=='number')return;
-  var html='<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="https://maps.apple.com/?daddr='+s[4]+','+s[5]+'" target="_blank" rel="noopener">Directions →</a></div>';
+  var html='<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions →</a></div>';
   map.setView([s[4],s[5]],14);
   L.popup().setLatLng([s[4],s[5]]).setContent(html).openOn(map);
   var m=document.getElementById('map');
@@ -201,6 +209,27 @@ function wireStationTaps(){
       tr.addEventListener('click',function(){focusStation(parseInt(tr.getAttribute('data-i'),10))});
     })(trs[i]);
   }
+}
+/* ===== Settings: navigation app choice (persisted) ===== */
+function navApp(){try{return localStorage.getItem('gasNavApp')||'apple'}catch(e){return 'apple'}}
+function navURL(lat,lng){
+  var a=navApp();
+  if(a==='google')return 'https://www.google.com/maps/dir/?api=1&destination='+lat+','+lng;
+  if(a==='waze')return 'https://waze.com/ul?ll='+lat+','+lng+'&navigate=yes';
+  return 'https://maps.apple.com/?daddr='+lat+','+lng;
+}
+function goNav(lat,lng){window.open(navURL(lat,lng),'_blank','noopener')}
+function setupSettings(){
+  var ov=document.getElementById('settingsOverlay'),btn=document.getElementById('settingsBtn'),close=document.getElementById('settingsClose');
+  if(!ov||!btn||!close)return;
+  var cur=navApp(),radios=ov.querySelectorAll('input[name="navapp"]');
+  for(var i=0;i<radios.length;i++){
+    if(radios[i].value===cur)radios[i].checked=true;
+    radios[i].addEventListener('change',function(){try{localStorage.setItem('gasNavApp',this.value)}catch(e){}});
+  }
+  btn.addEventListener('click',function(){ov.hidden=false});
+  close.addEventListener('click',function(){ov.hidden=true});
+  ov.addEventListener('click',function(e){if(e.target===ov)ov.hidden=true});
 }
 /* Marks the area the user's GPS location falls in with 📍, so they can
    find their way back after browsing other areas. Re-applied whenever the
@@ -381,6 +410,7 @@ function init(){
   selectMetro('nashville');
   if(map&&'geolocation' in navigator)setupLocate();
   setupRefresh();
+  setupSettings();
 }
 document.addEventListener('DOMContentLoaded',init);
 </script>
