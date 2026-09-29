@@ -102,15 +102,13 @@ tbody tr[data-i]:active{background:var(--bg)}
 .route-msg{color:var(--muted);font-size:.83rem;margin:8px 0;line-height:1.5}
 #routeResults[hidden]{display:none}
 #routeRows tr.sel{background:rgba(11,94,215,.09)}
-#routeTripBtn{display:block;width:100%;margin-top:12px;background:var(--brand);color:var(--brand-ink);border:none;border-radius:14px;padding:14px;font:inherit;font-size:1rem;font-weight:800;cursor:pointer;transition:transform .1s}
-#routeTripBtn:active{transform:scale(.98)}
 .ac-list{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);z-index:1300;overflow:hidden;max-height:320px;overflow-y:auto}
 .ac-list[hidden]{display:none}
 .ac-item{padding:11px 14px;cursor:pointer;border-bottom:1px solid var(--border);font-size:.9rem}
 .ac-item:last-child{border-bottom:none}
 .ac-item:active{background:var(--bg)}
-#tripOverlay[hidden],#settingsOverlay[hidden]{display:none}
-#tripOverlay,#settingsOverlay{position:fixed;inset:0;background:rgba(4,8,16,.5);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px}
+#settingsOverlay[hidden]{display:none}
+#settingsOverlay{position:fixed;inset:0;background:rgba(4,8,16,.5);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px}
 .settings-sheet{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:20px;padding:18px;max-width:360px;width:100%;box-shadow:0 18px 50px rgba(0,0,0,.35)}
 .settings-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
 .settings-head b{font-size:1rem}
@@ -118,9 +116,6 @@ tbody tr[data-i]:active{background:var(--bg)}
 .nav-choices{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
 .nav-choices label{font-size:.9rem;display:flex;gap:7px;align-items:center;cursor:pointer;background:var(--bg);border:1px solid var(--border);border-radius:999px;padding:9px 15px;font-weight:600}
 .nav-choices input{accent-color:var(--brand);margin:0}
-.trip-choice{display:block;width:100%;margin:10px 0 0;background:var(--brand);color:var(--brand-ink);border:none;border-radius:14px;padding:14px;font:inherit;font-size:.95rem;font-weight:700;cursor:pointer;transition:transform .1s}
-.trip-choice.secondary{background:var(--card);color:var(--brand-deep);border:1.5px solid var(--brand)}
-.trip-choice:active{transform:scale(.98)}
 button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
 @media(min-width:960px){
 main{padding:22px 22px 52px}
@@ -135,14 +130,13 @@ main{padding:22px 22px 52px}
 <header><h1>⛽ <span id="metroName">Nashville</span> Gas Prices</h1></header>
 <main>
 <div class="topbar"><div class="seg" id="metro" aria-label="Metro"></div><div class="top-actions"><button class="icon-btn" id="refreshBtn" type="button" aria-label="Check for new prices">↻</button><button class="icon-btn" id="settingsBtn" type="button" aria-label="Settings">⚙</button></div></div><div class="refresh-msg" id="refreshMsg" role="status"></div>
-<div id="tripOverlay" hidden><div class="settings-sheet" role="dialog" aria-label="Trip options"><div class="settings-head"><b>Send trip to GPS</b><button id="tripClose" type="button">Cancel</button></div><p class="route-msg" id="tripMsg"></p><button id="tripGoogle" type="button" class="trip-choice">⛽ Open full trip in Google Maps</button><button id="tripApp" type="button" class="trip-choice secondary">Route to station</button></div></div>
 <div id="settingsOverlay" hidden><div class="settings-sheet" role="dialog" aria-label="Settings"><div class="settings-head"><b>Settings</b><button id="settingsClose" type="button">Done</button></div><div><span>Navigation app</span><div class="nav-choices"><label><input type="radio" name="navapp" value="apple"> Apple</label><label><input type="radio" name="navapp" value="google"> Google</label><label><input type="radio" name="navapp" value="waze"> Waze</label></div></div></div></div>
 <div class="avg-block"><span class="aaa-line" id="aaaLine" style="display:none"></span><br><span class="callout" id="calloutLine" style="display:none"></span></div>
 <div class="seg view-seg" role="tablist" aria-label="View"><button type="button" id="viewOverview" data-view="overview" class="active">Overview</button><button type="button" id="viewRoute" data-view="route">Route</button></div>
 <div class="map-list"><div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div class="pin-legend"><span class="pill"><span class="dot bad"></span>above avg</span><span class="pill"><span class="dot ok"></span>near avg</span><span class="pill"><span class="dot good"></span>good deal</span></div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
 <div id="overviewPane"><div class="controls"><label for="area">Top 10 for</label><select id="area"></select></div>
 <div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><div class="trend-sub" id="trendSub"></div><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div></div><div id="routePane" hidden>
-<div class="card" id="routeCard"><h2>⛽ Cheapest on my route</h2><div class="route-form"><div class="ac-wrap"><input id="routeDest" type="text" placeholder="Where are you headed? (address or place)" autocomplete="off" enterkeyhint="search"><div id="routeAC" class="ac-list" hidden></div></div><button id="routeGo" type="button">Find</button><button id="routeClear" type="button" hidden>✕ Clear</button></div><div class="route-msg" id="routeMsg">Uses your GPS location as the starting point.</div><div id="routeResults" hidden><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Off route</th></tr></thead><tbody id="routeRows"></tbody></table><button id="routeTripBtn" type="button">⛽ Send trip to GPS →</button><div class="route-msg">Opens the full trip with your gas stop in Google Maps.</div></div></div>
+<div class="card" id="routeCard"><h2>⛽ Cheapest on my route</h2><div class="route-form"><div class="ac-wrap"><input id="routeDest" type="text" placeholder="Where are you headed? (address or place)" autocomplete="off" enterkeyhint="search"><div id="routeAC" class="ac-list" hidden></div></div><button id="routeGo" type="button">Find</button><button id="routeClear" type="button" hidden>✕ Clear</button></div><div class="route-msg" id="routeMsg">Uses your GPS location as the starting point.</div><div id="routeResults" hidden><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Off route</th></tr></thead><tbody id="routeRows"></tbody></table></div></div>
 </div></div>
 <p class="note">Every pin shows a price, colored against the AAA metro average: red is above average, yellow is near it, green is a good deal. Zoom out for one pin per area; zoom in for every station. The list shows the cheapest stations with addresses. Prices come from GasBuddy; “updated” is how long ago each price was reported. Excludes Costco, Sam’s Club, and BJ’s. Trend arrows compare each area’s cheapest station to about 24 hours ago; the callout is fill-up advice based on the metro trend. Allow location to see each station’s distance from you.</p>
 </main>
@@ -584,10 +578,10 @@ function showRouteResults(coords,dest){
   if(routeLine){map.removeLayer(routeLine);routeLine=null}
   layer.clearLayers();
   routeLine=L.polyline(coords.map(function(c){return [c[1],c[0]]}),{color:'#1a73e8',weight:4,opacity:0.85}).addTo(map);
-  routeStations.forEach(function(r){
+  routeStations.forEach(function(r,i){
     var s=r.s;
     addPricePin(s[4],s[5],s[6],dealClassAvg(s[6],r.avg),
-      '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+' mi off route<br><a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions \u2192</a></div>');
+      '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+' mi off route<br><a href="#" onclick="goTrip('+i+');return false">Directions \u2192</a></div>');
   });
   try{map.fitBounds(routeLine.getBounds().pad(0.15))}catch(e){}
   var rows='';
@@ -598,30 +592,21 @@ function showRouteResults(coords,dest){
   document.getElementById('routeRows').innerHTML=rows||'<tr><td colspan="4">No stations within 1.5 mi of that route.</td></tr>';
   document.getElementById('routeResults').hidden=false;
   document.getElementById('routeClear').hidden=false;
-  msg_text('routeMsg',routeStations.length+' cheapest near your route to '+dest.name+'. Tap a station to choose your stop.');
-  tripLabel();
+  msg_text('routeMsg',routeStations.length+' cheapest near your route to '+dest.name+'. Tap a station to choose your stop, then Directions \u2192 on the map opens the full trip in Google Maps.');
   wireRouteTaps();
 }
-function tripLabel(){
-  var b=document.getElementById('routeTripBtn');
-  if(!b||!routeStations.length)return;
-  b.textContent='\u26fd Trip via '+routeStations[routeStopIdx].s[1]+' \u2192';
-}
-function openGoogleTrip(){
+/* Directions on a route-mode map pin opens the full multi-stop trip
+   (your location -> gas stop -> destination) in Google Maps. */
+function goTrip(i){
   if(!routeTrip||!routeStations.length)return;
-  var st=routeStations[routeStopIdx].s,o=routeTrip.origin,d=routeTrip.dest;
+  var idx=(typeof i==='number'&&routeStations[i])?i:routeStopIdx;
+  routeStopIdx=idx;
+  var tb=document.getElementById('routeRows');
+  if(tb){var trs=tb.querySelectorAll('tr[data-ri]');for(var k=0;k<trs.length;k++)trs[k].classList.toggle('sel',+trs[k].getAttribute('data-ri')===idx)}
+  var st=routeStations[idx].s,o=routeTrip.origin,d=routeTrip.dest;
   var url='https://www.google.com/maps/dir/?api=1&origin='+o.lat+','+o.lng+
     '&destination='+d.lat+','+d.lng+'&waypoints='+st[4]+','+st[5]+'&travelmode=driving';
   window.open(url,'_blank','noopener');
-}
-function sendTrip(){
-  if(!routeTrip||!routeStations.length)return;
-  if(navApp()==='google'){openGoogleTrip();return}
-  var st=routeStations[routeStopIdx].s;
-  var appName=navApp()==='waze'?'Waze':'Apple Maps';
-  document.getElementById('tripMsg').textContent='A trip with a gas stop needs Google Maps \u2014 '+appName+' can only open one stop at a time.';
-  document.getElementById('tripApp').textContent='Route to '+st[1]+' in '+appName;
-  document.getElementById('tripOverlay').hidden=false;
 }
 function msg_text(id,t){document.getElementById(id).textContent=t}
 function wireRouteTaps(){
@@ -634,13 +619,12 @@ function wireRouteTaps(){
     var trs=tb.querySelectorAll('tr[data-ri]');
     for(var k=0;k<trs.length;k++)trs[k].classList.remove('sel');
     tr.classList.add('sel');
-    tripLabel();
     var r=routeStations[routeStopIdx];
     if(!r)return;
     var s=r.s;
     map.setView([s[4],s[5]],14);
     L.popup().setLatLng([s[4],s[5]]).setContent(
-      '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+' mi off route<br><a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions \u2192</a></div>'
+      '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+' mi off route<br><a href="#" onclick="goTrip('+routeStopIdx+');return false">Directions \u2192</a></div>'
     ).openOn(map);
   });
 }
@@ -726,12 +710,6 @@ function setupRoute(){
   document.getElementById('routeGo').addEventListener('click',findRoute);
   document.getElementById('routeDest').addEventListener('keydown',function(e){if(e.key==='Enter')findRoute()});
   document.getElementById('routeClear').addEventListener('click',clearRoute);
-  document.getElementById('routeTripBtn').addEventListener('click',sendTrip);
-  var tripOv=document.getElementById('tripOverlay');
-  document.getElementById('tripGoogle').addEventListener('click',function(){tripOv.hidden=true;openGoogleTrip()});
-  document.getElementById('tripApp').addEventListener('click',function(){tripOv.hidden=true;var r=routeStations[routeStopIdx];if(r)goNav(r.s[4],r.s[5])});
-  document.getElementById('tripClose').addEventListener('click',function(){tripOv.hidden=true});
-  tripOv.addEventListener('click',function(e){if(e.target===tripOv)tripOv.hidden=true});
   setupRouteAC();
 }
 
