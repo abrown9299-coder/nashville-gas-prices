@@ -145,13 +145,13 @@ function renderMap(slug){
     if(a[0]===slug)return;
     var s=a[2][0],best=s[6]===minP;
     addPricePin(s[4],s[5],s[6],best?' best':'',
-      '<div class="ppop"><b>#1 in '+esc(a[1])+'</b><br>'+esc(s[1])+'<br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="selectArea(\''+a[0]+'\');return false">View '+esc(a[1])+' top 10 →</a></div>');
+      '<div class="ppop"><b>#1 in '+esc(a[1])+'</b><br>'+esc(s[1])+'<br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="selectArea(\''+a[0]+'\');return false">View '+esc(a[1])+' top 10 →</a> · <a href="https://maps.apple.com/?daddr='+s[4]+','+s[5]+'" target="_blank" rel="noopener">Directions →</a></div>');
   });
   if(slug!=='overall'){
     var v=getView(slug);
     if(v&&v[2])v[2].forEach(function(s,i){
       addPricePin(s[4],s[5],s[6],' mine',
-        '<div class="ppop"><b>#'+(i+1)+' in '+esc(v[1])+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span></div>');
+        '<div class="ppop"><b>#'+(i+1)+' in '+esc(v[1])+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="https://maps.apple.com/?daddr='+s[4]+','+s[5]+'" target="_blank" rel="noopener">Directions →</a></div>');
     });
   }
 }
@@ -253,6 +253,18 @@ function wireGraphTaps(){
     })(trs[i]);
   }
 }
+/* Marks the area the user's GPS location falls in with 📍, so they can
+   find their way back after browsing other areas. Re-applied whenever the
+   area options are rebuilt or a location fix arrives. */
+function markCurrentArea(){
+  if(!selectEl||!userLoc)return;
+  var slug=detectArea(userLoc);
+  for(var i=0;i<selectEl.options.length;i++){
+    var o=selectEl.options[i],base=o.getAttribute('data-base');
+    if(!base){base=o.textContent.replace(/ 📍$/,'');o.setAttribute('data-base',base)}
+    o.textContent=base+(o.value===slug?' 📍':'');
+  }
+}
 window.selectMetro=function(mkey){
   loadMetro(mkey);
   document.getElementById('metroName').textContent=M().label;
@@ -261,6 +273,7 @@ window.selectMetro=function(mkey){
   selectEl.innerHTML='';
   var opt=document.createElement('option');opt.value='overall';opt.textContent=M().label+' Metro (Overall)';selectEl.appendChild(opt);
   centers().forEach(function(c){var o=document.createElement('option');o.value=c[0];o.textContent=c[1];selectEl.appendChild(o)});
+  markCurrentArea();
   renderAaaCallout();
   if(map){map.setView(M().center,10);map.closePopup();renderMap('overall')}
   renderList('overall');
@@ -368,6 +381,7 @@ function setupLocate(){
       if(mk!==curMetro)selectMetro(mk); // rebuilds area select, resets to overall
       var slug=detectArea(e.latlng);
       if(slug)selectArea(slug,false);
+      markCurrentArea();
     }
   });
   map.on('locationerror',function(){if(hint){hint.textContent='Location blocked — allow it in your browser settings.';setTimeout(function(){hint.textContent=origHint},4500)}});
