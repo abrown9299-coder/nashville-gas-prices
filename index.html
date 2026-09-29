@@ -38,6 +38,7 @@ main{max-width:1120px;margin:0 auto;padding:14px 14px 44px}
 .seg{flex:1;min-width:0;display:flex;background:var(--border);border-radius:999px;padding:3px}
 .seg button{flex:1;min-width:0;border:0;background:transparent;color:var(--muted);font:inherit;font-weight:700;font-size:.85rem;padding:9px 6px;border-radius:999px;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:background .15s,color .15s}
 .seg button.active{background:var(--card);color:var(--text);box-shadow:0 1px 5px rgba(0,0,0,.2)}
+.view-seg{max-width:330px;margin:2px 0 14px}
 .top-actions{display:flex;gap:8px;flex:none}
 .icon-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:1.2rem;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;box-shadow:var(--shadow);transition:transform .1s}
 .icon-btn:active{transform:scale(.92)}
@@ -126,7 +127,6 @@ main{padding:22px 22px 52px}
 .map-list{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;align-items:start}
 .map-list .card{margin-bottom:0}
 #map{height:520px}
-#routeCard{margin-top:16px}
 }
 @media(max-width:400px){.seg button{font-size:.78rem;padding:8px 2px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -138,11 +138,13 @@ main{padding:22px 22px 52px}
 <div id="tripOverlay" hidden><div class="settings-sheet" role="dialog" aria-label="Trip options"><div class="settings-head"><b>Send trip to GPS</b><button id="tripClose" type="button">Cancel</button></div><p class="route-msg" id="tripMsg"></p><button id="tripGoogle" type="button" class="trip-choice">⛽ Open full trip in Google Maps</button><button id="tripApp" type="button" class="trip-choice secondary">Route to station</button></div></div>
 <div id="settingsOverlay" hidden><div class="settings-sheet" role="dialog" aria-label="Settings"><div class="settings-head"><b>Settings</b><button id="settingsClose" type="button">Done</button></div><div><span>Navigation app</span><div class="nav-choices"><label><input type="radio" name="navapp" value="apple"> Apple</label><label><input type="radio" name="navapp" value="google"> Google</label><label><input type="radio" name="navapp" value="waze"> Waze</label></div></div></div></div>
 <div class="avg-block"><span class="aaa-line" id="aaaLine" style="display:none"></span><br><span class="callout" id="calloutLine" style="display:none"></span></div>
+<div class="seg view-seg" role="tablist" aria-label="View"><button type="button" id="viewOverview" data-view="overview" class="active">Overview</button><button type="button" id="viewRoute" data-view="route">Route</button></div>
 <div class="map-list"><div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div class="pin-legend"><span class="pill"><span class="dot bad"></span>above avg</span><span class="pill"><span class="dot ok"></span>near avg</span><span class="pill"><span class="dot good"></span>good deal</span></div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
-<div><div class="controls"><label for="area">Top 10 for</label><select id="area"></select></div>
-<div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><div class="trend-sub" id="trendSub"></div><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div></div>
-<p class="note">Every pin shows a price, colored against the AAA metro average: red is above average, yellow is near it, green is a good deal. Zoom out for one pin per area; zoom in for every station. The list shows the cheapest stations with addresses. Prices come from GasBuddy; “updated” is how long ago each price was reported. Excludes Costco, Sam’s Club, and BJ’s. Trend arrows compare each area’s cheapest station to about 24 hours ago; the callout is fill-up advice based on the metro trend. Allow location to see each station’s distance from you.</p>
+<div id="overviewPane"><div class="controls"><label for="area">Top 10 for</label><select id="area"></select></div>
+<div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><div class="trend-sub" id="trendSub"></div><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div></div><div id="routePane" hidden>
 <div class="card" id="routeCard"><h2>⛽ Cheapest on my route</h2><div class="route-form"><div class="ac-wrap"><input id="routeDest" type="text" placeholder="Where are you headed? (address or place)" autocomplete="off" enterkeyhint="search"><div id="routeAC" class="ac-list" hidden></div></div><button id="routeGo" type="button">Find</button><button id="routeClear" type="button" hidden>✕ Clear</button></div><div class="route-msg" id="routeMsg">Uses your GPS location as the starting point.</div><div id="routeResults" hidden><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Off route</th></tr></thead><tbody id="routeRows"></tbody></table><button id="routeTripBtn" type="button">⛽ Send trip to GPS →</button><div class="route-msg">Opens the full trip with your gas stop in Google Maps.</div></div></div>
+</div></div>
+<p class="note">Every pin shows a price, colored against the AAA metro average: red is above average, yellow is near it, green is a good deal. Zoom out for one pin per area; zoom in for every station. The list shows the cheapest stations with addresses. Prices come from GasBuddy; “updated” is how long ago each price was reported. Excludes Costco, Sam’s Club, and BJ’s. Trend arrows compare each area’s cheapest station to about 24 hours ago; the callout is fill-up advice based on the metro trend. Allow location to see each station’s distance from you.</p>
 </main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -492,7 +494,17 @@ function setupRefresh(){
 
 /* ===== Init ===== */
 /* ===== Route mode: cheapest stations along a driving route ===== */
-var routeMode=false, routeLine=null, routeStations=[], routeTrip=null, routeStopIdx=0;
+var routeMode=false, routeLine=null, routeStations=[], routeTrip=null, routeStopIdx=0, currentView='overview';
+function setView(v){
+  currentView=v;
+  var ov=document.getElementById('viewOverview'),rv=document.getElementById('viewRoute');
+  if(ov)ov.classList.toggle('active',v==='overview');
+  if(rv)rv.classList.toggle('active',v==='route');
+  var op=document.getElementById('overviewPane'),rp=document.getElementById('routePane');
+  if(op)op.hidden=(v!=='overview');
+  if(rp)rp.hidden=(v!=='route');
+  if(v==='route'&&map){try{map.invalidateSize()}catch(e){}if(!routeStations.length){var d=document.getElementById('routeDest');if(d&&d.focus)d.focus()}}
+}
 function allStations(){
   var out=[];
   METRO_ORDER.forEach(function(mk){
@@ -568,7 +580,7 @@ function showRouteResults(coords,dest){
     if(d<=1.5)cands.push({s:s,avg:r.avg,d:d});
   });
   cands.sort(function(a,b){return a.s[6]-b.s[6]});
-  routeStations=cands.slice(0,10);
+  routeStations=cands.slice(0,5);
   if(routeLine){map.removeLayer(routeLine);routeLine=null}
   layer.clearLayers();
   routeLine=L.polyline(coords.map(function(c){return [c[1],c[0]]}),{color:'#1a73e8',weight:4,opacity:0.85}).addTo(map);
@@ -677,11 +689,19 @@ function metroACBBox(){
   }catch(e){return null}
 }
 function fetchRouteAC(q){
+  var box=document.getElementById('routeAC');
   var bb=metroACBBox();
   var url='https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=10'+(bb?('&bbox='+bb):'');
   fetch(url).then(function(r){return r.json()}).then(function(j){
-    renderRouteAC((j&&j.features)||[]);
-  }).catch(function(){});
+    var feats=(j&&j.features)||[];
+    if(feats.length){renderRouteAC(feats);return}
+    var mc=M().center; // Photon can't resolve house numbers — single metro-fenced Nominatim fallback
+    var nurl='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=8&countrycodes=us&bounded=1&viewbox='+(mc[1]-0.6)+','+(mc[0]+0.6)+','+(mc[1]+0.6)+','+(mc[0]-0.6)+'&q='+encodeURIComponent(q);
+    fetch(nurl,{headers:{'Accept':'application/json'}}).then(function(r){return r.json()}).then(function(nj){
+      var nfs=(nj||[]).map(function(n){return{properties:{name:String(n.display_name).split(',').slice(0,3).join(','),city:'',street:''},geometry:{coordinates:[parseFloat(n.lon),parseFloat(n.lat)]}}});
+      renderRouteAC(nfs);
+    }).catch(function(){box.hidden=true});
+  }).catch(function(){box.hidden=true});
 }
 function renderRouteAC(feats){
   var box=document.getElementById('routeAC');
@@ -701,6 +721,8 @@ function resolveDest(dest,cb){
   else geocodeDest(dest,cb);
 }
 function setupRoute(){
+  document.getElementById('viewOverview').addEventListener('click',function(){setView('overview')});
+  document.getElementById('viewRoute').addEventListener('click',function(){setView('route')});
   document.getElementById('routeGo').addEventListener('click',findRoute);
   document.getElementById('routeDest').addEventListener('keydown',function(e){if(e.key==='Enter')findRoute()});
   document.getElementById('routeClear').addEventListener('click',clearRoute);
