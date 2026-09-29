@@ -20,9 +20,9 @@ select{flex:1;font-size:1rem;padding:10px;border-radius:8px;border:1px solid #cc
 table{width:100%;border-collapse:collapse;font-size:.92rem}th{text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;opacity:.6;padding:6px 4px;border-bottom:2px solid #e0e0e0}
 td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weight:700;white-space:nowrap}.dim{font-size:.8rem;opacity:.65}
 .ppwrap{background:none!important;border:none!important}
-.price-pin{transform:translate(-50%,-50%);background:#14521c;color:#fff;font-weight:800;font-size:15px;padding:6px 10px;border-radius:15px;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.45);border:2px solid #fff}
+.price-pin{width:72px;height:32px;line-height:28px;text-align:center;background:#14521c;color:#fff;font-weight:800;font-size:15px;border-radius:16px;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.45);white-space:nowrap}
 .price-pin.best{background:#8a6d00}
-.pin{width:26px;height:26px;border-radius:50%;background:#0d47a1;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;border:2px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.45)}
+.price-pin.mine{background:#0d47a1}
 .ppop{font-size:13px;line-height:1.55}.ppop a{color:#0d47a1;font-weight:600}
 .locate-btn{width:34px;height:34px;background:#fff;border:1px solid #ccc;border-radius:4px;cursor:pointer;font-size:19px;line-height:1;color:#333;box-shadow:0 1px 5px rgba(0,0,0,.3);padding:0}.locate-btn:hover{background:#f4f4f4}.locate-btn:focus-visible{outline:2px solid #1a73e8}
 .note{font-size:.8rem;opacity:.7;line-height:1.5}
@@ -36,7 +36,7 @@ td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weig
 <div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
 <div class="controls"><label for="area">Top 10 for:</label><select id="area"></select></div>
 <div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
-<p class="note">Map shows the cheapest regular-gas station in each of the 24 areas (price on the pin; gold pin is the metro cheapest). Blue numbered pins are the 10 cheapest stations for the selected area — the list below shows the same 10 with addresses. Prices come from GasBuddy; the "updated" age is how long ago each price was reported. Excludes Costco, Sam's Club, and BJ's.</p>
+<p class="note">Every pin on the map shows a price: blue pins are the 10 cheapest stations in the selected area, green pins are the cheapest station in each other area (gold pin is the cheapest in the metro). The list below shows the same top 10 with addresses. Prices come from GasBuddy; the "updated" age is how long ago each price was reported. Excludes Costco, Sam's Club, and BJ's.</p>
 </main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -45,22 +45,24 @@ var map=null,layer=null,selectEl=null,firstFix=true;
 var areas=[],overall=null;
 data.a.forEach(function(a){if(a[0]==='overall')overall=a;else areas.push(a)});
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function addPricePin(lat,lng,price,cls,popup){
+  var icon=L.divIcon({className:'ppwrap',html:'<div class="price-pin'+cls+'">$'+price.toFixed(2)+'</div>',iconSize:[72,32],iconAnchor:[36,16]});
+  L.marker([lat,lng],{icon:icon}).addTo(layer).bindPopup(popup);
+}
 function renderMap(slug){
   layer.clearLayers();
   var minP=Math.min.apply(null,areas.map(function(a){return a[2][0][6]}));
   areas.forEach(function(a){
     if(a[0]===slug)return;
     var s=a[2][0],best=s[6]===minP;
-    var icon=L.divIcon({className:'ppwrap',html:'<div class="price-pin'+(best?' best':'')+'">$'+s[6].toFixed(2)+'</div>'});
-    L.marker([s[4],s[5]],{icon:icon}).addTo(layer).bindPopup(
+    addPricePin(s[4],s[5],s[6],best?' best':'',
       '<div class="ppop"><b>#1 in '+esc(a[1])+'</b><br>'+esc(s[1])+'<br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="selectArea(\''+a[0]+'\');return false">View '+esc(a[1])+' top 10 →</a></div>');
   });
   if(slug!=='overall'){
     var v=getView(slug);
     v[2].forEach(function(s,i){
-      var icon=L.divIcon({className:'',html:'<div class="pin">'+(i+1)+'</div>',iconSize:[26,26],iconAnchor:[13,13]});
-      L.marker([s[4],s[5]],{icon:icon}).addTo(layer).bindPopup(
-        '<div class="ppop"><b>#'+(i+1)+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span></div>');
+      addPricePin(s[4],s[5],s[6],' mine',
+        '<div class="ppop"><b>#'+(i+1)+' in '+esc(v[1])+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span></div>');
     });
   }
 }
