@@ -11,6 +11,9 @@ header{background:#0d47a1;color:#fff;padding:14px 16px}header h1{margin:0;font-s
 main{max-width:720px;margin:0 auto;padding:12px}
 .card{background:#fff;border-radius:10px;padding:12px 14px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
 .updated-card{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.updated-card .lbl{font-size:.8rem;opacity:.7}.updated-card .ts{font-weight:700}
+.live-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#888;margin-right:4px;vertical-align:1px}
+.live-dot.on{background:#2e9e44;box-shadow:0 0 6px #2e9e44}
+.live-lbl{font-size:.78rem;font-weight:600;opacity:.8}
 .refresh-btn{margin-left:auto;background:#0d47a1;color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:.9rem;cursor:pointer}
 .refresh-btn:disabled{opacity:.55;cursor:default}.refresh-msg{display:block;margin-top:6px;font-size:.75rem;opacity:.85;min-height:1.1em}
 #map{height:340px;border-radius:8px;z-index:0}.map-head{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}.map-head h2{margin:0;font-size:1rem}.map-head span{font-size:.78rem;opacity:.65}
@@ -26,13 +29,14 @@ td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weig
 .ppop{font-size:13px;line-height:1.55}.ppop a{color:#0d47a1;font-weight:600}
 .locate-btn{width:34px;height:34px;background:#fff;border:1px solid #ccc;border-radius:4px;cursor:pointer;font-size:19px;line-height:1;color:#333;box-shadow:0 1px 5px rgba(0,0,0,.3);padding:0}.locate-btn:hover{background:#f4f4f4}.locate-btn:focus-visible{outline:2px solid #1a73e8}
 .note{font-size:.8rem;opacity:.7;line-height:1.5}
+.loading-row td{text-align:center;opacity:.6;padding:18px}
 @media(prefers-color-scheme:dark){body{background:#121212;color:#e8e8e8}.card{background:#1e1e1e}select{background:#2a2a2a;color:#e8e8e8;border-color:#444}td{border-color:#333}th{border-color:#444}.ppop a{color:#90caf9}}
 </style>
 </head>
 <body>
 <header><h1>🛢️ Nashville Gas Prices</h1></header>
 <main>
-<div class="card updated-card"><span class="lbl">Last updated</span><span class="ts" id="updated">—</span><button class="refresh-btn" id="refreshBtn" type="button">↻ Refresh</button><span class="refresh-msg" id="refreshMsg"></span></div>
+<div class="card updated-card"><span class="lbl">Last updated</span><span class="ts" id="updated">—</span><span class="live-lbl"><span class="live-dot" id="liveDot"></span><span id="liveLbl">Cached</span></span><button class="refresh-btn" id="refreshBtn" type="button">↻ Refresh</button><span class="refresh-msg" id="refreshMsg"></span></div>
 <div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
 <div class="controls"><label for="area">Top 10 for:</label><select id="area"></select></div>
 <div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
@@ -40,19 +44,78 @@ td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weig
 </main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+/* ===== Config ===== */
+var WORKER_URL = "__WORKER_URL__"; // set to your Cloudflare Worker URL (no trailing slash). Empty = cached mode only.
+var AREA_CENTERS = [
+["downtown","Downtown",36.1627,-86.7816],["midtown-vanderbilt","Midtown / Vanderbilt",36.1516,-86.8000],
+["east-nashville","East Nashville",36.1800,-86.7500],["germantown","Germantown",36.1780,-86.7880],
+["12-south-berry-hill","12 South / Berry Hill",36.1200,-86.7900],["green-hills","Green Hills",36.1050,-86.8100],
+["belle-meade","Belle Meade",36.1050,-86.8600],["bellevue","Bellevue",36.0900,-86.9150],
+["west-nashville","West Nashville",36.1500,-86.8700],["joelton-whites-creek","Joelton / Whites Creek",36.2300,-86.9200],
+["madison","Madison",36.2600,-86.7100],["donelson","Donelson",36.0700,-86.6700],
+["hermitage","Hermitage",36.2000,-86.6100],["antioch-cane-ridge","Antioch / Cane Ridge",36.0600,-86.6700],
+["brentwood","Brentwood",36.0300,-86.7900],["franklin-cool-springs","Franklin / Cool Springs",35.9700,-86.8400],
+["nolensville","Nolensville",35.9500,-86.6700],["smyrna-la-vergne","Smyrna / La Vergne",36.0000,-86.5450],
+["murfreesboro","Murfreesboro",35.8450,-86.3900],["hendersonville","Hendersonville",36.3000,-86.6200],
+["gallatin","Gallatin",36.3900,-86.4500],["mount-juliet","Mount Juliet",36.2000,-86.5200],
+["lebanon","Lebanon",36.2100,-86.3300],["goodlettsville","Goodlettsville",36.3300,-86.7100]
+];
+/* ===== Static fallback data (baked at build time) ===== */
 var data=__GAS_DATA_JSON__;
+
+/* ===== State ===== */
 var map=null,layer=null,selectEl=null,firstFix=true;
-var areas=[],overall=null;
+var areas=[],overall=null;          // static views
+var liveCache={};                   // slug -> {stations:[[id,name,addr,city,lat,lng,price,age]...], fetched_at}
+var liveMode=false, curSlug='overall', liveStamp=null;
 data.a.forEach(function(a){if(a[0]==='overall')overall=a;else areas.push(a)});
+
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function fmtTs(iso){try{var d=new Date(iso);return d.toLocaleString(undefined,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}catch(e){return iso}}
+
+/* Convert Worker station -> static station array [id,name,addr,city,lat,lng,price,age] */
+function toStatic(s){return [s.id,s.name,s.address,s.city,s.lat,s.lng,s.price,s.age]}
+
+/* Get the view (area entry) for a slug — prefers live, falls back to static */
+function getView(slug){
+  if(liveCache[slug]&&liveCache[slug].stations.length){
+    var nm='Nashville Metro';
+    for(var i=0;i<AREA_CENTERS.length;i++)if(AREA_CENTERS[i][0]===slug)nm=AREA_CENTERS[i][1];
+    if(slug==='overall')nm='Nashville Metro';
+    return [slug,nm,liveCache[slug].stations,null];
+  }
+  if(slug==='overall')return overall;
+  for(var j=0;j<areas.length;j++)if(areas[j][0]===slug)return areas[j];
+  return overall;
+}
+
+/* ===== Map & list rendering (works with live or static) ===== */
 function addPricePin(lat,lng,price,cls,popup){
   var icon=L.divIcon({className:'ppwrap',html:'<div class="price-pin'+cls+'">$'+price.toFixed(2)+'</div>',iconSize:[72,32],iconAnchor:[36,16]});
   L.marker([lat,lng],{icon:icon}).addTo(layer).bindPopup(popup);
 }
+function areaEntry(slug){
+  // returns [slug,name,stations,center] using live if available
+  if(liveCache[slug]&&liveCache[slug].stations.length){
+    var c=null,nm=slug;
+    for(var i=0;i<AREA_CENTERS.length;i++)if(AREA_CENTERS[i][0]===slug){nm=AREA_CENTERS[i][1];c=[AREA_CENTERS[i][2],AREA_CENTERS[i][3]]}
+    return [slug,nm,liveCache[slug].stations,c];
+  }
+  for(var j=0;j<areas.length;j++)if(areas[j][0]===slug)return areas[j];
+  return null;
+}
 function renderMap(slug){
+  if(!layer)return;
   layer.clearLayers();
-  var minP=Math.min.apply(null,areas.map(function(a){return a[2][0][6]}));
-  areas.forEach(function(a){
+  var entries=[];
+  AREA_CENTERS.forEach(function(ac){
+    var e=areaEntry(ac[0]);
+    if(e&&e[2]&&e[2].length)entries.push(e);
+  });
+  // fallback: if no live and no static entries (shouldn't happen), use static areas
+  if(!entries.length)entries=areas;
+  var minP=Math.min.apply(null,entries.map(function(a){return a[2][0][6]}));
+  entries.forEach(function(a){
     if(a[0]===slug)return;
     var s=a[2][0],best=s[6]===minP;
     addPricePin(s[4],s[5],s[6],best?' best':'',
@@ -60,29 +123,102 @@ function renderMap(slug){
   });
   if(slug!=='overall'){
     var v=getView(slug);
-    v[2].forEach(function(s,i){
+    if(v&&v[2])v[2].forEach(function(s,i){
       addPricePin(s[4],s[5],s[6],' mine',
         '<div class="ppop"><b>#'+(i+1)+' in '+esc(v[1])+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span></div>');
     });
   }
 }
-function getView(slug){if(slug==='overall')return overall;for(var i=0;i<areas.length;i++)if(areas[i][0]===slug)return areas[i];return overall}
 function renderList(slug){
   var v=getView(slug),rows='';
-  v[2].forEach(function(s,i){
+  if(slug==='overall'&&liveMode){
+    // Live metro view: cheapest in each area, sorted
+    var rows2=[];
+    AREA_CENTERS.forEach(function(ac){
+      var e=areaEntry(ac[0]);
+      if(e&&e[2]&&e[2].length)rows2.push([e[1],e[2][0]]);
+    });
+    rows2.sort(function(x,y){return x[1][6]-y[1][6]});
+    rows2.forEach(function(r,i){
+      var s=r[1];
+      rows+='<tr><td>'+(i+1)+'</td><td><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+' · '+esc(r[0])+'</span></td><td class="pr">$'+s[6].toFixed(2)+'</td><td class="dim">'+esc(s[7])+'</td></tr>';
+    });
+    document.getElementById('rows').innerHTML=rows||'<tr class="loading-row"><td colspan="4">Loading live prices…</td></tr>';
+    document.getElementById('listTitle').textContent='Cheapest in each area';
+    return;
+  }
+  if(v&&v[2])v[2].forEach(function(s,i){
     rows+='<tr><td>'+(i+1)+'</td><td><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+'</span></td><td class="pr">$'+s[6].toFixed(2)+'</td><td class="dim">'+esc(s[7])+'</td></tr>';
   });
   document.getElementById('rows').innerHTML=rows;
-  document.getElementById('listTitle').textContent='Top 10 — '+v[1];
+  document.getElementById('listTitle').textContent='Top 10 — '+(v?v[1]:'');
 }
-window.selectArea=function(slug,scroll){selectEl.value=slug;renderMap(slug);renderList(slug);if(map)map.closePopup();if(scroll!==false){var el=document.getElementById('listCard');if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'})}};
+window.selectArea=function(slug,scroll){
+  curSlug=slug;selectEl.value=slug;renderMap(slug);renderList(slug);
+  if(map)map.closePopup();
+  if(scroll!==false){var el=document.getElementById('listCard');if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'})}
+  // If live mode but this area isn't cached yet, fetch it now
+  if(WORKER_URL&&!liveCache[slug]&&slug!=='overall')fetchAreaLive(slug,true);
+};
+
+/* ===== Live fetching ===== */
+function setLive(on,stamp){
+  liveMode=on;
+  document.getElementById('liveDot').className='live-dot'+(on?' on':'');
+  document.getElementById('liveLbl').textContent=on?'Live':'Cached';
+  if(stamp){liveStamp=stamp;document.getElementById('updated').textContent=fmtTs(stamp)+' (live)'}
+}
+function fetchAreaLive(slug,rerender){
+  var ac=null;
+  for(var i=0;i<AREA_CENTERS.length;i++)if(AREA_CENTERS[i][0]===slug)ac=AREA_CENTERS[i];
+  if(!ac)return Promise.resolve(false);
+  var url=WORKER_URL+'/api/nearby?lat='+ac[2]+'&lng='+ac[3]+'&n=10';
+  return fetch(url).then(function(r){
+    if(!r.ok)throw new Error('http '+r.status);
+    return r.json();
+  }).then(function(d){
+    if(!d.stations||!d.stations.length)throw new Error('empty');
+    liveCache[slug]={stations:d.stations.map(toStatic),fetched_at:d.fetched_at};
+    setLive(true,d.fetched_at);
+    if(rerender!==false&&(slug===curSlug||curSlug==='overall')){renderMap(curSlug);renderList(curSlug)}
+    return true;
+  }).catch(function(){return false});
+}
+function fetchAllLive(){
+  // Fetch all areas with limited concurrency, progressively rendering
+  var queue=AREA_CENTERS.map(function(a){return a[0]}),active=0,done=0;
+  return new Promise(function(resolve){
+    function next(){
+      if(!queue.length&&active===0){resolve();return}
+      while(active<6&&queue.length){
+        var slug=queue.shift();active++;
+        fetchAreaLive(slug,false).then(function(){active--;done++;next()});
+      }
+    }
+    next();
+  }).then(function(){
+    if(Object.keys(liveCache).length>0){
+      var latest=null;
+      Object.keys(liveCache).forEach(function(k){var f=liveCache[k].fetched_at;if(!latest||f>latest)latest=f});
+      setLive(true,latest);
+      renderMap(curSlug);renderList(curSlug);
+    }
+  });
+}
+
+/* ===== Location ===== */
 function detectArea(ll){
   var best=null,bestD=0.35;
-  areas.forEach(function(a){
-    if(!a[3])return;
-    var d=Math.sqrt(Math.pow(a[3][0]-ll.lat,2)+Math.pow(a[3][1]-ll.lng,2));
+  AREA_CENTERS.forEach(function(a){
+    var d=Math.sqrt(Math.pow(a[2]-ll.lat,2)+Math.pow(a[3]-ll.lng,2));
     if(d<bestD){bestD=d;best=a[0]}
   });
+  // map to static slug if needed
+  if(best){
+    for(var i=0;i<areas.length;i++){
+      // static slugs may differ; match by name similarity — just return best and let getView fall back
+    }
+  }
   return best;
 }
 function setupLocate(){
@@ -99,24 +235,39 @@ function setupLocate(){
   map.on('locationerror',function(){if(hint){hint.textContent='Location blocked — allow it in your browser settings.';setTimeout(function(){hint.textContent=origHint},4500)}});
   map.locate({setView:true,maxZoom:14,timeout:12000});
 }
+
+/* ===== Refresh ===== */
 function setupRefresh(){
   var btn=document.getElementById('refreshBtn'),msg=document.getElementById('refreshMsg'),cur=data.u;
   function say(t){msg.textContent=t}
   btn.addEventListener('click',function(){
-    btn.disabled=true;say('Checking for updates…');
-    fetch(location.href.split('?')[0],{cache:'no-store'}).then(function(r){return r.text()}).then(function(html){
-      var m=html.match(/"u":"([^"]+)"/);
-      if(m&&m[1]&&m[1]!==cur){say('New prices found — reloading…');location.reload()}
-      else{say('✓ Latest available — prices from '+cur+'.');btn.disabled=false;setTimeout(function(){say('')},6000)}
-    }).catch(function(){say('Could not check for updates.');btn.disabled=false;setTimeout(function(){say('')},4000)});
+    btn.disabled=true;
+    if(WORKER_URL){
+      say('Pulling live prices…');
+      var target=curSlug==='overall'?null:curSlug;
+      var p=target?fetchAreaLive(target,true):fetchAllLive();
+      p.then(function(){
+        say(liveMode?'✓ Live prices updated.':'Live fetch failed — showing cached.');
+        btn.disabled=false;setTimeout(function(){say('')},5000);
+      });
+    }else{
+      say('Checking for updates…');
+      fetch(location.href.split('?')[0],{cache:'no-store'}).then(function(r){return r.text()}).then(function(html){
+        var m=html.match(/"u":"([^"]+)"/);
+        if(m&&m[1]&&m[1]!==cur){say('New prices found — reloading…');location.reload()}
+        else{say('✓ Latest available — prices from '+cur+'.');btn.disabled=false;setTimeout(function(){say('')},6000)}
+      }).catch(function(){say('Could not check for updates.');btn.disabled=false;setTimeout(function(){say('')},4000)});
+    }
   });
 }
+
+/* ===== Init ===== */
 function init(){
   document.getElementById('updated').textContent=data.u;
   selectEl=document.getElementById('area');
   var opt=document.createElement('option');opt.value='overall';opt.textContent='Nashville Metro (Overall)';selectEl.appendChild(opt);
-  areas.forEach(function(a){var o=document.createElement('option');o.value=a[0];o.textContent=a[1];selectEl.appendChild(o)});
-  selectEl.addEventListener('change',function(){var s=selectEl.value;renderMap(s);renderList(s)});
+  AREA_CENTERS.forEach(function(a){var o=document.createElement('option');o.value=a[0];o.textContent=a[1];selectEl.appendChild(o)});
+  selectEl.addEventListener('change',function(){selectArea(selectEl.value)});
   try{
     if(!window.L)throw new Error('Leaflet unavailable');
     map=L.map('map',{scrollWheelZoom:false}).setView([36.1627,-86.7816],10);
@@ -130,6 +281,10 @@ function init(){
   renderList('overall');
   if(map&&'geolocation' in navigator)setupLocate();
   setupRefresh();
+  // Go live in the background if a Worker is configured
+  if(WORKER_URL&&WORKER_URL.indexOf('__WORKER')!==0){
+    fetchAllLive();
+  }
 }
 document.addEventListener('DOMContentLoaded',init);
 </script>
