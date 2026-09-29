@@ -20,12 +20,13 @@ select{flex:1;font-size:1rem;padding:10px;border-radius:8px;border:1px solid #cc
 table{width:100%;border-collapse:collapse;font-size:.92rem}th{text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;opacity:.6;padding:6px 4px;border-bottom:2px solid #e0e0e0}
 td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weight:700;white-space:nowrap}.dim{font-size:.8rem;opacity:.65}
 .ppwrap{background:none!important;border:none!important}
-.price-pin{transform:translate(-50%,-50%);background:#fff;border:2px solid #2e7d32;color:#14521c;font-weight:700;font-size:12px;padding:3px 7px;border-radius:13px;white-space:nowrap;box-shadow:0 1px 5px rgba(0,0,0,.35)}
-.price-pin.best{background:#2e7d32;color:#fff}
+.price-pin{transform:translate(-50%,-50%);background:#14521c;color:#fff;font-weight:800;font-size:15px;padding:6px 10px;border-radius:15px;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.45);border:2px solid #fff}
+.price-pin.best{background:#8a6d00}
+.pin{width:26px;height:26px;border-radius:50%;background:#0d47a1;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;border:2px solid #fff;box-shadow:0 2px 5px rgba(0,0,0,.45)}
 .ppop{font-size:13px;line-height:1.55}.ppop a{color:#0d47a1;font-weight:600}
 .locate-btn{width:34px;height:34px;background:#fff;border:1px solid #ccc;border-radius:4px;cursor:pointer;font-size:19px;line-height:1;color:#333;box-shadow:0 1px 5px rgba(0,0,0,.3);padding:0}.locate-btn:hover{background:#f4f4f4}.locate-btn:focus-visible{outline:2px solid #1a73e8}
 .note{font-size:.8rem;opacity:.7;line-height:1.5}
-@media(prefers-color-scheme:dark){body{background:#121212;color:#e8e8e8}.card{background:#1e1e1e}select{background:#2a2a2a;color:#e8e8e8;border-color:#444}td{border-color:#333}th{border-color:#444}.price-pin{background:#1e1e1e;color:#a5d6a7}.price-pin.best{background:#2e7d32;color:#fff}.ppop a{color:#90caf9}}
+@media(prefers-color-scheme:dark){body{background:#121212;color:#e8e8e8}.card{background:#1e1e1e}select{background:#2a2a2a;color:#e8e8e8;border-color:#444}td{border-color:#333}th{border-color:#444}.ppop a{color:#90caf9}}
 </style>
 </head>
 <body>
@@ -35,7 +36,7 @@ td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weig
 <div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
 <div class="controls"><label for="area">Top 10 for:</label><select id="area"></select></div>
 <div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
-<p class="note">Map shows the cheapest regular-gas station in each of 24 Nashville areas (price on the pin; green pin is the metro cheapest). The list shows the 10 cheapest non-membership stations for the selected area. Prices come from GasBuddy; the "updated" age is how long ago each price was reported. Excludes Costco, Sam's Club, and BJ's.</p>
+<p class="note">Map shows the cheapest regular-gas station in each of the 24 areas (price on the pin; gold pin is the metro cheapest). Blue numbered pins are the 10 cheapest stations for the selected area — the list below shows the same 10 with addresses. Prices come from GasBuddy; the "updated" age is how long ago each price was reported. Excludes Costco, Sam's Club, and BJ's.</p>
 </main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -44,14 +45,24 @@ var map=null,layer=null,selectEl=null,firstFix=true;
 var areas=[],overall=null;
 data.a.forEach(function(a){if(a[0]==='overall')overall=a;else areas.push(a)});
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-function renderAreaPins(){
+function renderMap(slug){
+  layer.clearLayers();
   var minP=Math.min.apply(null,areas.map(function(a){return a[2][0][6]}));
   areas.forEach(function(a){
+    if(a[0]===slug)return;
     var s=a[2][0],best=s[6]===minP;
     var icon=L.divIcon({className:'ppwrap',html:'<div class="price-pin'+(best?' best':'')+'">$'+s[6].toFixed(2)+'</div>'});
     L.marker([s[4],s[5]],{icon:icon}).addTo(layer).bindPopup(
       '<div class="ppop"><b>#1 in '+esc(a[1])+'</b><br>'+esc(s[1])+'<br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="selectArea(\''+a[0]+'\');return false">View '+esc(a[1])+' top 10 →</a></div>');
   });
+  if(slug!=='overall'){
+    var v=getView(slug);
+    v[2].forEach(function(s,i){
+      var icon=L.divIcon({className:'',html:'<div class="pin">'+(i+1)+'</div>',iconSize:[26,26],iconAnchor:[13,13]});
+      L.marker([s[4],s[5]],{icon:icon}).addTo(layer).bindPopup(
+        '<div class="ppop"><b>#'+(i+1)+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span></div>');
+    });
+  }
 }
 function getView(slug){if(slug==='overall')return overall;for(var i=0;i<areas.length;i++)if(areas[i][0]===slug)return areas[i];return overall}
 function renderList(slug){
@@ -62,7 +73,7 @@ function renderList(slug){
   document.getElementById('rows').innerHTML=rows;
   document.getElementById('listTitle').textContent='Top 10 — '+v[1];
 }
-window.selectArea=function(slug){selectEl.value=slug;renderList(slug);if(map)map.closePopup();var el=document.getElementById('listCard');if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'})};
+window.selectArea=function(slug,scroll){selectEl.value=slug;renderMap(slug);renderList(slug);if(map)map.closePopup();if(scroll!==false){var el=document.getElementById('listCard');if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'})}};
 function detectArea(ll){
   var best=null,bestD=0.35;
   areas.forEach(function(a){
@@ -81,7 +92,7 @@ function setupLocate(){
     acc=L.circle(e.latlng,{radius:e.accuracy,color:'#1a73e8',weight:1,opacity:.6,fillOpacity:.07}).addTo(map);
     dot=L.circleMarker(e.latlng,{radius:8,color:'#fff',weight:3,fillColor:'#1a73e8',fillOpacity:1}).addTo(map);
     if(hint)hint.textContent='Blue dot is you';
-    if(firstFix){firstFix=false;var slug=detectArea(e.latlng);if(slug){selectEl.value=slug;renderList(slug)}}
+    if(firstFix){firstFix=false;var slug=detectArea(e.latlng);if(slug)selectArea(slug,false)}
   });
   map.on('locationerror',function(){if(hint){hint.textContent='Location blocked — allow it in your browser settings.';setTimeout(function(){hint.textContent=origHint},4500)}});
   map.locate({setView:true,maxZoom:14,timeout:12000});
@@ -103,13 +114,13 @@ function init(){
   selectEl=document.getElementById('area');
   var opt=document.createElement('option');opt.value='overall';opt.textContent='Nashville Metro (Overall)';selectEl.appendChild(opt);
   areas.forEach(function(a){var o=document.createElement('option');o.value=a[0];o.textContent=a[1];selectEl.appendChild(o)});
-  selectEl.addEventListener('change',function(){renderList(selectEl.value)});
+  selectEl.addEventListener('change',function(){var s=selectEl.value;renderMap(s);renderList(s)});
   try{
     if(!window.L)throw new Error('Leaflet unavailable');
     map=L.map('map',{scrollWheelZoom:false}).setView([36.1627,-86.7816],10);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(map);
     layer=L.layerGroup().addTo(map);
-    renderAreaPins();
+    renderMap('overall');
   }catch(e){
     document.getElementById('map').style.display='none';
     document.getElementById('mapFallback').style.display='block';
