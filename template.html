@@ -583,7 +583,7 @@ function showRouteResults(coords,dest){
     addPricePin(s[4],s[5],s[6],dealClassAvg(s[6],r.avg),
       '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+' mi off route<br><a href="#" onclick="goTrip('+i+');return false">Directions \u2192</a></div>');
   });
-  try{map.fitBounds(routeLine.getBounds().pad(0.15))}catch(e){}
+  frameRoute();
   var rows='';
   routeStations.forEach(function(r,i){
     var s=r.s;
@@ -594,6 +594,18 @@ function showRouteResults(coords,dest){
   document.getElementById('routeClear').hidden=false;
   msg_text('routeMsg',routeStations.length+' cheapest near your route to '+dest.name+'. Tap a station to choose your stop, then Directions \u2192 on the map opens the full trip in Google Maps.');
   wireRouteTaps();
+}
+/* Fit the map to the full route overview: origin, destination, route
+   line, and the currently chosen gas stop — always in frame. */
+function frameRoute(){
+  if(!map||!routeTrip)return;
+  try{
+    var b=L.latLngBounds([[routeTrip.origin.lat,routeTrip.origin.lng],[routeTrip.dest.lat,routeTrip.dest.lng]]);
+    if(routeLine)b.extend(routeLine.getBounds());
+    var r=routeStations[routeStopIdx];
+    if(r&&typeof r.s[4]==='number'&&typeof r.s[5]==='number')b.extend([r.s[4],r.s[5]]);
+    map.fitBounds(b.pad(0.12));
+  }catch(e){}
 }
 /* Directions on a route-mode map pin opens the full multi-stop trip
    (your location -> gas stop -> destination) in Google Maps. */
@@ -622,7 +634,7 @@ function wireRouteTaps(){
     var r=routeStations[routeStopIdx];
     if(!r)return;
     var s=r.s;
-    map.setView([s[4],s[5]],14);
+    frameRoute();
     L.popup().setLatLng([s[4],s[5]]).setContent(
       '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+' mi off route<br><a href="#" onclick="goTrip('+routeStopIdx+');return false">Directions \u2192</a></div>'
     ).openOn(map);
