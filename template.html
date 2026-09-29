@@ -43,8 +43,13 @@ table{width:100%;border-collapse:collapse;font-size:.92rem}th{text-align:left;fo
 td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weight:700;white-space:nowrap}.dim{font-size:.8rem;opacity:.65}
 .ppwrap{background:none!important;border:none!important}
 .price-pin{width:72px;height:32px;line-height:28px;text-align:center;background:#14521c;color:#fff;font-weight:800;font-size:15px;border-radius:16px;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.45);white-space:nowrap}
-.price-pin.best{background:#8a6d00}
-.price-pin.mine{background:#0d47a1}
+.price-pin.deal-bad{background:#c62828}
+.price-pin.deal-ok{background:#f9a825;color:#3e2723}
+.price-pin.deal-good{background:#1b7a34}
+.pin-legend{font-size:.72rem;opacity:.85;margin-top:6px;display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.pin-legend .dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-left:6px}
+.pin-legend .dot:first-child{margin-left:0}
+.dot.bad{background:#c62828}.dot.ok{background:#f9a825}.dot.good{background:#1b7a34}
 .ppop{font-size:13px;line-height:1.55}.ppop a{color:#0d47a1;font-weight:600}
 .locate-btn{width:34px;height:34px;background:#fff;border:1px solid #ccc;border-radius:4px;cursor:pointer;font-size:19px;line-height:1;color:#333;box-shadow:0 1px 5px rgba(0,0,0,.3);padding:0}.locate-btn:hover{background:#f4f4f4}.locate-btn:focus-visible{outline:2px solid #1a73e8}
 .note{font-size:.8rem;opacity:.7;line-height:1.5}
@@ -58,7 +63,7 @@ td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weig
 <div class="controls metro-row"><label for="metro">Metro:</label><select id="metro"></select><button class="refresh-btn" id="refreshBtn" type="button">↻ Refresh</button><button class="refresh-btn" id="settingsBtn" type="button" aria-label="Settings">⚙</button><span class="refresh-msg" id="refreshMsg"></span></div>
 <div id="settingsOverlay" hidden><div class="settings-sheet" role="dialog" aria-label="Settings"><div class="settings-head"><b>Settings</b><button id="settingsClose" type="button">Done</button></div><div><span>Navigation app</span><div class="nav-choices"><label><input type="radio" name="navapp" value="apple"> Apple</label><label><input type="radio" name="navapp" value="google"> Google</label><label><input type="radio" name="navapp" value="waze"> Waze</label></div></div></div></div>
 <div class="avg-block"><span class="aaa-line" id="aaaLine" style="display:none"></span><br><span class="callout" id="calloutLine" style="display:none"></span></div>
-<div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
+<div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div class="pin-legend"><span class="dot bad"></span>above avg<span class="dot ok"></span>near avg<span class="dot good"></span>good deal</div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
 <div class="controls"><label for="area">Top 10 for:</label><select id="area"></select></div>
 <div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><div class="trend-sub" id="trendSub"></div><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
 <p class="note">Every pin on the map shows a price: blue pins are the 10 cheapest stations in the selected area, green pins are the cheapest station in each other area (gold pin is the cheapest in the metro). The list below shows the same top 10 with addresses. Prices come from GasBuddy; the "updated" age is how long ago each price was reported. Excludes Costco, Sam's Club, and BJ's. The AAA line is the metro-wide daily average from AAA (fleet-card data) — a sanity check for the station prices above. Trend arrows compare each area's cheapest station to ~24 hours ago; the callout line is fill-up advice based on the metro trend. Allow location to see each station's distance from you.</p>
@@ -134,6 +139,18 @@ function areaEntry(slug){
   for(var j=0;j<areas.length;j++)if(areas[j][0]===slug)return areas[j];
   return null;
 }
+/* Pin colors vs the metro (AAA) average: red above, yellow near, green good deal */
+function metroAvg(){
+  var a=M().aaa;
+  return (a&&a.regular>0)?a.regular:0;
+}
+function dealClass(price){
+  var avg=metroAvg();
+  if(!(avg>0))return '';
+  if(price>avg)return ' deal-bad';
+  if(price>=avg-0.05)return ' deal-ok';
+  return ' deal-good';
+}
 function renderMap(slug){
   if(!layer)return;
   layer.clearLayers();
@@ -144,17 +161,16 @@ function renderMap(slug){
   });
   // fallback: if no live and no static entries (shouldn't happen), use static areas
   if(!entries.length)entries=areas;
-  var minP=Math.min.apply(null,entries.map(function(a){return a[2][0][6]}));
   entries.forEach(function(a){
     if(a[0]===slug)return;
-    var s=a[2][0],best=s[6]===minP;
-    addPricePin(s[4],s[5],s[6],best?' best':'',
+    var s=a[2][0];
+    addPricePin(s[4],s[5],s[6],dealClass(s[6]),
       '<div class="ppop"><b>#1 in '+esc(a[1])+'</b><br>'+esc(s[1])+'<br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="selectArea(\''+a[0]+'\');return false">View '+esc(a[1])+' top 10 →</a> · <a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions →</a></div>');
   });
   if(slug!=='overall'){
     var v=getView(slug);
     if(v&&v[2])v[2].forEach(function(s,i){
-      addPricePin(s[4],s[5],s[6],' mine',
+      addPricePin(s[4],s[5],s[6],dealClass(s[6]),
         '<div class="ppop"><b>#'+(i+1)+' in '+esc(v[1])+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions →</a></div>');
     });
   }
