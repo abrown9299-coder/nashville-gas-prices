@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-09-29T14:15:34.394173+00:00",
+ "fetched_at": "2026-09-29T18:10:11.169512+00:00",
  "area": "atlanta",
  "metro": "atlanta",
  "station_count_raw": 20,
- "membership_excluded": 2,
+ "membership_excluded": 8,
  "stations": [
   {
    "station_id": "154043",
@@ -20,32 +20,32 @@
     "regular": {
      "card": 3.46,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:30.235Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:34.575Z",
+     "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.89,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:30.251Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:34.591Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": 4.29,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:30.267Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:34.607Z",
+     "age_hours": 0.7
     },
     "diesel": {
-     "card": null,
+     "card": 5.76,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-09-29T17:30:34.607Z",
+     "age_hours": 0.7
     }
    },
    "rank": 1,
    "regular_card": 3.46,
-   "price_posted_at": "2026-09-29T13:01:30.235Z",
-   "price_age_hours": 1.2
+   "price_posted_at": "2026-09-29T17:30:34.575Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "14231",
@@ -62,20 +62,20 @@
     "regular": {
      "card": 3.46,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:42.906Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:51.736Z",
+     "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.91,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:42.919Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:51.752Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": 4.21,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:42.935Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:51.768Z",
+     "age_hours": 0.7
     },
     "diesel": {
      "card": null,
@@ -86,8 +86,8 @@
    },
    "rank": 2,
    "regular_card": 3.46,
-   "price_posted_at": "2026-09-29T13:01:42.906Z",
-   "price_age_hours": 1.2
+   "price_posted_at": "2026-09-29T17:30:51.736Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "39005",
@@ -104,20 +104,20 @@
     "regular": {
      "card": 3.48,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:32.054Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:41.216Z",
+     "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.88,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:32.022Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:41.231Z",
+     "age_hours": 0.7
     },
     "premium": {
-     "card": 4.28,
+     "card": null,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:32.038Z",
-     "age_hours": 1.2
+     "posted_at": null,
+     "age_hours": null
     },
     "diesel": {
      "card": null,
@@ -128,8 +128,8 @@
    },
    "rank": 3,
    "regular_card": 3.48,
-   "price_posted_at": "2026-09-29T13:01:32.054Z",
-   "price_age_hours": 1.2
+   "price_posted_at": "2026-09-29T17:30:41.216Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "177902",
@@ -146,32 +146,32 @@
     "regular": {
      "card": 3.49,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:39.557Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:33.406Z",
+     "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.84,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:39.557Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:33.422Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": 4.19,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:39.588Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:33.437Z",
+     "age_hours": 0.7
     },
     "diesel": {
-     "card": 5.69,
+     "card": null,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:39.588Z",
-     "age_hours": 1.2
+     "posted_at": null,
+     "age_hours": null
     }
    },
    "rank": 4,
    "regular_card": 3.49,
-   "price_posted_at": "2026-09-29T13:01:39.557Z",
-   "price_age_hours": 1.2
+   "price_posted_at": "2026-09-29T17:30:33.406Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "42226",
@@ -188,62 +188,20 @@
     "regular": {
      "card": 3.49,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:56.776Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:41.164Z",
+     "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.9,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:56.776Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:41.180Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": 4.2,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:56.791Z",
-     "age_hours": 1.2
-    },
-    "diesel": {
-     "card": 5.71,
-     "cash": null,
-     "posted_at": "2026-09-29T13:01:56.807Z",
-     "age_hours": 1.2
-    }
-   },
-   "rank": 5,
-   "regular_card": 3.49,
-   "price_posted_at": "2026-09-29T13:01:56.776Z",
-   "price_age_hours": 1.2
-  },
-  {
-   "station_id": "42430",
-   "brand": "Murphy USA",
-   "name": "Murphy USA",
-   "membership": false,
-   "address": "5620 N Henry Blvd",
-   "city": "Stockbridge",
-   "state": "GA",
-   "zip": "30281",
-   "lat": 33.55377,
-   "lng": -84.258402,
-   "fuels": {
-    "regular": {
-     "card": 3.5,
-     "cash": null,
-     "posted_at": "2026-09-29T13:01:53.763Z",
-     "age_hours": 1.2
-    },
-    "midgrade": {
-     "card": 3.9,
-     "cash": null,
-     "posted_at": "2026-09-29T13:01:53.778Z",
-     "age_hours": 1.2
-    },
-    "premium": {
-     "card": 4.3,
-     "cash": null,
-     "posted_at": "2026-09-29T13:01:53.794Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:41.196Z",
+     "age_hours": 0.7
     },
     "diesel": {
      "card": null,
@@ -252,10 +210,10 @@
      "age_hours": null
     }
    },
-   "rank": 6,
-   "regular_card": 3.5,
-   "price_posted_at": "2026-09-29T13:01:53.763Z",
-   "price_age_hours": 1.2
+   "rank": 5,
+   "regular_card": 3.49,
+   "price_posted_at": "2026-09-29T17:30:41.164Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "70885",
@@ -272,32 +230,74 @@
     "regular": {
      "card": 3.5,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:42.607Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:49.999Z",
+     "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.9,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:42.622Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:50.015Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": 4.3,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:42.638Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:50.015Z",
+     "age_hours": 0.7
     },
     "diesel": {
      "card": 5.7,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:42.654Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:50.031Z",
+     "age_hours": 0.7
+    }
+   },
+   "rank": 6,
+   "regular_card": 3.5,
+   "price_posted_at": "2026-09-29T17:30:49.999Z",
+   "price_age_hours": 0.7
+  },
+  {
+   "station_id": "42430",
+   "brand": "Murphy USA",
+   "name": "Murphy USA",
+   "membership": false,
+   "address": "5620 N Henry Blvd",
+   "city": "Stockbridge",
+   "state": "GA",
+   "zip": "30281",
+   "lat": 33.55377,
+   "lng": -84.258402,
+   "fuels": {
+    "regular": {
+     "card": 3.5,
+     "cash": null,
+     "posted_at": "2026-09-29T17:30:47.948Z",
+     "age_hours": 0.7
+    },
+    "midgrade": {
+     "card": 3.9,
+     "cash": null,
+     "posted_at": "2026-09-29T17:30:47.964Z",
+     "age_hours": 0.7
+    },
+    "premium": {
+     "card": 4.3,
+     "cash": null,
+     "posted_at": "2026-09-29T17:30:47.979Z",
+     "age_hours": 0.7
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
     }
    },
    "rank": 7,
    "regular_card": 3.5,
-   "price_posted_at": "2026-09-29T13:01:42.607Z",
-   "price_age_hours": 1.2
+   "price_posted_at": "2026-09-29T17:30:47.948Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "195938",
@@ -314,32 +314,32 @@
     "regular": {
      "card": 3.52,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:26.881Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:18.613Z",
+     "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.9,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:26.897Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:18.629Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": 4.25,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:26.912Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:18.644Z",
+     "age_hours": 0.7
     },
     "diesel": {
      "card": 5.62,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:26.928Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:18.660Z",
+     "age_hours": 0.7
     }
    },
    "rank": 8,
    "regular_card": 3.52,
-   "price_posted_at": "2026-09-29T13:01:26.881Z",
-   "price_age_hours": 1.2
+   "price_posted_at": "2026-09-29T17:30:18.613Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "104388",
@@ -356,32 +356,32 @@
     "regular": {
      "card": 3.52,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:36.580Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:51.997Z",
+     "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.9,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:36.596Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:52.013Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": 4.25,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:36.596Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:52.028Z",
+     "age_hours": 0.7
     },
     "diesel": {
-     "card": 5.66,
+     "card": null,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:36.611Z",
-     "age_hours": 1.2
+     "posted_at": null,
+     "age_hours": null
     }
    },
    "rank": 9,
    "regular_card": 3.52,
-   "price_posted_at": "2026-09-29T13:01:36.580Z",
-   "price_age_hours": 1.2
+   "price_posted_at": "2026-09-29T17:30:51.997Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "191115",
@@ -398,32 +398,32 @@
     "regular": {
      "card": 3.54,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:38.359Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:37.822Z",
+     "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.9,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:38.328Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:37.853Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": 4.25,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:38.343Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-29T17:30:37.869Z",
+     "age_hours": 0.7
     },
     "diesel": {
-     "card": 5.72,
+     "card": null,
      "cash": null,
-     "posted_at": "2026-09-29T13:01:38.312Z",
-     "age_hours": 1.2
+     "posted_at": null,
+     "age_hours": null
     }
    },
    "rank": 10,
    "regular_card": 3.54,
-   "price_posted_at": "2026-09-29T13:01:38.359Z",
-   "price_age_hours": 1.2
+   "price_posted_at": "2026-09-29T17:30:37.822Z",
+   "price_age_hours": 0.7
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-29T14:15:10.899911+00:00",
+ "fetched_at": "2026-09-29T18:10:19.825511+00:00",
  "area": "birmingham",
  "metro": "birmingham",
  "station_count_raw": 20,
@@ -18,22 +18,22 @@
    "lng": -86.75321561695,
    "fuels": {
     "regular": {
-     "card": 3.85,
+     "card": 3.75,
      "cash": null,
-     "posted_at": "2026-09-28T20:16:39.130Z",
-     "age_hours": 18.0
+     "posted_at": "2026-09-29T16:11:37.061Z",
+     "age_hours": 2.0
     },
     "midgrade": {
      "card": 4.15,
      "cash": null,
      "posted_at": "2026-09-28T20:16:39.146Z",
-     "age_hours": 18.0
+     "age_hours": 21.9
     },
     "premium": {
      "card": 4.65,
      "cash": null,
-     "posted_at": "2026-09-28T20:16:39.161Z",
-     "age_hours": 18.0
+     "posted_at": "2026-09-29T14:16:34.546Z",
+     "age_hours": 3.9
     },
     "diesel": {
      "card": null,
@@ -43,9 +43,51 @@
     }
    },
    "rank": 1,
-   "regular_card": 3.85,
-   "price_posted_at": "2026-09-28T20:16:39.130Z",
-   "price_age_hours": 18.0
+   "regular_card": 3.75,
+   "price_posted_at": "2026-09-29T16:11:37.061Z",
+   "price_age_hours": 2.0
+  },
+  {
+   "station_id": "125709",
+   "brand": "Love's Travel Stop",
+   "name": "Love's Travel Stop",
+   "membership": false,
+   "address": "905 Steele Station Rd",
+   "city": "Steele",
+   "state": "AL",
+   "zip": "35987",
+   "lat": 33.93283219,
+   "lng": -86.19175404,
+   "fuels": {
+    "regular": {
+     "card": 3.81,
+     "cash": 3.81,
+     "posted_at": "2026-09-29T16:52:19.968Z",
+     "age_hours": 1.3
+    },
+    "midgrade": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "premium": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    }
+   },
+   "rank": 2,
+   "regular_card": 3.81,
+   "price_posted_at": "2026-09-29T16:52:19.968Z",
+   "price_age_hours": 1.3
   },
   {
    "station_id": "213149",
@@ -63,115 +105,31 @@
      "card": 3.85,
      "cash": 0,
      "posted_at": "2026-09-29T10:47:12.954Z",
-     "age_hours": 3.5
+     "age_hours": 7.4
     },
     "midgrade": {
      "card": 4.25,
      "cash": 0,
      "posted_at": "2026-09-29T10:47:12.970Z",
-     "age_hours": 3.5
+     "age_hours": 7.4
     },
     "premium": {
      "card": 4.55,
      "cash": 0,
      "posted_at": "2026-09-29T10:47:12.985Z",
-     "age_hours": 3.5
+     "age_hours": 7.4
     },
     "diesel": {
      "card": 5.89,
      "cash": 5.89,
      "posted_at": "2026-09-29T10:47:13.001Z",
-     "age_hours": 3.5
-    }
-   },
-   "rank": 2,
-   "regular_card": 3.85,
-   "price_posted_at": "2026-09-29T10:47:12.954Z",
-   "price_age_hours": 3.5
-  },
-  {
-   "station_id": "215272",
-   "brand": "Love's Travel Stop",
-   "name": "Love's Travel Stop",
-   "membership": false,
-   "address": "220 Elza'S Way",
-   "city": "Quinton",
-   "state": "AL",
-   "zip": "35130",
-   "lat": 33.680684,
-   "lng": -87.081453,
-   "fuels": {
-    "regular": {
-     "card": 3.85,
-     "cash": 3.85,
-     "posted_at": "2026-09-29T14:01:33.184Z",
-     "age_hours": 0.2
-    },
-    "midgrade": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "premium": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "age_hours": 7.4
     }
    },
    "rank": 3,
    "regular_card": 3.85,
-   "price_posted_at": "2026-09-29T14:01:33.184Z",
-   "price_age_hours": 0.2
-  },
-  {
-   "station_id": "203409",
-   "brand": "Buc-ee's",
-   "name": "Buc-ee's",
-   "membership": false,
-   "address": "6900 Buc-ee's Blvd (along Coosa Ave)",
-   "city": "Leeds",
-   "state": "AL",
-   "zip": "35094",
-   "lat": 33.544185,
-   "lng": -86.585956,
-   "fuels": {
-    "regular": {
-     "card": 3.85,
-     "cash": null,
-     "posted_at": "2026-09-29T03:55:35.707Z",
-     "age_hours": 10.3
-    },
-    "midgrade": {
-     "card": 4.15,
-     "cash": null,
-     "posted_at": "2026-09-29T03:55:35.722Z",
-     "age_hours": 10.3
-    },
-    "premium": {
-     "card": 4.55,
-     "cash": null,
-     "posted_at": "2026-09-29T03:55:35.738Z",
-     "age_hours": 10.3
-    },
-    "diesel": {
-     "card": 5.79,
-     "cash": null,
-     "posted_at": "2026-09-29T03:55:35.754Z",
-     "age_hours": 10.3
-    }
-   },
-   "rank": 4,
-   "regular_card": 3.85,
-   "price_posted_at": "2026-09-29T03:55:35.707Z",
-   "price_age_hours": 10.3
+   "price_posted_at": "2026-09-29T10:47:12.954Z",
+   "price_age_hours": 7.4
   },
   {
    "station_id": "134458",
@@ -189,7 +147,7 @@
      "card": 3.85,
      "cash": null,
      "posted_at": "2026-09-29T03:59:29.497Z",
-     "age_hours": 10.3
+     "age_hours": 14.2
     },
     "midgrade": {
      "card": null,
@@ -210,10 +168,10 @@
      "age_hours": null
     }
    },
-   "rank": 5,
+   "rank": 4,
    "regular_card": 3.85,
    "price_posted_at": "2026-09-29T03:59:29.497Z",
-   "price_age_hours": 10.3
+   "price_age_hours": 14.2
   },
   {
    "station_id": "68521",
@@ -230,32 +188,32 @@
     "regular": {
      "card": 3.86,
      "cash": null,
-     "posted_at": "2026-09-29T14:01:00.573Z",
-     "age_hours": 0.2
+     "posted_at": "2026-09-29T17:01:53.360Z",
+     "age_hours": 1.1
     },
     "midgrade": {
      "card": 4.29,
      "cash": null,
-     "posted_at": "2026-09-29T14:01:00.589Z",
-     "age_hours": 0.2
+     "posted_at": "2026-09-29T17:01:53.370Z",
+     "age_hours": 1.1
     },
     "premium": {
-     "card": 4.69,
-     "cash": null,
-     "posted_at": "2026-09-29T14:01:00.589Z",
-     "age_hours": 0.2
-    },
-    "diesel": {
      "card": null,
      "cash": null,
      "posted_at": null,
      "age_hours": null
+    },
+    "diesel": {
+     "card": 5.92,
+     "cash": null,
+     "posted_at": "2026-09-29T16:30:49.381Z",
+     "age_hours": 1.7
     }
    },
-   "rank": 6,
+   "rank": 5,
    "regular_card": 3.86,
-   "price_posted_at": "2026-09-29T14:01:00.573Z",
-   "price_age_hours": 0.2
+   "price_posted_at": "2026-09-29T17:01:53.360Z",
+   "price_age_hours": 1.1
   },
   {
    "station_id": "186175",
@@ -272,74 +230,74 @@
     "regular": {
      "card": 3.86,
      "cash": null,
-     "posted_at": "2026-09-29T13:30:34.214Z",
-     "age_hours": 0.7
+     "posted_at": "2026-09-29T18:00:59.667Z",
+     "age_hours": 0.2
     },
     "midgrade": {
      "card": 4.27,
      "cash": null,
-     "posted_at": "2026-09-29T13:30:34.230Z",
-     "age_hours": 0.7
+     "posted_at": "2026-09-29T18:00:59.683Z",
+     "age_hours": 0.2
     },
     "premium": {
      "card": 4.57,
      "cash": null,
-     "posted_at": "2026-09-29T13:30:34.246Z",
-     "age_hours": 0.7
+     "posted_at": "2026-09-29T18:00:59.715Z",
+     "age_hours": 0.2
     },
     "diesel": {
      "card": 5.86,
      "cash": null,
-     "posted_at": "2026-09-29T13:30:34.277Z",
-     "age_hours": 0.7
+     "posted_at": "2026-09-29T18:00:59.720Z",
+     "age_hours": 0.2
     }
    },
-   "rank": 7,
+   "rank": 6,
    "regular_card": 3.86,
-   "price_posted_at": "2026-09-29T13:30:34.214Z",
-   "price_age_hours": 0.7
+   "price_posted_at": "2026-09-29T18:00:59.667Z",
+   "price_age_hours": 0.2
   },
   {
-   "station_id": "215728",
-   "brand": "QuikTrip",
-   "name": "QT",
+   "station_id": "16088",
+   "brand": "Murphy USA",
+   "name": "Murphy USA",
    "membership": false,
-   "address": "37011 US-231",
-   "city": "Ashville",
+   "address": "560 Colonial Promenade Pkwy.",
+   "city": "Alabaster",
    "state": "AL",
-   "zip": "35953",
-   "lat": 33.865567974914,
-   "lng": -86.289664223413,
+   "zip": "35007",
+   "lat": 33.235745,
+   "lng": -86.803765,
    "fuels": {
     "regular": {
      "card": 3.87,
      "cash": null,
-     "posted_at": "2026-09-29T02:18:08.645Z",
-     "age_hours": 12.0
+     "posted_at": "2026-09-29T17:01:28.309Z",
+     "age_hours": 1.1
     },
     "midgrade": {
-     "card": 4.27,
+     "card": 4.29,
      "cash": null,
-     "posted_at": "2026-09-29T02:18:08.662Z",
-     "age_hours": 12.0
+     "posted_at": "2026-09-29T17:01:28.325Z",
+     "age_hours": 1.1
     },
     "premium": {
-     "card": null,
+     "card": 4.59,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-09-29T17:01:28.340Z",
+     "age_hours": 1.1
     },
     "diesel": {
-     "card": null,
+     "card": 5.89,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-09-29T17:01:28.356Z",
+     "age_hours": 1.1
     }
    },
-   "rank": 8,
+   "rank": 7,
    "regular_card": 3.87,
-   "price_posted_at": "2026-09-29T02:18:08.645Z",
-   "price_age_hours": 12.0
+   "price_posted_at": "2026-09-29T17:01:28.309Z",
+   "price_age_hours": 1.1
   },
   {
    "station_id": "70824",
@@ -357,49 +315,91 @@
      "card": 3.87,
      "cash": null,
      "posted_at": "2026-09-28T22:10:47.517Z",
-     "age_hours": 16.1
+     "age_hours": 20.0
     },
     "midgrade": {
      "card": 4.27,
      "cash": null,
      "posted_at": "2026-09-28T22:10:47.533Z",
-     "age_hours": 16.1
+     "age_hours": 20.0
     },
     "premium": {
      "card": 4.57,
      "cash": null,
      "posted_at": "2026-09-28T22:10:47.549Z",
-     "age_hours": 16.1
+     "age_hours": 20.0
     },
     "diesel": {
      "card": 5.87,
      "cash": null,
      "posted_at": "2026-09-28T22:10:47.564Z",
-     "age_hours": 16.1
+     "age_hours": 20.0
     }
    },
-   "rank": 9,
+   "rank": 8,
    "regular_card": 3.87,
    "price_posted_at": "2026-09-28T22:10:47.517Z",
-   "price_age_hours": 16.1
+   "price_age_hours": 20.0
   },
   {
-   "station_id": "76016",
-   "brand": "RaceWay",
-   "name": "RaceWay",
+   "station_id": "215728",
+   "brand": "QuikTrip",
+   "name": "QT",
    "membership": false,
-   "address": "2107 Moody Pkwy",
-   "city": "Moody",
+   "address": "37011 US-231",
+   "city": "Ashville",
    "state": "AL",
-   "zip": "35004",
-   "lat": 33.570895,
-   "lng": -86.520444,
+   "zip": "35953",
+   "lat": 33.865567974914,
+   "lng": -86.289664223413,
    "fuels": {
     "regular": {
      "card": 3.87,
      "cash": null,
-     "posted_at": "2026-09-28T12:47:36.426Z",
-     "age_hours": 25.5
+     "posted_at": "2026-09-29T02:18:08.645Z",
+     "age_hours": 15.9
+    },
+    "midgrade": {
+     "card": 4.27,
+     "cash": null,
+     "posted_at": "2026-09-29T02:18:08.662Z",
+     "age_hours": 15.9
+    },
+    "premium": {
+     "card": 4.67,
+     "cash": null,
+     "posted_at": "2026-09-29T02:18:08.662Z",
+     "age_hours": 15.9
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    }
+   },
+   "rank": 9,
+   "regular_card": 3.87,
+   "price_posted_at": "2026-09-29T02:18:08.645Z",
+   "price_age_hours": 15.9
+  },
+  {
+   "station_id": "143272",
+   "brand": "Murphy Express",
+   "name": "Murphy Express",
+   "membership": false,
+   "address": "7740 Crestwood Blvd.",
+   "city": "Birmingham",
+   "state": "AL",
+   "zip": "35210",
+   "lat": 33.531251,
+   "lng": -86.718199,
+   "fuels": {
+    "regular": {
+     "card": 3.88,
+     "cash": null,
+     "posted_at": "2026-09-29T18:00:48.324Z",
+     "age_hours": 0.2
     },
     "midgrade": {
      "card": null,
@@ -408,22 +408,22 @@
      "age_hours": null
     },
     "premium": {
-     "card": 4.59,
+     "card": null,
      "cash": null,
-     "posted_at": "2026-09-28T12:47:36.457Z",
-     "age_hours": 25.5
+     "posted_at": null,
+     "age_hours": null
     },
     "diesel": {
      "card": 5.87,
      "cash": null,
-     "posted_at": "2026-09-28T12:47:36.472Z",
-     "age_hours": 25.5
+     "posted_at": "2026-09-29T18:00:48.422Z",
+     "age_hours": 0.2
     }
    },
    "rank": 10,
-   "regular_card": 3.87,
-   "price_posted_at": "2026-09-28T12:47:36.426Z",
-   "price_age_hours": 25.5
+   "regular_card": 3.88,
+   "price_posted_at": "2026-09-29T18:00:48.324Z",
+   "price_age_hours": 0.2
   }
  ]
 }

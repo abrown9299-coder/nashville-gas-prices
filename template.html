@@ -78,6 +78,7 @@ var METRO_ORDER=Object.keys(data.metros); // ["nashville","atlanta","birmingham"
 
 /* ===== State ===== */
 var map=null,layer=null,selectEl=null,metroEl=null,firstFix=true,userLoc=null;
+var curZoom=10;
 var areas=[],overall=null,curMetro='nashville';   // static views for current metro
 var liveCache={};                   // slug -> {stations:[[id,name,addr,city,lat,lng,price,age]...], fetched_at}
 var liveMode=false, curSlug='overall', liveStamp=null;
@@ -154,6 +155,7 @@ function dealClass(price){
 function renderMap(slug){
   if(!layer)return;
   layer.clearLayers();
+  var pins=[]; // {lat,lng,price,html}
   var entries=[];
   centers().forEach(function(ac){
     var e=areaEntry(ac[0]);
@@ -164,48 +166,25 @@ function renderMap(slug){
   entries.forEach(function(a){
     if(a[0]===slug)return;
     var s=a[2][0];
-    addPricePin(s[4],s[5],s[6],dealClass(s[6]),
-      '<div class="ppop"><b>#1 in '+esc(a[1])+'</b><br>'+esc(s[1])+'<br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="selectArea(\''+a[0]+'\');return false">View '+esc(a[1])+' top 10 →</a> · <a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions →</a></div>');
+    pins.push({lat:s[4],lng:s[5],price:s[6],
+      html:'<div class="ppop"><b>#1 in '+esc(a[1])+'</b><br>'+esc(s[1])+'<br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="selectArea(\''+a[0]+'\');return false">View '+esc(a[1])+' top 10 →</a> · <a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions →</a></div>'});
   });
   if(slug!=='overall'){
     var v=getView(slug);
     if(v&&v[2])v[2].forEach(function(s,i){
-      addPricePin(s[4],s[5],s[6],dealClass(s[6]),
-        '<div class="ppop"><b>#'+(i+1)+' in '+esc(v[1])+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions →</a></div>');
+      pins.push({lat:s[4],lng:s[5],price:s[6],
+        html:'<div class="ppop"><b>#'+(i+1)+' in '+esc(v[1])+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions →</a></div>'});
     });
   }
-}
-function renderList(slug){
-  var v=getView(slug),rows='';
-  if(slug==='overall'&&liveMode){
-    // Live metro view: cheapest in each area, sorted
-    var rows2=[];
-    centers().forEach(function(ac){
-      var e=areaEntry(ac[0]);
-      if(e&&e[2]&&e[2].length)rows2.push([e[1],e[2][0]]);
-    });
-    rows2.sort(function(x,y){return x[1][6]-y[1][6]});
-    curRows=rows2.map(function(r){return r[1]});
-    rows2.forEach(function(r,i){
-      var s=r[1];
-      rows+='<tr data-i="'+i+'"><td>'+(i+1)+'</td><td><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+' · '+esc(r[0])+distTxt(s)+'</span></td><td class="pr">$'+s[6].toFixed(2)+'</td><td class="dim">'+esc(s[7])+'</td></tr>';
-    });
-    document.getElementById('rows').innerHTML=rows||'<tr class="loading-row"><td colspan="4">Loading live prices…</td></tr>';
-    document.getElementById('listTitle').textContent='Cheapest in each area';
-    document.getElementById('trendSub').textContent=trendTxt('overall');
-    wireStationTaps();
-    return;
+  // Zoomed out: declutter — only good deals. Never leave the map empty:
+  // fall back to the 3 cheapest pins.
+  var show=pins;
+  if(curZoom<12){
+    var good=pins.filter(function(p){return dealClass(p.price)===' deal-good'});
+    show=good.length?good:pins.slice().sort(function(a,b){return a.price-b.price}).slice(0,3);
   }
-  curRows=(v&&v[2])||[];
-  if(v&&v[2])v[2].forEach(function(s,i){
-    rows+='<tr data-i="'+i+'"><td>'+(i+1)+'</td><td><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+distTxt(s)+'</span></td><td class="pr">$'+s[6].toFixed(2)+'</td><td class="dim">'+esc(s[7])+'</td></tr>';
-  });
-  document.getElementById('rows').innerHTML=rows;
-  wireStationTaps();
-  document.getElementById('listTitle').textContent='Top 10 — '+(v?v[1]:'');
-  document.getElementById('trendSub').textContent=trendTxt(slug);
+  show.forEach(function(p){addPricePin(p.lat,p.lng,p.price,dealClass(p.price),p.html)});
 }
-
 /* ===== Tap a station row: pull it up on the map ===== */
 var curRows=[];
 function focusStation(i){
@@ -422,6 +401,13 @@ function init(){
   }catch(e){
     document.getElementById('map').style.display='none';
     document.getElementById('mapFallback').style.display='block';
+  }
+  if(map){
+    curZoom=map.getZoom();
+    map.on('zoomend',function(){
+      var z=map.getZoom();
+      if(z!==curZoom){curZoom=z;renderMap(curSlug)}
+    });
   }
   selectMetro('nashville');
   if(map&&'geolocation' in navigator)setupLocate();
