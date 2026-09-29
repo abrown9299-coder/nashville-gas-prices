@@ -16,6 +16,7 @@ main{max-width:720px;margin:0 auto;padding:12px}
 .live-lbl{font-size:.78rem;font-weight:600;opacity:.8}
 .refresh-btn{margin-left:auto;background:#0d47a1;color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:.9rem;cursor:pointer}
 .refresh-btn:disabled{opacity:.55;cursor:default}.refresh-msg{display:block;margin-top:6px;font-size:.75rem;opacity:.85;min-height:1.1em}
+.aaa-line{flex-basis:100%;font-size:.8rem;opacity:.75}
 #map{height:340px;border-radius:8px;z-index:0}.map-head{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}.map-head h2{margin:0;font-size:1rem}.map-head span{font-size:.78rem;opacity:.65}
 .controls{display:flex;align-items:center;gap:10px;margin-bottom:12px}.controls label{font-weight:600;font-size:.95rem}
 select{flex:1;font-size:1rem;padding:10px;border-radius:8px;border:1px solid #ccc;background:#fff;color:#1a1a1a;max-width:100%}
@@ -36,11 +37,11 @@ td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weig
 <body>
 <header><h1>🛢️ Nashville Gas Prices</h1></header>
 <main>
-<div class="card updated-card"><span class="lbl">Last updated</span><span class="ts" id="updated">—</span><span class="live-lbl"><span class="live-dot" id="liveDot"></span><span id="liveLbl">Cached</span></span><button class="refresh-btn" id="refreshBtn" type="button">↻ Refresh</button><span class="refresh-msg" id="refreshMsg"></span></div>
+<div class="card updated-card"><span class="lbl">Last updated</span><span class="ts" id="updated">—</span><span class="live-lbl"><span class="live-dot" id="liveDot"></span><span id="liveLbl">Cached</span></span><button class="refresh-btn" id="refreshBtn" type="button">↻ Refresh</button><span class="refresh-msg" id="refreshMsg"></span><span class="aaa-line" id="aaaLine" style="display:none"></span></div>
 <div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
 <div class="controls"><label for="area">Top 10 for:</label><select id="area"></select></div>
 <div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
-<p class="note">Every pin on the map shows a price: blue pins are the 10 cheapest stations in the selected area, green pins are the cheapest station in each other area (gold pin is the cheapest in the metro). The list below shows the same top 10 with addresses. Prices come from GasBuddy; the "updated" age is how long ago each price was reported. Excludes Costco, Sam's Club, and BJ's.</p>
+<p class="note">Every pin on the map shows a price: blue pins are the 10 cheapest stations in the selected area, green pins are the cheapest station in each other area (gold pin is the cheapest in the metro). The list below shows the same top 10 with addresses. Prices come from GasBuddy; the "updated" age is how long ago each price was reported. Excludes Costco, Sam's Club, and BJ's. The AAA line is the metro-wide daily average from AAA (fleet-card data) — a sanity check for the station prices above.</p>
 </main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -264,6 +265,11 @@ function setupRefresh(){
 /* ===== Init ===== */
 function init(){
   document.getElementById('updated').textContent=data.u;
+  if(data.aaa&&data.aaa.regular){
+    var aaa=document.getElementById('aaaLine');
+    aaa.style.display='inline';
+    aaa.textContent='AAA Nashville metro avg ('+data.aaa.date+'): $'+data.aaa.regular.toFixed(2)+' regular';
+  }
   selectEl=document.getElementById('area');
   var opt=document.createElement('option');opt.value='overall';opt.textContent='Nashville Metro (Overall)';selectEl.appendChild(opt);
   AREA_CENTERS.forEach(function(a){var o=document.createElement('option');o.value=a[0];o.textContent=a[1];selectEl.appendChild(o)});
