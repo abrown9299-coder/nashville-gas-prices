@@ -30,6 +30,9 @@ main{max-width:720px;margin:0 auto;padding:12px}
 #routeClear[hidden]{display:none}
 .route-msg{color:#555;font-size:.85rem;margin:6px 0}
 #routeResults[hidden]{display:none}
+#routeRows tr[data-ri]{cursor:pointer}
+#routeRows tr.sel{background:#e3ecf9}
+#routeTripBtn{display:block;width:100%;margin-top:10px;background:#0d47a1;color:#fff;border:none;border-radius:8px;padding:12px;font-size:1rem;cursor:pointer}
 .aaa-line{font-size:.8rem;opacity:.75}
 .callout{font-size:.85rem;font-weight:700}
 #rows tr[data-i]{cursor:pointer}
@@ -75,7 +78,7 @@ td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weig
 <div class="controls"><label for="area">Top 10 for:</label><select id="area"></select></div>
 <div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><div class="trend-sub" id="trendSub"></div><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
 <p class="note">Every pin on the map shows a price: blue pins are the 10 cheapest stations in the selected area, green pins are the cheapest station in each other area (gold pin is the cheapest in the metro). The list below shows the same top 10 with addresses. Prices come from GasBuddy; the "updated" age is how long ago each price was reported. Excludes Costco, Sam's Club, and BJ's. The AAA line is the metro-wide daily average from AAA (fleet-card data) — a sanity check for the station prices above. Trend arrows compare each area's cheapest station to ~24 hours ago; the callout line is fill-up advice based on the metro trend. Allow location to see each station's distance from you.</p>
-<div class="card" id="routeCard"><h2>⛽ Cheapest on my route</h2><div class="route-form"><input id="routeDest" type="text" placeholder="Where are you headed? (address or place)" autocomplete="off" enterkeyhint="search"><button id="routeGo" type="button">Find</button><button id="routeClear" type="button" hidden>✕ Clear</button></div><div class="route-msg" id="routeMsg">Uses your GPS location as the starting point.</div><div id="routeResults" hidden><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Off route</th></tr></thead><tbody id="routeRows"></tbody></table></div></div>
+<div class="card" id="routeCard"><h2>⛽ Cheapest on my route</h2><div class="route-form"><input id="routeDest" type="text" placeholder="Where are you headed? (address or place)" autocomplete="off" enterkeyhint="search"><button id="routeGo" type="button">Find</button><button id="routeClear" type="button" hidden>✕ Clear</button></div><div class="route-msg" id="routeMsg">Uses your GPS location as the starting point.</div><div id="routeResults" hidden><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Off route</th></tr></thead><tbody id="routeRows"></tbody></table><button id="routeTripBtn" type="button">⛽ Send trip to GPS →</button><div class="route-msg">Opens the full trip with your gas stop in Google Maps.</div></div></div>
 </main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -425,7 +428,7 @@ function setupRefresh(){
 
 /* ===== Init ===== */
 /* ===== Route mode: cheapest stations along a driving route ===== */
-var routeMode=false, routeLine=null, routeStations=[];
+var routeMode=false, routeLine=null, routeStations=[], routeTrip=null, routeStopIdx=0;
 function allStations(){
   var out=[];
   METRO_ORDER.forEach(function(mk){
@@ -491,6 +494,8 @@ function findRoute(){
 }
 function showRouteResults(coords,dest){
   routeMode=true;
+  routeTrip={origin:{lat:userLoc.lat,lng:userLoc.lng},dest:dest};
+  routeStopIdx=0;
   var cands=[];
   allStations().forEach(function(r){
     var s=r.s;
@@ -512,13 +517,26 @@ function showRouteResults(coords,dest){
   var rows='';
   routeStations.forEach(function(r,i){
     var s=r.s;
-    rows+='<tr data-ri="'+i+'"><td>'+(i+1)+'</td><td><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+'</span></td><td class="pr">$'+s[6].toFixed(2)+'</td><td class="dim">'+r.d.toFixed(1)+' mi</td></tr>';
+    rows+='<tr data-ri="'+i+'"'+(i===0?' class="sel"':'')+'><td>'+(i+1)+'</td><td><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+'</span></td><td class="pr">$'+s[6].toFixed(2)+'</td><td class="dim">'+r.d.toFixed(1)+' mi</td></tr>';
   });
   document.getElementById('routeRows').innerHTML=rows||'<tr><td colspan="4">No stations within 1.5 mi of that route.</td></tr>';
   document.getElementById('routeResults').hidden=false;
   document.getElementById('routeClear').hidden=false;
-  msg_text('routeMsg',routeStations.length+' cheapest near your route to '+dest.name+'.');
+  msg_text('routeMsg',routeStations.length+' cheapest near your route to '+dest.name+'. Tap a station to choose your stop.');
+  tripLabel();
   wireRouteTaps();
+}
+function tripLabel(){
+  var b=document.getElementById('routeTripBtn');
+  if(!b||!routeStations.length)return;
+  b.textContent='\u26fd Trip via '+routeStations[routeStopIdx].s[1]+' \u2192';
+}
+function sendTrip(){
+  if(!routeTrip||!routeStations.length)return;
+  var st=routeStations[routeStopIdx].s,o=routeTrip.origin,d=routeTrip.dest;
+  var url='https://www.google.com/maps/dir/?api=1&origin='+o.lat+','+o.lng+
+    '&destination='+d.lat+','+d.lng+'&waypoints='+st[4]+','+st[5]+'&travelmode=driving';
+  window.open(url,'_blank','noopener');
 }
 function msg_text(id,t){document.getElementById(id).textContent=t}
 function wireRouteTaps(){
@@ -527,7 +545,12 @@ function wireRouteTaps(){
   tb.addEventListener('click',function(ev){
     var tr=ev.target&&ev.target.closest?ev.target.closest('tr[data-ri]'):null;
     if(!tr||!map)return;
-    var r=routeStations[+tr.getAttribute('data-ri')];
+    routeStopIdx=+tr.getAttribute('data-ri');
+    var trs=tb.querySelectorAll('tr[data-ri]');
+    for(var k=0;k<trs.length;k++)trs[k].classList.remove('sel');
+    tr.classList.add('sel');
+    tripLabel();
+    var r=routeStations[routeStopIdx];
     if(!r)return;
     var s=r.s;
     map.setView([s[4],s[5]],14);
@@ -537,7 +560,7 @@ function wireRouteTaps(){
   });
 }
 function clearRoute(){
-  routeMode=false;routeStations=[];
+  routeMode=false;routeStations=[];routeTrip=null;routeStopIdx=0;
   if(map&&routeLine){map.removeLayer(routeLine);routeLine=null}
   document.getElementById('routeResults').hidden=true;
   document.getElementById('routeClear').hidden=true;
@@ -549,6 +572,7 @@ function setupRoute(){
   document.getElementById('routeGo').addEventListener('click',findRoute);
   document.getElementById('routeDest').addEventListener('keydown',function(e){if(e.key==='Enter')findRoute()});
   document.getElementById('routeClear').addEventListener('click',clearRoute);
+  document.getElementById('routeTripBtn').addEventListener('click',sendTrip);
 }
 
 function init(){
