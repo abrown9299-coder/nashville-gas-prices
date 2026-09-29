@@ -500,11 +500,19 @@ function setView(v){
   if(v==='route'&&map){try{map.invalidateSize()}catch(e){}if(!routeStations.length){var d=document.getElementById('routeDest');if(d&&d.focus)d.focus()}}
 }
 function allStations(){
-  var out=[];
+  var out=[],seen={};
   METRO_ORDER.forEach(function(mk){
     var md=data.metros[mk],avg=(md.aaa&&md.aaa.regular)||0;
     (md.a||[]).forEach(function(v){
-      (v[2]||[]).forEach(function(s){out.push({s:s,avg:avg})});
+      (v[2]||[]).forEach(function(s){
+        /* The same physical station is scraped into every area whose
+           bounds cover it — de-dupe by identity+coords so route results
+           never list one station twice. Cheapest copy wins. */
+        var key=s[0]+'|'+(+s[4]).toFixed(5)+'|'+(+s[5]).toFixed(5);
+        if(seen[key]!==undefined){
+          if(s[6]<out[seen[key]].s[6])out[seen[key]]={s:s,avg:avg};
+        }else{seen[key]=out.length;out.push({s:s,avg:avg})}
+      });
     });
   });
   return out;
@@ -580,7 +588,7 @@ function showRouteResults(coords,dest){
     var ri=routeInfoMi(s[4],s[5],coords);
     var dd=ptDistMi(s[4],s[5],dest.lat,dest.lng);
     var onWay=ri.d<=1.5&&!ri.before&&!ri.after;  /* in the corridor, ahead of you */
-    var nearDest=dd<=2;                          /* close to where you're headed */
+    var nearDest=dd<=1;                          /* close to where you're headed */
     if(!onWay&&!nearDest)return;                  /* out of the way: skip */
     cands.push({s:s,avg:r.avg,d:onWay?ri.d:dd,nearDest:!onWay&&nearDest});
   });
