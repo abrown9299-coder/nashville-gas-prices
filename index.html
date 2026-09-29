@@ -185,6 +185,37 @@ function renderMap(slug){
   }
   show.forEach(function(p){addPricePin(p.lat,p.lng,p.price,dealClass(p.price),p.html)});
 }
+
+function renderList(slug){
+  var v=getView(slug),rows='';
+  if(slug==='overall'&&liveMode){
+    // Live metro view: cheapest in each area, sorted
+    var rows2=[];
+    centers().forEach(function(ac){
+      var e=areaEntry(ac[0]);
+      if(e&&e[2]&&e[2].length)rows2.push([e[1],e[2][0]]);
+    });
+    rows2.sort(function(x,y){return x[1][6]-y[1][6]});
+    curRows=rows2.map(function(r){return r[1]});
+    rows2.forEach(function(r,i){
+      var s=r[1];
+      rows+='<tr data-i="'+i+'"><td>'+(i+1)+'</td><td><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+' · '+esc(r[0])+distTxt(s)+'</span></td><td class="pr">$'+s[6].toFixed(2)+'</td><td class="dim">'+esc(s[7])+'</td></tr>';
+    });
+    document.getElementById('rows').innerHTML=rows||'<tr class="loading-row"><td colspan="4">Loading live prices…</td></tr>';
+    document.getElementById('listTitle').textContent='Cheapest in each area';
+    document.getElementById('trendSub').textContent=trendTxt('overall');
+    wireStationTaps();
+    return;
+  }
+  curRows=(v&&v[2])||[];
+  if(v&&v[2])v[2].forEach(function(s,i){
+    rows+='<tr data-i="'+i+'"><td>'+(i+1)+'</td><td><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+distTxt(s)+'</span></td><td class="pr">$'+s[6].toFixed(2)+'</td><td class="dim">'+esc(s[7])+'</td></tr>';
+  });
+  document.getElementById('rows').innerHTML=rows;
+  wireStationTaps();
+  document.getElementById('listTitle').textContent='Top 10 — '+(v?v[1]:'');
+  document.getElementById('trendSub').textContent=trendTxt(slug);
+}
 /* ===== Tap a station row: pull it up on the map ===== */
 var curRows=[];
 function focusStation(i){
