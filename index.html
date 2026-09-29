@@ -170,7 +170,6 @@ function loadMetro(mkey){
 }
 
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-function fmtTs(iso){try{var d=new Date(iso);return d.toLocaleString(undefined,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}catch(e){return iso}}
 function miles(lat1,lng1,lat2,lng2){var R=3959,dLa=(lat2-lat1)*Math.PI/180,dLn=(lng2-lng1)*Math.PI/180,a=Math.sin(dLa/2)*Math.sin(dLa/2)+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLn/2)*Math.sin(dLn/2);return 2*R*Math.asin(Math.sqrt(a))}
 function distTxt(s){if(!userLoc||typeof s[4]!=='number'||typeof s[5]!=='number')return '';return ' · '+miles(userLoc.lat,userLoc.lng,s[4],s[5]).toFixed(1)+' mi'}
 function trendTxt(slug){
