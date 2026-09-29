@@ -1,0 +1,6055 @@
+{
+ "fetched_at": "2026-09-29T14:14:02.067040+00:00",
+ "metro": "atlanta",
+ "areas": [
+  {
+   "name": "Downtown",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.749,
+    -84.388
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "135969",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "336 Joseph E Lowery Blvd NW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30314-3276",
+     "lat": 33.763655941914,
+     "lng": -84.417673945427,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": 3.99,
+       "posted_at": "2026-09-28T21:24:52.161Z",
+       "age_hours": 16.8
+      },
+      "midgrade": {
+       "card": 4.99,
+       "cash": 4.89,
+       "posted_at": "2026-09-28T21:24:52.237Z",
+       "age_hours": 16.8
+      },
+      "premium": {
+       "card": 5.69,
+       "cash": 5.59,
+       "posted_at": "2026-09-28T21:24:52.315Z",
+       "age_hours": 16.8
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 1,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T21:24:52.161Z",
+     "price_age_hours": 16.8
+    },
+    {
+     "station_id": "145119",
+     "brand": "Circle K",
+     "name": "Chevron",
+     "membership": false,
+     "address": "111 Boulevard NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30312-1609",
+     "lat": 33.757385458541,
+     "lng": -84.371695518494,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": 4.29,
+       "posted_at": "2026-09-29T13:20:22.294Z",
+       "age_hours": 0.9
+      },
+      "midgrade": {
+       "card": 4.99,
+       "cash": 4.99,
+       "posted_at": "2026-09-29T13:20:22.310Z",
+       "age_hours": 0.9
+      },
+      "premium": {
+       "card": 5.29,
+       "cash": 5.29,
+       "posted_at": "2026-09-29T13:17:14.060Z",
+       "age_hours": 0.9
+      },
+      "diesel": {
+       "card": 5.79,
+       "cash": 5.79,
+       "posted_at": "2026-09-29T13:17:14.077Z",
+       "age_hours": 0.9
+      }
+     },
+     "rank": 2,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T13:20:22.294Z",
+     "price_age_hours": 0.9
+    },
+    {
+     "station_id": "190537",
+     "brand": "Kroger",
+     "name": "Kroger",
+     "membership": false,
+     "address": "800 Glenwood Ave SE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30316-1814",
+     "lat": 33.741328076104,
+     "lng": -84.360972046852,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-27T15:18:36.502Z",
+       "age_hours": 46.9
+      },
+      "midgrade": {
+       "card": 4.69,
+       "cash": null,
+       "posted_at": "2026-09-27T15:18:36.517Z",
+       "age_hours": 46.9
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-27T15:18:36.533Z",
+       "age_hours": 46.9
+      },
+      "diesel": {
+       "card": 6.49,
+       "cash": null,
+       "posted_at": "2026-09-27T15:18:36.548Z",
+       "age_hours": 46.9
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-27T15:18:36.502Z",
+     "price_age_hours": 46.9
+    },
+    {
+     "station_id": "199872",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "135 UNIVERSITY AVE SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30315",
+     "lat": 33.721149,
+     "lng": -84.391768,
+     "fuels": {
+      "regular": {
+       "card": 4.36,
+       "cash": 0,
+       "posted_at": "2026-09-29T01:11:42.454Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.36,
+     "price_posted_at": "2026-09-29T01:11:42.454Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "195119",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "464 WINDSOR ST SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30312",
+     "lat": 33.741897,
+     "lng": -84.398214,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-29T04:07:46.619Z",
+       "age_hours": 10.1
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-29T04:07:46.619Z",
+     "price_age_hours": 10.1
+    },
+    {
+     "station_id": "158246",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "556 Northside Dr SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30310-2057",
+     "lat": 33.739738529093,
+     "lng": -84.407859742641,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": 4.19,
+       "posted_at": "2026-09-28T14:40:22.971Z",
+       "age_hours": 23.6
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-28T14:40:22.971Z",
+     "price_age_hours": 23.6
+    },
+    {
+     "station_id": "196955",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "516 LEE ST SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30310",
+     "lat": 33.740753,
+     "lng": -84.414032,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-29T04:09:13.832Z",
+       "age_hours": 10.1
+      },
+      "midgrade": {
+       "card": 5.09,
+       "cash": null,
+       "posted_at": "2026-09-29T04:09:13.847Z",
+       "age_hours": 10.1
+      },
+      "premium": {
+       "card": 5.69,
+       "cash": null,
+       "posted_at": "2026-09-29T04:09:13.863Z",
+       "age_hours": 10.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-29T04:09:13.832Z",
+     "price_age_hours": 10.1
+    },
+    {
+     "station_id": "123333",
+     "brand": "Texaco",
+     "name": "Texaco",
+     "membership": false,
+     "address": "535 Lee St SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30310-1929",
+     "lat": 33.740419,
+     "lng": -84.414415,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": 4.29,
+       "posted_at": "2026-09-29T04:09:06.205Z",
+       "age_hours": 10.1
+      },
+      "midgrade": {
+       "card": 4.99,
+       "cash": 4.89,
+       "posted_at": "2026-09-29T04:09:06.290Z",
+       "age_hours": 10.1
+      },
+      "premium": {
+       "card": 5.49,
+       "cash": 5.39,
+       "posted_at": "2026-09-29T04:09:06.368Z",
+       "age_hours": 10.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-29T04:09:06.205Z",
+     "price_age_hours": 10.1
+    },
+    {
+     "station_id": "88574",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "507 Joseph E Lowery Blvd SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30310",
+     "lat": 33.740977,
+     "lng": -84.417777,
+     "fuels": {
+      "regular": {
+       "card": 4.47,
+       "cash": null,
+       "posted_at": "2026-09-29T13:52:50.549Z",
+       "age_hours": 0.4
+      },
+      "midgrade": {
+       "card": 4.97,
+       "cash": null,
+       "posted_at": "2026-09-29T13:52:50.566Z",
+       "age_hours": 0.4
+      },
+      "premium": {
+       "card": 5.47,
+       "cash": null,
+       "posted_at": "2026-09-29T13:52:50.582Z",
+       "age_hours": 0.4
+      },
+      "diesel": {
+       "card": 6.49,
+       "cash": null,
+       "posted_at": "2026-09-29T13:52:50.595Z",
+       "age_hours": 0.4
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.47,
+     "price_posted_at": "2026-09-29T13:52:50.549Z",
+     "price_age_hours": 0.4
+    },
+    {
+     "station_id": "90419",
+     "brand": "Circle K",
+     "name": "76",
+     "membership": false,
+     "address": "74 Northside Dr SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30313-1402",
+     "lat": 33.752778189473,
+     "lng": -84.402642846107,
+     "fuels": {
+      "regular": {
+       "card": 4.49,
+       "cash": 4.39,
+       "posted_at": "2026-09-29T13:40:42.431Z",
+       "age_hours": 0.6
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.49,
+     "price_posted_at": "2026-09-29T13:40:42.431Z",
+     "price_age_hours": 0.6
+    }
+   ]
+  },
+  {
+   "name": "Midtown",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.784,
+    -84.383
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "200999",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "630 10th St NW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30318",
+     "lat": 33.781247416292,
+     "lng": -84.407819509506,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-28T04:16:29.830Z",
+       "age_hours": 34.0
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-28T23:21:02.661Z",
+       "age_hours": 14.9
+      },
+      "premium": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-28T23:21:02.677Z",
+       "age_hours": 14.9
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": null,
+       "posted_at": "2026-09-28T23:21:02.637Z",
+       "age_hours": 14.9
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-28T04:16:29.830Z",
+     "price_age_hours": 34.0
+    },
+    {
+     "station_id": "194733",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "1678 Howell Mill Rd",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30318",
+     "lat": 33.799863200765,
+     "lng": -84.416369965219,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:52.340Z",
+       "age_hours": 14.9
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:52.340Z",
+       "age_hours": 14.9
+      },
+      "premium": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:52.357Z",
+       "age_hours": 14.9
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:52.324Z",
+       "age_hours": 14.9
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-28T23:20:52.340Z",
+     "price_age_hours": 14.9
+    },
+    {
+     "station_id": "16021",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "1001 NORTHSIDE DR NW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30318",
+     "lat": 33.78177,
+     "lng": -84.40749,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": 3.99,
+       "posted_at": "2026-09-28T03:07:32.684Z",
+       "age_hours": 35.1
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 4.79,
+       "posted_at": "2026-09-29T04:07:35.100Z",
+       "age_hours": 10.1
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T03:07:32.684Z",
+     "price_age_hours": 35.1
+    },
+    {
+     "station_id": "145119",
+     "brand": "Circle K",
+     "name": "Chevron",
+     "membership": false,
+     "address": "111 Boulevard NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30312-1609",
+     "lat": 33.757385458541,
+     "lng": -84.371695518494,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": 4.29,
+       "posted_at": "2026-09-29T13:20:22.294Z",
+       "age_hours": 0.9
+      },
+      "midgrade": {
+       "card": 4.99,
+       "cash": 4.99,
+       "posted_at": "2026-09-29T13:20:22.310Z",
+       "age_hours": 0.9
+      },
+      "premium": {
+       "card": 5.29,
+       "cash": 5.29,
+       "posted_at": "2026-09-29T13:17:14.060Z",
+       "age_hours": 0.9
+      },
+      "diesel": {
+       "card": 5.79,
+       "cash": 5.79,
+       "posted_at": "2026-09-29T13:17:14.077Z",
+       "age_hours": 0.9
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T13:20:22.294Z",
+     "price_age_hours": 0.9
+    },
+    {
+     "station_id": "30205",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "1570 Monroe Dr NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30324-5017",
+     "lat": 33.797069967792,
+     "lng": -84.369270801544,
+     "fuels": {
+      "regular": {
+       "card": 4.35,
+       "cash": null,
+       "posted_at": "2026-09-28T16:06:12.638Z",
+       "age_hours": 22.1
+      },
+      "midgrade": {
+       "card": 4.85,
+       "cash": null,
+       "posted_at": "2026-09-28T16:06:12.654Z",
+       "age_hours": 22.1
+      },
+      "premium": {
+       "card": 5.35,
+       "cash": null,
+       "posted_at": "2026-09-28T16:06:12.669Z",
+       "age_hours": 22.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.35,
+     "price_posted_at": "2026-09-28T16:06:12.638Z",
+     "price_age_hours": 22.1
+    },
+    {
+     "station_id": "30204",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "329 14TH ST NW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30318",
+     "lat": 33.78618,
+     "lng": -84.397847,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-29T01:11:58.822Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 5.39,
+       "cash": null,
+       "posted_at": "2026-09-29T01:11:59.479Z",
+       "age_hours": 13.0
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-28T00:27:07.410Z",
+       "age_hours": 37.8
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-29T01:11:58.822Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "202310",
+     "brand": "Circle K",
+     "name": "Shell",
+     "membership": false,
+     "address": "1896 Piedmont Rd NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30324",
+     "lat": 33.809079823975,
+     "lng": -84.366040080785,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": 4.19,
+       "posted_at": "2026-09-29T03:28:22.878Z",
+       "age_hours": 10.8
+      },
+      "midgrade": {
+       "card": 5.29,
+       "cash": 5.19,
+       "posted_at": "2026-09-29T03:28:22.894Z",
+       "age_hours": 10.8
+      },
+      "premium": {
+       "card": 5.89,
+       "cash": 5.79,
+       "posted_at": "2026-09-29T03:28:22.909Z",
+       "age_hours": 10.8
+      },
+      "diesel": {
+       "card": 6.59,
+       "cash": 6.49,
+       "posted_at": "2026-09-29T03:28:22.925Z",
+       "age_hours": 10.8
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-29T03:28:22.878Z",
+     "price_age_hours": 10.8
+    },
+    {
+     "station_id": "90419",
+     "brand": "Circle K",
+     "name": "76",
+     "membership": false,
+     "address": "74 Northside Dr SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30313-1402",
+     "lat": 33.752778189473,
+     "lng": -84.402642846107,
+     "fuels": {
+      "regular": {
+       "card": 4.49,
+       "cash": 4.39,
+       "posted_at": "2026-09-29T13:40:42.431Z",
+       "age_hours": 0.6
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.49,
+     "price_posted_at": "2026-09-29T13:40:42.431Z",
+     "price_age_hours": 0.6
+    },
+    {
+     "station_id": "160145",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "160 PONCE DE LEON AVE NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30308",
+     "lat": 33.772484,
+     "lng": -84.382055,
+     "fuels": {
+      "regular": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-28T19:47:27.248Z",
+       "age_hours": 18.4
+      },
+      "midgrade": {
+       "card": 5.09,
+       "cash": null,
+       "posted_at": "2026-09-28T19:47:27.263Z",
+       "age_hours": 18.4
+      },
+      "premium": {
+       "card": 5.59,
+       "cash": null,
+       "posted_at": "2026-09-28T19:47:27.279Z",
+       "age_hours": 18.4
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.59,
+     "price_posted_at": "2026-09-28T19:47:27.248Z",
+     "price_age_hours": 18.4
+    },
+    {
+     "station_id": "42088",
+     "brand": "Chevron",
+     "name": "Standard",
+     "membership": false,
+     "address": "1025 N Highland Ave NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30306-3550",
+     "lat": 33.782702671115,
+     "lng": -84.354140460491,
+     "fuels": {
+      "regular": {
+       "card": 4.59,
+       "cash": 0,
+       "posted_at": "2026-09-29T01:11:03.592Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.59,
+     "price_posted_at": "2026-09-29T01:11:03.592Z",
+     "price_age_hours": 13.0
+    }
+   ]
+  },
+  {
+   "name": "Buckhead",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.956,
+    -84.378
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "42182",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "8200 Dunwoody Pl",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30350-3301",
+     "lat": 33.990395168485,
+     "lng": -84.343950748444,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:49.360Z",
+       "age_hours": 14.9
+      },
+      "midgrade": {
+       "card": 4.54,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:49.376Z",
+       "age_hours": 14.9
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-28T14:18:46.944Z",
+       "age_hours": 23.9
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 1,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T23:20:49.360Z",
+     "price_age_hours": 14.9
+    },
+    {
+     "station_id": "3706",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "4706 Lower Roswell Rd NE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30068",
+     "lat": 33.965057,
+     "lng": -84.414986,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": 0,
+       "posted_at": "2026-09-28T21:36:15.491Z",
+       "age_hours": 16.6
+      },
+      "midgrade": {
+       "card": 4.72,
+       "cash": 0,
+       "posted_at": "2026-09-28T21:36:15.506Z",
+       "age_hours": 16.6
+      },
+      "premium": {
+       "card": 5.17,
+       "cash": 0,
+       "posted_at": "2026-09-28T21:36:15.522Z",
+       "age_hours": 16.6
+      },
+      "diesel": {
+       "card": 6.25,
+       "cash": 0,
+       "posted_at": "2026-09-28T21:36:15.475Z",
+       "age_hours": 16.6
+      }
+     },
+     "rank": 2,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-28T21:36:15.491Z",
+     "price_age_hours": 16.6
+    },
+    {
+     "station_id": "208581",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "4724 Ashford Dunwoody Rd",
+     "city": "Dunwoody",
+     "state": "GA",
+     "zip": "30338",
+     "lat": 33.933231,
+     "lng": -84.33805,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-28T21:25:26.842Z",
+       "age_hours": 16.8
+      },
+      "midgrade": {
+       "card": 4.67,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:49.120Z",
+       "age_hours": 0.0
+      },
+      "premium": {
+       "card": 5.07,
+       "cash": null,
+       "posted_at": "2026-09-28T23:21:01.911Z",
+       "age_hours": 14.9
+      },
+      "diesel": {
+       "card": 6.29,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:49.151Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-28T21:25:26.842Z",
+     "price_age_hours": 16.8
+    },
+    {
+     "station_id": "38985",
+     "brand": "Shell",
+     "name": "Exxon",
+     "membership": false,
+     "address": "77 Perimeter Center Pkwy NE",
+     "city": "Dunwoody",
+     "state": "GA",
+     "zip": "30346-1806",
+     "lat": 33.924186947261,
+     "lng": -84.337367534633,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-28T19:32:43.902Z",
+       "age_hours": 18.7
+      },
+      "midgrade": {
+       "card": 4.68,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:42.840Z",
+       "age_hours": 0.0
+      },
+      "premium": {
+       "card": 5.04,
+       "cash": null,
+       "posted_at": "2026-09-28T19:32:43.918Z",
+       "age_hours": 18.7
+      },
+      "diesel": {
+       "card": 6.29,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:42.856Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-28T19:32:43.902Z",
+     "price_age_hours": 18.7
+    },
+    {
+     "station_id": "11830",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "7320 Roswell Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30328-1422",
+     "lat": 33.955001049822,
+     "lng": -84.365558624268,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:45.337Z",
+       "age_hours": 2.4
+      },
+      "midgrade": {
+       "card": 4.84,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:45.353Z",
+       "age_hours": 2.4
+      },
+      "premium": {
+       "card": 5.39,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:45.353Z",
+       "age_hours": 2.4
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-29T14:13:04.252Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T11:50:45.337Z",
+     "price_age_hours": 2.4
+    },
+    {
+     "station_id": "69445",
+     "brand": "Circle K",
+     "name": "Shell",
+     "membership": false,
+     "address": "7325 Roswell Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30328-1421",
+     "lat": 33.955098942257,
+     "lng": -84.364507198334,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:34.242Z",
+       "age_hours": 2.4
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-29T14:13:09.671Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T11:50:34.242Z",
+     "price_age_hours": 2.4
+    },
+    {
+     "station_id": "35072",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "7884 Roswell Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30350-4858",
+     "lat": 33.9731,
+     "lng": -84.35824,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T11:47:56.336Z",
+       "age_hours": 2.4
+      },
+      "midgrade": {
+       "card": 4.74,
+       "cash": null,
+       "posted_at": "2026-09-29T11:47:56.352Z",
+       "age_hours": 2.4
+      },
+      "premium": {
+       "card": 5.19,
+       "cash": null,
+       "posted_at": "2026-09-29T11:47:56.368Z",
+       "age_hours": 2.4
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T11:47:56.336Z",
+     "price_age_hours": 2.4
+    },
+    {
+     "station_id": "11827",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "133 Johnson Ferry Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30068",
+     "lat": 33.951272,
+     "lng": -84.41188,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T04:06:38.448Z",
+       "age_hours": 10.1
+      },
+      "midgrade": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-29T04:06:38.432Z",
+       "age_hours": 10.1
+      },
+      "premium": {
+       "card": 5.29,
+       "cash": null,
+       "posted_at": "2026-09-29T04:06:38.416Z",
+       "age_hours": 10.1
+      },
+      "diesel": {
+       "card": 6.29,
+       "cash": null,
+       "posted_at": "2026-09-29T14:13:47.592Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T04:06:38.448Z",
+     "price_age_hours": 10.1
+    },
+    {
+     "station_id": "119825",
+     "brand": "Exxon",
+     "name": "Exxon",
+     "membership": false,
+     "address": "8325 Roswell Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30350-2810",
+     "lat": 33.981931939257,
+     "lng": -84.349912029906,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-27T21:59:07.286Z",
+       "age_hours": 40.2
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.38,
+       "cash": null,
+       "posted_at": "2026-09-27T21:59:07.302Z",
+       "age_hours": 40.2
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-27T21:59:07.286Z",
+     "price_age_hours": 40.2
+    },
+    {
+     "station_id": "2578",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "1280 Johnson Ferry Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30068",
+     "lat": 33.980680602999,
+     "lng": -84.423939585686,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": 4.19,
+       "posted_at": "2026-09-27T14:44:58.922Z",
+       "age_hours": 47.5
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 5.49,
+       "cash": 0,
+       "posted_at": "2026-09-29T01:12:14.542Z",
+       "age_hours": 13.0
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-27T14:44:58.922Z",
+     "price_age_hours": 47.5
+    }
+   ]
+  },
+  {
+   "name": "Virginia-Highland",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.799,
+    -84.352
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "30209",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "1836 Briarcliff Rd",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30329-4008",
+     "lat": 33.806959299331,
+     "lng": -84.336107755889,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T01:36:07.331Z",
+       "age_hours": 12.6
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-29T01:36:07.347Z",
+       "age_hours": 12.6
+      },
+      "premium": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-29T01:36:07.363Z",
+       "age_hours": 12.6
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": null,
+       "posted_at": "2026-09-29T01:36:07.378Z",
+       "age_hours": 12.6
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T01:36:07.331Z",
+     "price_age_hours": 12.6
+    },
+    {
+     "station_id": "7473",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "2375 N Druid Hills Rd",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30329",
+     "lat": 33.827476362869,
+     "lng": -84.329702854157,
+     "fuels": {
+      "regular": {
+       "card": 4.06,
+       "cash": null,
+       "posted_at": "2026-09-28T14:18:50.432Z",
+       "age_hours": 23.9
+      },
+      "midgrade": {
+       "card": 4.46,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:52.679Z",
+       "age_hours": 14.9
+      },
+      "premium": {
+       "card": 4.86,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:52.695Z",
+       "age_hours": 14.9
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 2,
+     "regular_card": 4.06,
+     "price_posted_at": "2026-09-28T14:18:50.432Z",
+     "price_age_hours": 23.9
+    },
+    {
+     "station_id": "42094",
+     "brand": "Circle K",
+     "name": "Chevron",
+     "membership": false,
+     "address": "639 Morosgo Dr NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30324-3325",
+     "lat": 33.823403192596,
+     "lng": -84.3669962883,
+     "fuels": {
+      "regular": {
+       "card": 4.14,
+       "cash": 4.14,
+       "posted_at": "2026-09-29T13:20:09.556Z",
+       "age_hours": 0.9
+      },
+      "midgrade": {
+       "card": 4.82,
+       "cash": 4.82,
+       "posted_at": "2026-09-29T13:20:09.587Z",
+       "age_hours": 0.9
+      },
+      "premium": {
+       "card": 5.33,
+       "cash": 5.33,
+       "posted_at": "2026-09-29T13:20:09.618Z",
+       "age_hours": 0.9
+      },
+      "diesel": {
+       "card": 5.92,
+       "cash": 5.92,
+       "posted_at": "2026-09-29T13:20:09.649Z",
+       "age_hours": 0.9
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.14,
+     "price_posted_at": "2026-09-29T13:20:09.556Z",
+     "price_age_hours": 0.9
+    },
+    {
+     "station_id": "954",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "761 Sidney Marcus Blvd NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30324-3120",
+     "lat": 33.825453171253,
+     "lng": -84.362404346466,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:52.338Z",
+       "age_hours": 14.9
+      },
+      "midgrade": {
+       "card": 4.67,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:52.353Z",
+       "age_hours": 14.9
+      },
+      "premium": {
+       "card": 4.97,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:52.369Z",
+       "age_hours": 14.9
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-28T23:20:52.338Z",
+     "price_age_hours": 14.9
+    },
+    {
+     "station_id": "30205",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "1570 Monroe Dr NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30324-5017",
+     "lat": 33.797069967792,
+     "lng": -84.369270801544,
+     "fuels": {
+      "regular": {
+       "card": 4.35,
+       "cash": null,
+       "posted_at": "2026-09-28T16:06:12.638Z",
+       "age_hours": 22.1
+      },
+      "midgrade": {
+       "card": 4.85,
+       "cash": null,
+       "posted_at": "2026-09-28T16:06:12.654Z",
+       "age_hours": 22.1
+      },
+      "premium": {
+       "card": 5.35,
+       "cash": null,
+       "posted_at": "2026-09-28T16:06:12.669Z",
+       "age_hours": 22.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.35,
+     "price_posted_at": "2026-09-28T16:06:12.638Z",
+     "price_age_hours": 22.1
+    },
+    {
+     "station_id": "202310",
+     "brand": "Circle K",
+     "name": "Shell",
+     "membership": false,
+     "address": "1896 Piedmont Rd NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30324",
+     "lat": 33.809079823975,
+     "lng": -84.366040080785,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": 4.19,
+       "posted_at": "2026-09-29T03:28:22.878Z",
+       "age_hours": 10.8
+      },
+      "midgrade": {
+       "card": 5.29,
+       "cash": 5.19,
+       "posted_at": "2026-09-29T03:28:22.894Z",
+       "age_hours": 10.8
+      },
+      "premium": {
+       "card": 5.89,
+       "cash": 5.79,
+       "posted_at": "2026-09-29T03:28:22.909Z",
+       "age_hours": 10.8
+      },
+      "diesel": {
+       "card": 6.59,
+       "cash": 6.49,
+       "posted_at": "2026-09-29T03:28:22.925Z",
+       "age_hours": 10.8
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-29T03:28:22.878Z",
+     "price_age_hours": 10.8
+    },
+    {
+     "station_id": "42087",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "2289 N Druid Hills Rd",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30329-3106",
+     "lat": 33.828492396988,
+     "lng": -84.331033229828,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-28T12:25:47.824Z",
+       "age_hours": 25.8
+      },
+      "midgrade": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-28T12:25:47.856Z",
+       "age_hours": 25.8
+      },
+      "premium": {
+       "card": 5.29,
+       "cash": null,
+       "posted_at": "2026-09-28T12:25:47.871Z",
+       "age_hours": 25.8
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-28T12:26:19.800Z",
+       "age_hours": 25.8
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-28T12:25:47.824Z",
+     "price_age_hours": 25.8
+    },
+    {
+     "station_id": "16023",
+     "brand": "CITGO",
+     "name": "CITGO",
+     "membership": false,
+     "address": "1925 Mason Mill Rd",
+     "city": "Decatur",
+     "state": "GA",
+     "zip": "30033",
+     "lat": 33.806691805517,
+     "lng": -84.310645759106,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": 0,
+       "posted_at": "2026-09-28T13:12:35.659Z",
+       "age_hours": 25.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-28T13:12:35.659Z",
+     "price_age_hours": 25.0
+    },
+    {
+     "station_id": "42088",
+     "brand": "Chevron",
+     "name": "Standard",
+     "membership": false,
+     "address": "1025 N Highland Ave NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30306-3550",
+     "lat": 33.782702671115,
+     "lng": -84.354140460491,
+     "fuels": {
+      "regular": {
+       "card": 4.59,
+       "cash": 0,
+       "posted_at": "2026-09-29T01:11:03.592Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.59,
+     "price_posted_at": "2026-09-29T01:11:03.592Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "96895",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "1079 North Ave NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30307-1426",
+     "lat": 33.770875795132,
+     "lng": -84.352195858955,
+     "fuels": {
+      "regular": {
+       "card": 4.59,
+       "cash": 0,
+       "posted_at": "2026-09-28T14:40:53.108Z",
+       "age_hours": 23.6
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.59,
+     "price_posted_at": "2026-09-28T14:40:53.108Z",
+     "price_age_hours": 23.6
+    }
+   ]
+  },
+  {
+   "name": "Decatur",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.7748,
+    -84.2963
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "42355",
+     "brand": "Chevron",
+     "name": "Texaco",
+     "membership": false,
+     "address": "2832 N Decatur Rd",
+     "city": "Decatur",
+     "state": "GA",
+     "zip": "30033",
+     "lat": 33.794143675894,
+     "lng": -84.277035579086,
+     "fuels": {
+      "regular": {
+       "card": 4.04,
+       "cash": 4.04,
+       "posted_at": "2026-09-28T16:48:23.794Z",
+       "age_hours": 21.4
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.25,
+       "cash": 6.25,
+       "posted_at": "2026-09-28T16:48:23.872Z",
+       "age_hours": 21.4
+      }
+     },
+     "rank": 1,
+     "regular_card": 4.04,
+     "price_posted_at": "2026-09-28T16:48:23.794Z",
+     "price_age_hours": 21.4
+    },
+    {
+     "station_id": "114045",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "2767 E College Ave",
+     "city": "Decatur",
+     "state": "GA",
+     "zip": "30030",
+     "lat": 33.774909973144,
+     "lng": -84.276580810546,
+     "fuels": {
+      "regular": {
+       "card": 4.19,
+       "cash": 4.09,
+       "posted_at": "2026-09-28T16:10:48.066Z",
+       "age_hours": 22.1
+      },
+      "midgrade": {
+       "card": 4.99,
+       "cash": 4.89,
+       "posted_at": "2026-09-28T16:10:48.097Z",
+       "age_hours": 22.1
+      },
+      "premium": {
+       "card": 5.79,
+       "cash": 5.69,
+       "posted_at": "2026-09-28T16:10:48.113Z",
+       "age_hours": 22.1
+      },
+      "diesel": {
+       "card": 6.49,
+       "cash": 6.49,
+       "posted_at": "2026-09-29T04:00:47.367Z",
+       "age_hours": 10.2
+      }
+     },
+     "rank": 2,
+     "regular_card": 4.19,
+     "price_posted_at": "2026-09-28T16:10:48.066Z",
+     "price_age_hours": 22.1
+    },
+    {
+     "station_id": "136070",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "3568 MEMORIAL DR",
+     "city": "Decatur",
+     "state": "GA",
+     "zip": "30032",
+     "lat": 33.755024,
+     "lng": -84.267468,
+     "fuels": {
+      "regular": {
+       "card": 4.19,
+       "cash": 4.09,
+       "posted_at": "2026-09-29T01:12:44.496Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 6.29,
+       "posted_at": "2026-09-27T14:02:47.479Z",
+       "age_hours": 48.2
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.19,
+     "price_posted_at": "2026-09-29T01:12:44.496Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "113873",
+     "brand": "Exxon",
+     "name": "Exxon",
+     "membership": false,
+     "address": "3384 E Ponce de Leon Ave",
+     "city": "Scottdale",
+     "state": "GA",
+     "zip": "30079",
+     "lat": 33.793318893769,
+     "lng": -84.264516323796,
+     "fuels": {
+      "regular": {
+       "card": 4.19,
+       "cash": 0,
+       "posted_at": "2026-09-29T01:12:06.331Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.19,
+     "price_posted_at": "2026-09-29T01:12:06.331Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "42158",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "1910 Lawrenceville Hwy",
+     "city": "Decatur",
+     "state": "GA",
+     "zip": "30033",
+     "lat": 33.80339326631,
+     "lng": -84.278274178505,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-28T16:48:49.389Z",
+       "age_hours": 21.4
+      },
+      "midgrade": {
+       "card": 4.67,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:53.408Z",
+       "age_hours": 14.9
+      },
+      "premium": {
+       "card": 4.97,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:53.424Z",
+       "age_hours": 14.9
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:53.393Z",
+       "age_hours": 14.9
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-28T16:48:49.389Z",
+     "price_age_hours": 21.4
+    },
+    {
+     "station_id": "42166",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "570 Dekalb Industrial Way",
+     "city": "Decatur",
+     "state": "GA",
+     "zip": "30030",
+     "lat": 33.79360625625,
+     "lng": -84.276879429817,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": 4.19,
+       "posted_at": "2026-09-27T17:08:49.487Z",
+       "age_hours": 45.1
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-27T17:08:49.487Z",
+     "price_age_hours": 45.1
+    },
+    {
+     "station_id": "42356",
+     "brand": "Kroger",
+     "name": "Kroger",
+     "membership": false,
+     "address": "2875 N Decatur Rd",
+     "city": "Decatur",
+     "state": "GA",
+     "zip": "30033",
+     "lat": 33.792679496804,
+     "lng": -84.274905368694,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-28T22:29:29.293Z",
+       "age_hours": 15.7
+      },
+      "midgrade": {
+       "card": 4.64,
+       "cash": null,
+       "posted_at": "2026-09-28T22:29:29.308Z",
+       "age_hours": 15.7
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-28T22:29:29.324Z",
+       "age_hours": 15.7
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-28T22:29:29.293Z",
+     "price_age_hours": 15.7
+    },
+    {
+     "station_id": "42169",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2146 Lawrenceville Hwy",
+     "city": "Decatur",
+     "state": "GA",
+     "zip": "30033",
+     "lat": 33.810743114304,
+     "lng": -84.273234978318,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-27T18:44:04.792Z",
+       "age_hours": 43.5
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-27T18:44:04.792Z",
+       "age_hours": 43.5
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-27T18:44:04.792Z",
+     "price_age_hours": 43.5
+    },
+    {
+     "station_id": "144738",
+     "brand": "Texaco",
+     "name": "Texaco",
+     "membership": false,
+     "address": "3580 N Decatur Rd",
+     "city": "Scottdale",
+     "state": "GA",
+     "zip": "30079",
+     "lat": 33.78786,
+     "lng": -84.24754,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": 4.19,
+       "posted_at": "2026-09-28T21:01:49.912Z",
+       "age_hours": 17.2
+      },
+      "midgrade": {
+       "card": 4.79,
+       "cash": 0,
+       "posted_at": "2026-09-28T21:01:49.912Z",
+       "age_hours": 17.2
+      },
+      "premium": {
+       "card": 5.29,
+       "cash": 0,
+       "posted_at": "2026-09-28T21:01:49.928Z",
+       "age_hours": 17.2
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-28T21:01:49.912Z",
+     "price_age_hours": 17.2
+    },
+    {
+     "station_id": "70633",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "2371 GLENWOOD AVE SE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30317",
+     "lat": 33.74004,
+     "lng": -84.30941,
+     "fuels": {
+      "regular": {
+       "card": 4.35,
+       "cash": null,
+       "posted_at": "2026-09-29T01:11:13.111Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.35,
+     "price_posted_at": "2026-09-29T01:11:13.111Z",
+     "price_age_hours": 13.0
+    }
+   ]
+  },
+  {
+   "name": "East Atlanta",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.74,
+    -84.34
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "42079",
+     "brand": "Amoco",
+     "name": "Amoco",
+     "membership": false,
+     "address": "1420 Custer Ave",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30316",
+     "lat": 33.718804593397,
+     "lng": -84.341194242206,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": 3.99,
+       "posted_at": "2026-09-29T13:20:12.063Z",
+       "age_hours": 0.9
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": 4.49,
+       "posted_at": "2026-09-29T13:20:12.143Z",
+       "age_hours": 0.9
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": 4.99,
+       "posted_at": "2026-09-29T13:20:12.266Z",
+       "age_hours": 0.9
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T13:20:12.063Z",
+     "price_age_hours": 0.9
+    },
+    {
+     "station_id": "213688",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "1411 Bouldercrest Rd",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30316",
+     "lat": 33.717892797325,
+     "lng": -84.330458160902,
+     "fuels": {
+      "regular": {
+       "card": 4.15,
+       "cash": null,
+       "posted_at": "2026-09-28T00:15:30.851Z",
+       "age_hours": 38.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 2,
+     "regular_card": 4.15,
+     "price_posted_at": "2026-09-28T00:15:30.851Z",
+     "price_age_hours": 38.0
+    },
+    {
+     "station_id": "138616",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "1981 Flat Shoals Rd SE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30316-2856",
+     "lat": 33.725911404756,
+     "lng": -84.323174357414,
+     "fuels": {
+      "regular": {
+       "card": 4.24,
+       "cash": null,
+       "posted_at": "2026-09-27T21:33:28.980Z",
+       "age_hours": 40.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.29,
+       "cash": null,
+       "posted_at": "2026-09-26T21:26:06.190Z",
+       "age_hours": 64.8
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.24,
+     "price_posted_at": "2026-09-27T21:33:28.980Z",
+     "price_age_hours": 40.7
+    },
+    {
+     "station_id": "190537",
+     "brand": "Kroger",
+     "name": "Kroger",
+     "membership": false,
+     "address": "800 Glenwood Ave SE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30316-1814",
+     "lat": 33.741328076104,
+     "lng": -84.360972046852,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-27T15:18:36.502Z",
+       "age_hours": 46.9
+      },
+      "midgrade": {
+       "card": 4.69,
+       "cash": null,
+       "posted_at": "2026-09-27T15:18:36.517Z",
+       "age_hours": 46.9
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-27T15:18:36.533Z",
+       "age_hours": 46.9
+      },
+      "diesel": {
+       "card": 6.49,
+       "cash": null,
+       "posted_at": "2026-09-27T15:18:36.548Z",
+       "age_hours": 46.9
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-27T15:18:36.502Z",
+     "price_age_hours": 46.9
+    },
+    {
+     "station_id": "145119",
+     "brand": "Circle K",
+     "name": "Chevron",
+     "membership": false,
+     "address": "111 Boulevard NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30312-1609",
+     "lat": 33.757385458541,
+     "lng": -84.371695518494,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": 4.29,
+       "posted_at": "2026-09-29T13:20:22.294Z",
+       "age_hours": 0.9
+      },
+      "midgrade": {
+       "card": 4.99,
+       "cash": 4.99,
+       "posted_at": "2026-09-29T13:20:22.310Z",
+       "age_hours": 0.9
+      },
+      "premium": {
+       "card": 5.29,
+       "cash": 5.29,
+       "posted_at": "2026-09-29T13:17:14.060Z",
+       "age_hours": 0.9
+      },
+      "diesel": {
+       "card": 5.79,
+       "cash": 5.79,
+       "posted_at": "2026-09-29T13:17:14.077Z",
+       "age_hours": 0.9
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T13:20:22.294Z",
+     "price_age_hours": 0.9
+    },
+    {
+     "station_id": "70633",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "2371 GLENWOOD AVE SE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30317",
+     "lat": 33.74004,
+     "lng": -84.30941,
+     "fuels": {
+      "regular": {
+       "card": 4.35,
+       "cash": null,
+       "posted_at": "2026-09-29T01:11:13.111Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.35,
+     "price_posted_at": "2026-09-29T01:11:13.111Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "109088",
+     "brand": "Circle K",
+     "name": "Shell",
+     "membership": false,
+     "address": "350 Moreland Ave NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30307",
+     "lat": 33.763803,
+     "lng": -84.349475,
+     "fuels": {
+      "regular": {
+       "card": 4.59,
+       "cash": 4.49,
+       "posted_at": "2026-09-29T04:00:46.933Z",
+       "age_hours": 10.2
+      },
+      "midgrade": {
+       "card": 5.09,
+       "cash": 4.99,
+       "posted_at": "2026-09-29T04:00:46.971Z",
+       "age_hours": 10.2
+      },
+      "premium": {
+       "card": 5.59,
+       "cash": 5.49,
+       "posted_at": "2026-09-29T01:11:09.330Z",
+       "age_hours": 13.0
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.59,
+     "price_posted_at": "2026-09-29T04:00:46.933Z",
+     "price_age_hours": 10.2
+    },
+    {
+     "station_id": "96895",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "1079 North Ave NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30307-1426",
+     "lat": 33.770875795132,
+     "lng": -84.352195858955,
+     "fuels": {
+      "regular": {
+       "card": 4.59,
+       "cash": 0,
+       "posted_at": "2026-09-28T14:40:53.108Z",
+       "age_hours": 23.6
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.59,
+     "price_posted_at": "2026-09-28T14:40:53.108Z",
+     "price_age_hours": 23.6
+    },
+    {
+     "station_id": "42085",
+     "brand": "Circle K",
+     "name": "76",
+     "membership": false,
+     "address": "372 Moreland Ave NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30307-1927",
+     "lat": 33.764714002074,
+     "lng": -84.349516734464,
+     "fuels": {
+      "regular": {
+       "card": 4.69,
+       "cash": 4.59,
+       "posted_at": "2026-09-29T04:05:05.388Z",
+       "age_hours": 10.1
+      },
+      "midgrade": {
+       "card": 5.39,
+       "cash": 0,
+       "posted_at": "2026-09-29T04:05:05.508Z",
+       "age_hours": 10.1
+      },
+      "premium": {
+       "card": 6.09,
+       "cash": 5.89,
+       "posted_at": "2026-09-29T04:05:05.491Z",
+       "age_hours": 10.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.69,
+     "price_posted_at": "2026-09-29T04:05:05.388Z",
+     "price_age_hours": 10.1
+    },
+    {
+     "station_id": "128237",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "1161 Ponce De Leon Ave NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30306-4525",
+     "lat": 33.773508207293,
+     "lng": -84.349438548088,
+     "fuels": {
+      "regular": {
+       "card": 4.69,
+       "cash": 0,
+       "posted_at": "2026-09-28T01:10:44.292Z",
+       "age_hours": 37.1
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.69,
+     "price_posted_at": "2026-09-28T01:10:44.292Z",
+     "price_age_hours": 37.1
+    }
+   ]
+  },
+  {
+   "name": "West End",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.735,
+    -84.413
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "135969",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "336 Joseph E Lowery Blvd NW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30314-3276",
+     "lat": 33.763655941914,
+     "lng": -84.417673945427,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": 3.99,
+       "posted_at": "2026-09-28T21:24:52.161Z",
+       "age_hours": 16.8
+      },
+      "midgrade": {
+       "card": 4.99,
+       "cash": 4.89,
+       "posted_at": "2026-09-28T21:24:52.237Z",
+       "age_hours": 16.8
+      },
+      "premium": {
+       "card": 5.69,
+       "cash": 5.59,
+       "posted_at": "2026-09-28T21:24:52.315Z",
+       "age_hours": 16.8
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 1,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T21:24:52.161Z",
+     "price_age_hours": 16.8
+    },
+    {
+     "station_id": "117642",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "1219 Metropolitan Pkwy SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30310-3525",
+     "lat": 33.721927618047,
+     "lng": -84.40814617511,
+     "fuels": {
+      "regular": {
+       "card": 4.19,
+       "cash": null,
+       "posted_at": "2026-09-29T13:34:58.870Z",
+       "age_hours": 0.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 2,
+     "regular_card": 4.19,
+     "price_posted_at": "2026-09-29T13:34:58.870Z",
+     "price_age_hours": 0.7
+    },
+    {
+     "station_id": "199453",
+     "brand": "Amoco",
+     "name": "Exxon",
+     "membership": false,
+     "address": "1815 Martin Luther King Jr Dr",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30310",
+     "lat": 33.750751037922,
+     "lng": -84.44650311371,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": 4.19,
+       "posted_at": "2026-09-29T04:00:51.023Z",
+       "age_hours": 10.2
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T04:00:51.023Z",
+     "price_age_hours": 10.2
+    },
+    {
+     "station_id": "199872",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "135 UNIVERSITY AVE SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30315",
+     "lat": 33.721149,
+     "lng": -84.391768,
+     "fuels": {
+      "regular": {
+       "card": 4.36,
+       "cash": 0,
+       "posted_at": "2026-09-29T01:11:42.454Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.36,
+     "price_posted_at": "2026-09-29T01:11:42.454Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "123333",
+     "brand": "Texaco",
+     "name": "Texaco",
+     "membership": false,
+     "address": "535 Lee St SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30310-1929",
+     "lat": 33.740419,
+     "lng": -84.414415,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": 4.29,
+       "posted_at": "2026-09-29T04:09:06.205Z",
+       "age_hours": 10.1
+      },
+      "midgrade": {
+       "card": 4.99,
+       "cash": 4.89,
+       "posted_at": "2026-09-29T04:09:06.290Z",
+       "age_hours": 10.1
+      },
+      "premium": {
+       "card": 5.49,
+       "cash": 5.39,
+       "posted_at": "2026-09-29T04:09:06.368Z",
+       "age_hours": 10.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-29T04:09:06.205Z",
+     "price_age_hours": 10.1
+    },
+    {
+     "station_id": "196955",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "516 LEE ST SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30310",
+     "lat": 33.740753,
+     "lng": -84.414032,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-29T04:09:13.832Z",
+       "age_hours": 10.1
+      },
+      "midgrade": {
+       "card": 5.09,
+       "cash": null,
+       "posted_at": "2026-09-29T04:09:13.847Z",
+       "age_hours": 10.1
+      },
+      "premium": {
+       "card": 5.69,
+       "cash": null,
+       "posted_at": "2026-09-29T04:09:13.863Z",
+       "age_hours": 10.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-29T04:09:13.832Z",
+     "price_age_hours": 10.1
+    },
+    {
+     "station_id": "158246",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "556 Northside Dr SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30310-2057",
+     "lat": 33.739738529093,
+     "lng": -84.407859742641,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": 4.19,
+       "posted_at": "2026-09-28T14:40:22.971Z",
+       "age_hours": 23.6
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-28T14:40:22.971Z",
+     "price_age_hours": 23.6
+    },
+    {
+     "station_id": "195119",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "464 WINDSOR ST SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30312",
+     "lat": 33.741897,
+     "lng": -84.398214,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-29T04:07:46.619Z",
+       "age_hours": 10.1
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-29T04:07:46.619Z",
+     "price_age_hours": 10.1
+    },
+    {
+     "station_id": "88574",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "507 Joseph E Lowery Blvd SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30310",
+     "lat": 33.740977,
+     "lng": -84.417777,
+     "fuels": {
+      "regular": {
+       "card": 4.47,
+       "cash": null,
+       "posted_at": "2026-09-29T13:52:50.549Z",
+       "age_hours": 0.4
+      },
+      "midgrade": {
+       "card": 4.97,
+       "cash": null,
+       "posted_at": "2026-09-29T13:52:50.566Z",
+       "age_hours": 0.4
+      },
+      "premium": {
+       "card": 5.47,
+       "cash": null,
+       "posted_at": "2026-09-29T13:52:50.582Z",
+       "age_hours": 0.4
+      },
+      "diesel": {
+       "card": 6.49,
+       "cash": null,
+       "posted_at": "2026-09-29T13:52:50.595Z",
+       "age_hours": 0.4
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.47,
+     "price_posted_at": "2026-09-29T13:52:50.549Z",
+     "price_age_hours": 0.4
+    },
+    {
+     "station_id": "75642",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "923 Lee St SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30310-3301",
+     "lat": 33.729729207866,
+     "lng": -84.415882229805,
+     "fuels": {
+      "regular": {
+       "card": 4.49,
+       "cash": 4.39,
+       "posted_at": "2026-09-29T13:52:26.320Z",
+       "age_hours": 0.4
+      },
+      "midgrade": {
+       "card": 5.09,
+       "cash": 4.99,
+       "posted_at": "2026-09-29T13:52:26.336Z",
+       "age_hours": 0.4
+      },
+      "premium": {
+       "card": 5.49,
+       "cash": 5.39,
+       "posted_at": "2026-09-29T13:52:26.367Z",
+       "age_hours": 0.4
+      },
+      "diesel": {
+       "card": 6.69,
+       "cash": 6.59,
+       "posted_at": "2026-09-29T13:52:26.382Z",
+       "age_hours": 0.4
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.49,
+     "price_posted_at": "2026-09-29T13:52:26.320Z",
+     "price_age_hours": 0.4
+    }
+   ]
+  },
+  {
+   "name": "Sandy Springs",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.9304,
+    -84.3733
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "75063",
+     "brand": "Texaco",
+     "name": "Texaco",
+     "membership": false,
+     "address": "4308 N Peachtree Rd",
+     "city": "Chamblee",
+     "state": "GA",
+     "zip": "30341-1210",
+     "lat": 33.91929321703,
+     "lng": -84.297425821424,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": 4.09,
+       "posted_at": "2026-09-29T04:03:24.022Z",
+       "age_hours": 10.2
+      },
+      "midgrade": {
+       "card": 4.59,
+       "cash": 4.59,
+       "posted_at": "2026-09-29T04:03:24.131Z",
+       "age_hours": 10.2
+      },
+      "premium": {
+       "card": 5.09,
+       "cash": 5.09,
+       "posted_at": "2026-09-29T04:03:24.147Z",
+       "age_hours": 10.2
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": 0,
+       "posted_at": "2026-09-29T04:03:24.069Z",
+       "age_hours": 10.2
+      }
+     },
+     "rank": 1,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-29T04:03:24.022Z",
+     "price_age_hours": 10.2
+    },
+    {
+     "station_id": "42098",
+     "brand": "Amoco",
+     "name": "Amoco",
+     "membership": false,
+     "address": "5500 Northside Dr",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30327-4228",
+     "lat": 33.904865336339,
+     "lng": -84.431047439575,
+     "fuels": {
+      "regular": {
+       "card": 4.19,
+       "cash": null,
+       "posted_at": "2026-09-29T12:02:23.590Z",
+       "age_hours": 2.2
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-29T14:13:34.997Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 2,
+     "regular_card": 4.19,
+     "price_posted_at": "2026-09-29T12:02:23.590Z",
+     "price_age_hours": 2.2
+    },
+    {
+     "station_id": "208581",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "4724 Ashford Dunwoody Rd",
+     "city": "Dunwoody",
+     "state": "GA",
+     "zip": "30338",
+     "lat": 33.933231,
+     "lng": -84.33805,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-28T21:25:26.842Z",
+       "age_hours": 16.8
+      },
+      "midgrade": {
+       "card": 4.67,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:49.120Z",
+       "age_hours": 0.0
+      },
+      "premium": {
+       "card": 5.07,
+       "cash": null,
+       "posted_at": "2026-09-28T23:21:01.911Z",
+       "age_hours": 14.9
+      },
+      "diesel": {
+       "card": 6.29,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:49.151Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-28T21:25:26.842Z",
+     "price_age_hours": 16.8
+    },
+    {
+     "station_id": "38985",
+     "brand": "Shell",
+     "name": "Exxon",
+     "membership": false,
+     "address": "77 Perimeter Center Pkwy NE",
+     "city": "Dunwoody",
+     "state": "GA",
+     "zip": "30346-1806",
+     "lat": 33.924186947261,
+     "lng": -84.337367534633,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-28T19:32:43.902Z",
+       "age_hours": 18.7
+      },
+      "midgrade": {
+       "card": 4.68,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:42.840Z",
+       "age_hours": 0.0
+      },
+      "premium": {
+       "card": 5.04,
+       "cash": null,
+       "posted_at": "2026-09-28T19:32:43.918Z",
+       "age_hours": 18.7
+      },
+      "diesel": {
+       "card": 6.29,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:42.856Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-28T19:32:43.902Z",
+     "price_age_hours": 18.7
+    },
+    {
+     "station_id": "3706",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "4706 Lower Roswell Rd NE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30068",
+     "lat": 33.965057,
+     "lng": -84.414986,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": 0,
+       "posted_at": "2026-09-28T21:36:15.491Z",
+       "age_hours": 16.6
+      },
+      "midgrade": {
+       "card": 4.72,
+       "cash": 0,
+       "posted_at": "2026-09-28T21:36:15.506Z",
+       "age_hours": 16.6
+      },
+      "premium": {
+       "card": 5.17,
+       "cash": 0,
+       "posted_at": "2026-09-28T21:36:15.522Z",
+       "age_hours": 16.6
+      },
+      "diesel": {
+       "card": 6.25,
+       "cash": 0,
+       "posted_at": "2026-09-28T21:36:15.475Z",
+       "age_hours": 16.6
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-28T21:36:15.491Z",
+     "price_age_hours": 16.6
+    },
+    {
+     "station_id": "40762",
+     "brand": "Valero",
+     "name": "Valero",
+     "membership": false,
+     "address": "3500 Ashford Dunwoody Rd",
+     "city": "Brookhaven",
+     "state": "GA",
+     "zip": "30319-2002",
+     "lat": 33.893644855524,
+     "lng": -84.3288230896,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": 0,
+       "posted_at": "2026-09-29T01:11:12.684Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-29T01:11:12.684Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "97769",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "5701 Roswell Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30342-1104",
+     "lat": 33.910560352712,
+     "lng": -84.378642439842,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": 4.19,
+       "posted_at": "2026-09-28T10:32:38.719Z",
+       "age_hours": 27.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 6.59,
+       "posted_at": "2026-09-29T14:11:49.793Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-28T10:32:38.719Z",
+     "price_age_hours": 27.7
+    },
+    {
+     "station_id": "11830",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "7320 Roswell Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30328-1422",
+     "lat": 33.955001049822,
+     "lng": -84.365558624268,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:45.337Z",
+       "age_hours": 2.4
+      },
+      "midgrade": {
+       "card": 4.84,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:45.353Z",
+       "age_hours": 2.4
+      },
+      "premium": {
+       "card": 5.39,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:45.353Z",
+       "age_hours": 2.4
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-29T14:13:04.252Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T11:50:45.337Z",
+     "price_age_hours": 2.4
+    },
+    {
+     "station_id": "69445",
+     "brand": "Circle K",
+     "name": "Shell",
+     "membership": false,
+     "address": "7325 Roswell Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30328-1421",
+     "lat": 33.955098942257,
+     "lng": -84.364507198334,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:34.242Z",
+       "age_hours": 2.4
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-29T14:13:09.671Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T11:50:34.242Z",
+     "price_age_hours": 2.4
+    },
+    {
+     "station_id": "9167",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "5300 Roswell Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30342-1967",
+     "lat": 33.899762872166,
+     "lng": -84.380900859833,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-27T22:22:28.162Z",
+       "age_hours": 39.9
+      },
+      "midgrade": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:23.924Z",
+       "age_hours": 0.0
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.49,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:23.939Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-27T22:22:28.162Z",
+     "price_age_hours": 39.9
+    }
+   ]
+  },
+  {
+   "name": "Brookhaven",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.865,
+    -84.335
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "156647",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "2746 Clairmont Rd",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30329-2713",
+     "lat": 33.836935168315,
+     "lng": -84.312006711943,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-29T11:15:38.736Z",
+       "age_hours": 3.0
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-28T22:50:31.957Z",
+       "age_hours": 15.4
+      },
+      "premium": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-28T22:50:31.957Z",
+       "age_hours": 15.4
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": null,
+       "posted_at": "2026-09-28T22:50:31.973Z",
+       "age_hours": 15.4
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T11:15:38.736Z",
+     "price_age_hours": 3.0
+    },
+    {
+     "station_id": "7474",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "5347 Peachtree Blvd",
+     "city": "Chamblee",
+     "state": "GA",
+     "zip": "30341-2139",
+     "lat": 33.894286065631,
+     "lng": -84.305477142334,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-29T11:35:18.005Z",
+       "age_hours": 2.6
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:54.007Z",
+       "age_hours": 14.9
+      },
+      "premium": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:54.023Z",
+       "age_hours": 14.9
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": null,
+       "posted_at": "2026-09-29T14:14:01.964Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T11:35:18.005Z",
+     "price_age_hours": 2.6
+    },
+    {
+     "station_id": "212519",
+     "brand": "Amoco",
+     "name": "Amoco",
+     "membership": false,
+     "address": "3892 Buford Hwy NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30329-1004",
+     "lat": 33.857555047828,
+     "lng": -84.312923249791,
+     "fuels": {
+      "regular": {
+       "card": 3.94,
+       "cash": null,
+       "posted_at": "2026-09-27T19:18:43.402Z",
+       "age_hours": 42.9
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.94,
+     "price_posted_at": "2026-09-27T19:18:43.402Z",
+     "price_age_hours": 42.9
+    },
+    {
+     "station_id": "197289",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "3249 Buford Hwy NE",
+     "city": "Brookhaven",
+     "state": "GA",
+     "zip": "30329",
+     "lat": 33.841209627036,
+     "lng": -84.330024719238,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:53.441Z",
+       "age_hours": 14.9
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:53.456Z",
+       "age_hours": 14.9
+      },
+      "premium": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-29T01:24:17.743Z",
+       "age_hours": 12.8
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:53.441Z",
+       "age_hours": 14.9
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-28T23:20:53.441Z",
+     "price_age_hours": 14.9
+    },
+    {
+     "station_id": "11422",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "2898 CLAIRMONT RD NE",
+     "city": "Brookhaven",
+     "state": "GA",
+     "zip": "30329",
+     "lat": 33.84175,
+     "lng": -84.31381,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": 3.94,
+       "posted_at": "2026-09-29T11:16:28.963Z",
+       "age_hours": 3.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 5,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T11:16:28.963Z",
+     "price_age_hours": 3.0
+    },
+    {
+     "station_id": "118811",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "2755 Clairmont Rd",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30329-2712",
+     "lat": 33.837141566912,
+     "lng": -84.311463832855,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": 3.99,
+       "posted_at": "2026-09-29T11:14:35.436Z",
+       "age_hours": 3.0
+      },
+      "midgrade": {
+       "card": 4.59,
+       "cash": 4.59,
+       "posted_at": "2026-09-29T11:14:35.467Z",
+       "age_hours": 3.0
+      },
+      "premium": {
+       "card": 5.09,
+       "cash": 5.09,
+       "posted_at": "2026-09-29T11:14:35.483Z",
+       "age_hours": 3.0
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": 6.39,
+       "posted_at": "2026-09-29T11:14:35.498Z",
+       "age_hours": 3.0
+      }
+     },
+     "rank": 6,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T11:14:35.436Z",
+     "price_age_hours": 3.0
+    },
+    {
+     "station_id": "7473",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "2375 N Druid Hills Rd",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30329",
+     "lat": 33.827476362869,
+     "lng": -84.329702854157,
+     "fuels": {
+      "regular": {
+       "card": 4.06,
+       "cash": null,
+       "posted_at": "2026-09-28T14:18:50.432Z",
+       "age_hours": 23.9
+      },
+      "midgrade": {
+       "card": 4.46,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:52.679Z",
+       "age_hours": 14.9
+      },
+      "premium": {
+       "card": 4.86,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:52.695Z",
+       "age_hours": 14.9
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.06,
+     "price_posted_at": "2026-09-28T14:18:50.432Z",
+     "price_age_hours": 23.9
+    },
+    {
+     "station_id": "194381",
+     "brand": "RaceTrac",
+     "name": "RaceTrac",
+     "membership": false,
+     "address": "3630 Clairmont Rd",
+     "city": "Brookhaven",
+     "state": "GA",
+     "zip": "30341",
+     "lat": 33.86597,
+     "lng": -84.309883,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:07.544Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 4.67,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:07.560Z",
+       "age_hours": 1.2
+      },
+      "premium": {
+       "card": 4.97,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:07.575Z",
+       "age_hours": 1.2
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:07.591Z",
+       "age_hours": 1.2
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-29T13:01:07.544Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "42091",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "4050 Buford Hwy",
+     "city": "Chamblee",
+     "state": "GA",
+     "zip": "30345-1649",
+     "lat": 33.861418761624,
+     "lng": -84.308725968003,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-29T08:08:05.404Z",
+       "age_hours": 6.1
+      },
+      "midgrade": {
+       "card": 4.67,
+       "cash": null,
+       "posted_at": "2026-09-29T08:08:05.419Z",
+       "age_hours": 6.1
+      },
+      "premium": {
+       "card": 5.07,
+       "cash": null,
+       "posted_at": "2026-09-29T08:08:05.435Z",
+       "age_hours": 6.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-29T08:08:05.404Z",
+     "price_age_hours": 6.1
+    },
+    {
+     "station_id": "40762",
+     "brand": "Valero",
+     "name": "Valero",
+     "membership": false,
+     "address": "3500 Ashford Dunwoody Rd",
+     "city": "Brookhaven",
+     "state": "GA",
+     "zip": "30319-2002",
+     "lat": 33.893644855524,
+     "lng": -84.3288230896,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": 0,
+       "posted_at": "2026-09-29T01:11:12.684Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-29T01:11:12.684Z",
+     "price_age_hours": 13.0
+    }
+   ]
+  },
+  {
+   "name": "Marietta",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.9526,
+    -84.5499
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "123332",
+     "brand": "Texaco",
+     "name": "Texaco",
+     "membership": false,
+     "address": "574 Roswell St",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30060",
+     "lat": 33.950293,
+     "lng": -84.535568,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": 3.89,
+       "posted_at": "2026-09-29T11:12:50.712Z",
+       "age_hours": 3.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.19,
+       "cash": 6.19,
+       "posted_at": "2026-09-28T17:26:13.681Z",
+       "age_hours": 20.8
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T11:12:50.712Z",
+     "price_age_hours": 3.0
+    },
+    {
+     "station_id": "102423",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "630 Whitlock Ave SW",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30064",
+     "lat": 33.952154,
+     "lng": -84.570515,
+     "fuels": {
+      "regular": {
+       "card": 3.96,
+       "cash": null,
+       "posted_at": "2026-09-29T12:01:56.583Z",
+       "age_hours": 2.2
+      },
+      "midgrade": {
+       "card": 4.58,
+       "cash": null,
+       "posted_at": "2026-09-29T12:01:56.599Z",
+       "age_hours": 2.2
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-29T12:01:56.599Z",
+       "age_hours": 2.2
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.96,
+     "price_posted_at": "2026-09-29T12:01:56.583Z",
+     "price_age_hours": 2.2
+    },
+    {
+     "station_id": "100521",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "749 S MARIETTA PKWY SE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30060",
+     "lat": 33.942427,
+     "lng": -84.531143,
+     "fuels": {
+      "regular": {
+       "card": 3.96,
+       "cash": null,
+       "posted_at": "2026-09-29T11:36:46.989Z",
+       "age_hours": 2.6
+      },
+      "midgrade": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-29T11:36:47.005Z",
+       "age_hours": 2.6
+      },
+      "premium": {
+       "card": 5.39,
+       "cash": null,
+       "posted_at": "2026-09-29T11:36:47.021Z",
+       "age_hours": 2.6
+      },
+      "diesel": {
+       "card": 6.34,
+       "cash": null,
+       "posted_at": "2026-09-29T11:36:47.036Z",
+       "age_hours": 2.6
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.96,
+     "price_posted_at": "2026-09-29T11:36:46.989Z",
+     "price_age_hours": 2.6
+    },
+    {
+     "station_id": "176664",
+     "brand": "Gulf",
+     "name": "Gulf",
+     "membership": false,
+     "address": "855 S Cobb Drive",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30060",
+     "lat": 33.932117,
+     "lng": -84.548584,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": 3.99,
+       "posted_at": "2026-09-29T03:48:47.882Z",
+       "age_hours": 10.4
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T03:48:47.882Z",
+     "price_age_hours": 10.4
+    },
+    {
+     "station_id": "197039",
+     "brand": "RaceTrac",
+     "name": "RaceTrac",
+     "membership": false,
+     "address": "900 Whitlock Ave Nw",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30064",
+     "lat": 33.952497,
+     "lng": -84.577616,
+     "fuels": {
+      "regular": {
+       "card": 4.05,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:08.592Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 4.43,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:08.607Z",
+       "age_hours": 1.2
+      },
+      "premium": {
+       "card": 4.81,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:08.607Z",
+       "age_hours": 1.2
+      },
+      "diesel": {
+       "card": 6.28,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:08.623Z",
+       "age_hours": 1.2
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.05,
+     "price_posted_at": "2026-09-29T13:01:08.592Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "131211",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "600 S Marietta Pkwy",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30060",
+     "lat": 33.942795949275,
+     "lng": -84.534725546837,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T13:07:37.207Z",
+       "age_hours": 25.1
+      },
+      "midgrade": {
+       "card": 4.36,
+       "cash": null,
+       "posted_at": "2026-09-29T11:29:25.414Z",
+       "age_hours": 2.7
+      },
+      "premium": {
+       "card": 4.76,
+       "cash": null,
+       "posted_at": "2026-09-29T11:29:25.430Z",
+       "age_hours": 2.7
+      },
+      "diesel": {
+       "card": 6.34,
+       "cash": null,
+       "posted_at": "2026-09-29T11:29:25.430Z",
+       "age_hours": 2.7
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T13:07:37.207Z",
+     "price_age_hours": 25.1
+    },
+    {
+     "station_id": "128286",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "800 S Cobb Dr SE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30060",
+     "lat": 33.933578,
+     "lng": -84.548225,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": 3.99,
+       "posted_at": "2026-09-29T03:49:04.535Z",
+       "age_hours": 10.4
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-29T03:49:04.535Z",
+     "price_age_hours": 10.4
+    },
+    {
+     "station_id": "213574",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "31 Cobb Pkwy SE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30062",
+     "lat": 33.95016,
+     "lng": -84.519623,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": 4.09,
+       "posted_at": "2026-09-29T11:21:45.442Z",
+       "age_hours": 2.9
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": 4.39,
+       "posted_at": "2026-09-29T11:21:45.474Z",
+       "age_hours": 2.9
+      },
+      "premium": {
+       "card": 4.79,
+       "cash": 4.79,
+       "posted_at": "2026-09-29T11:21:45.505Z",
+       "age_hours": 2.9
+      },
+      "diesel": {
+       "card": 6.23,
+       "cash": 6.23,
+       "posted_at": "2026-09-29T11:21:45.521Z",
+       "age_hours": 2.9
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-29T11:21:45.442Z",
+     "price_age_hours": 2.9
+    },
+    {
+     "station_id": "3854",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "334 S Cobb Pkwy",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30060",
+     "lat": 33.944107,
+     "lng": -84.51727,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": 0,
+       "posted_at": "2026-09-29T11:23:42.340Z",
+       "age_hours": 2.8
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-29T11:23:42.340Z",
+     "price_age_hours": 2.8
+    },
+    {
+     "station_id": "744",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "671 N Cobb Pkwy",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30062",
+     "lat": 33.967961663867,
+     "lng": -84.537217319012,
+     "fuels": {
+      "regular": {
+       "card": 4.19,
+       "cash": null,
+       "posted_at": "2026-09-28T18:55:44.275Z",
+       "age_hours": 19.3
+      },
+      "midgrade": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-28T18:55:44.294Z",
+       "age_hours": 19.3
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-28T18:55:44.306Z",
+       "age_hours": 19.3
+      },
+      "diesel": {
+       "card": 6.19,
+       "cash": null,
+       "posted_at": "2026-09-28T18:55:44.322Z",
+       "age_hours": 19.3
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.19,
+     "price_posted_at": "2026-09-28T18:55:44.275Z",
+     "price_age_hours": 19.3
+    }
+   ]
+  },
+  {
+   "name": "Smyrna-Vinings",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.884,
+    -84.468
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "191115",
+     "brand": "Murphy USA",
+     "name": "Murphy USA",
+     "membership": false,
+     "address": "1787 Cobb Parkway South",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30060",
+     "lat": 33.908723,
+     "lng": -84.490775,
+     "fuels": {
+      "regular": {
+       "card": 3.54,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:38.359Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 3.9,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:38.328Z",
+       "age_hours": 1.2
+      },
+      "premium": {
+       "card": 4.25,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:38.343Z",
+       "age_hours": 1.2
+      },
+      "diesel": {
+       "card": 5.72,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:38.312Z",
+       "age_hours": 1.2
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.54,
+     "price_posted_at": "2026-09-29T13:01:38.359Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "11824",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "2041 Cobb Pkwy S",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30060-9260",
+     "lat": 33.90328921508,
+     "lng": -84.487137794495,
+     "fuels": {
+      "regular": {
+       "card": 3.88,
+       "cash": null,
+       "posted_at": "2026-09-29T13:06:37.228Z",
+       "age_hours": 1.1
+      },
+      "midgrade": {
+       "card": 4.38,
+       "cash": null,
+       "posted_at": "2026-09-29T13:06:37.244Z",
+       "age_hours": 1.1
+      },
+      "premium": {
+       "card": 4.88,
+       "cash": null,
+       "posted_at": "2026-09-29T13:06:37.260Z",
+       "age_hours": 1.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.88,
+     "price_posted_at": "2026-09-29T13:06:37.228Z",
+     "price_age_hours": 1.1
+    },
+    {
+     "station_id": "39842",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "2180 Windy Hill Rd SE",
+     "city": "Smyrna",
+     "state": "GA",
+     "zip": "30080-2263",
+     "lat": 33.900831476329,
+     "lng": -84.490506649017,
+     "fuels": {
+      "regular": {
+       "card": 3.88,
+       "cash": null,
+       "posted_at": "2026-09-29T13:04:09.476Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 4.23,
+       "cash": null,
+       "posted_at": "2026-09-29T13:04:09.487Z",
+       "age_hours": 1.2
+      },
+      "premium": {
+       "card": 4.58,
+       "cash": null,
+       "posted_at": "2026-09-29T13:04:09.499Z",
+       "age_hours": 1.2
+      },
+      "diesel": {
+       "card": 6.17,
+       "cash": null,
+       "posted_at": "2026-09-28T22:46:39.546Z",
+       "age_hours": 15.5
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.88,
+     "price_posted_at": "2026-09-29T13:04:09.476Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "1010",
+     "brand": "Car Spa",
+     "name": "Car Spa",
+     "membership": false,
+     "address": "2330 Windy Hill Rd SE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30067-8602",
+     "lat": 33.902870692109,
+     "lng": -84.486472606659,
+     "fuels": {
+      "regular": {
+       "card": 3.97,
+       "cash": null,
+       "posted_at": "2026-09-29T12:57:50.678Z",
+       "age_hours": 1.3
+      },
+      "midgrade": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-29T12:57:50.693Z",
+       "age_hours": 1.3
+      },
+      "premium": {
+       "card": 4.47,
+       "cash": null,
+       "posted_at": "2026-09-29T12:57:50.709Z",
+       "age_hours": 1.3
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.97,
+     "price_posted_at": "2026-09-29T12:57:50.678Z",
+     "price_age_hours": 1.3
+    },
+    {
+     "station_id": "42467",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "2804 Paces Ferry Rd SE",
+     "city": "Vinings",
+     "state": "GA",
+     "zip": "30339-3717",
+     "lat": 33.865608286265,
+     "lng": -84.471072806491,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-28T14:18:56.841Z",
+       "age_hours": 23.9
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-28T14:18:56.841Z",
+       "age_hours": 23.9
+      },
+      "premium": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-28T14:18:56.857Z",
+       "age_hours": 23.9
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 5,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-28T14:18:56.841Z",
+     "price_age_hours": 23.9
+    },
+    {
+     "station_id": "963",
+     "brand": "RaceTrac",
+     "name": "RaceTrac",
+     "membership": false,
+     "address": "2466 Delk Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30067",
+     "lat": 33.922133,
+     "lng": -84.481097,
+     "fuels": {
+      "regular": {
+       "card": 4.08,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:52.470Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 4.48,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:52.486Z",
+       "age_hours": 1.2
+      },
+      "premium": {
+       "card": 4.78,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:52.502Z",
+       "age_hours": 1.2
+      },
+      "diesel": {
+       "card": 6.29,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:52.517Z",
+       "age_hours": 1.2
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.08,
+     "price_posted_at": "2026-09-29T13:00:52.470Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "42308",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "1445 Powers Ferry Rd SE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30067",
+     "lat": 33.91685,
+     "lng": -84.465935,
+     "fuels": {
+      "regular": {
+       "card": 4.14,
+       "cash": 4.04,
+       "posted_at": "2026-09-27T15:32:30.341Z",
+       "age_hours": 46.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.14,
+     "price_posted_at": "2026-09-27T15:32:30.341Z",
+     "price_age_hours": 46.7
+    },
+    {
+     "station_id": "42395",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2001 Windy Hill Rd SE",
+     "city": "Smyrna",
+     "state": "GA",
+     "zip": "30080-2264",
+     "lat": 33.898965862841,
+     "lng": -84.495152235031,
+     "fuels": {
+      "regular": {
+       "card": 4.19,
+       "cash": 4.19,
+       "posted_at": "2026-09-27T22:10:03.969Z",
+       "age_hours": 40.1
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.19,
+     "price_posted_at": "2026-09-27T22:10:03.969Z",
+     "price_age_hours": 40.1
+    },
+    {
+     "station_id": "3856",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "1889 Cobb Pkwy S",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30060",
+     "lat": 33.905800309756,
+     "lng": -84.489508867264,
+     "fuels": {
+      "regular": {
+       "card": 4.19,
+       "cash": 3.99,
+       "posted_at": "2026-09-28T11:08:12.374Z",
+       "age_hours": 27.1
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.49,
+       "cash": 6.49,
+       "posted_at": "2026-09-28T11:08:12.452Z",
+       "age_hours": 27.1
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.19,
+     "price_posted_at": "2026-09-28T11:08:12.374Z",
+     "price_age_hours": 27.1
+    },
+    {
+     "station_id": "42098",
+     "brand": "Amoco",
+     "name": "Amoco",
+     "membership": false,
+     "address": "5500 Northside Dr",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30327-4228",
+     "lat": 33.904865336339,
+     "lng": -84.431047439575,
+     "fuels": {
+      "regular": {
+       "card": 4.19,
+       "cash": null,
+       "posted_at": "2026-09-29T12:02:23.590Z",
+       "age_hours": 2.2
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-29T14:13:34.997Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.19,
+     "price_posted_at": "2026-09-29T12:02:23.590Z",
+     "price_age_hours": 2.2
+    }
+   ]
+  },
+  {
+   "name": "Dunwoody",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.946,
+    -84.334
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "7474",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "5347 Peachtree Blvd",
+     "city": "Chamblee",
+     "state": "GA",
+     "zip": "30341-2139",
+     "lat": 33.894286065631,
+     "lng": -84.305477142334,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-29T11:35:18.005Z",
+       "age_hours": 2.6
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:54.007Z",
+       "age_hours": 14.9
+      },
+      "premium": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:54.023Z",
+       "age_hours": 14.9
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": null,
+       "posted_at": "2026-09-29T14:14:01.964Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T11:35:18.005Z",
+     "price_age_hours": 2.6
+    },
+    {
+     "station_id": "75063",
+     "brand": "Texaco",
+     "name": "Texaco",
+     "membership": false,
+     "address": "4308 N Peachtree Rd",
+     "city": "Chamblee",
+     "state": "GA",
+     "zip": "30341-1210",
+     "lat": 33.91929321703,
+     "lng": -84.297425821424,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": 4.09,
+       "posted_at": "2026-09-29T04:03:24.022Z",
+       "age_hours": 10.2
+      },
+      "midgrade": {
+       "card": 4.59,
+       "cash": 4.59,
+       "posted_at": "2026-09-29T04:03:24.131Z",
+       "age_hours": 10.2
+      },
+      "premium": {
+       "card": 5.09,
+       "cash": 5.09,
+       "posted_at": "2026-09-29T04:03:24.147Z",
+       "age_hours": 10.2
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": 0,
+       "posted_at": "2026-09-29T04:03:24.069Z",
+       "age_hours": 10.2
+      }
+     },
+     "rank": 2,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-29T04:03:24.022Z",
+     "price_age_hours": 10.2
+    },
+    {
+     "station_id": "42182",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "8200 Dunwoody Pl",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30350-3301",
+     "lat": 33.990395168485,
+     "lng": -84.343950748444,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:49.360Z",
+       "age_hours": 14.9
+      },
+      "midgrade": {
+       "card": 4.54,
+       "cash": null,
+       "posted_at": "2026-09-28T23:20:49.376Z",
+       "age_hours": 14.9
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-28T14:18:46.944Z",
+       "age_hours": 23.9
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T23:20:49.360Z",
+     "price_age_hours": 14.9
+    },
+    {
+     "station_id": "208581",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "4724 Ashford Dunwoody Rd",
+     "city": "Dunwoody",
+     "state": "GA",
+     "zip": "30338",
+     "lat": 33.933231,
+     "lng": -84.33805,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-28T21:25:26.842Z",
+       "age_hours": 16.8
+      },
+      "midgrade": {
+       "card": 4.67,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:49.120Z",
+       "age_hours": 0.0
+      },
+      "premium": {
+       "card": 5.07,
+       "cash": null,
+       "posted_at": "2026-09-28T23:21:01.911Z",
+       "age_hours": 14.9
+      },
+      "diesel": {
+       "card": 6.29,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:49.151Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-28T21:25:26.842Z",
+     "price_age_hours": 16.8
+    },
+    {
+     "station_id": "38985",
+     "brand": "Shell",
+     "name": "Exxon",
+     "membership": false,
+     "address": "77 Perimeter Center Pkwy NE",
+     "city": "Dunwoody",
+     "state": "GA",
+     "zip": "30346-1806",
+     "lat": 33.924186947261,
+     "lng": -84.337367534633,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-28T19:32:43.902Z",
+       "age_hours": 18.7
+      },
+      "midgrade": {
+       "card": 4.68,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:42.840Z",
+       "age_hours": 0.0
+      },
+      "premium": {
+       "card": 5.04,
+       "cash": null,
+       "posted_at": "2026-09-28T19:32:43.918Z",
+       "age_hours": 18.7
+      },
+      "diesel": {
+       "card": 6.29,
+       "cash": null,
+       "posted_at": "2026-09-29T14:12:42.856Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-28T19:32:43.902Z",
+     "price_age_hours": 18.7
+    },
+    {
+     "station_id": "40762",
+     "brand": "Valero",
+     "name": "Valero",
+     "membership": false,
+     "address": "3500 Ashford Dunwoody Rd",
+     "city": "Brookhaven",
+     "state": "GA",
+     "zip": "30319-2002",
+     "lat": 33.893644855524,
+     "lng": -84.3288230896,
+     "fuels": {
+      "regular": {
+       "card": 4.27,
+       "cash": 0,
+       "posted_at": "2026-09-29T01:11:12.684Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.27,
+     "price_posted_at": "2026-09-29T01:11:12.684Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "69445",
+     "brand": "Circle K",
+     "name": "Shell",
+     "membership": false,
+     "address": "7325 Roswell Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30328-1421",
+     "lat": 33.955098942257,
+     "lng": -84.364507198334,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:34.242Z",
+       "age_hours": 2.4
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-29T14:13:09.671Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T11:50:34.242Z",
+     "price_age_hours": 2.4
+    },
+    {
+     "station_id": "11830",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "7320 Roswell Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30328-1422",
+     "lat": 33.955001049822,
+     "lng": -84.365558624268,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:45.337Z",
+       "age_hours": 2.4
+      },
+      "midgrade": {
+       "card": 4.84,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:45.353Z",
+       "age_hours": 2.4
+      },
+      "premium": {
+       "card": 5.39,
+       "cash": null,
+       "posted_at": "2026-09-29T11:50:45.353Z",
+       "age_hours": 2.4
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-29T14:13:04.252Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T11:50:45.337Z",
+     "price_age_hours": 2.4
+    },
+    {
+     "station_id": "16058",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "4249 Dunwoody Club Dr",
+     "city": "Dunwoody",
+     "state": "GA",
+     "zip": "30350-5205",
+     "lat": 33.959908881783,
+     "lng": -84.303004145622,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-28T12:37:45.642Z",
+       "age_hours": 25.6
+      },
+      "midgrade": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-28T12:37:45.658Z",
+       "age_hours": 25.6
+      },
+      "premium": {
+       "card": 5.49,
+       "cash": null,
+       "posted_at": "2026-09-28T12:37:45.674Z",
+       "age_hours": 25.6
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-28T12:37:45.642Z",
+     "price_age_hours": 25.6
+    },
+    {
+     "station_id": "42089",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "4479 Chamblee Dunwoody Rd",
+     "city": "Dunwoody",
+     "state": "GA",
+     "zip": "30338-6208",
+     "lat": 33.921479992299,
+     "lng": -84.31394085288,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T12:17:13.145Z",
+       "age_hours": 1.9
+      },
+      "midgrade": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-29T12:17:13.155Z",
+       "age_hours": 1.9
+      },
+      "premium": {
+       "card": 5.29,
+       "cash": null,
+       "posted_at": "2026-09-29T12:17:13.155Z",
+       "age_hours": 1.9
+      },
+      "diesel": {
+       "card": 6.49,
+       "cash": null,
+       "posted_at": "2026-09-29T14:13:19.287Z",
+       "age_hours": 0.0
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T12:17:13.145Z",
+     "price_age_hours": 1.9
+    }
+   ]
+  },
+  {
+   "name": "Kennesaw",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    34.0232,
+    -84.615
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "14231",
+     "brand": "Murphy USA",
+     "name": "Murphy USA",
+     "membership": false,
+     "address": "3111 Cobb Pkwy. Nw",
+     "city": "Acworth",
+     "state": "GA",
+     "zip": "30101",
+     "lat": 34.030509,
+     "lng": -84.659629,
+     "fuels": {
+      "regular": {
+       "card": 3.46,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:42.906Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 3.91,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:42.919Z",
+       "age_hours": 1.2
+      },
+      "premium": {
+       "card": 4.21,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:42.935Z",
+       "age_hours": 1.2
+      },
+      "diesel": {
+       "card": 5.81,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:42.950Z",
+       "age_hours": 1.2
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.46,
+     "price_posted_at": "2026-09-29T13:01:42.906Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "42226",
+     "brand": "Murphy USA",
+     "name": "Murphy USA",
+     "membership": false,
+     "address": "2691 Chastain Meadows Pkwy.",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30066",
+     "lat": 34.017875,
+     "lng": -84.554626,
+     "fuels": {
+      "regular": {
+       "card": 3.49,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:56.776Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 3.9,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:56.776Z",
+       "age_hours": 1.2
+      },
+      "premium": {
+       "card": 4.2,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:56.791Z",
+       "age_hours": 1.2
+      },
+      "diesel": {
+       "card": 5.71,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:56.807Z",
+       "age_hours": 1.2
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.49,
+     "price_posted_at": "2026-09-29T13:01:56.776Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "42230",
+     "brand": "QuikTrip",
+     "name": "QuikTrip",
+     "membership": false,
+     "address": "2761 N Cobb Pkwy",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30152",
+     "lat": 34.019870118244,
+     "lng": -84.621870517731,
+     "fuels": {
+      "regular": {
+       "card": 3.84,
+       "cash": null,
+       "posted_at": "2026-09-28T14:57:02.404Z",
+       "age_hours": 23.3
+      },
+      "midgrade": {
+       "card": 4.24,
+       "cash": null,
+       "posted_at": "2026-09-28T05:04:55.104Z",
+       "age_hours": 33.2
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-28T02:03:57.019Z",
+       "age_hours": 36.2
+      },
+      "diesel": {
+       "card": 6.23,
+       "cash": null,
+       "posted_at": "2026-09-28T05:04:55.120Z",
+       "age_hours": 33.2
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.84,
+     "price_posted_at": "2026-09-28T14:57:02.404Z",
+     "price_age_hours": 23.3
+    },
+    {
+     "station_id": "78428",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "2520 Cobb Pkwy",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30152-3441",
+     "lat": 34.015997334368,
+     "lng": -84.615143537521,
+     "fuels": {
+      "regular": {
+       "card": 3.84,
+       "cash": 3.84,
+       "posted_at": "2026-09-28T16:57:35.015Z",
+       "age_hours": 21.3
+      },
+      "midgrade": {
+       "card": 4.24,
+       "cash": 4.24,
+       "posted_at": "2026-09-27T19:03:56.137Z",
+       "age_hours": 43.2
+      },
+      "premium": {
+       "card": 4.64,
+       "cash": 4.64,
+       "posted_at": "2026-09-27T19:03:56.169Z",
+       "age_hours": 43.2
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": 6.24,
+       "posted_at": "2026-09-27T19:03:56.184Z",
+       "age_hours": 43.2
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.84,
+     "price_posted_at": "2026-09-28T16:57:35.015Z",
+     "price_age_hours": 21.3
+    },
+    {
+     "station_id": "42235",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2515 N Cobb Pkwy",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30152",
+     "lat": 34.015083,
+     "lng": -84.61573,
+     "fuels": {
+      "regular": {
+       "card": 3.94,
+       "cash": 3.89,
+       "posted_at": "2026-09-27T19:04:18.179Z",
+       "age_hours": 43.2
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": 4.29,
+       "posted_at": "2026-09-27T19:04:18.210Z",
+       "age_hours": 43.2
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": 4.84,
+       "posted_at": "2026-09-27T19:04:18.226Z",
+       "age_hours": 43.2
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": 6.24,
+       "posted_at": "2026-09-27T19:04:18.320Z",
+       "age_hours": 43.2
+      }
+     },
+     "rank": 5,
+     "regular_card": 3.94,
+     "price_posted_at": "2026-09-27T19:04:18.179Z",
+     "price_age_hours": 43.2
+    },
+    {
+     "station_id": "121872",
+     "brand": "76",
+     "name": "76",
+     "membership": false,
+     "address": "3326 Cherokee St",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30144-1906",
+     "lat": 34.034003613037,
+     "lng": -84.605712890625,
+     "fuels": {
+      "regular": {
+       "card": 3.94,
+       "cash": 3.89,
+       "posted_at": "2026-09-29T03:59:54.059Z",
+       "age_hours": 10.2
+      },
+      "midgrade": {
+       "card": 4.44,
+       "cash": 4.39,
+       "posted_at": "2026-09-29T03:59:54.122Z",
+       "age_hours": 10.2
+      },
+      "premium": {
+       "card": 4.94,
+       "cash": 4.89,
+       "posted_at": "2026-09-29T03:59:54.106Z",
+       "age_hours": 10.2
+      },
+      "diesel": {
+       "card": 6.34,
+       "cash": 0,
+       "posted_at": "2026-09-29T03:59:54.075Z",
+       "age_hours": 10.2
+      }
+     },
+     "rank": 6,
+     "regular_card": 3.94,
+     "price_posted_at": "2026-09-29T03:59:54.059Z",
+     "price_age_hours": 10.2
+    },
+    {
+     "station_id": "83204",
+     "brand": "Texaco",
+     "name": "Texaco",
+     "membership": false,
+     "address": "3129 N Cobb Pkwy  NW",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30152",
+     "lat": 34.028788854246,
+     "lng": -84.649615287781,
+     "fuels": {
+      "regular": {
+       "card": 3.97,
+       "cash": null,
+       "posted_at": "2026-09-28T18:26:05.433Z",
+       "age_hours": 19.8
+      },
+      "midgrade": {
+       "card": 4.47,
+       "cash": null,
+       "posted_at": "2026-09-28T18:26:05.464Z",
+       "age_hours": 19.8
+      },
+      "premium": {
+       "card": 4.87,
+       "cash": null,
+       "posted_at": "2026-09-28T18:26:05.480Z",
+       "age_hours": 19.8
+      },
+      "diesel": {
+       "card": 6.37,
+       "cash": null,
+       "posted_at": "2026-09-29T02:16:54.777Z",
+       "age_hours": 12.0
+      }
+     },
+     "rank": 7,
+     "regular_card": 3.97,
+     "price_posted_at": "2026-09-28T18:26:05.433Z",
+     "price_age_hours": 19.8
+    },
+    {
+     "station_id": "92659",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "3053 N Cobb Pkwy",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30152",
+     "lat": 34.028877770126,
+     "lng": -84.650559425354,
+     "fuels": {
+      "regular": {
+       "card": 3.97,
+       "cash": null,
+       "posted_at": "2026-09-28T18:25:39.382Z",
+       "age_hours": 19.8
+      },
+      "midgrade": {
+       "card": 4.47,
+       "cash": null,
+       "posted_at": "2026-09-28T18:25:39.398Z",
+       "age_hours": 19.8
+      },
+      "premium": {
+       "card": 4.77,
+       "cash": null,
+       "posted_at": "2026-09-28T18:25:39.413Z",
+       "age_hours": 19.8
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 3.97,
+     "price_posted_at": "2026-09-28T18:25:39.382Z",
+     "price_age_hours": 19.8
+    },
+    {
+     "station_id": "106546",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "550 Ernest W Barrett Pkwy",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30144",
+     "lat": 34.008589198185,
+     "lng": -84.570693969727,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-28T18:34:49.132Z",
+       "age_hours": 19.7
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-28T18:34:49.148Z",
+       "age_hours": 19.7
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-28T18:34:49.164Z",
+       "age_hours": 19.7
+      },
+      "diesel": {
+       "card": 6.13,
+       "cash": null,
+       "posted_at": "2026-09-28T18:34:49.179Z",
+       "age_hours": 19.7
+      }
+     },
+     "rank": 9,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-28T18:34:49.132Z",
+     "price_age_hours": 19.7
+    },
+    {
+     "station_id": "124296",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "4138 S Main St",
+     "city": "Acworth",
+     "state": "GA",
+     "zip": "30101-5675",
+     "lat": 34.054843146648,
+     "lng": -84.663514494896,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": 3.99,
+       "posted_at": "2026-09-29T13:25:03.990Z",
+       "age_hours": 0.8
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": 5.99,
+       "posted_at": "2026-09-29T13:25:04.068Z",
+       "age_hours": 0.8
+      }
+     },
+     "rank": 10,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T13:25:03.990Z",
+     "price_age_hours": 0.8
+    }
+   ]
+  },
+  {
+   "name": "College Park-Hapeville",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.653,
+    -84.44
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "188341",
+     "brand": "Murphy Express",
+     "name": "Murphy Express",
+     "membership": false,
+     "address": "864 Cleveland Ave",
+     "city": "East Point",
+     "state": "GA",
+     "zip": "30344",
+     "lat": 33.680796,
+     "lng": -84.417087,
+     "fuels": {
+      "regular": {
+       "card": 3.73,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:10.130Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 4.21,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:10.097Z",
+       "age_hours": 1.2
+      },
+      "premium": {
+       "card": 4.56,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:10.113Z",
+       "age_hours": 1.2
+      },
+      "diesel": {
+       "card": 5.72,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:10.082Z",
+       "age_hours": 1.2
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.73,
+     "price_posted_at": "2026-09-29T13:01:10.130Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "128762",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "4875 Old National Hwy",
+     "city": "College Park",
+     "state": "GA",
+     "zip": "30337-6234",
+     "lat": 33.622709337995,
+     "lng": -84.474713802338,
+     "fuels": {
+      "regular": {
+       "card": 4.16,
+       "cash": 4.06,
+       "posted_at": "2026-09-28T22:39:40.766Z",
+       "age_hours": 15.6
+      },
+      "midgrade": {
+       "card": 4.94,
+       "cash": 0,
+       "posted_at": "2026-09-28T22:39:40.782Z",
+       "age_hours": 15.6
+      },
+      "premium": {
+       "card": 5.54,
+       "cash": 0,
+       "posted_at": "2026-09-28T22:39:40.797Z",
+       "age_hours": 15.6
+      },
+      "diesel": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 2,
+     "regular_card": 4.16,
+     "price_posted_at": "2026-09-28T22:39:40.766Z",
+     "price_age_hours": 15.6
+    },
+    {
+     "station_id": "99430",
+     "brand": "Valero",
+     "name": "Valero",
+     "membership": false,
+     "address": "5300 Riverdale Rd",
+     "city": "College Park",
+     "state": "GA",
+     "zip": "30349-5706",
+     "lat": 33.610393047134,
+     "lng": -84.436167776585,
+     "fuels": {
+      "regular": {
+       "card": 4.19,
+       "cash": 4.09,
+       "posted_at": "2026-09-28T21:20:26.623Z",
+       "age_hours": 16.9
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.19,
+     "price_posted_at": "2026-09-28T21:20:26.623Z",
+     "price_age_hours": 16.9
+    },
+    {
+     "station_id": "42189",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "1338 Virginia Ave",
+     "city": "East Point",
+     "state": "GA",
+     "zip": "30344-5214",
+     "lat": 33.658996645829,
+     "lng": -84.432959854603,
+     "fuels": {
+      "regular": {
+       "card": 4.25,
+       "cash": 4.15,
+       "posted_at": "2026-09-28T01:23:30.958Z",
+       "age_hours": 36.8
+      },
+      "midgrade": {
+       "card": 4.89,
+       "cash": 4.79,
+       "posted_at": "2026-09-28T01:23:30.974Z",
+       "age_hours": 36.8
+      },
+      "premium": {
+       "card": 5.49,
+       "cash": 5.39,
+       "posted_at": "2026-09-28T01:23:30.989Z",
+       "age_hours": 36.8
+      },
+      "diesel": {
+       "card": 6.45,
+       "cash": 6.35,
+       "posted_at": "2026-09-28T01:23:31.071Z",
+       "age_hours": 36.8
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.25,
+     "price_posted_at": "2026-09-28T01:23:30.958Z",
+     "price_age_hours": 36.8
+    },
+    {
+     "station_id": "197535",
+     "brand": "RaceTrac",
+     "name": "RaceTrac",
+     "membership": false,
+     "address": "1180 Virginia Ave",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30344",
+     "lat": 33.658388,
+     "lng": -84.427727,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:49.072Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 4.69,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:49.087Z",
+       "age_hours": 1.2
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:49.103Z",
+       "age_hours": 1.2
+      },
+      "diesel": {
+       "card": 6.34,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:49.119Z",
+       "age_hours": 1.2
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T13:00:49.072Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "39111",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "971 Virginia Ave",
+     "city": "Hapeville",
+     "state": "GA",
+     "zip": "30354-1339",
+     "lat": 33.659174351686,
+     "lng": -84.421048164368,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-28T14:40:09.185Z",
+       "age_hours": 23.6
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-29T01:12:49.137Z",
+       "age_hours": 13.0
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-28T14:40:09.185Z",
+     "price_age_hours": 23.6
+    },
+    {
+     "station_id": "163162",
+     "brand": "RaceTrac",
+     "name": "RaceTrac",
+     "membership": false,
+     "address": "2250 Camp Creek Pkwy",
+     "city": "College Park",
+     "state": "GA",
+     "zip": "30337",
+     "lat": 33.648767,
+     "lng": -84.463038,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:59.351Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 4.69,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:59.367Z",
+       "age_hours": 1.2
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:59.380Z",
+       "age_hours": 1.2
+      },
+      "diesel": {
+       "card": 6.34,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:59.396Z",
+       "age_hours": 1.2
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T13:00:59.351Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "142681",
+     "brand": "Amoco",
+     "name": "Amoco",
+     "membership": false,
+     "address": "1270 Cleveland Ave",
+     "city": "East Point",
+     "state": "GA",
+     "zip": "30344-3434",
+     "lat": 33.679532658841,
+     "lng": -84.430360794067,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-28T20:08:09.466Z",
+       "age_hours": 18.1
+      },
+      "midgrade": {
+       "card": 4.74,
+       "cash": null,
+       "posted_at": "2026-09-28T20:08:09.497Z",
+       "age_hours": 18.1
+      },
+      "premium": {
+       "card": 5.19,
+       "cash": null,
+       "posted_at": "2026-09-28T20:08:09.499Z",
+       "age_hours": 18.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-28T20:08:09.466Z",
+     "price_age_hours": 18.1
+    },
+    {
+     "station_id": "128758",
+     "brand": "BP",
+     "name": "BP",
+     "membership": false,
+     "address": "5097 W FAYETTEVILLE RD",
+     "city": "College Park",
+     "state": "GA",
+     "zip": "30349",
+     "lat": 33.61653,
+     "lng": -84.4499,
+     "fuels": {
+      "regular": {
+       "card": 4.29,
+       "cash": 4.19,
+       "posted_at": "2026-09-29T11:20:04.392Z",
+       "age_hours": 2.9
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.29,
+     "price_posted_at": "2026-09-29T11:20:04.392Z",
+     "price_age_hours": 2.9
+    },
+    {
+     "station_id": "125805",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "3537 Main St",
+     "city": "College Park",
+     "state": "GA",
+     "zip": "30337-2624",
+     "lat": 33.658888586771,
+     "lng": -84.448084831237,
+     "fuels": {
+      "regular": {
+       "card": 4.39,
+       "cash": 4.29,
+       "posted_at": "2026-09-29T03:59:58.789Z",
+       "age_hours": 10.2
+      },
+      "midgrade": {
+       "card": 4.99,
+       "cash": 4.89,
+       "posted_at": "2026-09-29T03:59:58.804Z",
+       "age_hours": 10.2
+      },
+      "premium": {
+       "card": 5.39,
+       "cash": 5.29,
+       "posted_at": "2026-09-29T03:59:58.835Z",
+       "age_hours": 10.2
+      },
+      "diesel": {
+       "card": 6.69,
+       "cash": 6.59,
+       "posted_at": "2026-09-28T03:00:33.542Z",
+       "age_hours": 35.2
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.39,
+     "price_posted_at": "2026-09-29T03:59:58.789Z",
+     "price_age_hours": 10.2
+    }
+   ]
+  }
+ ],
+ "area_count": 14
+}

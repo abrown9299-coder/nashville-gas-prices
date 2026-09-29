@@ -1,0 +1,4327 @@
+{
+ "fetched_at": "2026-09-29T14:14:02.182753+00:00",
+ "metro": "birmingham",
+ "areas": [
+  {
+   "name": "Downtown",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.5207,
+    -86.8025
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "211882",
+     "brand": "Speedway",
+     "name": "Speedway",
+     "membership": false,
+     "address": "1617 Finley Blvd",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35204",
+     "lat": 33.539593694776,
+     "lng": -86.8280959681,
+     "fuels": {
+      "regular": {
+       "card": 3.94,
+       "cash": null,
+       "posted_at": "2026-09-28T14:32:13.725Z",
+       "age_hours": 23.7
+      },
+      "midgrade": {
+       "card": 4.28,
+       "cash": null,
+       "posted_at": "2026-09-28T14:32:13.725Z",
+       "age_hours": 23.7
+      },
+      "premium": {
+       "card": 4.58,
+       "cash": null,
+       "posted_at": "2026-09-28T14:32:13.740Z",
+       "age_hours": 23.7
+      },
+      "diesel": {
+       "card": 5.95,
+       "cash": null,
+       "posted_at": "2026-09-28T14:32:13.772Z",
+       "age_hours": 23.7
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.94,
+     "price_posted_at": "2026-09-28T14:32:13.725Z",
+     "price_age_hours": 23.7
+    },
+    {
+     "station_id": "207936",
+     "brand": "MAPCO",
+     "name": "MAPCO",
+     "membership": false,
+     "address": "1901 Finley Blvd",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35234",
+     "lat": 33.541855,
+     "lng": -86.825042,
+     "fuels": {
+      "regular": {
+       "card": 3.98,
+       "cash": null,
+       "posted_at": "2026-09-28T14:32:52.851Z",
+       "age_hours": 23.7
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-28T14:32:52.851Z",
+       "age_hours": 23.7
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-28T14:32:52.866Z",
+       "age_hours": 23.7
+      },
+      "diesel": {
+       "card": 5.97,
+       "cash": null,
+       "posted_at": "2026-09-28T14:32:52.882Z",
+       "age_hours": 23.7
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.98,
+     "price_posted_at": "2026-09-28T14:32:52.851Z",
+     "price_age_hours": 23.7
+    },
+    {
+     "station_id": "86501",
+     "brand": "CITGO",
+     "name": "CITGO",
+     "membership": false,
+     "address": "1101 3rd Ave N",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35203",
+     "lat": 33.51030549357,
+     "lng": -86.818985939026,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-27T14:33:08.028Z",
+       "age_hours": 47.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-27T14:33:08.028Z",
+     "price_age_hours": 47.7
+    },
+    {
+     "station_id": "122312",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "1700 Tallapoosa St",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35234",
+     "lat": 33.551570457001,
+     "lng": -86.783473491669,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T04:38:29.829Z",
+       "age_hours": 9.6
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-29T04:38:29.845Z",
+       "age_hours": 9.6
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-29T04:38:29.861Z",
+       "age_hours": 9.6
+      },
+      "diesel": {
+       "card": 6.09,
+       "cash": null,
+       "posted_at": "2026-09-29T04:38:29.876Z",
+       "age_hours": 9.6
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T04:38:29.829Z",
+     "price_age_hours": 9.6
+    },
+    {
+     "station_id": "374",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2320 University Blvd",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35233",
+     "lat": 33.506727,
+     "lng": -86.794603,
+     "fuels": {
+      "regular": {
+       "card": 4.08,
+       "cash": null,
+       "posted_at": "2026-09-28T12:16:44.251Z",
+       "age_hours": 26.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.08,
+     "price_posted_at": "2026-09-28T12:16:44.251Z",
+     "price_age_hours": 26.0
+    },
+    {
+     "station_id": "208549",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "3019 12th Ave N",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35234",
+     "lat": 33.533829,
+     "lng": -86.799459,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T21:10:24.788Z",
+       "age_hours": 17.1
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T21:10:24.788Z",
+     "price_age_hours": 17.1
+    },
+    {
+     "station_id": "16100",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "1100 4th Ave N",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35203",
+     "lat": 33.511647317022,
+     "lng": -86.819755733013,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-27T14:33:15.307Z",
+       "age_hours": 47.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-27T14:33:15.307Z",
+     "price_age_hours": 47.7
+    },
+    {
+     "station_id": "84561",
+     "brand": "Marathon",
+     "name": "Marathon",
+     "membership": false,
+     "address": "1101 4th Ave North",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35203",
+     "lat": 33.511175444813,
+     "lng": -86.819590777159,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-27T14:33:11.464Z",
+       "age_hours": 47.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-27T14:33:11.464Z",
+     "price_age_hours": 47.7
+    },
+    {
+     "station_id": "16098",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "416 10th St N",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35203",
+     "lat": 33.510907826146,
+     "lng": -86.821979284287,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-27T14:33:26.365Z",
+       "age_hours": 47.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-27T14:33:26.380Z",
+       "age_hours": 47.7
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-27T14:33:26.365Z",
+     "price_age_hours": 47.7
+    },
+    {
+     "station_id": "85672",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "900 University Blvd",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35205",
+     "lat": 33.49885559082,
+     "lng": -86.814949035644,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T15:28:21.195Z",
+       "age_hours": 22.8
+      },
+      "midgrade": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-27T15:58:17.397Z",
+       "age_hours": 46.3
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-27T15:58:17.412Z",
+       "age_hours": 46.3
+      },
+      "diesel": {
+       "card": 6.09,
+       "cash": null,
+       "posted_at": "2026-09-28T15:28:21.211Z",
+       "age_hours": 22.8
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T15:28:21.195Z",
+     "price_age_hours": 22.8
+    }
+   ]
+  },
+  {
+   "name": "Homewood",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.4684,
+    -86.8089
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "4968",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2908 Independence Dr",
+     "city": "Homewood",
+     "state": "AL",
+     "zip": "35209",
+     "lat": 33.478900885454,
+     "lng": -86.78763628006,
+     "fuels": {
+      "regular": {
+       "card": 4.08,
+       "cash": null,
+       "posted_at": "2026-09-29T01:13:15.246Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 1,
+     "regular_card": 4.08,
+     "price_posted_at": "2026-09-29T01:13:15.246Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "124588",
+     "brand": "Marathon",
+     "name": "Marathon",
+     "membership": false,
+     "address": "401 Palisades Blvd",
+     "city": "Homewood",
+     "state": "AL",
+     "zip": "35209",
+     "lat": 33.468923020589,
+     "lng": -86.818268179631,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T20:51:18.515Z",
+       "age_hours": 17.4
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 2,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T20:51:18.515Z",
+     "price_age_hours": 17.4
+    },
+    {
+     "station_id": "16097",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "700 Valley Ave",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35209",
+     "lat": 33.476860534045,
+     "lng": -86.814436912537,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T20:49:00.524Z",
+       "age_hours": 17.4
+      },
+      "midgrade": {
+       "card": 5.09,
+       "cash": null,
+       "posted_at": "2026-09-28T20:49:00.528Z",
+       "age_hours": 17.4
+      },
+      "premium": {
+       "card": 5.29,
+       "cash": null,
+       "posted_at": "2026-09-28T20:49:00.543Z",
+       "age_hours": 17.4
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T20:49:00.524Z",
+     "price_age_hours": 17.4
+    },
+    {
+     "station_id": "177296",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "208 Oxmoor Rd",
+     "city": "Homewood",
+     "state": "AL",
+     "zip": "35209",
+     "lat": 33.462927289188,
+     "lng": -86.827059388161,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-29T05:50:19.232Z",
+       "age_hours": 8.4
+      },
+      "midgrade": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-29T05:50:19.248Z",
+       "age_hours": 8.4
+      },
+      "premium": {
+       "card": 5.29,
+       "cash": null,
+       "posted_at": "2026-09-29T05:50:19.294Z",
+       "age_hours": 8.4
+      },
+      "diesel": {
+       "card": 6.09,
+       "cash": null,
+       "posted_at": "2026-09-29T05:50:19.310Z",
+       "age_hours": 8.4
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-29T05:50:19.232Z",
+     "price_age_hours": 8.4
+    },
+    {
+     "station_id": "86496",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "197 Oxmoor Rd",
+     "city": "Homewood",
+     "state": "AL",
+     "zip": "35209",
+     "lat": 33.462264,
+     "lng": -86.827494,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-29T05:50:11.276Z",
+       "age_hours": 8.4
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-29T05:50:11.307Z",
+       "age_hours": 8.4
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-29T05:50:11.340Z",
+       "age_hours": 8.4
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-29T05:50:11.276Z",
+     "price_age_hours": 8.4
+    },
+    {
+     "station_id": "5031",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "1250 Columbiana Rd",
+     "city": "Homewood",
+     "state": "AL",
+     "zip": "35216",
+     "lat": 33.451835475333,
+     "lng": -86.811518669128,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-29T01:20:38.944Z",
+       "age_hours": 12.9
+      },
+      "midgrade": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-27T19:19:32.660Z",
+       "age_hours": 42.9
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-27T19:19:32.675Z",
+       "age_hours": 42.9
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": null,
+       "posted_at": "2026-09-29T01:20:38.929Z",
+       "age_hours": 12.9
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-29T01:20:38.944Z",
+     "price_age_hours": 12.9
+    },
+    {
+     "station_id": "123531",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "213 Green Springs Ave S",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35205",
+     "lat": 33.483876277769,
+     "lng": -86.824479103088,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-27T17:50:48.852Z",
+       "age_hours": 44.4
+      },
+      "midgrade": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-29T03:59:46.353Z",
+       "age_hours": 10.2
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-29T03:59:46.369Z",
+       "age_hours": 10.2
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-27T17:50:48.852Z",
+     "price_age_hours": 44.4
+    },
+    {
+     "station_id": "5082",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "2032 Green Springs Hwy",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35205",
+     "lat": 33.485540643782,
+     "lng": -86.823127269745,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-27T17:50:29.049Z",
+       "age_hours": 44.4
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-27T17:50:29.049Z",
+     "price_age_hours": 44.4
+    },
+    {
+     "station_id": "173598",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "705 Montgomery Hwy",
+     "city": "Vestavia Hills",
+     "state": "AL",
+     "zip": "35216",
+     "lat": 33.446445641002,
+     "lng": -86.790318489074,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-27T14:36:12.566Z",
+       "age_hours": 47.6
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-27T14:36:12.597Z",
+       "age_hours": 47.6
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-27T14:36:12.613Z",
+       "age_hours": 47.6
+      },
+      "diesel": {
+       "card": 6.49,
+       "cash": null,
+       "posted_at": "2026-09-27T14:36:17.189Z",
+       "age_hours": 47.6
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-27T14:36:12.566Z",
+     "price_age_hours": 47.6
+    },
+    {
+     "station_id": "86500",
+     "brand": "Marathon",
+     "name": "Marathon",
+     "membership": false,
+     "address": "39 W Oxmoor Rd",
+     "city": "Homewood",
+     "state": "AL",
+     "zip": "35209",
+     "lat": 33.454848103084,
+     "lng": -86.839450931213,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-29T05:50:06.060Z",
+       "age_hours": 8.4
+      },
+      "midgrade": {
+       "card": 4.65,
+       "cash": null,
+       "posted_at": "2026-09-29T05:50:06.091Z",
+       "age_hours": 8.4
+      },
+      "premium": {
+       "card": 5.05,
+       "cash": null,
+       "posted_at": "2026-09-29T05:50:06.122Z",
+       "age_hours": 8.4
+      },
+      "diesel": {
+       "card": 6.19,
+       "cash": null,
+       "posted_at": "2026-09-29T05:50:06.153Z",
+       "age_hours": 8.4
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-29T05:50:06.060Z",
+     "price_age_hours": 8.4
+    }
+   ]
+  },
+  {
+   "name": "Hoover",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.376,
+    -86.811
+   ],
+   "candidates": 39,
+   "stations": [
+    {
+     "station_id": "4959",
+     "brand": "Murphy USA",
+     "name": "Murphy USA",
+     "membership": false,
+     "address": "2191 Pelham Pkwy.",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.339368,
+     "lng": -86.792237,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:49.739Z",
+       "age_hours": 0.7
+      },
+      "midgrade": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:49.754Z",
+       "age_hours": 0.7
+      },
+      "premium": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:49.774Z",
+       "age_hours": 0.7
+      },
+      "diesel": {
+       "card": 5.92,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:49.786Z",
+       "age_hours": 0.7
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T13:30:49.739Z",
+     "price_age_hours": 0.7
+    },
+    {
+     "station_id": "4966",
+     "brand": "RaceWay",
+     "name": "RaceWay",
+     "membership": false,
+     "address": "310 Cahaba Valley Rd",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.333098,
+     "lng": -86.786276,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:52.051Z",
+       "age_hours": 3.2
+      },
+      "midgrade": {
+       "card": 4.32,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:52.067Z",
+       "age_hours": 3.2
+      },
+      "premium": {
+       "card": 4.62,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:52.083Z",
+       "age_hours": 3.2
+      },
+      "diesel": {
+       "card": 5.98,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:52.098Z",
+       "age_hours": 3.2
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T11:02:52.051Z",
+     "price_age_hours": 3.2
+    },
+    {
+     "station_id": "16132",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "100 Riverchase Pkwy",
+     "city": "Hoover",
+     "state": "AL",
+     "zip": "35244",
+     "lat": 33.351913966895,
+     "lng": -86.783645153046,
+     "fuels": {
+      "regular": {
+       "card": 3.91,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:49.053Z",
+       "age_hours": 3.2
+      },
+      "midgrade": {
+       "card": 4.31,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:49.069Z",
+       "age_hours": 3.2
+      },
+      "premium": {
+       "card": 4.91,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:49.084Z",
+       "age_hours": 3.2
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.91,
+     "price_posted_at": "2026-09-29T11:02:49.053Z",
+     "price_age_hours": 3.2
+    },
+    {
+     "station_id": "42831",
+     "brand": "Exxon",
+     "name": "Exxon",
+     "membership": false,
+     "address": "2030 Old Montgomery Hwy",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.346097499896,
+     "lng": -86.800682544708,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T13:20:25.280Z",
+       "age_hours": 0.9
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-29T13:20:25.296Z",
+       "age_hours": 0.9
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T13:20:25.280Z",
+     "price_age_hours": 0.9
+    },
+    {
+     "station_id": "16143",
+     "brand": "RaceWay",
+     "name": "RaceWay",
+     "membership": false,
+     "address": "1999 Pelham  Pkwy",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.346483,
+     "lng": -86.795361,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T03:18:31.437Z",
+       "age_hours": 10.9
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:58.629Z",
+       "age_hours": 3.2
+      }
+     },
+     "rank": 5,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T03:18:31.437Z",
+     "price_age_hours": 10.9
+    },
+    {
+     "station_id": "16145",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "9249 Helena Rd",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.344815853231,
+     "lng": -86.79958820343,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T13:20:17.864Z",
+       "age_hours": 0.9
+      },
+      "midgrade": {
+       "card": 4.42,
+       "cash": null,
+       "posted_at": "2026-09-29T13:20:17.880Z",
+       "age_hours": 0.9
+      },
+      "premium": {
+       "card": 4.82,
+       "cash": null,
+       "posted_at": "2026-09-29T13:20:17.896Z",
+       "age_hours": 0.9
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 6,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T13:20:17.864Z",
+     "price_age_hours": 0.9
+    },
+    {
+     "station_id": "34086",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "7921 Helena Rd",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.331119877645,
+     "lng": -86.813085079193,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T13:11:41.126Z",
+       "age_hours": 1.0
+      },
+      "midgrade": {
+       "card": 4.42,
+       "cash": null,
+       "posted_at": "2026-09-29T13:13:47.426Z",
+       "age_hours": 1.0
+      },
+      "premium": {
+       "card": 4.82,
+       "cash": null,
+       "posted_at": "2026-09-29T13:13:47.426Z",
+       "age_hours": 1.0
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T13:11:41.126Z",
+     "price_age_hours": 1.0
+    },
+    {
+     "station_id": "4963",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "715 Cahaba Valley Rd",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.336784966411,
+     "lng": -86.781327724457,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:19.896Z",
+       "age_hours": 4.2
+      },
+      "midgrade": {
+       "card": 4.42,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:19.896Z",
+       "age_hours": 4.2
+      },
+      "premium": {
+       "card": 4.82,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:19.911Z",
+       "age_hours": 4.2
+      },
+      "diesel": {
+       "card": 5.97,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:19.911Z",
+       "age_hours": 4.2
+      }
+     },
+     "rank": 8,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T10:02:19.896Z",
+     "price_age_hours": 4.2
+    },
+    {
+     "station_id": "108446",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "406 Cahaba Valley Rd",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.334418581731,
+     "lng": -86.783645153046,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T11:03:39.864Z",
+       "age_hours": 3.2
+      },
+      "midgrade": {
+       "card": 4.32,
+       "cash": null,
+       "posted_at": "2026-09-29T11:03:39.877Z",
+       "age_hours": 3.2
+      },
+      "premium": {
+       "card": 4.72,
+       "cash": null,
+       "posted_at": "2026-09-29T11:03:39.885Z",
+       "age_hours": 3.2
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T11:03:39.864Z",
+     "price_age_hours": 3.2
+    },
+    {
+     "station_id": "86541",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "630 Cahaba Valley Rd",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.335261165464,
+     "lng": -86.781949996948,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:11.984Z",
+       "age_hours": 4.2
+      },
+      "midgrade": {
+       "card": 4.42,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:11.984Z",
+       "age_hours": 4.2
+      },
+      "premium": {
+       "card": 4.82,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:11.999Z",
+       "age_hours": 4.2
+      },
+      "diesel": {
+       "card": 5.97,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:12.015Z",
+       "age_hours": 4.2
+      }
+     },
+     "rank": 10,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T10:02:11.984Z",
+     "price_age_hours": 4.2
+    }
+   ]
+  },
+  {
+   "name": "Vestavia Hills",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.448,
+    -86.778
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "86727",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "3197 US-280 E",
+     "city": "Mountain Brook",
+     "state": "AL",
+     "zip": "35243",
+     "lat": 33.445193134508,
+     "lng": -86.737146377563,
+     "fuels": {
+      "regular": {
+       "card": 4.05,
+       "cash": null,
+       "posted_at": "2026-09-28T18:25:11.721Z",
+       "age_hours": 19.8
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.09,
+       "cash": null,
+       "posted_at": "2026-09-27T17:08:08.119Z",
+       "age_hours": 45.1
+      }
+     },
+     "rank": 1,
+     "regular_card": 4.05,
+     "price_posted_at": "2026-09-28T18:25:11.721Z",
+     "price_age_hours": 19.8
+    },
+    {
+     "station_id": "16135",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2423 Acton Rd",
+     "city": "Vestavia Hills",
+     "state": "AL",
+     "zip": "35243",
+     "lat": 33.410845374433,
+     "lng": -86.762788295746,
+     "fuels": {
+      "regular": {
+       "card": 4.05,
+       "cash": null,
+       "posted_at": "2026-09-27T17:31:34.296Z",
+       "age_hours": 44.7
+      },
+      "midgrade": {
+       "card": 4.55,
+       "cash": null,
+       "posted_at": "2026-09-27T17:31:34.311Z",
+       "age_hours": 44.7
+      },
+      "premium": {
+       "card": 5.05,
+       "cash": null,
+       "posted_at": "2026-09-27T17:31:34.327Z",
+       "age_hours": 44.7
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-27T17:31:34.343Z",
+       "age_hours": 44.7
+      }
+     },
+     "rank": 2,
+     "regular_card": 4.05,
+     "price_posted_at": "2026-09-27T17:31:34.296Z",
+     "price_age_hours": 44.7
+    },
+    {
+     "station_id": "4968",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2908 Independence Dr",
+     "city": "Homewood",
+     "state": "AL",
+     "zip": "35209",
+     "lat": 33.478900885454,
+     "lng": -86.78763628006,
+     "fuels": {
+      "regular": {
+       "card": 4.08,
+       "cash": null,
+       "posted_at": "2026-09-29T01:13:15.246Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 3,
+     "regular_card": 4.08,
+     "price_posted_at": "2026-09-29T01:13:15.246Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "173598",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "705 Montgomery Hwy",
+     "city": "Vestavia Hills",
+     "state": "AL",
+     "zip": "35216",
+     "lat": 33.446445641002,
+     "lng": -86.790318489074,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-27T14:36:12.566Z",
+       "age_hours": 47.6
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-27T14:36:12.597Z",
+       "age_hours": 47.6
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-27T14:36:12.613Z",
+       "age_hours": 47.6
+      },
+      "diesel": {
+       "card": 6.49,
+       "cash": null,
+       "posted_at": "2026-09-27T14:36:17.189Z",
+       "age_hours": 47.6
+      }
+     },
+     "rank": 4,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-27T14:36:12.566Z",
+     "price_age_hours": 47.6
+    },
+    {
+     "station_id": "102194",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "2544 Rocky Ridge Rd",
+     "city": "Vestavia Hills",
+     "state": "AL",
+     "zip": "35243",
+     "lat": 33.427435,
+     "lng": -86.772744,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-29T01:40:21.167Z",
+       "age_hours": 12.6
+      },
+      "midgrade": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-29T04:00:29.870Z",
+       "age_hours": 10.2
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-29T04:00:29.854Z",
+       "age_hours": 10.2
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-29T04:00:29.885Z",
+       "age_hours": 10.2
+      }
+     },
+     "rank": 5,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-29T01:40:21.167Z",
+     "price_age_hours": 12.6
+    },
+    {
+     "station_id": "187187",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2485 Rocky Ridge Rd",
+     "city": "Vestavia Hills",
+     "state": "AL",
+     "zip": "35243",
+     "lat": 33.423257,
+     "lng": -86.772155,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-27T16:33:36.852Z",
+       "age_hours": 45.7
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-26T17:27:39.852Z",
+       "age_hours": 68.8
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-26T17:27:39.860Z",
+       "age_hours": 68.8
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-26T17:27:39.876Z",
+       "age_hours": 68.8
+      }
+     },
+     "rank": 6,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-27T16:33:36.852Z",
+     "price_age_hours": 45.7
+    },
+    {
+     "station_id": "5031",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "1250 Columbiana Rd",
+     "city": "Homewood",
+     "state": "AL",
+     "zip": "35216",
+     "lat": 33.451835475333,
+     "lng": -86.811518669128,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-29T01:20:38.944Z",
+       "age_hours": 12.9
+      },
+      "midgrade": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-27T19:19:32.660Z",
+       "age_hours": 42.9
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-27T19:19:32.675Z",
+       "age_hours": 42.9
+      },
+      "diesel": {
+       "card": 6.24,
+       "cash": null,
+       "posted_at": "2026-09-29T01:20:38.929Z",
+       "age_hours": 12.9
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-29T01:20:38.944Z",
+     "price_age_hours": 12.9
+    },
+    {
+     "station_id": "91238",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2890 Acton Rd",
+     "city": "Vestavia Hills",
+     "state": "AL",
+     "zip": "35243",
+     "lat": 33.43342,
+     "lng": -86.73823,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-27T17:07:52.511Z",
+       "age_hours": 45.1
+      },
+      "midgrade": {
+       "card": 4.69,
+       "cash": null,
+       "posted_at": "2026-09-27T17:07:52.527Z",
+       "age_hours": 45.1
+      },
+      "premium": {
+       "card": 5.09,
+       "cash": null,
+       "posted_at": "2026-09-27T17:07:52.543Z",
+       "age_hours": 45.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-27T17:07:52.511Z",
+     "price_age_hours": 45.1
+    },
+    {
+     "station_id": "124588",
+     "brand": "Marathon",
+     "name": "Marathon",
+     "membership": false,
+     "address": "401 Palisades Blvd",
+     "city": "Homewood",
+     "state": "AL",
+     "zip": "35209",
+     "lat": 33.468923020589,
+     "lng": -86.818268179631,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T20:51:18.515Z",
+       "age_hours": 17.4
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T20:51:18.515Z",
+     "price_age_hours": 17.4
+    },
+    {
+     "station_id": "4960",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "1488 Montgomery Hwy",
+     "city": "Vestavia Hills",
+     "state": "AL",
+     "zip": "35216",
+     "lat": 33.415125618615,
+     "lng": -86.804667115414,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T20:58:56.944Z",
+       "age_hours": 17.3
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-28T20:58:56.960Z",
+       "age_hours": 17.3
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-28T20:58:56.976Z",
+       "age_hours": 17.3
+      },
+      "diesel": {
+       "card": 6.49,
+       "cash": null,
+       "posted_at": "2026-09-28T20:58:56.991Z",
+       "age_hours": 17.3
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T20:58:56.944Z",
+     "price_age_hours": 17.3
+    }
+   ]
+  },
+  {
+   "name": "Mountain Brook",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.49,
+    -86.74
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "92378",
+     "brand": "Circle K",
+     "name": "Exxon",
+     "membership": false,
+     "address": "1685 Montclair Rd",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35210",
+     "lat": 33.526853195107,
+     "lng": -86.71807050705,
+     "fuels": {
+      "regular": {
+       "card": 3.88,
+       "cash": null,
+       "posted_at": "2026-09-29T11:19:25.973Z",
+       "age_hours": 2.9
+      },
+      "midgrade": {
+       "card": 4.41,
+       "cash": null,
+       "posted_at": "2026-09-27T21:18:21.751Z",
+       "age_hours": 40.9
+      },
+      "premium": {
+       "card": 4.81,
+       "cash": null,
+       "posted_at": "2026-09-27T21:18:21.767Z",
+       "age_hours": 40.9
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.88,
+     "price_posted_at": "2026-09-29T11:19:25.973Z",
+     "price_age_hours": 2.9
+    },
+    {
+     "station_id": "143272",
+     "brand": "Murphy Express",
+     "name": "Murphy Express",
+     "membership": false,
+     "address": "7740 Crestwood Blvd.",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35210",
+     "lat": 33.531251,
+     "lng": -86.718199,
+     "fuels": {
+      "regular": {
+       "card": 3.88,
+       "cash": null,
+       "posted_at": "2026-09-29T14:00:22.660Z",
+       "age_hours": 0.2
+      },
+      "midgrade": {
+       "card": 4.38,
+       "cash": null,
+       "posted_at": "2026-09-29T14:00:22.691Z",
+       "age_hours": 0.2
+      },
+      "premium": {
+       "card": 4.78,
+       "cash": null,
+       "posted_at": "2026-09-29T14:00:22.707Z",
+       "age_hours": 0.2
+      },
+      "diesel": {
+       "card": 5.87,
+       "cash": null,
+       "posted_at": "2026-09-29T14:00:22.722Z",
+       "age_hours": 0.2
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.88,
+     "price_posted_at": "2026-09-29T14:00:22.660Z",
+     "price_age_hours": 0.2
+    },
+    {
+     "station_id": "40138",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "1547 Montclair Rd",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35210",
+     "lat": 33.524268384418,
+     "lng": -86.724105477333,
+     "fuels": {
+      "regular": {
+       "card": 3.91,
+       "cash": null,
+       "posted_at": "2026-09-28T19:40:11.957Z",
+       "age_hours": 18.6
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.91,
+     "price_posted_at": "2026-09-28T19:40:11.957Z",
+     "price_age_hours": 18.6
+    },
+    {
+     "station_id": "16138",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "1804 Crestwood Blvd",
+     "city": "Irondale",
+     "state": "AL",
+     "zip": "35210",
+     "lat": 33.532630727871,
+     "lng": -86.705582141876,
+     "fuels": {
+      "regular": {
+       "card": 3.91,
+       "cash": null,
+       "posted_at": "2026-09-28T19:42:35.301Z",
+       "age_hours": 18.5
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.91,
+     "price_posted_at": "2026-09-28T19:42:35.301Z",
+     "price_age_hours": 18.5
+    },
+    {
+     "station_id": "92379",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "1816 Crestwood Blvd",
+     "city": "Irondale",
+     "state": "AL",
+     "zip": "35210",
+     "lat": 33.533073417631,
+     "lng": -86.704396605492,
+     "fuels": {
+      "regular": {
+       "card": 3.91,
+       "cash": null,
+       "posted_at": "2026-09-28T19:42:01.381Z",
+       "age_hours": 18.5
+      },
+      "midgrade": {
+       "card": 4.41,
+       "cash": null,
+       "posted_at": "2026-09-27T18:38:27.576Z",
+       "age_hours": 43.6
+      },
+      "premium": {
+       "card": 4.81,
+       "cash": null,
+       "posted_at": "2026-09-27T18:38:27.592Z",
+       "age_hours": 43.6
+      },
+      "diesel": {
+       "card": 5.88,
+       "cash": null,
+       "posted_at": "2026-09-27T18:38:27.607Z",
+       "age_hours": 43.6
+      }
+     },
+     "rank": 5,
+     "regular_card": 3.91,
+     "price_posted_at": "2026-09-28T19:42:01.381Z",
+     "price_age_hours": 18.5
+    },
+    {
+     "station_id": "92377",
+     "brand": "Texaco",
+     "name": "Texaco",
+     "membership": false,
+     "address": "1557 Montclair Rd",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35210",
+     "lat": 33.524491987011,
+     "lng": -86.723477840424,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T04:02:04.632Z",
+       "age_hours": 10.2
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-29T04:02:04.694Z",
+       "age_hours": 10.2
+      },
+      "premium": {
+       "card": 5.09,
+       "cash": null,
+       "posted_at": "2026-09-29T04:02:04.648Z",
+       "age_hours": 10.2
+      },
+      "diesel": {
+       "card": 6.39,
+       "cash": null,
+       "posted_at": "2026-09-29T04:02:04.648Z",
+       "age_hours": 10.2
+      }
+     },
+     "rank": 6,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T04:02:04.632Z",
+     "price_age_hours": 10.2
+    },
+    {
+     "station_id": "86727",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "3197 US-280 E",
+     "city": "Mountain Brook",
+     "state": "AL",
+     "zip": "35243",
+     "lat": 33.445193134508,
+     "lng": -86.737146377563,
+     "fuels": {
+      "regular": {
+       "card": 4.05,
+       "cash": null,
+       "posted_at": "2026-09-28T18:25:11.721Z",
+       "age_hours": 19.8
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 6.09,
+       "cash": null,
+       "posted_at": "2026-09-27T17:08:08.119Z",
+       "age_hours": 45.1
+      }
+     },
+     "rank": 7,
+     "regular_card": 4.05,
+     "price_posted_at": "2026-09-28T18:25:11.721Z",
+     "price_age_hours": 19.8
+    },
+    {
+     "station_id": "4968",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2908 Independence Dr",
+     "city": "Homewood",
+     "state": "AL",
+     "zip": "35209",
+     "lat": 33.478900885454,
+     "lng": -86.78763628006,
+     "fuels": {
+      "regular": {
+       "card": 4.08,
+       "cash": null,
+       "posted_at": "2026-09-29T01:13:15.246Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.08,
+     "price_posted_at": "2026-09-29T01:13:15.246Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "374",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2320 University Blvd",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35233",
+     "lat": 33.506727,
+     "lng": -86.794603,
+     "fuels": {
+      "regular": {
+       "card": 4.08,
+       "cash": null,
+       "posted_at": "2026-09-28T12:16:44.251Z",
+       "age_hours": 26.0
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.08,
+     "price_posted_at": "2026-09-28T12:16:44.251Z",
+     "price_age_hours": 26.0
+    },
+    {
+     "station_id": "89880",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "104 Euclid Ave",
+     "city": "Mountain Brook",
+     "state": "AL",
+     "zip": "35213",
+     "lat": 33.503541,
+     "lng": -86.756787,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T16:44:06.804Z",
+       "age_hours": 21.5
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-28T16:44:06.819Z",
+       "age_hours": 21.5
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-28T16:44:06.835Z",
+       "age_hours": 21.5
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T16:44:06.804Z",
+     "price_age_hours": 21.5
+    }
+   ]
+  },
+  {
+   "name": "Trussville",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.6218,
+    -86.66
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "156206",
+     "brand": "Mobil",
+     "name": "Mobil",
+     "membership": false,
+     "address": "9933 Parkway E",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35215",
+     "lat": 33.610393,
+     "lng": -86.687682,
+     "fuels": {
+      "regular": {
+       "card": 3.94,
+       "cash": null,
+       "posted_at": "2026-09-29T12:46:48.879Z",
+       "age_hours": 1.5
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.94,
+     "price_posted_at": "2026-09-29T12:46:48.879Z",
+     "price_age_hours": 1.5
+    },
+    {
+     "station_id": "6051",
+     "brand": "Gasboy",
+     "name": "Gasboy",
+     "membership": false,
+     "address": "9917 Parkway East",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35215",
+     "lat": 33.609475579823,
+     "lng": -86.688189963299,
+     "fuels": {
+      "regular": {
+       "card": 3.95,
+       "cash": null,
+       "posted_at": "2026-09-29T12:46:54.550Z",
+       "age_hours": 1.5
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.95,
+     "price_posted_at": "2026-09-29T12:46:54.550Z",
+     "price_age_hours": 1.5
+    },
+    {
+     "station_id": "136698",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "9401 Parkway E",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35215",
+     "lat": 33.591618,
+     "lng": -86.696272,
+     "fuels": {
+      "regular": {
+       "card": 3.95,
+       "cash": 0,
+       "posted_at": "2026-09-29T00:08:22.701Z",
+       "age_hours": 14.1
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": 0,
+       "posted_at": "2026-09-27T17:27:14.425Z",
+       "age_hours": 44.8
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": 0,
+       "posted_at": "2026-09-27T17:27:14.441Z",
+       "age_hours": 44.8
+      },
+      "diesel": {
+       "card": 5.97,
+       "cash": 0,
+       "posted_at": "2026-09-28T19:23:25.440Z",
+       "age_hours": 18.8
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.95,
+     "price_posted_at": "2026-09-29T00:08:22.701Z",
+     "price_age_hours": 14.1
+    },
+    {
+     "station_id": "142980",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "1529 Springville Rd",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35215",
+     "lat": 33.622186702002,
+     "lng": -86.667784452438,
+     "fuels": {
+      "regular": {
+       "card": 3.97,
+       "cash": null,
+       "posted_at": "2026-09-29T02:40:13.381Z",
+       "age_hours": 11.6
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.97,
+     "price_posted_at": "2026-09-29T02:40:13.381Z",
+     "price_age_hours": 11.6
+    },
+    {
+     "station_id": "149802",
+     "brand": "Marathon",
+     "name": "Marathon",
+     "membership": false,
+     "address": "1283 Center Point Pkwy",
+     "city": "Center Point",
+     "state": "AL",
+     "zip": "35215",
+     "lat": 33.619136810302,
+     "lng": -86.684623718261,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T12:47:12.905Z",
+       "age_hours": 1.4
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 5,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T12:47:12.905Z",
+     "price_age_hours": 1.4
+    },
+    {
+     "station_id": "140808",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "1880 Edwards Lake Rd",
+     "city": "Trussville",
+     "state": "AL",
+     "zip": "35235",
+     "lat": 33.598654375932,
+     "lng": -86.64820432663,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-28T18:32:00.546Z",
+       "age_hours": 19.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 6,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-28T18:32:00.546Z",
+     "price_age_hours": 19.7
+    },
+    {
+     "station_id": "41109",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "9901 Parkway East",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35215",
+     "lat": 33.608737370576,
+     "lng": -86.68852865696,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T12:46:23.733Z",
+       "age_hours": 1.5
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T12:46:23.733Z",
+     "price_age_hours": 1.5
+    },
+    {
+     "station_id": "109461",
+     "brand": "RaceWay",
+     "name": "RaceWay",
+     "membership": false,
+     "address": "1435 Gasden Hwy",
+     "city": "Trussville",
+     "state": "AL",
+     "zip": "35235",
+     "lat": 33.596938,
+     "lng": -86.644336,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T01:15:18.888Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-29T01:15:18.904Z",
+       "age_hours": 13.0
+      },
+      "premium": {
+       "card": 4.69,
+       "cash": null,
+       "posted_at": "2026-09-29T01:15:18.919Z",
+       "age_hours": 13.0
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-29T01:15:18.935Z",
+       "age_hours": 13.0
+      }
+     },
+     "rank": 8,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T01:15:18.888Z",
+     "price_age_hours": 13.0
+    },
+    {
+     "station_id": "170323",
+     "brand": "Marathon",
+     "name": "Marathon",
+     "membership": false,
+     "address": "2224 Center Point Pkwy",
+     "city": "Birmingham",
+     "state": "AL",
+     "zip": "35215",
+     "lat": 33.643438,
+     "lng": -86.684049,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T12:52:46.203Z",
+       "age_hours": 1.4
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T12:52:46.203Z",
+     "price_age_hours": 1.4
+    },
+    {
+     "station_id": "207448",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "450 Main Street",
+     "city": "Trussville",
+     "state": "AL",
+     "zip": "35173",
+     "lat": 33.6177809,
+     "lng": -86.6179646,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T01:15:44.214Z",
+       "age_hours": 13.0
+      },
+      "midgrade": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-27T19:31:58.747Z",
+       "age_hours": 42.7
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-29T01:15:44.230Z",
+       "age_hours": 13.0
+      },
+      "diesel": {
+       "card": 6.09,
+       "cash": null,
+       "posted_at": "2026-09-29T01:15:44.245Z",
+       "age_hours": 13.0
+      }
+     },
+     "rank": 10,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T01:15:44.214Z",
+     "price_age_hours": 13.0
+    }
+   ]
+  },
+  {
+   "name": "Gardendale",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.663,
+    -86.81
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "16127",
+     "brand": "Murphy USA",
+     "name": "Murphy USA",
+     "membership": false,
+     "address": "916 Odum Road",
+     "city": "Gardendale",
+     "state": "AL",
+     "zip": "35071",
+     "lat": 33.648452,
+     "lng": -86.824544,
+     "fuels": {
+      "regular": {
+       "card": 3.96,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:36.005Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-29T14:00:38.680Z",
+       "age_hours": 0.2
+      },
+      "premium": {
+       "card": 4.69,
+       "cash": null,
+       "posted_at": "2026-09-29T14:00:38.696Z",
+       "age_hours": 0.2
+      },
+      "diesel": {
+       "card": 5.94,
+       "cash": null,
+       "posted_at": "2026-09-29T13:01:36.020Z",
+       "age_hours": 1.2
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.96,
+     "price_posted_at": "2026-09-29T13:01:36.005Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "202459",
+     "brand": "Exxon",
+     "name": "Exxon",
+     "membership": false,
+     "address": "2300 Mount Olive Rd",
+     "city": "Gardendale",
+     "state": "AL",
+     "zip": "35117",
+     "lat": 33.672497,
+     "lng": -86.839005,
+     "fuels": {
+      "regular": {
+       "card": 3.97,
+       "cash": null,
+       "posted_at": "2026-09-29T11:58:58.381Z",
+       "age_hours": 2.3
+      },
+      "midgrade": {
+       "card": 4.37,
+       "cash": null,
+       "posted_at": "2026-09-29T11:58:58.397Z",
+       "age_hours": 2.3
+      },
+      "premium": {
+       "card": 4.67,
+       "cash": null,
+       "posted_at": "2026-09-29T11:58:58.412Z",
+       "age_hours": 2.3
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-29T11:58:58.412Z",
+       "age_hours": 2.3
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.97,
+     "price_posted_at": "2026-09-29T11:58:58.381Z",
+     "price_age_hours": 2.3
+    },
+    {
+     "station_id": "130969",
+     "brand": "Murphy Express",
+     "name": "Murphy Express",
+     "membership": false,
+     "address": "1341 Walker Chapel Rd",
+     "city": "Fultondale",
+     "state": "AL",
+     "zip": "35068",
+     "lat": 33.609414,
+     "lng": -86.804206,
+     "fuels": {
+      "regular": {
+       "card": 3.98,
+       "cash": null,
+       "posted_at": "2026-09-28T15:01:45.153Z",
+       "age_hours": 23.2
+      },
+      "midgrade": {
+       "card": 4.48,
+       "cash": null,
+       "posted_at": "2026-09-28T15:01:45.168Z",
+       "age_hours": 23.2
+      },
+      "premium": {
+       "card": 4.78,
+       "cash": null,
+       "posted_at": "2026-09-28T15:01:45.185Z",
+       "age_hours": 23.2
+      },
+      "diesel": {
+       "card": 5.95,
+       "cash": null,
+       "posted_at": "2026-09-28T15:01:45.201Z",
+       "age_hours": 23.2
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.98,
+     "price_posted_at": "2026-09-28T15:01:45.153Z",
+     "price_age_hours": 23.2
+    },
+    {
+     "station_id": "105977",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2156 Moncrief Rd",
+     "city": "Gardendale",
+     "state": "AL",
+     "zip": "35071",
+     "lat": 33.674534,
+     "lng": -86.81809,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T12:01:23.762Z",
+       "age_hours": 2.2
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-29T12:01:23.778Z",
+       "age_hours": 2.2
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-29T12:01:23.778Z",
+       "age_hours": 2.2
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-29T12:01:23.794Z",
+       "age_hours": 2.2
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T12:01:23.762Z",
+     "price_age_hours": 2.2
+    },
+    {
+     "station_id": "203386",
+     "brand": "RaceTrac",
+     "name": "RaceTrac",
+     "membership": false,
+     "address": "606 Fieldstown Rd",
+     "city": "Gardendale",
+     "state": "AL",
+     "zip": "35071",
+     "lat": 33.652758,
+     "lng": -86.823262,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:48.084Z",
+       "age_hours": 1.2
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:48.097Z",
+       "age_hours": 1.2
+      },
+      "premium": {
+       "card": 4.69,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:48.106Z",
+       "age_hours": 1.2
+      },
+      "diesel": {
+       "card": 5.97,
+       "cash": null,
+       "posted_at": "2026-09-29T13:00:48.106Z",
+       "age_hours": 1.2
+      }
+     },
+     "rank": 5,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T13:00:48.084Z",
+     "price_age_hours": 1.2
+    },
+    {
+     "station_id": "68426",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2251 Mt Olive Rd",
+     "city": "Gardendale",
+     "state": "AL",
+     "zip": "35117",
+     "lat": 33.672881022719,
+     "lng": -86.836280822754,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T11:59:43.150Z",
+       "age_hours": 2.2
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-29T11:59:43.165Z",
+       "age_hours": 2.2
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-29T11:59:43.181Z",
+       "age_hours": 2.2
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-29T11:59:43.197Z",
+       "age_hours": 2.2
+      }
+     },
+     "rank": 6,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T11:59:43.150Z",
+     "price_age_hours": 2.2
+    },
+    {
+     "station_id": "68410",
+     "brand": "CITGO",
+     "name": "CITGO",
+     "membership": false,
+     "address": "2470 Mt Olive Rd",
+     "city": "Mt Olive",
+     "state": "AL",
+     "zip": "35117",
+     "lat": 33.670836322459,
+     "lng": -86.845582723618,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T11:58:21.760Z",
+       "age_hours": 2.3
+      },
+      "midgrade": {
+       "card": 4.55,
+       "cash": null,
+       "posted_at": "2026-09-29T11:58:21.760Z",
+       "age_hours": 2.3
+      },
+      "premium": {
+       "card": 4.95,
+       "cash": null,
+       "posted_at": "2026-09-29T11:58:21.776Z",
+       "age_hours": 2.3
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-29T11:58:21.791Z",
+       "age_hours": 2.3
+      }
+     },
+     "rank": 7,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T11:58:21.760Z",
+     "price_age_hours": 2.3
+    },
+    {
+     "station_id": "70387",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "2709 Mt Olive Rd",
+     "city": "Mt Olive",
+     "state": "AL",
+     "zip": "35117",
+     "lat": 33.670127213841,
+     "lng": -86.85377150774,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T11:57:35.840Z",
+       "age_hours": 2.3
+      },
+      "midgrade": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-29T11:57:35.856Z",
+       "age_hours": 2.3
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-29T11:57:35.856Z",
+       "age_hours": 2.3
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T11:57:35.840Z",
+     "price_age_hours": 2.3
+    },
+    {
+     "station_id": "68543",
+     "brand": "Exxon",
+     "name": "Exxon",
+     "membership": false,
+     "address": "101 Walker Chapel Rd",
+     "city": "Fultondale",
+     "state": "AL",
+     "zip": "35068",
+     "lat": 33.61059977487,
+     "lng": -86.797289428382,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-28T19:47:55.238Z",
+       "age_hours": 18.4
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-29T04:02:57.753Z",
+       "age_hours": 10.2
+      },
+      "premium": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-29T04:02:57.784Z",
+       "age_hours": 10.2
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-28T19:47:55.238Z",
+     "price_age_hours": 18.4
+    },
+    {
+     "station_id": "136908",
+     "brand": "RaceWay",
+     "name": "RaceWay",
+     "membership": false,
+     "address": "2460 Pinson Valley Pkwy",
+     "city": "Tarrant",
+     "state": "AL",
+     "zip": "35217",
+     "lat": 33.604941,
+     "lng": -86.75389,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-28T21:33:25.898Z",
+       "age_hours": 16.7
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-28T21:33:25.914Z",
+       "age_hours": 16.7
+      },
+      "premium": {
+       "card": 4.69,
+       "cash": null,
+       "posted_at": "2026-09-28T21:33:25.914Z",
+       "age_hours": 16.7
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-28T21:33:12.211Z",
+       "age_hours": 16.7
+      }
+     },
+     "rank": 10,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-28T21:33:25.898Z",
+     "price_age_hours": 16.7
+    }
+   ]
+  },
+  {
+   "name": "Bessemer",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.401,
+    -86.955
+   ],
+   "candidates": 39,
+   "stations": [
+    {
+     "station_id": "86649",
+     "brand": "Mobil",
+     "name": "Mobil",
+     "membership": false,
+     "address": "2108 19th St  N",
+     "city": "Bessemer",
+     "state": "AL",
+     "zip": "35020",
+     "lat": 33.415535,
+     "lng": -86.976974,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-29T12:34:01.552Z",
+       "age_hours": 1.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T12:34:01.552Z",
+     "price_age_hours": 1.7
+    },
+    {
+     "station_id": "163494",
+     "brand": "Exxon",
+     "name": "Exxon",
+     "membership": false,
+     "address": "561 9th Ave N",
+     "city": "Bessemer",
+     "state": "AL",
+     "zip": "35020",
+     "lat": 33.391283644505,
+     "lng": -86.973942518234,
+     "fuels": {
+      "regular": {
+       "card": 3.97,
+       "cash": null,
+       "posted_at": "2026-09-27T03:40:34.814Z",
+       "age_hours": 58.6
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-28T18:10:34.588Z",
+       "age_hours": 20.1
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.97,
+     "price_posted_at": "2026-09-27T03:40:34.814Z",
+     "price_age_hours": 58.6
+    },
+    {
+     "station_id": "86138",
+     "brand": "Fuel Stop",
+     "name": "Fuel Stop",
+     "membership": false,
+     "address": "600 14th St S",
+     "city": "Bessemer",
+     "state": "AL",
+     "zip": "35022",
+     "lat": 33.390961161514,
+     "lng": -86.947689056396,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T04:01:52.320Z",
+       "age_hours": 10.2
+      },
+      "midgrade": {
+       "card": 4.94,
+       "cash": null,
+       "posted_at": "2026-09-29T04:01:52.304Z",
+       "age_hours": 10.2
+      },
+      "premium": {
+       "card": 5.14,
+       "cash": null,
+       "posted_at": "2026-09-29T04:01:52.320Z",
+       "age_hours": 10.2
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T04:01:52.320Z",
+     "price_age_hours": 10.2
+    },
+    {
+     "station_id": "172478",
+     "brand": "CITGO",
+     "name": "CITGO",
+     "membership": false,
+     "address": "2805 Dartmouth Ave",
+     "city": "Bessemer",
+     "state": "AL",
+     "zip": "35020",
+     "lat": 33.408244,
+     "lng": -86.93703,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T03:57:31.464Z",
+       "age_hours": 10.3
+      },
+      "midgrade": {
+       "card": 4.69,
+       "cash": null,
+       "posted_at": "2026-09-28T02:57:42.058Z",
+       "age_hours": 35.3
+      },
+      "premium": {
+       "card": 5.09,
+       "cash": null,
+       "posted_at": "2026-09-29T03:57:31.480Z",
+       "age_hours": 10.3
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T03:57:31.464Z",
+     "price_age_hours": 10.3
+    },
+    {
+     "station_id": "16094",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "1831 18th Ave",
+     "city": "Bessemer",
+     "state": "AL",
+     "zip": "35020",
+     "lat": 33.412708166632,
+     "lng": -86.972773075104,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T12:34:31.351Z",
+       "age_hours": 1.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 5,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T12:34:31.351Z",
+     "price_age_hours": 1.7
+    },
+    {
+     "station_id": "40136",
+     "brand": "Marathon",
+     "name": "Marathon",
+     "membership": false,
+     "address": "2429 19th St N",
+     "city": "Bessemer",
+     "state": "AL",
+     "zip": "35023",
+     "lat": 33.419236579661,
+     "lng": -86.982074975967,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T12:33:26.930Z",
+       "age_hours": 1.7
+      },
+      "midgrade": {
+       "card": 4.79,
+       "cash": null,
+       "posted_at": "2026-09-28T03:06:00.649Z",
+       "age_hours": 35.1
+      },
+      "premium": {
+       "card": 5.09,
+       "cash": null,
+       "posted_at": "2026-09-29T04:04:34.212Z",
+       "age_hours": 10.2
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-29T04:04:34.181Z",
+       "age_hours": 10.2
+      }
+     },
+     "rank": 6,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T12:33:26.930Z",
+     "price_age_hours": 1.7
+    },
+    {
+     "station_id": "40135",
+     "brand": "Exxon",
+     "name": "Exxon",
+     "membership": false,
+     "address": "2516 19th St N",
+     "city": "Hueytown",
+     "state": "AL",
+     "zip": "35023",
+     "lat": 33.41985,
+     "lng": -86.983926,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": null,
+       "posted_at": "2026-09-29T12:32:19.062Z",
+       "age_hours": 1.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-29T12:32:19.062Z",
+     "price_age_hours": 1.7
+    },
+    {
+     "station_id": "16096",
+     "brand": "Marathon",
+     "name": "Marathon",
+     "membership": false,
+     "address": "906 9th Ave N",
+     "city": "Bessemer",
+     "state": "AL",
+     "zip": "35020",
+     "lat": 33.395726621686,
+     "lng": -86.970262527466,
+     "fuels": {
+      "regular": {
+       "card": 4.01,
+       "cash": null,
+       "posted_at": "2026-09-26T21:40:28.757Z",
+       "age_hours": 64.6
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": null,
+       "posted_at": "2026-09-28T17:40:27.292Z",
+       "age_hours": 20.6
+      }
+     },
+     "rank": 8,
+     "regular_card": 4.01,
+     "price_posted_at": "2026-09-26T21:40:28.757Z",
+     "price_age_hours": 64.6
+    },
+    {
+     "station_id": "16092",
+     "brand": "Exxon",
+     "name": "Exxon",
+     "membership": false,
+     "address": "1401 Carolina Ave",
+     "city": "Bessemer",
+     "state": "AL",
+     "zip": "35020",
+     "lat": 33.394909,
+     "lng": -86.953889,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T20:10:28.493Z",
+       "age_hours": 18.1
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T20:10:28.493Z",
+     "price_age_hours": 18.1
+    },
+    {
+     "station_id": "86125",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "580 14th St S",
+     "city": "Bessemer",
+     "state": "AL",
+     "zip": "35020",
+     "lat": 33.391526,
+     "lng": -86.948183,
+     "fuels": {
+      "regular": {
+       "card": 4.09,
+       "cash": null,
+       "posted_at": "2026-09-28T11:20:13.184Z",
+       "age_hours": 26.9
+      },
+      "midgrade": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-27T15:22:48.122Z",
+       "age_hours": 46.9
+      },
+      "premium": {
+       "card": 4.99,
+       "cash": null,
+       "posted_at": "2026-09-27T15:22:48.137Z",
+       "age_hours": 46.9
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 10,
+     "regular_card": 4.09,
+     "price_posted_at": "2026-09-28T11:20:13.184Z",
+     "price_age_hours": 26.9
+    }
+   ]
+  },
+  {
+   "name": "Pelham-Alabaster",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.304,
+    -86.81
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "16146",
+     "brand": "Exxon",
+     "name": "Exxon",
+     "membership": false,
+     "address": "3071 Pelham Pkwy",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.292583918531,
+     "lng": -86.811389923096,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-29T13:05:55.924Z",
+       "age_hours": 1.1
+      },
+      "midgrade": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T13:05:55.940Z",
+       "age_hours": 1.1
+      },
+      "premium": {
+       "card": 4.69,
+       "cash": null,
+       "posted_at": "2026-09-29T13:05:55.956Z",
+       "age_hours": 1.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T13:05:55.924Z",
+     "price_age_hours": 1.1
+    },
+    {
+     "station_id": "16144",
+     "brand": "RaceWay",
+     "name": "RaceWay",
+     "membership": false,
+     "address": "3314 Pelham Hwy",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.277823,
+     "lng": -86.812372,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-29T13:08:08.307Z",
+       "age_hours": 1.1
+      },
+      "midgrade": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T13:08:08.323Z",
+       "age_hours": 1.1
+      },
+      "premium": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-29T13:08:08.339Z",
+       "age_hours": 1.1
+      },
+      "diesel": {
+       "card": 5.95,
+       "cash": null,
+       "posted_at": "2026-09-29T13:08:08.354Z",
+       "age_hours": 1.1
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T13:08:08.307Z",
+     "price_age_hours": 1.1
+    },
+    {
+     "station_id": "4966",
+     "brand": "RaceWay",
+     "name": "RaceWay",
+     "membership": false,
+     "address": "310 Cahaba Valley Rd",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.333098,
+     "lng": -86.786276,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:52.051Z",
+       "age_hours": 3.2
+      },
+      "midgrade": {
+       "card": 4.32,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:52.067Z",
+       "age_hours": 3.2
+      },
+      "premium": {
+       "card": 4.62,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:52.083Z",
+       "age_hours": 3.2
+      },
+      "diesel": {
+       "card": 5.98,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:52.098Z",
+       "age_hours": 3.2
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T11:02:52.051Z",
+     "price_age_hours": 3.2
+    },
+    {
+     "station_id": "4959",
+     "brand": "Murphy USA",
+     "name": "Murphy USA",
+     "membership": false,
+     "address": "2191 Pelham Pkwy.",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.339368,
+     "lng": -86.792237,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:49.739Z",
+       "age_hours": 0.7
+      },
+      "midgrade": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:49.754Z",
+       "age_hours": 0.7
+      },
+      "premium": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:49.774Z",
+       "age_hours": 0.7
+      },
+      "diesel": {
+       "card": 5.92,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:49.786Z",
+       "age_hours": 0.7
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T13:30:49.739Z",
+     "price_age_hours": 0.7
+    },
+    {
+     "station_id": "16132",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "100 Riverchase Pkwy",
+     "city": "Hoover",
+     "state": "AL",
+     "zip": "35244",
+     "lat": 33.351913966895,
+     "lng": -86.783645153046,
+     "fuels": {
+      "regular": {
+       "card": 3.91,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:49.053Z",
+       "age_hours": 3.2
+      },
+      "midgrade": {
+       "card": 4.31,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:49.069Z",
+       "age_hours": 3.2
+      },
+      "premium": {
+       "card": 4.91,
+       "cash": null,
+       "posted_at": "2026-09-29T11:02:49.084Z",
+       "age_hours": 3.2
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 5,
+     "regular_card": 3.91,
+     "price_posted_at": "2026-09-29T11:02:49.053Z",
+     "price_age_hours": 3.2
+    },
+    {
+     "station_id": "34086",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "7921 Helena Rd",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.331119877645,
+     "lng": -86.813085079193,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T13:11:41.126Z",
+       "age_hours": 1.0
+      },
+      "midgrade": {
+       "card": 4.42,
+       "cash": null,
+       "posted_at": "2026-09-29T13:13:47.426Z",
+       "age_hours": 1.0
+      },
+      "premium": {
+       "card": 4.82,
+       "cash": null,
+       "posted_at": "2026-09-29T13:13:47.426Z",
+       "age_hours": 1.0
+      },
+      "diesel": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 6,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T13:11:41.126Z",
+     "price_age_hours": 1.0
+    },
+    {
+     "station_id": "16142",
+     "brand": "Mobil",
+     "name": "Mobil",
+     "membership": false,
+     "address": "2310 Pelham Pkwy",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35214",
+     "lat": 33.327946549868,
+     "lng": -86.793365478516,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T10:03:20.423Z",
+       "age_hours": 4.2
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 4.72,
+       "cash": null,
+       "posted_at": "2026-09-29T04:06:29.848Z",
+       "age_hours": 10.1
+      },
+      "diesel": {
+       "card": 5.97,
+       "cash": null,
+       "posted_at": "2026-09-29T10:03:20.423Z",
+       "age_hours": 4.2
+      }
+     },
+     "rank": 7,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T10:03:20.423Z",
+     "price_age_hours": 4.2
+    },
+    {
+     "station_id": "42809",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "1107A Townhouse Rd",
+     "city": "Helena",
+     "state": "AL",
+     "zip": "35080",
+     "lat": 33.27288,
+     "lng": -86.83063,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T13:56:59.093Z",
+       "age_hours": 0.3
+      },
+      "midgrade": {
+       "card": 4.42,
+       "cash": null,
+       "posted_at": "2026-09-29T13:56:59.108Z",
+       "age_hours": 0.3
+      },
+      "premium": {
+       "card": 4.82,
+       "cash": null,
+       "posted_at": "2026-09-29T13:56:59.124Z",
+       "age_hours": 0.3
+      },
+      "diesel": {
+       "card": 5.97,
+       "cash": null,
+       "posted_at": "2026-09-29T13:56:59.124Z",
+       "age_hours": 0.3
+      }
+     },
+     "rank": 8,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T13:56:59.093Z",
+     "price_age_hours": 0.3
+    },
+    {
+     "station_id": "108446",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "406 Cahaba Valley Rd",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.334418581731,
+     "lng": -86.783645153046,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T11:03:39.864Z",
+       "age_hours": 3.2
+      },
+      "midgrade": {
+       "card": 4.32,
+       "cash": null,
+       "posted_at": "2026-09-29T11:03:39.877Z",
+       "age_hours": 3.2
+      },
+      "premium": {
+       "card": 4.72,
+       "cash": null,
+       "posted_at": "2026-09-29T11:03:39.885Z",
+       "age_hours": 3.2
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 9,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T11:03:39.864Z",
+     "price_age_hours": 3.2
+    },
+    {
+     "station_id": "86541",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "630 Cahaba Valley Rd",
+     "city": "Pelham",
+     "state": "AL",
+     "zip": "35124",
+     "lat": 33.335261165464,
+     "lng": -86.781949996948,
+     "fuels": {
+      "regular": {
+       "card": 3.92,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:11.984Z",
+       "age_hours": 4.2
+      },
+      "midgrade": {
+       "card": 4.42,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:11.984Z",
+       "age_hours": 4.2
+      },
+      "premium": {
+       "card": 4.82,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:11.999Z",
+       "age_hours": 4.2
+      },
+      "diesel": {
+       "card": 5.97,
+       "cash": null,
+       "posted_at": "2026-09-29T10:02:12.015Z",
+       "age_hours": 4.2
+      }
+     },
+     "rank": 10,
+     "regular_card": 3.92,
+     "price_posted_at": "2026-09-29T10:02:11.984Z",
+     "price_age_hours": 4.2
+    }
+   ]
+  },
+  {
+   "name": "Leeds-Moody",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.548,
+    -86.555
+   ],
+   "candidates": 40,
+   "stations": [
+    {
+     "station_id": "203409",
+     "brand": "Buc-ee's",
+     "name": "Buc-ee's",
+     "membership": false,
+     "address": "6900 Buc-ee's Blvd (along Coosa Ave)",
+     "city": "Leeds",
+     "state": "AL",
+     "zip": "35094",
+     "lat": 33.544185,
+     "lng": -86.585956,
+     "fuels": {
+      "regular": {
+       "card": 3.85,
+       "cash": null,
+       "posted_at": "2026-09-29T03:55:35.707Z",
+       "age_hours": 10.3
+      },
+      "midgrade": {
+       "card": 4.15,
+       "cash": null,
+       "posted_at": "2026-09-29T03:55:35.722Z",
+       "age_hours": 10.3
+      },
+      "premium": {
+       "card": 4.55,
+       "cash": null,
+       "posted_at": "2026-09-29T03:55:35.738Z",
+       "age_hours": 10.3
+      },
+      "diesel": {
+       "card": 5.79,
+       "cash": null,
+       "posted_at": "2026-09-29T03:55:35.754Z",
+       "age_hours": 10.3
+      }
+     },
+     "rank": 1,
+     "regular_card": 3.85,
+     "price_posted_at": "2026-09-29T03:55:35.707Z",
+     "price_age_hours": 10.3
+    },
+    {
+     "station_id": "186175",
+     "brand": "Murphy USA",
+     "name": "Murphy USA",
+     "membership": false,
+     "address": "8559 Whitfield Ave",
+     "city": "Leeds",
+     "state": "AL",
+     "zip": "35094",
+     "lat": 33.562343,
+     "lng": -86.520677,
+     "fuels": {
+      "regular": {
+       "card": 3.86,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:34.214Z",
+       "age_hours": 0.7
+      },
+      "midgrade": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:34.230Z",
+       "age_hours": 0.7
+      },
+      "premium": {
+       "card": 4.57,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:34.246Z",
+       "age_hours": 0.7
+      },
+      "diesel": {
+       "card": 5.86,
+       "cash": null,
+       "posted_at": "2026-09-29T13:30:34.277Z",
+       "age_hours": 0.7
+      }
+     },
+     "rank": 2,
+     "regular_card": 3.86,
+     "price_posted_at": "2026-09-29T13:30:34.214Z",
+     "price_age_hours": 0.7
+    },
+    {
+     "station_id": "70824",
+     "brand": "RaceWay",
+     "name": "RaceWay",
+     "membership": false,
+     "address": "1800 Ashville Rd",
+     "city": "Leeds",
+     "state": "AL",
+     "zip": "35094",
+     "lat": 33.562196,
+     "lng": -86.521881,
+     "fuels": {
+      "regular": {
+       "card": 3.87,
+       "cash": null,
+       "posted_at": "2026-09-28T22:10:47.517Z",
+       "age_hours": 16.1
+      },
+      "midgrade": {
+       "card": 4.27,
+       "cash": null,
+       "posted_at": "2026-09-28T22:10:47.533Z",
+       "age_hours": 16.1
+      },
+      "premium": {
+       "card": 4.57,
+       "cash": null,
+       "posted_at": "2026-09-28T22:10:47.549Z",
+       "age_hours": 16.1
+      },
+      "diesel": {
+       "card": 5.87,
+       "cash": null,
+       "posted_at": "2026-09-28T22:10:47.564Z",
+       "age_hours": 16.1
+      }
+     },
+     "rank": 3,
+     "regular_card": 3.87,
+     "price_posted_at": "2026-09-28T22:10:47.517Z",
+     "price_age_hours": 16.1
+    },
+    {
+     "station_id": "76016",
+     "brand": "RaceWay",
+     "name": "RaceWay",
+     "membership": false,
+     "address": "2107 Moody Pkwy",
+     "city": "Moody",
+     "state": "AL",
+     "zip": "35004",
+     "lat": 33.570895,
+     "lng": -86.520444,
+     "fuels": {
+      "regular": {
+       "card": 3.87,
+       "cash": null,
+       "posted_at": "2026-09-28T12:47:36.426Z",
+       "age_hours": 25.4
+      },
+      "midgrade": {
+       "card": 4.29,
+       "cash": null,
+       "posted_at": "2026-09-28T12:47:36.441Z",
+       "age_hours": 25.4
+      },
+      "premium": {
+       "card": 4.59,
+       "cash": null,
+       "posted_at": "2026-09-28T12:47:36.457Z",
+       "age_hours": 25.4
+      },
+      "diesel": {
+       "card": 5.87,
+       "cash": null,
+       "posted_at": "2026-09-28T12:47:36.472Z",
+       "age_hours": 25.4
+      }
+     },
+     "rank": 4,
+     "regular_card": 3.87,
+     "price_posted_at": "2026-09-28T12:47:36.426Z",
+     "price_age_hours": 25.4
+    },
+    {
+     "station_id": "108731",
+     "brand": "Circle K",
+     "name": "Circle K",
+     "membership": false,
+     "address": "2110 Moody Pkwy",
+     "city": "Leeds",
+     "state": "AL",
+     "zip": "35004",
+     "lat": 33.570416641695,
+     "lng": -86.519587039948,
+     "fuels": {
+      "regular": {
+       "card": 3.88,
+       "cash": null,
+       "posted_at": "2026-09-28T19:23:11.359Z",
+       "age_hours": 18.8
+      },
+      "midgrade": {
+       "card": 4.38,
+       "cash": null,
+       "posted_at": "2026-09-27T19:21:56.076Z",
+       "age_hours": 42.9
+      },
+      "premium": {
+       "card": 4.78,
+       "cash": null,
+       "posted_at": "2026-09-27T19:21:56.092Z",
+       "age_hours": 42.9
+      },
+      "diesel": {
+       "card": 5.96,
+       "cash": null,
+       "posted_at": "2026-09-27T19:21:56.060Z",
+       "age_hours": 42.9
+      }
+     },
+     "rank": 5,
+     "regular_card": 3.88,
+     "price_posted_at": "2026-09-28T19:23:11.359Z",
+     "price_age_hours": 18.8
+    },
+    {
+     "station_id": "42829",
+     "brand": "Shell",
+     "name": "Shell",
+     "membership": false,
+     "address": "2170 Moody Pkwy",
+     "city": "Moody",
+     "state": "AL",
+     "zip": "35004",
+     "lat": 33.571179917049,
+     "lng": -86.519119865143,
+     "fuels": {
+      "regular": {
+       "card": 3.88,
+       "cash": null,
+       "posted_at": "2026-09-28T16:33:16.039Z",
+       "age_hours": 21.7
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 5.97,
+       "cash": null,
+       "posted_at": "2026-09-27T18:30:04.105Z",
+       "age_hours": 43.7
+      }
+     },
+     "rank": 6,
+     "regular_card": 3.88,
+     "price_posted_at": "2026-09-28T16:33:16.039Z",
+     "price_age_hours": 21.7
+    },
+    {
+     "station_id": "34078",
+     "brand": "Pure",
+     "name": "Conoco",
+     "membership": false,
+     "address": "7502 Parkway Dr",
+     "city": "Leeds",
+     "state": "AL",
+     "zip": "35094-4807",
+     "lat": 33.54510566195,
+     "lng": -86.55454158783,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-28T03:06:16.278Z",
+       "age_hours": 35.1
+      },
+      "midgrade": {
+       "card": 4.19,
+       "cash": null,
+       "posted_at": "2026-09-28T03:06:16.262Z",
+       "age_hours": 35.1
+      },
+      "premium": {
+       "card": 4.49,
+       "cash": null,
+       "posted_at": "2026-09-28T03:06:16.293Z",
+       "age_hours": 35.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 7,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-28T03:06:16.278Z",
+     "price_age_hours": 35.1
+    },
+    {
+     "station_id": "70820",
+     "brand": "Chevron",
+     "name": "Chevron",
+     "membership": false,
+     "address": "1833 Ashville Rd",
+     "city": "Leeds",
+     "state": "AL",
+     "zip": "35094",
+     "lat": 33.562871509231,
+     "lng": -86.52184009552,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": null,
+       "posted_at": "2026-09-29T11:10:53.094Z",
+       "age_hours": 3.1
+      },
+      "midgrade": {
+       "card": 4.39,
+       "cash": null,
+       "posted_at": "2026-09-29T11:10:53.109Z",
+       "age_hours": 3.1
+      },
+      "premium": {
+       "card": 4.89,
+       "cash": null,
+       "posted_at": "2026-09-29T11:10:53.125Z",
+       "age_hours": 3.1
+      },
+      "diesel": {
+       "card": null,
+       "cash": null,
+       "posted_at": null,
+       "age_hours": null
+      }
+     },
+     "rank": 8,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T11:10:53.094Z",
+     "price_age_hours": 3.1
+    },
+    {
+     "station_id": "163886",
+     "brand": "Love's Travel Stop",
+     "name": "Love's Travel Stop",
+     "membership": false,
+     "address": "2625 Kelly Creek Rd S",
+     "city": "Moody",
+     "state": "AL",
+     "zip": "35004",
+     "lat": 33.57675142,
+     "lng": -86.47778213,
+     "fuels": {
+      "regular": {
+       "card": 3.89,
+       "cash": 3.89,
+       "posted_at": "2026-09-29T12:51:59.149Z",
+       "age_hours": 1.4
+      },
+      "midgrade": {
+       "card": 4.34,
+       "cash": 4.34,
+       "posted_at": "2026-09-29T12:51:59.165Z",
+       "age_hours": 1.4
+      },
+      "premium": {
+       "card": 4.74,
+       "cash": 4.74,
+       "posted_at": "2026-09-29T12:51:59.196Z",
+       "age_hours": 1.4
+      },
+      "diesel": {
+       "card": 5.93,
+       "cash": 5.87,
+       "posted_at": "2026-09-29T12:51:59.212Z",
+       "age_hours": 1.4
+      }
+     },
+     "rank": 9,
+     "regular_card": 3.89,
+     "price_posted_at": "2026-09-29T12:51:59.149Z",
+     "price_age_hours": 1.4
+    },
+    {
+     "station_id": "121825",
+     "brand": "Valero",
+     "name": "Valero",
+     "membership": false,
+     "address": "2690 Kelly Creek Rd",
+     "city": "Odenville",
+     "state": "AL",
+     "zip": "35004",
+     "lat": 33.577138763505,
+     "lng": -86.47607088089,
+     "fuels": {
+      "regular": {
+       "card": 3.99,
+       "cash": 3.99,
+       "posted_at": "2026-09-28T02:10:14.105Z",
+       "age_hours": 36.1
+      },
+      "midgrade": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "premium": {
+       "card": 0,
+       "cash": 0,
+       "posted_at": null,
+       "age_hours": null
+      },
+      "diesel": {
+       "card": 5.99,
+       "cash": 5.99,
+       "posted_at": "2026-09-27T23:31:46.844Z",
+       "age_hours": 38.7
+      }
+     },
+     "rank": 10,
+     "regular_card": 3.99,
+     "price_posted_at": "2026-09-28T02:10:14.105Z",
+     "price_age_hours": 36.1
+    }
+   ]
+  }
+ ],
+ "area_count": 10
+}
