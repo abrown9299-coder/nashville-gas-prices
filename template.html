@@ -2,92 +2,146 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0d47a1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b5ed7">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Nashville Gas">
+<meta name="apple-mobile-web-app-title" content="Gas Prices">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <title>Nashville Gas Prices</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
-*{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;margin:0;background:#f4f6f8;color:#1a1a1a}
-header{background:#0d47a1;color:#fff;padding:14px 16px}header h1{margin:0;font-size:1.25rem}
-main{max-width:720px;margin:0 auto;padding:12px}
-.card{background:#fff;border-radius:10px;padding:12px 14px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.metro-row{display:flex;align-items:center;gap:10px;margin:0 2px 8px}.metro-row label{font-weight:600;white-space:nowrap}.metro-row select{flex:1;min-width:0}
-.avg-block{margin:0 2px 10px;font-size:.85rem;line-height:1.7}
-.refresh-btn{background:#0d47a1;color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:.9rem;cursor:pointer;flex:none}
-.refresh-btn:disabled{opacity:.55;cursor:default}.refresh-msg{font-size:.75rem;opacity:.7;white-space:nowrap}
-.route-form{display:flex;gap:8px;margin:10px 0}
-#routeDest{flex:1;min-width:0;padding:10px;font-size:16px;border:1px solid #ccc;border-radius:8px}
-#routeGo{background:#0d47a1;color:#fff;border:none;border-radius:8px;padding:10px 16px;font-size:.95rem;cursor:pointer;flex:none}
-#routeGo:disabled{opacity:.55;cursor:default}
-#routeClear{background:#fff;color:#333;border:1px solid #ccc;border-radius:8px;padding:10px 14px;font-size:.95rem;cursor:pointer;flex:none}
-#routeClear[hidden]{display:none}
-.route-msg{color:#555;font-size:.85rem;margin:6px 0}
-#routeResults[hidden]{display:none}
-#routeRows tr[data-ri]{cursor:pointer}
-#routeRows tr.sel{background:#e3ecf9}
-#routeTripBtn{display:block;width:100%;margin-top:10px;background:#0d47a1;color:#fff;border:none;border-radius:8px;padding:12px;font-size:1rem;cursor:pointer}
-#tripOverlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px}
-#tripOverlay[hidden]{display:none}
-.trip-choice{display:block;width:100%;margin:10px 0 0;background:#0d47a1;color:#fff;border:none;border-radius:8px;padding:12px;font-size:.95rem;cursor:pointer}
-.trip-choice.secondary{background:#fff;color:#0d47a1;border:1px solid #0d47a1}
-.ac-wrap{position:relative;flex:1;min-width:0;display:flex}
-.ac-list{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fff;border:1px solid #ccc;border-radius:8px;z-index:1500;max-height:230px;overflow:auto;box-shadow:0 6px 18px rgba(0,0,0,.18)}
-.ac-list[hidden]{display:none}
-.ac-item{padding:9px 12px;cursor:pointer;border-bottom:1px solid #eee;font-size:.9rem}
-.ac-item:last-child{border-bottom:none}
-.aaa-line{font-size:.8rem;opacity:.75}
-.callout{font-size:.85rem;font-weight:700}
-#rows tr[data-i]{cursor:pointer}
-#settingsOverlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px}
-#settingsOverlay[hidden]{display:none}
-.settings-sheet{background:#fff;border-radius:14px;padding:16px 18px;max-width:340px;width:100%;box-shadow:0 8px 30px rgba(0,0,0,.25)}
-.settings-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.settings-head button{border:1px solid #ccc;background:#f5f5f5;border-radius:8px;padding:6px 14px;font-size:.9rem;cursor:pointer}
-.nav-choices{display:flex;gap:14px;margin-top:8px;flex-wrap:wrap}
-.nav-choices label{font-size:.92rem;display:flex;gap:6px;align-items:center;cursor:pointer}
-.callout.down{color:#1b7f3b}.callout.up{color:#c0392b}.callout.flat{opacity:.65;font-weight:400}
-.trend-sub{font-size:.82rem;opacity:.65;margin:-2px 0 8px}
-@media(prefers-color-scheme:dark){body{background:#121212;color:#e8e8e8}.card{background:#1e1e1e}select{background:#2a2a2a;color:#e8e8e8;border-color:#444}td{border-color:#333}th{border-color:#444}.ppop a{color:#90caf9}.callout.down{color:#66bb6a}.callout.up{color:#ef9a9a}.settings-sheet{background:#1e1e1e}.ac-list{background:#1e1e1e;border-color:#444}.ac-item{border-color:#333}.trip-choice.secondary{background:#1e1e1e}.settings-head button{background:#2a2a2a;border-color:#444;color:#e8e8e8}}
-#map{height:340px;border-radius:8px;z-index:0}.map-head{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}.map-head h2{margin:0;font-size:1rem}.map-head span{font-size:.78rem;opacity:.65}
-.controls{display:flex;align-items:center;gap:10px;margin-bottom:12px}.controls label{font-weight:600;font-size:.95rem}
-select{flex:1;font-size:1rem;padding:10px;border-radius:8px;border:1px solid #ccc;background:#fff;color:#1a1a1a;max-width:100%}
-#listCard h2{margin:0 0 8px;font-size:1.05rem}
-table{width:100%;border-collapse:collapse;font-size:.92rem}th{text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;opacity:.6;padding:6px 4px;border-bottom:2px solid #e0e0e0}
-td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weight:700;white-space:nowrap}.dim{font-size:.8rem;opacity:.65}
+*{box-sizing:border-box}
+:root{
+--bg:#edf0f4;--card:#ffffff;--text:#0f141b;--muted:#5d6b7d;
+--brand:#0b5ed7;--brand-deep:#0849a8;--brand-ink:#ffffff;
+--border:#dde3ea;--shadow:0 1px 2px rgba(15,23,42,.05),0 8px 24px rgba(15,23,42,.07);
+--radius:18px;--good:#178a3c;--bad:#d32f2f;--pin-ok:#f2a007;
+color-scheme:light dark;
+}
+@media(prefers-color-scheme:dark){
+:root{
+--bg:#0b0e13;--card:#141922;--text:#eef1f6;--muted:#99a3b4;
+--brand:#5b93ff;--brand-deep:#8db4ff;--brand-ink:#0a1120;
+--border:#232b38;--shadow:0 10px 30px rgba(0,0,0,.5);
+}}
+html{-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Inter,sans-serif;margin:0;background:var(--bg);color:var(--text);line-height:1.45;-webkit-font-smoothing:antialiased}
+header{position:sticky;top:0;z-index:1200;background:var(--card);border-bottom:1px solid var(--border);padding:13px 16px}
+@supports((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header{background:color-mix(in srgb,var(--card) 84%,transparent);backdrop-filter:blur(14px) saturate(1.5);-webkit-backdrop-filter:blur(14px) saturate(1.5)}}
+header h1{margin:0;font-size:1.12rem;font-weight:800;letter-spacing:-.015em}
+main{max-width:1120px;margin:0 auto;padding:14px 14px 44px}
+.topbar{display:flex;align-items:center;gap:10px;margin:2px 0 4px}
+.seg{flex:1;min-width:0;display:flex;background:var(--border);border-radius:999px;padding:3px}
+.seg button{flex:1;min-width:0;border:0;background:transparent;color:var(--muted);font:inherit;font-weight:700;font-size:.85rem;padding:9px 6px;border-radius:999px;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:background .15s,color .15s}
+.seg button.active{background:var(--card);color:var(--text);box-shadow:0 1px 5px rgba(0,0,0,.2)}
+.top-actions{display:flex;gap:8px;flex:none}
+.icon-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:1.2rem;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;box-shadow:var(--shadow);transition:transform .1s}
+.icon-btn:active{transform:scale(.92)}
+.icon-btn:disabled{opacity:.55}
+.icon-btn.spin{animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.refresh-msg{font-size:.78rem;color:var(--muted);min-height:1.2em;margin:0 2px 10px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:14px;box-shadow:var(--shadow)}
+.card h2{margin:0;font-size:1.02rem;font-weight:800;letter-spacing:-.01em}
+.avg-block{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px 16px;margin-bottom:14px;box-shadow:var(--shadow);font-size:.87rem;display:flex;flex-direction:column;gap:3px}
+.aaa-line{color:var(--muted);font-weight:600}
+.callout{font-weight:800}
+.callout.down{color:var(--good)}
+.callout.up{color:var(--bad)}
+.callout.flat{color:var(--muted)}
+.map-head{display:flex;align-items:baseline;gap:8px;margin-bottom:10px}
+.map-head span{font-size:.78rem;color:var(--muted)}
+#map{height:340px;border-radius:12px;z-index:0;background:var(--border)}
+.pin-legend{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:.74rem;color:var(--muted)}
+.pin-legend .pill{display:inline-flex;align-items:center;gap:5px;background:var(--bg);border:1px solid var(--border);border-radius:999px;padding:3px 10px 3px 5px}
+.pin-legend .dot{width:10px;height:10px;border-radius:50%}
+.dot.bad{background:var(--bad)}.dot.ok{background:var(--pin-ok)}.dot.good{background:var(--good)}
+#mapFallback{display:none;background:var(--bg);border:1px dashed var(--border);border-radius:12px;padding:18px;text-align:center;color:var(--muted);font-size:.88rem}
+.controls{display:flex;align-items:center;gap:10px;margin:0 2px 10px}
+.controls label{font-weight:700;font-size:.9rem;white-space:nowrap}
+select{flex:1;min-width:0;font:inherit;font-size:1rem;padding:11px 12px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);max-width:100%}
+select:focus{outline:none;border-color:var(--brand)}
+#listCard{padding:8px 8px 6px}
+#listCard h2{padding:8px 10px 0}
+.trend-sub{font-size:.8rem;color:var(--muted);padding:2px 10px 4px}
+table{width:100%;border-collapse:collapse;font-size:.93rem}
+thead th{text-align:left;font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700;padding:8px 10px;border-bottom:1px solid var(--border)}
+tbody td{padding:12px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
+tbody tr:last-child td{border-bottom:none}
+tbody tr[data-i]{cursor:pointer}
+tbody tr[data-i]:active{background:var(--bg)}
+.pr{font-weight:800;white-space:nowrap;font-size:1.04rem;font-variant-numeric:tabular-nums}
+.dim{font-size:.78rem;color:var(--muted)}
+.loading-row td{text-align:center;color:var(--muted);padding:20px}
+.note{font-size:.78rem;color:var(--muted);line-height:1.6;margin:4px 4px 0}
 .ppwrap{background:none!important;border:none!important}
-.price-pin{width:72px;height:32px;line-height:28px;text-align:center;background:#14521c;color:#fff;font-weight:800;font-size:15px;border-radius:16px;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.45);white-space:nowrap}
-.price-pin.deal-bad{background:#c62828}
-.price-pin.deal-ok{background:#f9a825;color:#3e2723}
-.price-pin.deal-good{background:#1b7a34}
-.pin-legend{font-size:.72rem;opacity:.85;margin-top:6px;display:flex;gap:5px;align-items:center;flex-wrap:wrap}
-.pin-legend .dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-left:6px}
-.pin-legend .dot:first-child{margin-left:0}
-.dot.bad{background:#c62828}.dot.ok{background:#f9a825}.dot.good{background:#1b7a34}
-.ppop{font-size:13px;line-height:1.55}.ppop a{color:#0d47a1;font-weight:600}
-.locate-btn{width:34px;height:34px;background:#fff;border:1px solid #ccc;border-radius:4px;cursor:pointer;font-size:19px;line-height:1;color:#333;box-shadow:0 1px 5px rgba(0,0,0,.3);padding:0}.locate-btn:hover{background:#f4f4f4}.locate-btn:focus-visible{outline:2px solid #1a73e8}
-.note{font-size:.8rem;opacity:.7;line-height:1.5}
-.loading-row td{text-align:center;opacity:.6;padding:18px}
-@media(prefers-color-scheme:dark){body{background:#121212;color:#e8e8e8}.card{background:#1e1e1e}select{background:#2a2a2a;color:#e8e8e8;border-color:#444}td{border-color:#333}th{border-color:#444}.ppop a{color:#90caf9}}
+.price-pin{min-width:76px;height:34px;padding:0 11px;line-height:30px;text-align:center;background:var(--good);color:#fff;font-weight:800;font-size:15px;border-radius:999px;border:2px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.38);white-space:nowrap;font-variant-numeric:tabular-nums}
+.price-pin.deal-bad{background:var(--bad)}
+.price-pin.deal-ok{background:var(--pin-ok);color:#3a2a00}
+.price-pin.deal-good{background:var(--good)}
+.ppop{font-size:13px;line-height:1.55;color:#1a1a1a}
+.ppop a{color:#0849a8;font-weight:700}
+.locate-btn{width:38px;height:38px;background:var(--card);border:1px solid var(--border);border-radius:11px;cursor:pointer;font-size:19px;line-height:1;color:var(--text);box-shadow:var(--shadow);padding:0}
+.locate-btn:active{transform:scale(.94)}
+.locate-btn:focus-visible{outline:2px solid var(--brand)}
+#routeCard{scroll-margin-top:70px}
+.route-form{display:flex;gap:8px;margin:12px 0}
+.ac-wrap{position:relative;flex:1;min-width:0}
+#routeDest{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:var(--bg);color:var(--text)}
+#routeDest:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(11,94,215,.16)}
+#routeGo{background:var(--brand);color:var(--brand-ink);border:none;border-radius:12px;padding:12px 18px;font:inherit;font-size:.95rem;font-weight:700;cursor:pointer;flex:none;transition:transform .1s,opacity .15s}
+#routeGo:active{transform:scale(.96)}
+#routeGo:disabled{opacity:.5;cursor:default}
+#routeClear{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:12px;padding:12px 14px;font:inherit;font-size:.95rem;font-weight:600;cursor:pointer;flex:none}
+#routeClear[hidden]{display:none}
+.route-msg{color:var(--muted);font-size:.83rem;margin:8px 0;line-height:1.5}
+#routeResults[hidden]{display:none}
+#routeRows tr.sel{background:rgba(11,94,215,.09)}
+#routeTripBtn{display:block;width:100%;margin-top:12px;background:var(--brand);color:var(--brand-ink);border:none;border-radius:14px;padding:14px;font:inherit;font-size:1rem;font-weight:800;cursor:pointer;transition:transform .1s}
+#routeTripBtn:active{transform:scale(.98)}
+.ac-list{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);z-index:1300;overflow:hidden;max-height:320px;overflow-y:auto}
+.ac-list[hidden]{display:none}
+.ac-item{padding:11px 14px;cursor:pointer;border-bottom:1px solid var(--border);font-size:.9rem}
+.ac-item:last-child{border-bottom:none}
+.ac-item:active{background:var(--bg)}
+#tripOverlay[hidden],#settingsOverlay[hidden]{display:none}
+#tripOverlay,#settingsOverlay{position:fixed;inset:0;background:rgba(4,8,16,.5);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px}
+.settings-sheet{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:20px;padding:18px;max-width:360px;width:100%;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.settings-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.settings-head b{font-size:1rem}
+.settings-head button{background:var(--bg);border:1px solid var(--border);color:var(--text);border-radius:999px;padding:8px 15px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
+.nav-choices{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.nav-choices label{font-size:.9rem;display:flex;gap:7px;align-items:center;cursor:pointer;background:var(--bg);border:1px solid var(--border);border-radius:999px;padding:9px 15px;font-weight:600}
+.nav-choices input{accent-color:var(--brand);margin:0}
+.trip-choice{display:block;width:100%;margin:10px 0 0;background:var(--brand);color:var(--brand-ink);border:none;border-radius:14px;padding:14px;font:inherit;font-size:.95rem;font-weight:700;cursor:pointer;transition:transform .1s}
+.trip-choice.secondary{background:var(--card);color:var(--brand-deep);border:1.5px solid var(--brand)}
+.trip-choice:active{transform:scale(.98)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+@media(min-width:960px){
+main{padding:22px 22px 52px}
+.map-list{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;align-items:start}
+.map-list .card{margin-bottom:0}
+#map{height:520px}
+#routeCard{margin-top:16px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<header><h1>🛢️ <span id="metroName">Nashville</span> Gas Prices</h1></header>
+<header><h1>⛽ <span id="metroName">Nashville</span> Gas Prices</h1></header>
 <main>
-<div class="controls metro-row"><label for="metro">Metro:</label><select id="metro"></select><button class="refresh-btn" id="refreshBtn" type="button">↻ Refresh</button><button class="refresh-btn" id="settingsBtn" type="button" aria-label="Settings">⚙</button><span class="refresh-msg" id="refreshMsg"></span></div>
+<div class="topbar"><div class="seg" id="metro" aria-label="Metro"></div><div class="top-actions"><button class="icon-btn" id="refreshBtn" type="button" aria-label="Check for new prices">↻</button><button class="icon-btn" id="settingsBtn" type="button" aria-label="Settings">⚙</button></div></div><div class="refresh-msg" id="refreshMsg" role="status"></div>
 <div id="tripOverlay" hidden><div class="settings-sheet" role="dialog" aria-label="Trip options"><div class="settings-head"><b>Send trip to GPS</b><button id="tripClose" type="button">Cancel</button></div><p class="route-msg" id="tripMsg"></p><button id="tripGoogle" type="button" class="trip-choice">⛽ Open full trip in Google Maps</button><button id="tripApp" type="button" class="trip-choice secondary">Route to station</button></div></div>
 <div id="settingsOverlay" hidden><div class="settings-sheet" role="dialog" aria-label="Settings"><div class="settings-head"><b>Settings</b><button id="settingsClose" type="button">Done</button></div><div><span>Navigation app</span><div class="nav-choices"><label><input type="radio" name="navapp" value="apple"> Apple</label><label><input type="radio" name="navapp" value="google"> Google</label><label><input type="radio" name="navapp" value="waze"> Waze</label></div></div></div></div>
 <div class="avg-block"><span class="aaa-line" id="aaaLine" style="display:none"></span><br><span class="callout" id="calloutLine" style="display:none"></span></div>
-<div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div class="pin-legend"><span class="dot bad"></span>above avg<span class="dot ok"></span>near avg<span class="dot good"></span>good deal</div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
-<div class="controls"><label for="area">Top 10 for:</label><select id="area"></select></div>
-<div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><div class="trend-sub" id="trendSub"></div><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
-<p class="note">Every pin on the map shows a price: blue pins are the 10 cheapest stations in the selected area, green pins are the cheapest station in each other area (gold pin is the cheapest in the metro). The list below shows the same top 10 with addresses. Prices come from GasBuddy; the "updated" age is how long ago each price was reported. Excludes Costco, Sam's Club, and BJ's. The AAA line is the metro-wide daily average from AAA (fleet-card data) — a sanity check for the station prices above. Trend arrows compare each area's cheapest station to ~24 hours ago; the callout line is fill-up advice based on the metro trend. Allow location to see each station's distance from you.</p>
+<div class="map-list"><div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div class="pin-legend"><span class="pill"><span class="dot bad"></span>above avg</span><span class="pill"><span class="dot ok"></span>near avg</span><span class="pill"><span class="dot good"></span>good deal</span></div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
+<div><div class="controls"><label for="area">Top 10 for</label><select id="area"></select></div>
+<div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><div class="trend-sub" id="trendSub"></div><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div></div>
+<p class="note">Every pin shows a price, colored against the AAA metro average: red is above average, yellow is near it, green is a good deal. Zoom out for one pin per area; zoom in for every station. The list shows the cheapest stations with addresses. Prices come from GasBuddy; “updated” is how long ago each price was reported. Excludes Costco, Sam’s Club, and BJ’s. Trend arrows compare each area’s cheapest station to about 24 hours ago; the callout is fill-up advice based on the metro trend. Allow location to see each station’s distance from you.</p>
 <div class="card" id="routeCard"><h2>⛽ Cheapest on my route</h2><div class="route-form"><div class="ac-wrap"><input id="routeDest" type="text" placeholder="Where are you headed? (address or place)" autocomplete="off" enterkeyhint="search"><div id="routeAC" class="ac-list" hidden></div></div><button id="routeGo" type="button">Find</button><button id="routeClear" type="button" hidden>✕ Clear</button></div><div class="route-msg" id="routeMsg">Uses your GPS location as the starting point.</div><div id="routeResults" hidden><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Off route</th></tr></thead><tbody id="routeRows"></tbody></table><button id="routeTripBtn" type="button">⛽ Send trip to GPS →</button><div class="route-msg">Opens the full trip with your gas stop in Google Maps.</div></div></div>
 </main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -291,7 +345,7 @@ window.selectMetro=function(mkey){
   loadMetro(mkey);
   document.getElementById('metroName').textContent=M().label;
   document.title=M().label+' Gas Prices';
-  metroEl.value=mkey;
+  if(metroEl){var mbs=metroEl.querySelectorAll('button');for(var mbi=0;mbi<mbs.length;mbi++)mbs[mbi].classList.toggle('active',mbs[mbi].getAttribute('data-m')===mkey)}
   selectEl.innerHTML='';
   var opt=document.createElement('option');opt.value='overall';opt.textContent=M().label+' Metro (Overall)';selectEl.appendChild(opt);
   centers().forEach(function(c){var o=document.createElement('option');o.value=c[0];o.textContent=c[1];selectEl.appendChild(o)});
@@ -416,22 +470,22 @@ function setupRefresh(){
   var btn=document.getElementById('refreshBtn'),msg=document.getElementById('refreshMsg'),cur=data.u;
   function say(t){msg.textContent=t}
   btn.addEventListener('click',function(){
-    btn.disabled=true;
+    btn.disabled=true;btn.classList.add('spin');
     if(WORKER_URL){
       say('Pulling live prices…');
       var target=curSlug==='overall'?null:curSlug;
       var p=target?fetchAreaLive(target,true):fetchAllLive();
       p.then(function(){
         say(liveMode?'✓ Updated.':'Live fetch failed — showing cached.');
-        btn.disabled=false;setTimeout(function(){say('')},5000);
+        btn.disabled=false;btn.classList.remove('spin');setTimeout(function(){say('')},5000);
       });
     }else{
       say('Checking…');
       fetch(location.href.split('?')[0],{cache:'no-store'}).then(function(r){return r.text()}).then(function(html){
         var m=html.match(/"u":"([^"]+)"/);
         if(m&&m[1]&&m[1]!==cur){say('New prices found — reloading…');location.reload()}
-        else{say('✓ Up to date.');btn.disabled=false;setTimeout(function(){say('')},4000)}
-      }).catch(function(){say('Could not check.');btn.disabled=false;setTimeout(function(){say('')},4000)});
+        else{say('✓ Up to date.');btn.disabled=false;btn.classList.remove('spin');setTimeout(function(){say('')},4000)}
+      }).catch(function(){say('Could not check.');btn.disabled=false;btn.classList.remove('spin');setTimeout(function(){say('')},4000)});
     }
   });
 }
@@ -661,8 +715,7 @@ function setupRoute(){
 
 function init(){
   metroEl=document.getElementById('metro');
-  METRO_ORDER.forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=data.metros[k].label;metroEl.appendChild(o)});
-  metroEl.addEventListener('change',function(){selectMetro(metroEl.value)});
+  METRO_ORDER.forEach(function(k){var b=document.createElement('button');b.type='button';b.setAttribute('data-m',k);b.textContent=data.metros[k].label;b.addEventListener('click',function(){selectMetro(k)});metroEl.appendChild(b)});
   selectEl=document.getElementById('area');
   selectEl.addEventListener('change',function(){selectArea(selectEl.value)});
   try{
