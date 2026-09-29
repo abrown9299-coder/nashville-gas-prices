@@ -155,34 +155,27 @@ function dealClass(price){
 function renderMap(slug){
   if(!layer)return;
   layer.clearLayers();
-  var pins=[]; // {lat,lng,price,html}
-  var entries=[];
+  var perArea=[]; // one pin per area: cheapest station, for the zoomed-out view
+  var detail=[];  // full pin set for the zoomed-in view
   centers().forEach(function(ac){
     var e=areaEntry(ac[0]);
-    if(e&&e[2]&&e[2].length)entries.push(e);
-  });
-  // fallback: if no live and no static entries (shouldn't happen), use static areas
-  if(!entries.length)entries=areas;
-  entries.forEach(function(a){
-    if(a[0]===slug)return;
-    var s=a[2][0];
-    pins.push({lat:s[4],lng:s[5],price:s[6],
-      html:'<div class="ppop"><b>#1 in '+esc(a[1])+'</b><br>'+esc(s[1])+'<br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="selectArea(\''+a[0]+'\');return false">View '+esc(a[1])+' top 10 →</a> · <a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions →</a></div>'});
+    if(!(e&&e[2]&&e[2].length))return;
+    var s=e[2][0];
+    var html='<div class="ppop"><b>#1 in '+esc(ac[1])+'</b><br>'+esc(s[1])+'<br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="selectArea(\''+ac[0]+'\');return false">View '+esc(ac[1])+' top 10 \u2192</a> · <a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions \u2192</a></div>';
+    var pin={lat:s[4],lng:s[5],price:s[6],html:html};
+    perArea.push(pin);
+    if(ac[0]!==slug)detail.push(pin);
   });
   if(slug!=='overall'){
     var v=getView(slug);
     if(v&&v[2])v[2].forEach(function(s,i){
-      pins.push({lat:s[4],lng:s[5],price:s[6],
-        html:'<div class="ppop"><b>#'+(i+1)+' in '+esc(v[1])+' — '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">· '+esc(s[7])+'</span><br><a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions →</a></div>'});
+      detail.push({lat:s[4],lng:s[5],price:s[6],
+        html:'<div class="ppop"><b>#'+(i+1)+' in '+esc(v[1])+' \u2014 '+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br><a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions \u2192</a></div>'});
     });
   }
-  // Zoomed out: declutter — only good deals. Never leave the map empty:
-  // fall back to the 3 cheapest pins.
-  var show=pins;
-  if(curZoom<12){
-    var good=pins.filter(function(p){return dealClass(p.price)===' deal-good'});
-    show=good.length?good:pins.slice().sort(function(a,b){return a.price-b.price}).slice(0,3);
-  }
+  // Zoomed out: one pin per area, so prices stay visible across the whole
+  // metro — including the expensive parts of town. Zoom in for full detail.
+  var show=curZoom<12?perArea:detail;
   show.forEach(function(p){addPricePin(p.lat,p.lng,p.price,dealClass(p.price),p.html)});
 }
 
