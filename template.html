@@ -136,7 +136,7 @@ main{padding:22px 22px 52px}
 <div class="map-list"><div class="card"><div class="map-head"><h2>Cheapest per area</h2><span>Tap a price for details</span></div><div id="map"></div><div class="pin-legend"><span class="pill"><span class="dot bad"></span>above avg</span><span class="pill"><span class="dot ok"></span>near avg</span><span class="pill"><span class="dot good"></span>good deal</span></div><div id="mapFallback" style="display:none">Map could not load. The table below still has every price.</div></div>
 <div id="overviewPane"><div class="controls"><label for="area">Top 10 for</label><select id="area"></select></div>
 <div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><div class="trend-sub" id="trendSub"></div><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div></div><div id="routePane" hidden>
-<div class="card" id="routeCard"><h2>⛽ Cheapest on my route</h2><div class="route-form"><div class="ac-wrap"><input id="routeDest" type="text" placeholder="Where are you headed? (address or place)" autocomplete="off" enterkeyhint="search"><div id="routeAC" class="ac-list" hidden></div></div><button id="routeGo" type="button">Find</button><button id="routeClear" type="button" hidden>✕ Clear</button></div><div class="route-msg" id="routeMsg">Uses your GPS location as the starting point.</div><div id="routeResults" hidden><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Off route</th></tr></thead><tbody id="routeRows"></tbody></table></div></div>
+<div class="card" id="routeCard"><h2>⛽ Cheapest on my route</h2><div class="route-form"><div class="ac-wrap"><input id="routeDest" type="text" placeholder="Where are you headed? (address or place)" autocomplete="off" enterkeyhint="search"><div id="routeAC" class="ac-list" hidden></div></div><button id="routeGo" type="button">Find</button><button id="routeClear" type="button" hidden>✕ Clear</button></div><div class="route-msg" id="routeMsg">Uses your GPS location as the starting point.</div><div id="routeResults" hidden><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Away</th></tr></thead><tbody id="routeRows"></tbody></table></div></div>
 </div></div>
 <p class="note">Every pin shows a price, colored against the AAA metro average: red is above average, yellow is near it, green is a good deal. Zoom out for one pin per area; zoom in for every station. The list shows the cheapest stations with addresses. Prices come from GasBuddy; “updated” is how long ago each price was reported. Excludes Costco, Sam’s Club, and BJ’s. Trend arrows compare each area’s cheapest station to about 24 hours ago; the callout is fill-up advice based on the metro trend. Allow location to see each station’s distance from you.</p>
 </main>
@@ -509,23 +509,30 @@ function allStations(){
   });
   return out;
 }
-function segDistMi(la,lo,la1,lo1,la2,lo2){
+function segInfoMi(la,lo,la1,lo1,la2,lo2){
   var R=3959,rad=Math.PI/180,mLa=(la1+la2)/2*rad;
   function X(x){return R*x*rad*Math.cos(mLa)}
   function Y(y){return R*y*rad}
   var px=X(lo)-X(lo1),py=Y(la)-Y(la1),dx=X(lo2)-X(lo1),dy=Y(la2)-Y(la1);
-  var L2=dx*dx+dy*dy,t=L2?((px*dx+py*dy)/L2):0;
-  t=Math.max(0,Math.min(1,t));
+  var L2=dx*dx+dy*dy,raw=L2?((px*dx+py*dy)/L2):0;
+  var t=Math.max(0,Math.min(1,raw));
   var ex=px-dx*t,ey=py-dy*t;
-  return Math.sqrt(ex*ex+ey*ey);
+  return {d:Math.sqrt(ex*ex+ey*ey),t:raw};
 }
-function routeDistMi(la,lo,coords){
-  var best=1e9;
+/* Distance to the route plus whether the nearest point falls behind the
+   origin (backtracking) or past the destination (overshoot). */
+function routeInfoMi(la,lo,coords){
+  var best=1e9,before=false,after=false;
   for(var i=0;i+1<coords.length;i++){
-    var d=segDistMi(la,lo,coords[i][1],coords[i][0],coords[i+1][1],coords[i+1][0]);
-    if(d<best)best=d;
+    var r=segInfoMi(la,lo,coords[i][1],coords[i][0],coords[i+1][1],coords[i+1][0]);
+    if(r.d<best){best=r.d;before=(i===0&&r.t<0);after=(i===coords.length-2&&r.t>1)}
   }
-  return best;
+  return {d:best,before:before,after:after};
+}
+function ptDistMi(la1,lo1,la2,lo2){
+  var R=3959,rad=Math.PI/180,mLa=(la1+la2)/2*rad;
+  var dx=R*(lo2-lo1)*rad*Math.cos(mLa),dy=R*(la2-la1)*rad;
+  return Math.sqrt(dx*dx+dy*dy);
 }
 function geocodeDest(dest,cb){
   var url='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=us&q='+encodeURIComponent(dest);
@@ -570,8 +577,12 @@ function showRouteResults(coords,dest){
   allStations().forEach(function(r){
     var s=r.s;
     if(typeof s[4]!=='number'||typeof s[5]!=='number'||typeof s[6]!=='number')return;
-    var d=routeDistMi(s[4],s[5],coords);
-    if(d<=1.5)cands.push({s:s,avg:r.avg,d:d});
+    var ri=routeInfoMi(s[4],s[5],coords);
+    var dd=ptDistMi(s[4],s[5],dest.lat,dest.lng);
+    var onWay=ri.d<=1.5&&!ri.before&&!ri.after;  /* in the corridor, ahead of you */
+    var nearDest=dd<=2;                          /* close to where you're headed */
+    if(!onWay&&!nearDest)return;                  /* out of the way: skip */
+    cands.push({s:s,avg:r.avg,d:onWay?ri.d:dd,nearDest:!onWay&&nearDest});
   });
   cands.sort(function(a,b){return a.s[6]-b.s[6]});
   routeStations=cands.slice(0,5);
@@ -581,7 +592,7 @@ function showRouteResults(coords,dest){
   routeStations.forEach(function(r,i){
     var s=r.s;
     addPricePin(s[4],s[5],s[6],dealClassAvg(s[6],r.avg),
-      '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+' mi off route<br><a href="#" onclick="goTrip('+i+');return false">Directions \u2192</a></div>');
+      '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+(r.nearDest?' mi from destination':' mi off route')+'<br><a href="#" onclick="goTrip('+i+');return false">Directions \u2192</a></div>');
   });
   frameRoute();
   var rows='';
@@ -589,10 +600,10 @@ function showRouteResults(coords,dest){
     var s=r.s;
     rows+='<tr data-ri="'+i+'"'+(i===0?' class="sel"':'')+'><td>'+(i+1)+'</td><td><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+'</span></td><td class="pr">$'+s[6].toFixed(2)+'</td><td class="dim">'+r.d.toFixed(1)+' mi</td></tr>';
   });
-  document.getElementById('routeRows').innerHTML=rows||'<tr><td colspan="4">No stations within 1.5 mi of that route.</td></tr>';
+  document.getElementById('routeRows').innerHTML=rows||'<tr><td colspan="4">No stations on your way or near your destination.</td></tr>';
   document.getElementById('routeResults').hidden=false;
   document.getElementById('routeClear').hidden=false;
-  msg_text('routeMsg',routeStations.length+' cheapest near your route to '+dest.name+'. Tap a station to choose your stop, then Directions \u2192 on the map opens the full trip in Google Maps.');
+  msg_text('routeMsg',routeStations.length+' cheapest on your way to '+dest.name+'. (or near it). Tap a station to choose your stop, then Directions \u2192 on the map opens the full trip in Google Maps.');
   wireRouteTaps();
 }
 /* Fit the map to the full route overview: origin, destination, route
@@ -636,7 +647,7 @@ function wireRouteTaps(){
     var s=r.s;
     frameRoute();
     L.popup().setLatLng([s[4],s[5]]).setContent(
-      '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+' mi off route<br><a href="#" onclick="goTrip('+routeStopIdx+');return false">Directions \u2192</a></div>'
+      '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+(r.nearDest?' mi from destination':' mi off route')+'<br><a href="#" onclick="goTrip('+routeStopIdx+');return false">Directions \u2192</a></div>'
     ).openOn(map);
   });
 }
