@@ -107,7 +107,7 @@ function setupRefresh(){
     fetch(location.href.split('?')[0],{cache:'no-store'}).then(function(r){return r.text()}).then(function(html){
       var m=html.match(/"u":"([^"]+)"/);
       if(m&&m[1]&&m[1]!==cur){say('New prices found — reloading…');location.reload()}
-      else{say('Prices are already up to date.');btn.disabled=false;setTimeout(function(){say('')},4000)}
+      else{say('✓ Latest available — prices from '+cur+'.');btn.disabled=false;setTimeout(function(){say('')},6000)}
     }).catch(function(){say('Could not check for updates.');btn.disabled=false;setTimeout(function(){say('')},4000)});
   });
 }
