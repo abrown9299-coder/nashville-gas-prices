@@ -22,6 +22,14 @@ main{max-width:720px;margin:0 auto;padding:12px}
 .avg-block{margin:0 2px 10px;font-size:.85rem;line-height:1.7}
 .refresh-btn{background:#0d47a1;color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:.9rem;cursor:pointer;flex:none}
 .refresh-btn:disabled{opacity:.55;cursor:default}.refresh-msg{font-size:.75rem;opacity:.7;white-space:nowrap}
+.route-form{display:flex;gap:8px;margin:10px 0}
+#routeDest{flex:1;min-width:0;padding:10px;font-size:16px;border:1px solid #ccc;border-radius:8px}
+#routeGo{background:#0d47a1;color:#fff;border:none;border-radius:8px;padding:10px 16px;font-size:.95rem;cursor:pointer;flex:none}
+#routeGo:disabled{opacity:.55;cursor:default}
+#routeClear{background:#fff;color:#333;border:1px solid #ccc;border-radius:8px;padding:10px 14px;font-size:.95rem;cursor:pointer;flex:none}
+#routeClear[hidden]{display:none}
+.route-msg{color:#555;font-size:.85rem;margin:6px 0}
+#routeResults[hidden]{display:none}
 .aaa-line{font-size:.8rem;opacity:.75}
 .callout{font-size:.85rem;font-weight:700}
 #rows tr[data-i]{cursor:pointer}
@@ -67,6 +75,7 @@ td{padding:8px 4px;border-bottom:1px solid #eee;vertical-align:top}.pr{font-weig
 <div class="controls"><label for="area">Top 10 for:</label><select id="area"></select></div>
 <div class="card" id="listCard"><h2 id="listTitle">Top 10</h2><div class="trend-sub" id="trendSub"></div><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Updated</th></tr></thead><tbody id="rows"></tbody></table></div>
 <p class="note">Every pin on the map shows a price: blue pins are the 10 cheapest stations in the selected area, green pins are the cheapest station in each other area (gold pin is the cheapest in the metro). The list below shows the same top 10 with addresses. Prices come from GasBuddy; the "updated" age is how long ago each price was reported. Excludes Costco, Sam's Club, and BJ's. The AAA line is the metro-wide daily average from AAA (fleet-card data) — a sanity check for the station prices above. Trend arrows compare each area's cheapest station to ~24 hours ago; the callout line is fill-up advice based on the metro trend. Allow location to see each station's distance from you.</p>
+<div class="card" id="routeCard"><h2>⛽ Cheapest on my route</h2><div class="route-form"><input id="routeDest" type="text" placeholder="Where are you headed? (address or place)" autocomplete="off" enterkeyhint="search"><button id="routeGo" type="button">Find</button><button id="routeClear" type="button" hidden>✕ Clear</button></div><div class="route-msg" id="routeMsg">Uses your GPS location as the starting point.</div><div id="routeResults" hidden><table><thead><tr><th>#</th><th>Station</th><th>Price</th><th>Off route</th></tr></thead><tbody id="routeRows"></tbody></table></div></div>
 </main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -145,12 +154,14 @@ function metroAvg(){
   var a=M().aaa;
   return (a&&a.regular>0)?a.regular:0;
 }
-function dealClass(price){
-  var avg=metroAvg();
+function dealClassAvg(price,avg){
   if(!(avg>0))return '';
   if(price>avg)return ' deal-bad';
   if(price>=avg-0.05)return ' deal-ok';
   return ' deal-good';
+}
+function dealClass(price){
+  return dealClassAvg(price,metroAvg());
 }
 function renderMap(slug){
   if(!layer)return;
@@ -263,6 +274,7 @@ function markCurrentArea(){
   }
 }
 window.selectMetro=function(mkey){
+  if(routeMode)clearRoute();
   loadMetro(mkey);
   document.getElementById('metroName').textContent=M().label;
   document.title=M().label+' Gas Prices';
@@ -294,6 +306,7 @@ function renderAaaCallout(){
   }else co.style.display='none';
 }
 window.selectArea=function(slug,scroll){
+  if(routeMode)clearRoute();
   curSlug=slug;selectEl.value=slug;renderMap(slug);renderList(slug);
   if(map)map.closePopup();
   if(scroll!==false){var el=document.getElementById('listCard');if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'})}
@@ -411,6 +424,133 @@ function setupRefresh(){
 }
 
 /* ===== Init ===== */
+/* ===== Route mode: cheapest stations along a driving route ===== */
+var routeMode=false, routeLine=null, routeStations=[];
+function allStations(){
+  var out=[];
+  METRO_ORDER.forEach(function(mk){
+    var md=data.metros[mk],avg=(md.aaa&&md.aaa.regular)||0;
+    (md.a||[]).forEach(function(v){
+      (v[2]||[]).forEach(function(s){out.push({s:s,avg:avg})});
+    });
+  });
+  return out;
+}
+function segDistMi(la,lo,la1,lo1,la2,lo2){
+  var R=3959,rad=Math.PI/180,mLa=(la1+la2)/2*rad;
+  function X(x){return R*x*rad*Math.cos(mLa)}
+  function Y(y){return R*y*rad}
+  var px=X(lo)-X(lo1),py=Y(la)-Y(la1),dx=X(lo2)-X(lo1),dy=Y(la2)-Y(la1);
+  var L2=dx*dx+dy*dy,t=L2?((px*dx+py*dy)/L2):0;
+  t=Math.max(0,Math.min(1,t));
+  var ex=px-dx*t,ey=py-dy*t;
+  return Math.sqrt(ex*ex+ey*ey);
+}
+function routeDistMi(la,lo,coords){
+  var best=1e9;
+  for(var i=0;i+1<coords.length;i++){
+    var d=segDistMi(la,lo,coords[i][1],coords[i][0],coords[i+1][1],coords[i+1][0]);
+    if(d<best)best=d;
+  }
+  return best;
+}
+function geocodeDest(dest,cb){
+  var url='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=us&q='+encodeURIComponent(dest);
+  try{var c=M().center;url+='&viewbox='+(c[1]-0.6)+','+(c[0]+0.6)+','+(c[1]+0.6)+','+(c[0]-0.6);}catch(e){}
+  fetch(url,{headers:{'Accept':'application/json'}}).then(function(r){return r.json()}).then(function(j){
+    if(j&&j.length)cb({lat:parseFloat(j[0].lat),lng:parseFloat(j[0].lon),name:String(j[0].display_name).split(',').slice(0,2).join(',')});
+    else cb(null);
+  }).catch(function(){cb(null)});
+}
+function fetchRoute(o,d,cb){
+  var url='https://router.project-osrm.org/route/v1/driving/'+o.lng+','+o.lat+';'+d.lng+','+d.lat+'?overview=full&geometries=geojson';
+  fetch(url).then(function(r){return r.json()}).then(function(j){
+    if(j&&j.code==='Ok'&&j.routes&&j.routes.length)cb(j.routes[0].geometry.coordinates);
+    else cb(null);
+  }).catch(function(){cb(null)});
+}
+function findRoute(){
+  var destEl=document.getElementById('routeDest'),msg=document.getElementById('routeMsg'),btn=document.getElementById('routeGo');
+  var dest=destEl.value.trim();
+  if(!dest){msg.textContent='Type a destination first.';destEl.focus();return}
+  if(!map){msg.textContent='The map isn\u2019t available right now.';return}
+  if(!userLoc){
+    msg.textContent='Waiting on your GPS location \u2014 allow location access, then tap Find again.';
+    try{map.locate({setView:false,timeout:12000})}catch(e){}
+    return;
+  }
+  btn.disabled=true;btn.textContent='Finding\u2026';msg.textContent='Finding your route\u2026';
+  geocodeDest(dest,function(g){
+    if(!g){btn.disabled=false;btn.textContent='Find';msg.textContent='Couldn\u2019t find that place \u2014 try a street address.';return}
+    fetchRoute(userLoc,g,function(coords){
+      if(!coords)coords=[[userLoc.lng,userLoc.lat],[g.lng,g.lat]]; // straight-line fallback
+      showRouteResults(coords,g);
+      btn.disabled=false;btn.textContent='Find';
+    });
+  });
+}
+function showRouteResults(coords,dest){
+  routeMode=true;
+  var cands=[];
+  allStations().forEach(function(r){
+    var s=r.s;
+    if(typeof s[4]!=='number'||typeof s[5]!=='number'||typeof s[6]!=='number')return;
+    var d=routeDistMi(s[4],s[5],coords);
+    if(d<=1.5)cands.push({s:s,avg:r.avg,d:d});
+  });
+  cands.sort(function(a,b){return a.s[6]-b.s[6]});
+  routeStations=cands.slice(0,10);
+  if(routeLine){map.removeLayer(routeLine);routeLine=null}
+  layer.clearLayers();
+  routeLine=L.polyline(coords.map(function(c){return [c[1],c[0]]}),{color:'#1a73e8',weight:4,opacity:0.85}).addTo(map);
+  routeStations.forEach(function(r){
+    var s=r.s;
+    addPricePin(s[4],s[5],s[6],dealClassAvg(s[6],r.avg),
+      '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+' mi off route<br><a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions \u2192</a></div>');
+  });
+  try{map.fitBounds(routeLine.getBounds().pad(0.15))}catch(e){}
+  var rows='';
+  routeStations.forEach(function(r,i){
+    var s=r.s;
+    rows+='<tr data-ri="'+i+'"><td>'+(i+1)+'</td><td><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+'</span></td><td class="pr">$'+s[6].toFixed(2)+'</td><td class="dim">'+r.d.toFixed(1)+' mi</td></tr>';
+  });
+  document.getElementById('routeRows').innerHTML=rows||'<tr><td colspan="4">No stations within 1.5 mi of that route.</td></tr>';
+  document.getElementById('routeResults').hidden=false;
+  document.getElementById('routeClear').hidden=false;
+  msg_text('routeMsg',routeStations.length+' cheapest near your route to '+dest.name+'.');
+  wireRouteTaps();
+}
+function msg_text(id,t){document.getElementById(id).textContent=t}
+function wireRouteTaps(){
+  var tb=document.getElementById('routeRows');
+  if(!tb||tb._wired)return;tb._wired=true;
+  tb.addEventListener('click',function(ev){
+    var tr=ev.target&&ev.target.closest?ev.target.closest('tr[data-ri]'):null;
+    if(!tr||!map)return;
+    var r=routeStations[+tr.getAttribute('data-ri')];
+    if(!r)return;
+    var s=r.s;
+    map.setView([s[4],s[5]],14);
+    L.popup().setLatLng([s[4],s[5]]).setContent(
+      '<div class="ppop"><b>'+esc(s[1])+'</b><br><span class="dim">'+esc(s[2])+', '+esc(s[3])+'</span><br><b>$'+s[6].toFixed(2)+'</b> <span class="dim">\u00b7 '+esc(s[7])+'</span><br>'+r.d.toFixed(1)+' mi off route<br><a href="#" onclick="goNav('+s[4]+','+s[5]+');return false">Directions \u2192</a></div>'
+    ).openOn(map);
+  });
+}
+function clearRoute(){
+  routeMode=false;routeStations=[];
+  if(map&&routeLine){map.removeLayer(routeLine);routeLine=null}
+  document.getElementById('routeResults').hidden=true;
+  document.getElementById('routeClear').hidden=true;
+  document.getElementById('routeDest').value='';
+  msg_text('routeMsg','Uses your GPS location as the starting point.');
+  if(map){renderMap(curSlug);renderList(curSlug)}
+}
+function setupRoute(){
+  document.getElementById('routeGo').addEventListener('click',findRoute);
+  document.getElementById('routeDest').addEventListener('keydown',function(e){if(e.key==='Enter')findRoute()});
+  document.getElementById('routeClear').addEventListener('click',clearRoute);
+}
+
 function init(){
   metroEl=document.getElementById('metro');
   METRO_ORDER.forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=data.metros[k].label;metroEl.appendChild(o)});
@@ -430,13 +570,14 @@ function init(){
     curZoom=map.getZoom();
     map.on('zoomend',function(){
       var z=map.getZoom();
-      if(z!==curZoom){curZoom=z;renderMap(curSlug)}
+      if(z!==curZoom){curZoom=z;if(!routeMode)renderMap(curSlug)}
     });
   }
   selectMetro('nashville');
   if(map&&'geolocation' in navigator)setupLocate();
   setupRefresh();
   setupSettings();
+  setupRoute();
 }
 document.addEventListener('DOMContentLoaded',init);
 </script>
