@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-09-30T12:10:13.783370+00:00",
+ "fetched_at": "2026-09-30T18:10:13.255785+00:00",
  "area": "atlanta",
  "metro": "atlanta",
  "station_count_raw": 20,
- "membership_excluded": 7,
+ "membership_excluded": 8,
  "stations": [
   {
    "station_id": "154043",
@@ -20,20 +20,20 @@
     "regular": {
      "card": 3.46,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:37.725Z",
-     "age_hours": 0.7
+     "posted_at": "2026-09-30T18:00:30.255Z",
+     "age_hours": 0.2
     },
     "midgrade": {
      "card": 3.89,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:37.694Z",
-     "age_hours": 0.7
+     "posted_at": "2026-09-30T18:00:30.267Z",
+     "age_hours": 0.2
     },
     "premium": {
      "card": 4.29,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:37.709Z",
-     "age_hours": 0.7
+     "posted_at": "2026-09-30T18:00:30.283Z",
+     "age_hours": 0.2
     },
     "diesel": {
      "card": null,
@@ -44,8 +44,8 @@
    },
    "rank": 1,
    "regular_card": 3.46,
-   "price_posted_at": "2026-09-30T11:30:37.725Z",
-   "price_age_hours": 0.7
+   "price_posted_at": "2026-09-30T18:00:30.255Z",
+   "price_age_hours": 0.2
   },
   {
    "station_id": "14231",
@@ -62,20 +62,20 @@
     "regular": {
      "card": 3.46,
      "cash": null,
-     "posted_at": "2026-09-30T12:02:44.886Z",
-     "age_hours": 0.1
+     "posted_at": "2026-09-30T18:00:37.390Z",
+     "age_hours": 0.2
     },
     "midgrade": {
      "card": 3.91,
      "cash": null,
-     "posted_at": "2026-09-30T12:02:44.901Z",
-     "age_hours": 0.1
+     "posted_at": "2026-09-30T18:00:37.406Z",
+     "age_hours": 0.2
     },
     "premium": {
      "card": 4.21,
      "cash": null,
-     "posted_at": "2026-09-30T12:02:44.901Z",
-     "age_hours": 0.1
+     "posted_at": "2026-09-30T18:00:37.421Z",
+     "age_hours": 0.2
     },
     "diesel": {
      "card": null,
@@ -86,8 +86,8 @@
    },
    "rank": 2,
    "regular_card": 3.46,
-   "price_posted_at": "2026-09-30T12:02:44.886Z",
-   "price_age_hours": 0.1
+   "price_posted_at": "2026-09-30T18:00:37.390Z",
+   "price_age_hours": 0.2
   },
   {
    "station_id": "39005",
@@ -104,14 +104,14 @@
     "regular": {
      "card": 3.47,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:41.995Z",
-     "age_hours": 0.7
+     "posted_at": "2026-09-30T17:18:38.633Z",
+     "age_hours": 0.9
     },
     "midgrade": {
      "card": 3.88,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:41.964Z",
-     "age_hours": 0.7
+     "posted_at": "2026-09-30T17:18:38.648Z",
+     "age_hours": 0.9
     },
     "premium": {
      "card": null,
@@ -128,8 +128,8 @@
    },
    "rank": 3,
    "regular_card": 3.47,
-   "price_posted_at": "2026-09-30T11:30:41.995Z",
-   "price_age_hours": 0.7
+   "price_posted_at": "2026-09-30T17:18:38.633Z",
+   "price_age_hours": 0.9
   },
   {
    "station_id": "42430",
@@ -146,19 +146,19 @@
     "regular": {
      "card": 3.48,
      "cash": null,
-     "posted_at": "2026-09-30T11:01:24.882Z",
+     "posted_at": "2026-09-30T17:02:09.937Z",
      "age_hours": 1.1
     },
     "midgrade": {
      "card": 3.89,
      "cash": null,
-     "posted_at": "2026-09-30T11:01:24.851Z",
+     "posted_at": "2026-09-30T17:02:09.953Z",
      "age_hours": 1.1
     },
     "premium": {
      "card": 4.29,
      "cash": null,
-     "posted_at": "2026-09-30T11:01:24.867Z",
+     "posted_at": "2026-09-30T17:02:09.968Z",
      "age_hours": 1.1
     },
     "diesel": {
@@ -170,7 +170,7 @@
    },
    "rank": 4,
    "regular_card": 3.48,
-   "price_posted_at": "2026-09-30T11:01:24.882Z",
+   "price_posted_at": "2026-09-30T17:02:09.937Z",
    "price_age_hours": 1.1
   },
   {
@@ -188,19 +188,19 @@
     "regular": {
      "card": 3.48,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:41.070Z",
+     "posted_at": "2026-09-30T17:30:58.536Z",
      "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.89,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:41.039Z",
+     "posted_at": "2026-09-30T17:30:58.551Z",
      "age_hours": 0.7
     },
     "premium": {
      "card": 4.19,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:41.054Z",
+     "posted_at": "2026-09-30T17:30:58.567Z",
      "age_hours": 0.7
     },
     "diesel": {
@@ -212,8 +212,50 @@
    },
    "rank": 5,
    "regular_card": 3.48,
-   "price_posted_at": "2026-09-30T11:30:41.070Z",
+   "price_posted_at": "2026-09-30T17:30:58.536Z",
    "price_age_hours": 0.7
+  },
+  {
+   "station_id": "212429",
+   "brand": "GAS 'N GO",
+   "name": "GAS 'N GO",
+   "membership": false,
+   "address": "1912 Joe Frank Harris Pkwy SE",
+   "city": "Cartersville",
+   "state": "GA",
+   "zip": "30120",
+   "lat": 34.219519803415,
+   "lng": -84.841396316727,
+   "fuels": {
+    "regular": {
+     "card": 3.49,
+     "cash": null,
+     "posted_at": "2026-09-30T18:00:52.939Z",
+     "age_hours": 0.2
+    },
+    "midgrade": {
+     "card": 3.79,
+     "cash": null,
+     "posted_at": "2026-09-30T18:00:52.939Z",
+     "age_hours": 0.2
+    },
+    "premium": {
+     "card": 4.09,
+     "cash": null,
+     "posted_at": "2026-09-30T18:00:52.955Z",
+     "age_hours": 0.2
+    },
+    "diesel": {
+     "card": 5.62,
+     "cash": null,
+     "posted_at": "2026-09-30T18:00:52.970Z",
+     "age_hours": 0.2
+    }
+   },
+   "rank": 6,
+   "regular_card": 3.49,
+   "price_posted_at": "2026-09-30T18:00:52.939Z",
+   "price_age_hours": 0.2
   },
   {
    "station_id": "70885",
@@ -230,31 +272,31 @@
     "regular": {
      "card": 3.49,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:50.540Z",
+     "posted_at": "2026-09-30T17:30:59.860Z",
      "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.9,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:50.499Z",
+     "posted_at": "2026-09-30T17:30:59.875Z",
      "age_hours": 0.7
     },
     "premium": {
      "card": 4.3,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:50.528Z",
+     "posted_at": "2026-09-30T17:30:59.891Z",
      "age_hours": 0.7
     },
     "diesel": {
      "card": 5.69,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:50.499Z",
+     "posted_at": "2026-09-30T17:30:59.906Z",
      "age_hours": 0.7
     }
    },
-   "rank": 6,
+   "rank": 7,
    "regular_card": 3.49,
-   "price_posted_at": "2026-09-30T11:30:50.540Z",
+   "price_posted_at": "2026-09-30T17:30:59.860Z",
    "price_age_hours": 0.7
   },
   {
@@ -272,20 +314,20 @@
     "regular": {
      "card": 3.49,
      "cash": null,
-     "posted_at": "2026-09-30T11:01:00.359Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-30T17:01:52.540Z",
+     "age_hours": 1.1
     },
     "midgrade": {
      "card": 3.84,
      "cash": null,
-     "posted_at": "2026-09-30T11:01:00.327Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-30T17:01:52.540Z",
+     "age_hours": 1.1
     },
     "premium": {
      "card": 4.19,
      "cash": null,
-     "posted_at": "2026-09-30T11:01:00.343Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-30T17:01:52.571Z",
+     "age_hours": 1.1
     },
     "diesel": {
      "card": null,
@@ -294,10 +336,10 @@
      "age_hours": null
     }
    },
-   "rank": 7,
+   "rank": 8,
    "regular_card": 3.49,
-   "price_posted_at": "2026-09-30T11:01:00.359Z",
-   "price_age_hours": 1.2
+   "price_posted_at": "2026-09-30T17:01:52.540Z",
+   "price_age_hours": 1.1
   },
   {
    "station_id": "195938",
@@ -314,62 +356,20 @@
     "regular": {
      "card": 3.52,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:19.581Z",
+     "posted_at": "2026-09-30T17:30:23.708Z",
      "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.9,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:19.550Z",
+     "posted_at": "2026-09-30T17:30:23.724Z",
      "age_hours": 0.7
     },
     "premium": {
      "card": 4.25,
      "cash": null,
-     "posted_at": "2026-09-30T11:30:19.565Z",
+     "posted_at": "2026-09-30T17:30:23.740Z",
      "age_hours": 0.7
-    },
-    "diesel": {
-     "card": 5.62,
-     "cash": null,
-     "posted_at": "2026-09-30T11:30:19.534Z",
-     "age_hours": 0.7
-    }
-   },
-   "rank": 8,
-   "regular_card": 3.52,
-   "price_posted_at": "2026-09-30T11:30:19.581Z",
-   "price_age_hours": 0.7
-  },
-  {
-   "station_id": "104388",
-   "brand": "Murphy USA",
-   "name": "Murphy USA",
-   "membership": false,
-   "address": "5425 Fairington Road",
-   "city": "Lithonia",
-   "state": "GA",
-   "zip": "30038",
-   "lat": 33.702231,
-   "lng": -84.168056,
-   "fuels": {
-    "regular": {
-     "card": 3.52,
-     "cash": null,
-     "posted_at": "2026-09-30T12:01:50.339Z",
-     "age_hours": 0.1
-    },
-    "midgrade": {
-     "card": 3.9,
-     "cash": null,
-     "posted_at": "2026-09-30T12:01:50.300Z",
-     "age_hours": 0.1
-    },
-    "premium": {
-     "card": 4.25,
-     "cash": null,
-     "posted_at": "2026-09-30T12:01:50.323Z",
-     "age_hours": 0.1
     },
     "diesel": {
      "card": null,
@@ -380,8 +380,8 @@
    },
    "rank": 9,
    "regular_card": 3.52,
-   "price_posted_at": "2026-09-30T12:01:50.339Z",
-   "price_age_hours": 0.1
+   "price_posted_at": "2026-09-30T17:30:23.708Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "191115",
@@ -398,20 +398,20 @@
     "regular": {
      "card": 3.54,
      "cash": null,
-     "posted_at": "2026-09-30T11:00:58.373Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-30T18:06:50.419Z",
+     "age_hours": 0.1
     },
     "midgrade": {
      "card": 3.9,
      "cash": null,
-     "posted_at": "2026-09-30T11:00:58.342Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-30T17:04:50.575Z",
+     "age_hours": 1.1
     },
     "premium": {
      "card": 4.25,
      "cash": null,
-     "posted_at": "2026-09-30T11:00:58.358Z",
-     "age_hours": 1.2
+     "posted_at": "2026-09-30T17:04:50.591Z",
+     "age_hours": 1.1
     },
     "diesel": {
      "card": null,
@@ -422,8 +422,8 @@
    },
    "rank": 10,
    "regular_card": 3.54,
-   "price_posted_at": "2026-09-30T11:00:58.373Z",
-   "price_age_hours": 1.2
+   "price_posted_at": "2026-09-30T18:06:50.419Z",
+   "price_age_hours": 0.1
   }
  ]
 }
