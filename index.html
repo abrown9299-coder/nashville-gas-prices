@@ -705,16 +705,28 @@ function metroACBBox(){
 function fetchRouteAC(q){
   var box=document.getElementById('routeAC');
   var bb=metroACBBox();
-  var url='https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=10'+(bb?('&bbox='+bb):'');
-  fetch(url).then(function(r){return r.json()}).then(function(j){
+  var fenced='https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=10'+(bb?('&bbox='+bb):'');
+  var wide='https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=10';
+  fetch(fenced).then(function(r){return r.json()}).then(function(j){
     var feats=(j&&j.features)||[];
     if(feats.length){renderRouteAC(feats);return}
-    var mc=M().center; // Photon can't resolve house numbers — single metro-fenced Nominatim fallback
-    var nurl='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=8&countrycodes=us&bounded=1&viewbox='+(mc[1]-0.6)+','+(mc[0]+0.6)+','+(mc[1]+0.6)+','+(mc[0]-0.6)+'&q='+encodeURIComponent(q);
-    fetch(nurl,{headers:{'Accept':'application/json'}}).then(function(r){return r.json()}).then(function(nj){
-      var nfs=(nj||[]).map(function(n){return{properties:{name:String(n.display_name).split(',').slice(0,3).join(','),city:'',street:''},geometry:{coordinates:[parseFloat(n.lon),parseFloat(n.lat)]}}});
-      renderRouteAC(nfs);
-    }).catch(function(){box.hidden=true});
+    /* Fenced search came up empty — the metro pill may be on the wrong
+       metro, or the address sits outside the area-center bbox. Widen to an
+       unfenced Photon search before falling back to Nominatim. */
+    return fetch(wide).then(function(r){return r.json()}).then(function(wj){
+      var wfeats=(wj&&wj.features)||[];
+      if(wfeats.length){renderRouteAC(wfeats);return}
+      nominatimFallbackAC(q,box);
+    });
+  }).catch(function(){nominatimFallbackAC(q,box)});
+}
+/* Photon can't resolve house numbers — metro-fenced Nominatim fallback. */
+function nominatimFallbackAC(q,box){
+  var mc=M().center;
+  var nurl='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=8&countrycodes=us&bounded=1&viewbox='+(mc[1]-0.6)+','+(mc[0]+0.6)+','+(mc[1]+0.6)+','+(mc[0]-0.6)+'&q='+encodeURIComponent(q);
+  fetch(nurl,{headers:{'Accept':'application/json'}}).then(function(r){return r.json()}).then(function(nj){
+    var nfs=(nj||[]).map(function(n){return{properties:{name:String(n.display_name).split(',').slice(0,3).join(','),city:'',street:''},geometry:{coordinates:[parseFloat(n.lon),parseFloat(n.lat)]}}});
+    renderRouteAC(nfs);
   }).catch(function(){box.hidden=true});
 }
 function renderRouteAC(feats){
