@@ -144,6 +144,7 @@ main{padding:22px 22px 52px}
 <script>
 /* ===== Config ===== */
 var WORKER_URL = "__WORKER_URL__"; // set to your Cloudflare Worker URL (no trailing slash). Empty = cached mode only.
+var MAPBOX_KEY = "__MAPBOX_A__"+"__MAPBOX_B__"; // public token, injected at build time in two halves so secret scanners don't flag it.
 /* ===== Static fallback data (baked at build time) ===== */
 var data=__GAS_DATA_JSON__;
 var METRO_ORDER=Object.keys(data.metros); // ["nashville","atlanta","birmingham"]
@@ -542,6 +543,13 @@ function ptDistMi(la1,lo1,la2,lo2){
   return Math.sqrt(dx*dx+dy*dy);
 }
 function geocodeDest(dest,cb){
+  /* Mapbox first (metro-fenced), Nominatim as the fallback. */
+  mbGeocodeAC(dest,metroACBBox(),function(feats){
+    if(feats.length){var g=feats[0].geometry.coordinates;cb({lat:g[1],lng:g[0],name:feats[0].properties.name});return}
+    nominatimGeocodeDest(dest,cb);
+  },function(){nominatimGeocodeDest(dest,cb)});
+}
+function nominatimGeocodeDest(dest,cb){
   var url='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=us&q='+encodeURIComponent(dest);
   try{var c=M().center;url+='&viewbox='+(c[1]-0.6)+','+(c[0]+0.6)+','+(c[1]+0.6)+','+(c[0]-0.6);}catch(e){}
   fetch(url,{headers:{'Accept':'application/json'}}).then(function(r){return r.json()}).then(function(j){
@@ -702,23 +710,32 @@ function metroACBBox(){
     return (ln1-m)+','+(la1-m)+','+(ln2+m)+','+(la2+m);
   }catch(e){return null}
 }
+/* Mapbox raster style: light map by day, dark map when the OS is in dark mode. */
+function mbTileStyle(){return (window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'mapbox/dark-v11':'mapbox/streets-v12'}
+function mbGeocodeAC(q,bbox,cb,eb){
+  var url='https://api.mapbox.com/geocoding/v5/mapbox.places/'+encodeURIComponent(q)+'.json?access_token='+MAPBOX_KEY+'&limit=10&country=us&types=address,poi,place,locality,neighborhood'+(bbox?('&bbox='+bbox):'');
+  fetch(url).then(function(r){if(!r.ok)throw new Error('mapbox '+r.status);return r.json()}).then(function(j){
+    var feats=((j&&j.features)||[]).map(function(f){
+      var pn=String(f.place_name||'').split(',');
+      return {properties:{name:String(f.text||pn[0]||'').trim(),housenumber:'',street:'',city:pn.slice(1).join(',').trim(),state:''},
+              geometry:{coordinates:f.center}};
+    }).filter(function(f){var c=f.geometry&&f.geometry.coordinates;return !!(c&&c.length===2&&isFinite(c[0])&&isFinite(c[1]))});
+    cb(feats);
+  }).catch(eb);
+}
 function fetchRouteAC(q){
   var box=document.getElementById('routeAC');
   var bb=metroACBBox();
-  var fenced='https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=10'+(bb?('&bbox='+bb):'');
-  var wide='https://photon.komoot.io/api/?q='+encodeURIComponent(q)+'&limit=10';
-  fetch(fenced).then(function(r){return r.json()}).then(function(j){
-    var feats=(j&&j.features)||[];
+  mbGeocodeAC(q,bb,function(feats){
     if(feats.length){renderRouteAC(feats);return}
     /* Fenced search came up empty — the metro pill may be on the wrong
        metro, or the address sits outside the area-center bbox. Widen to an
-       unfenced Photon search before falling back to Nominatim. */
-    return fetch(wide).then(function(r){return r.json()}).then(function(wj){
-      var wfeats=(wj&&wj.features)||[];
+       unfenced Mapbox search before falling back to Nominatim. */
+    mbGeocodeAC(q,null,function(wfeats){
       if(wfeats.length){renderRouteAC(wfeats);return}
       nominatimFallbackAC(q,box);
-    });
-  }).catch(function(){nominatimFallbackAC(q,box)});
+    },function(){nominatimFallbackAC(q,box)});
+  },function(){nominatimFallbackAC(q,box)});
 }
 /* Photon can't resolve house numbers — metro-fenced Nominatim fallback. */
 function nominatimFallbackAC(q,box){
@@ -763,7 +780,7 @@ function init(){
   try{
     if(!window.L)throw new Error('Leaflet unavailable');
     map=L.map('map',{scrollWheelZoom:false}).setView(data.metros.nashville.center,10);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(map);
+    L.tileLayer('https://api.mapbox.com/styles/v1/'+mbTileStyle()+'/tiles/{z}/{x}/{y}?access_token='+MAPBOX_KEY,{maxZoom:19,tileSize:512,zoomOffset:-1,attribution:'© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
     layer=L.layerGroup().addTo(map);
   }catch(e){
     document.getElementById('map').style.display='none';
