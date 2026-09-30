@@ -1,0 +1,151 @@
+{
+ "fetched_at": "2026-09-30T00:26:16.075138+00:00",
+ "metro": "birmingham",
+ "areas": [
+  {
+   "name": "Downtown",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.5207,
+    -86.8025
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Homewood",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.4684,
+    -86.8089
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Hoover",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.376,
+    -86.811
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Vestavia Hills",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.448,
+    -86.778
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Mountain Brook",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.49,
+    -86.74
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Trussville",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.6218,
+    -86.66
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Gardendale",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.663,
+    -86.81
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Bessemer",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.401,
+    -86.955
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Hueytown",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.4448,
+    -86.9957
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "McCalla",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.351,
+    -86.935
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Pelham-Alabaster",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.304,
+    -86.81
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Leeds-Moody",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.548,
+    -86.555
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  }
+ ],
+ "area_count": 12
+}

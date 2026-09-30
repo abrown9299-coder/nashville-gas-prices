@@ -1,27 +1,195 @@
 {
- "fetched_at": "2026-09-29T18:10:03.828491+00:00",
+ "fetched_at": "2026-09-30T12:10:06.346891+00:00",
  "area": "nashville",
  "metro": "nashville",
  "station_count_raw": 20,
- "membership_excluded": 5,
+ "membership_excluded": 6,
  "stations": [
   {
-   "station_id": "10557",
-   "brand": "MAPCO",
-   "name": "Mapco",
+   "station_id": "167084",
+   "brand": "Speedway",
+   "name": "Speedway",
    "membership": false,
-   "address": "803 S Cumberland St",
+   "address": "1063 W Main St",
+   "city": "Hendersonville",
+   "state": "TN",
+   "zip": "37075",
+   "lat": 36.305926329731,
+   "lng": -86.653815507889,
+   "fuels": {
+    "regular": {
+     "card": 3.55,
+     "cash": null,
+     "posted_at": "2026-09-29T21:34:36.211Z",
+     "age_hours": 14.6
+    },
+    "midgrade": {
+     "card": 4.03,
+     "cash": null,
+     "posted_at": "2026-09-29T19:24:47.066Z",
+     "age_hours": 16.8
+    },
+    "premium": {
+     "card": 4.38,
+     "cash": null,
+     "posted_at": "2026-09-29T19:24:47.098Z",
+     "age_hours": 16.8
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    }
+   },
+   "rank": 1,
+   "regular_card": 3.55,
+   "price_posted_at": "2026-09-29T21:34:36.211Z",
+   "price_age_hours": 14.6
+  },
+  {
+   "station_id": "160774",
+   "brand": "Murphy Express",
+   "name": "Murphy Express",
+   "membership": false,
+   "address": "603 S. Cumberland St.",
    "city": "Lebanon",
    "state": "TN",
    "zip": "37087",
-   "lat": 36.186462350725,
-   "lng": -86.296794712543,
+   "lat": 36.194034,
+   "lng": -86.293029,
    "fuels": {
     "regular": {
      "card": 3.56,
      "cash": null,
-     "posted_at": "2026-09-29T13:11:43.884Z",
-     "age_hours": 5.0
+     "posted_at": "2026-09-30T12:01:51.934Z",
+     "age_hours": 0.1
+    },
+    "midgrade": {
+     "card": 3.86,
+     "cash": null,
+     "posted_at": "2026-09-30T12:01:51.966Z",
+     "age_hours": 0.1
+    },
+    "premium": {
+     "card": 4.16,
+     "cash": null,
+     "posted_at": "2026-09-30T12:01:51.981Z",
+     "age_hours": 0.1
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    }
+   },
+   "rank": 2,
+   "regular_card": 3.56,
+   "price_posted_at": "2026-09-30T12:01:51.934Z",
+   "price_age_hours": 0.1
+  },
+  {
+   "station_id": "162386",
+   "brand": "Speedway",
+   "name": "Speedway",
+   "membership": false,
+   "address": "1135 Murfreesboro Rd",
+   "city": "Lebanon",
+   "state": "TN",
+   "zip": "37090",
+   "lat": 36.173627702558,
+   "lng": -86.302299127019,
+   "fuels": {
+    "regular": {
+     "card": 3.56,
+     "cash": null,
+     "posted_at": "2026-09-30T06:19:29.842Z",
+     "age_hours": 5.8
+    },
+    "midgrade": {
+     "card": 4.01,
+     "cash": null,
+     "posted_at": "2026-09-30T02:24:06.723Z",
+     "age_hours": 9.8
+    },
+    "premium": {
+     "card": 4.36,
+     "cash": null,
+     "posted_at": "2026-09-30T02:24:06.723Z",
+     "age_hours": 9.8
+    },
+    "diesel": {
+     "card": 5.74,
+     "cash": null,
+     "posted_at": "2026-09-30T02:24:06.708Z",
+     "age_hours": 9.8
+    }
+   },
+   "rank": 3,
+   "regular_card": 3.56,
+   "price_posted_at": "2026-09-30T06:19:29.842Z",
+   "price_age_hours": 5.8
+  },
+  {
+   "station_id": "204614",
+   "brand": "QuikTrip",
+   "name": "QuikTrip",
+   "membership": false,
+   "address": "1215 Sparta Pk",
+   "city": "Lebanon",
+   "state": "TN",
+   "zip": "37090",
+   "lat": 36.185876,
+   "lng": -86.267134,
+   "fuels": {
+    "regular": {
+     "card": 3.56,
+     "cash": null,
+     "posted_at": "2026-09-30T11:32:56.341Z",
+     "age_hours": 0.6
+    },
+    "midgrade": {
+     "card": 3.86,
+     "cash": null,
+     "posted_at": "2026-09-30T11:06:59.488Z",
+     "age_hours": 1.1
+    },
+    "premium": {
+     "card": 4.36,
+     "cash": null,
+     "posted_at": "2026-09-30T11:06:59.503Z",
+     "age_hours": 1.1
+    },
+    "diesel": {
+     "card": 5.79,
+     "cash": null,
+     "posted_at": "2026-09-30T11:06:59.503Z",
+     "age_hours": 1.1
+    }
+   },
+   "rank": 4,
+   "regular_card": 3.56,
+   "price_posted_at": "2026-09-30T11:32:56.341Z",
+   "price_age_hours": 0.6
+  },
+  {
+   "station_id": "10559",
+   "brand": "Pilot",
+   "name": "Pilot",
+   "membership": false,
+   "address": "921 Murfreesboro Rd",
+   "city": "Lebanon",
+   "state": "TN",
+   "zip": "37090",
+   "lat": 36.179264746876,
+   "lng": -86.299963742495,
+   "fuels": {
+    "regular": {
+     "card": 3.56,
+     "cash": 3.56,
+     "posted_at": "2026-09-30T11:34:33.326Z",
+     "age_hours": 0.6
     },
     "midgrade": {
      "card": null,
@@ -42,10 +210,52 @@
      "age_hours": null
     }
    },
-   "rank": 1,
+   "rank": 5,
    "regular_card": 3.56,
-   "price_posted_at": "2026-09-29T13:11:43.884Z",
-   "price_age_hours": 5.0
+   "price_posted_at": "2026-09-30T11:34:33.326Z",
+   "price_age_hours": 0.6
+  },
+  {
+   "station_id": "201917",
+   "brand": "RaceTrac",
+   "name": "RaceTrac",
+   "membership": false,
+   "address": "405 S Cumberland St",
+   "city": "Lebanon",
+   "state": "TN",
+   "zip": "37087",
+   "lat": 36.199548,
+   "lng": -86.291565,
+   "fuels": {
+    "regular": {
+     "card": 3.56,
+     "cash": null,
+     "posted_at": "2026-09-30T12:01:12.830Z",
+     "age_hours": 0.1
+    },
+    "midgrade": {
+     "card": 3.96,
+     "cash": null,
+     "posted_at": "2026-09-30T12:01:12.830Z",
+     "age_hours": 0.1
+    },
+    "premium": {
+     "card": 4.26,
+     "cash": null,
+     "posted_at": "2026-09-30T12:01:12.845Z",
+     "age_hours": 0.1
+    },
+    "diesel": {
+     "card": 5.74,
+     "cash": null,
+     "posted_at": "2026-09-30T12:01:12.861Z",
+     "age_hours": 0.1
+    }
+   },
+   "rank": 6,
+   "regular_card": 3.56,
+   "price_posted_at": "2026-09-30T12:01:12.830Z",
+   "price_age_hours": 0.1
   },
   {
    "station_id": "63819",
@@ -63,217 +273,7 @@
      "card": 3.56,
      "cash": null,
      "posted_at": "2026-09-29T16:10:13.536Z",
-     "age_hours": 2.0
-    },
-    "midgrade": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "premium": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 2,
-   "regular_card": 3.56,
-   "price_posted_at": "2026-09-29T16:10:13.536Z",
-   "price_age_hours": 2.0
-  },
-  {
-   "station_id": "160774",
-   "brand": "Murphy Express",
-   "name": "Murphy Express",
-   "membership": false,
-   "address": "603 S. Cumberland St.",
-   "city": "Lebanon",
-   "state": "TN",
-   "zip": "37087",
-   "lat": 36.194034,
-   "lng": -86.293029,
-   "fuels": {
-    "regular": {
-     "card": 3.57,
-     "cash": null,
-     "posted_at": "2026-09-29T18:00:31.756Z",
-     "age_hours": 0.2
-    },
-    "midgrade": {
-     "card": 3.87,
-     "cash": null,
-     "posted_at": "2026-09-29T18:00:31.772Z",
-     "age_hours": 0.2
-    },
-    "premium": {
-     "card": 4.17,
-     "cash": null,
-     "posted_at": "2026-09-29T18:00:31.787Z",
-     "age_hours": 0.2
-    },
-    "diesel": {
-     "card": 5.95,
-     "cash": null,
-     "posted_at": "2026-09-29T18:00:31.803Z",
-     "age_hours": 0.2
-    }
-   },
-   "rank": 3,
-   "regular_card": 3.57,
-   "price_posted_at": "2026-09-29T18:00:31.756Z",
-   "price_age_hours": 0.2
-  },
-  {
-   "station_id": "201917",
-   "brand": "RaceTrac",
-   "name": "RaceTrac",
-   "membership": false,
-   "address": "405 S Cumberland St",
-   "city": "Lebanon",
-   "state": "TN",
-   "zip": "37087",
-   "lat": 36.199548,
-   "lng": -86.291565,
-   "fuels": {
-    "regular": {
-     "card": 3.57,
-     "cash": null,
-     "posted_at": "2026-09-29T17:01:11.089Z",
-     "age_hours": 1.1
-    },
-    "midgrade": {
-     "card": 3.97,
-     "cash": null,
-     "posted_at": "2026-09-29T17:01:11.105Z",
-     "age_hours": 1.1
-    },
-    "premium": {
-     "card": 4.27,
-     "cash": null,
-     "posted_at": "2026-09-29T17:01:11.121Z",
-     "age_hours": 1.1
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 4,
-   "regular_card": 3.57,
-   "price_posted_at": "2026-09-29T17:01:11.089Z",
-   "price_age_hours": 1.1
-  },
-  {
-   "station_id": "37590",
-   "brand": "RaceWay",
-   "name": "RaceWay",
-   "membership": false,
-   "address": "1137 Sparta Pike",
-   "city": "Lebanon",
-   "state": "TN",
-   "zip": "37087",
-   "lat": 36.19099,
-   "lng": -86.270919,
-   "fuels": {
-    "regular": {
-     "card": 3.58,
-     "cash": null,
-     "posted_at": "2026-09-29T11:33:09.296Z",
-     "age_hours": 6.6
-    },
-    "midgrade": {
-     "card": 3.98,
-     "cash": null,
-     "posted_at": "2026-09-29T16:25:56.597Z",
-     "age_hours": 1.7
-    },
-    "premium": {
-     "card": 4.28,
-     "cash": null,
-     "posted_at": "2026-09-29T16:25:56.613Z",
-     "age_hours": 1.7
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 5,
-   "regular_card": 3.58,
-   "price_posted_at": "2026-09-29T11:33:09.296Z",
-   "price_age_hours": 6.6
-  },
-  {
-   "station_id": "204614",
-   "brand": "QuikTrip",
-   "name": "QuikTrip",
-   "membership": false,
-   "address": "1215 Sparta Pk",
-   "city": "Lebanon",
-   "state": "TN",
-   "zip": "37090",
-   "lat": 36.185876,
-   "lng": -86.267134,
-   "fuels": {
-    "regular": {
-     "card": 3.58,
-     "cash": null,
-     "posted_at": "2026-09-29T14:03:17.950Z",
-     "age_hours": 4.1
-    },
-    "midgrade": {
-     "card": 3.88,
-     "cash": null,
-     "posted_at": "2026-09-28T19:27:22.778Z",
-     "age_hours": 22.7
-    },
-    "premium": {
-     "card": 4.38,
-     "cash": null,
-     "posted_at": "2026-09-28T23:46:38.075Z",
-     "age_hours": 18.4
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 6,
-   "regular_card": 3.58,
-   "price_posted_at": "2026-09-29T14:03:17.950Z",
-   "price_age_hours": 4.1
-  },
-  {
-   "station_id": "37587",
-   "brand": "Shell",
-   "name": "Shell",
-   "membership": false,
-   "address": "924 Murfreesboro Rd",
-   "city": "Lebanon",
-   "state": "TN",
-   "zip": "37087",
-   "lat": 36.179284592788,
-   "lng": -86.300748959184,
-   "fuels": {
-    "regular": {
-     "card": 3.58,
-     "cash": null,
-     "posted_at": "2026-09-29T01:33:29.109Z",
-     "age_hours": 16.6
+     "age_hours": 20.0
     },
     "midgrade": {
      "card": null,
@@ -295,27 +295,27 @@
     }
    },
    "rank": 7,
-   "regular_card": 3.58,
-   "price_posted_at": "2026-09-29T01:33:29.109Z",
-   "price_age_hours": 16.6
+   "regular_card": 3.56,
+   "price_posted_at": "2026-09-29T16:10:13.536Z",
+   "price_age_hours": 20.0
   },
   {
-   "station_id": "162386",
-   "brand": "Speedway",
-   "name": "Speedway",
+   "station_id": "10557",
+   "brand": "MAPCO",
+   "name": "Mapco",
    "membership": false,
-   "address": "1135 Murfreesboro Rd",
+   "address": "803 S Cumberland St",
    "city": "Lebanon",
    "state": "TN",
-   "zip": "37090",
-   "lat": 36.173627702558,
-   "lng": -86.302299127019,
+   "zip": "37087",
+   "lat": 36.186462350725,
+   "lng": -86.296794712543,
    "fuels": {
     "regular": {
-     "card": 3.58,
+     "card": 3.56,
      "cash": null,
-     "posted_at": "2026-09-28T17:53:59.026Z",
-     "age_hours": 24.3
+     "posted_at": "2026-09-29T13:11:43.884Z",
+     "age_hours": 23.0
     },
     "midgrade": {
      "card": null,
@@ -337,33 +337,33 @@
     }
    },
    "rank": 8,
-   "regular_card": 3.58,
-   "price_posted_at": "2026-09-28T17:53:59.026Z",
-   "price_age_hours": 24.3
+   "regular_card": 3.56,
+   "price_posted_at": "2026-09-29T13:11:43.884Z",
+   "price_age_hours": 23.0
   },
   {
-   "station_id": "10559",
-   "brand": "Pilot",
-   "name": "Pilot",
+   "station_id": "63816",
+   "brand": "Shell",
+   "name": "Gulf",
    "membership": false,
-   "address": "921 Murfreesboro Rd",
+   "address": "130 E High St",
    "city": "Lebanon",
    "state": "TN",
-   "zip": "37090",
-   "lat": 36.179264746876,
-   "lng": -86.299963742495,
+   "zip": "37087",
+   "lat": 36.21187815,
+   "lng": -86.28742173,
    "fuels": {
     "regular": {
-     "card": 3.58,
-     "cash": 3.58,
-     "posted_at": "2026-09-29T17:41:09.442Z",
-     "age_hours": 0.5
+     "card": 3.57,
+     "cash": null,
+     "posted_at": "2026-09-30T03:02:59.759Z",
+     "age_hours": 9.1
     },
     "midgrade": {
-     "card": null,
+     "card": 3.92,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-09-30T03:02:59.759Z",
+     "age_hours": 9.1
     },
     "premium": {
      "card": null,
@@ -379,39 +379,39 @@
     }
    },
    "rank": 9,
-   "regular_card": 3.58,
-   "price_posted_at": "2026-09-29T17:41:09.442Z",
-   "price_age_hours": 0.5
+   "regular_card": 3.57,
+   "price_posted_at": "2026-09-30T03:02:59.759Z",
+   "price_age_hours": 9.1
   },
   {
-   "station_id": "167084",
-   "brand": "Speedway",
-   "name": "Speedway",
+   "station_id": "81995",
+   "brand": "Dodge's Store",
+   "name": "Dodge's Store",
    "membership": false,
-   "address": "1063 W Main St",
+   "address": "1182 W Main St",
    "city": "Hendersonville",
    "state": "TN",
    "zip": "37075",
-   "lat": 36.305926329731,
-   "lng": -86.653815507889,
+   "lat": 36.309522989189,
+   "lng": -86.66456580162,
    "fuels": {
     "regular": {
      "card": 3.58,
-     "cash": null,
-     "posted_at": "2026-09-29T16:02:44.500Z",
-     "age_hours": 2.1
+     "cash": 3.48,
+     "posted_at": "2026-09-30T11:11:11.816Z",
+     "age_hours": 1.0
     },
     "midgrade": {
-     "card": 4.03,
+     "card": null,
      "cash": null,
-     "posted_at": "2026-09-29T12:21:02.030Z",
-     "age_hours": 5.8
+     "posted_at": null,
+     "age_hours": null
     },
     "premium": {
-     "card": 4.38,
+     "card": null,
      "cash": null,
-     "posted_at": "2026-09-29T12:21:02.046Z",
-     "age_hours": 5.8
+     "posted_at": null,
+     "age_hours": null
     },
     "diesel": {
      "card": null,
@@ -422,8 +422,8 @@
    },
    "rank": 10,
    "regular_card": 3.58,
-   "price_posted_at": "2026-09-29T16:02:44.500Z",
-   "price_age_hours": 2.1
+   "price_posted_at": "2026-09-30T11:11:11.816Z",
+   "price_age_hours": 1.0
   }
  ]
 }

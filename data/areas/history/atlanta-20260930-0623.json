@@ -1,0 +1,175 @@
+{
+ "fetched_at": "2026-09-30T06:23:38.987410+00:00",
+ "metro": "atlanta",
+ "areas": [
+  {
+   "name": "Downtown",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.749,
+    -84.388
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Midtown",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.784,
+    -84.383
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Buckhead",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.956,
+    -84.378
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Virginia-Highland",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.799,
+    -84.352
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Decatur",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.7748,
+    -84.2963
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "East Atlanta",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.74,
+    -84.34
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "West End",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.735,
+    -84.413
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Sandy Springs",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.9304,
+    -84.3733
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Brookhaven",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.865,
+    -84.335
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Marietta",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.9526,
+    -84.5499
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Smyrna-Vinings",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.884,
+    -84.468
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Dunwoody",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.946,
+    -84.334
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Kennesaw",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    34.0232,
+    -84.615
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "College Park-Hapeville",
+   "kind": "latlng",
+   "value": null,
+   "center": [
+    33.653,
+    -84.44
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home failed after 4 tries: HTTP Error 403: Forbidden"
+  }
+ ],
+ "area_count": 14
+}
