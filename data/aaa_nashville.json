@@ -1,11 +1,11 @@
 {
- "regular": 3.98,
- "midgrade": 4.46,
- "premium": 4.87,
- "diesel": 6.16,
- "yesterday_regular": 4.0,
- "week_ago_regular": 4.08,
+ "regular": 3.96,
+ "midgrade": 4.44,
+ "premium": 4.85,
+ "diesel": 6.15,
+ "yesterday_regular": 3.98,
+ "week_ago_regular": 4.07,
  "date": "2026-10-02",
- "fetched_at": "2026-10-02T06:18:00.519398+00:00",
+ "fetched_at": "2026-10-02T12:15:16.072425+00:00",
  "source": "AAA (gasprices.aaa.com, TN Nashville metro)"
 }
