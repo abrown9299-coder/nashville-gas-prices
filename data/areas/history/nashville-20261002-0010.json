@@ -1,0 +1,295 @@
+{
+ "fetched_at": "2026-10-02T00:10:05.105911+00:00",
+ "metro": "nashville",
+ "areas": [
+  {
+   "name": "Downtown",
+   "kind": "zip",
+   "value": "37219",
+   "center": [
+    36.1627,
+    -86.7816
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home?search=37219 failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Midtown / Vanderbilt",
+   "kind": "slug",
+   "value": "midtown",
+   "center": [
+    36.1516,
+    -86.8
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/midtown failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "East Nashville",
+   "kind": "slug",
+   "value": "east-nashville",
+   "center": [
+    36.18,
+    -86.75
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/east-nashville failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Germantown",
+   "kind": "slug",
+   "value": "germantown",
+   "center": [
+    36.178,
+    -86.788
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/germantown failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "12 South / Berry Hill",
+   "kind": "slug",
+   "value": "berry-hill",
+   "center": [
+    36.12,
+    -86.79
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/berry-hill failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Green Hills",
+   "kind": "slug",
+   "value": "green-hills",
+   "center": [
+    36.105,
+    -86.81
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/green-hills failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Belle Meade",
+   "kind": "slug",
+   "value": "belle-meade",
+   "center": [
+    36.105,
+    -86.86
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/belle-meade failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Bellevue",
+   "kind": "zip",
+   "value": "37221",
+   "center": [
+    36.09,
+    -86.915
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home?search=37221 failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "West Nashville",
+   "kind": "zip",
+   "value": "37209",
+   "center": [
+    36.15,
+    -86.87
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home?search=37209 failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Joelton / Whites Creek",
+   "kind": "zip",
+   "value": "37080",
+   "center": [
+    36.23,
+    -86.92
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/home?search=37080 failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Madison",
+   "kind": "slug",
+   "value": "madison",
+   "center": [
+    36.26,
+    -86.71
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/madison failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Donelson",
+   "kind": "slug",
+   "value": "donelson",
+   "center": [
+    36.07,
+    -86.67
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/donelson failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Hermitage",
+   "kind": "slug",
+   "value": "hermitage",
+   "center": [
+    36.2,
+    -86.61
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/hermitage failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Antioch / Cane Ridge",
+   "kind": "slug",
+   "value": "antioch",
+   "center": [
+    36.06,
+    -86.67
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/antioch failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Brentwood",
+   "kind": "slug",
+   "value": "brentwood",
+   "center": [
+    36.03,
+    -86.79
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/brentwood failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Franklin / Cool Springs",
+   "kind": "slug",
+   "value": "franklin",
+   "center": [
+    35.97,
+    -86.84
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/franklin failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Nolensville",
+   "kind": "slug",
+   "value": "nolensville",
+   "center": [
+    35.95,
+    -86.67
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/nolensville failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Smyrna / La Vergne",
+   "kind": "slug",
+   "value": "smyrna",
+   "center": [
+    36.0,
+    -86.545
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/smyrna failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Murfreesboro",
+   "kind": "slug",
+   "value": "murfreesboro",
+   "center": [
+    35.845,
+    -86.39
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/murfreesboro failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Hendersonville",
+   "kind": "slug",
+   "value": "hendersonville",
+   "center": [
+    36.3,
+    -86.62
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/hendersonville failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Gallatin",
+   "kind": "slug",
+   "value": "gallatin",
+   "center": [
+    36.39,
+    -86.45
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/gallatin failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Mount Juliet",
+   "kind": "slug",
+   "value": "mount-juliet",
+   "center": [
+    36.2,
+    -86.52
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/mount-juliet failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Lebanon",
+   "kind": "slug",
+   "value": "lebanon",
+   "center": [
+    36.21,
+    -86.33
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/lebanon failed after 4 tries: HTTP Error 403: Forbidden"
+  },
+  {
+   "name": "Goodlettsville",
+   "kind": "slug",
+   "value": "goodlettsville",
+   "center": [
+    36.33,
+    -86.71
+   ],
+   "candidates": 0,
+   "stations": [],
+   "error": "GET https://www.gasbuddy.com/gasprices/tennessee/goodlettsville failed after 4 tries: HTTP Error 403: Forbidden"
+  }
+ ],
+ "area_count": 24
+}
