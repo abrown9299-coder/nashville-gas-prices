@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-30T18:10:22.580133+00:00",
+ "fetched_at": "2026-10-02T01:24:03.393891+00:00",
  "area": "birmingham",
  "metro": "birmingham",
  "station_count_raw": 20,
@@ -18,16 +18,16 @@
    "lng": -86.75321561695,
    "fuels": {
     "regular": {
-     "card": 3.75,
+     "card": 3.7,
      "cash": null,
-     "posted_at": "2026-09-29T16:11:37.061Z",
-     "age_hours": 26.0
+     "posted_at": "2026-09-30T20:35:28.286Z",
+     "age_hours": 28.8
     },
     "midgrade": {
-     "card": null,
+     "card": 3.95,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-09-30T20:35:28.301Z",
+     "age_hours": 28.8
     },
     "premium": {
      "card": null,
@@ -43,9 +43,9 @@
     }
    },
    "rank": 1,
-   "regular_card": 3.75,
-   "price_posted_at": "2026-09-29T16:11:37.061Z",
-   "price_age_hours": 26.0
+   "regular_card": 3.7,
+   "price_posted_at": "2026-09-30T20:35:28.286Z",
+   "price_age_hours": 28.8
   },
   {
    "station_id": "215644",
@@ -60,22 +60,22 @@
    "lng": -86.190182943843,
    "fuels": {
     "regular": {
-     "card": 3.81,
+     "card": 3.75,
      "cash": null,
-     "posted_at": "2026-09-29T23:13:50.195Z",
-     "age_hours": 18.9
+     "posted_at": "2026-10-01T15:20:21.182Z",
+     "age_hours": 10.1
     },
     "midgrade": {
-     "card": 4.26,
+     "card": 4.2,
      "cash": null,
-     "posted_at": "2026-09-29T23:13:50.195Z",
-     "age_hours": 18.9
+     "posted_at": "2026-10-01T15:20:21.198Z",
+     "age_hours": 10.1
     },
     "premium": {
-     "card": 4.61,
+     "card": 4.55,
      "cash": null,
-     "posted_at": "2026-09-29T23:13:50.211Z",
-     "age_hours": 18.9
+     "posted_at": "2026-10-01T15:20:21.213Z",
+     "age_hours": 10.1
     },
     "diesel": {
      "card": null,
@@ -85,27 +85,27 @@
     }
    },
    "rank": 2,
-   "regular_card": 3.81,
-   "price_posted_at": "2026-09-29T23:13:50.195Z",
-   "price_age_hours": 18.9
+   "regular_card": 3.75,
+   "price_posted_at": "2026-10-01T15:20:21.182Z",
+   "price_age_hours": 10.1
   },
   {
-   "station_id": "143272",
-   "brand": "Murphy Express",
-   "name": "Murphy Express",
+   "station_id": "137900",
+   "brand": "CITGO",
+   "name": "CITGO",
    "membership": false,
-   "address": "7740 Crestwood Blvd.",
-   "city": "Birmingham",
+   "address": "1301 Short Creek Rd",
+   "city": "Mulga",
    "state": "AL",
-   "zip": "35210",
-   "lat": 33.531251,
-   "lng": -86.718199,
+   "zip": "35118",
+   "lat": 33.551081665149,
+   "lng": -87.100701034069,
    "fuels": {
     "regular": {
-     "card": 3.82,
+     "card": 3.75,
      "cash": null,
-     "posted_at": "2026-09-30T16:00:33.278Z",
-     "age_hours": 2.2
+     "posted_at": "2026-10-01T20:03:06.402Z",
+     "age_hours": 5.3
     },
     "midgrade": {
      "card": null,
@@ -127,33 +127,33 @@
     }
    },
    "rank": 3,
-   "regular_card": 3.82,
-   "price_posted_at": "2026-09-30T16:00:33.278Z",
-   "price_age_hours": 2.2
+   "regular_card": 3.75,
+   "price_posted_at": "2026-10-01T20:03:06.402Z",
+   "price_age_hours": 5.3
   },
   {
-   "station_id": "146949",
-   "brand": "Love's Travel Stop",
-   "name": "Love's Travel Stop",
+   "station_id": "143272",
+   "brand": "Murphy Express",
+   "name": "Murphy Express",
    "membership": false,
-   "address": "83 Carl Cannon Blvd",
-   "city": "Jasper",
+   "address": "7740 Crestwood Blvd.",
+   "city": "Birmingham",
    "state": "AL",
-   "zip": "35501",
-   "lat": 33.7910189,
-   "lng": -87.24218488,
+   "zip": "35210",
+   "lat": 33.531251,
+   "lng": -86.718199,
    "fuels": {
     "regular": {
-     "card": 3.83,
-     "cash": 3.83,
-     "posted_at": "2026-09-30T17:52:04.634Z",
-     "age_hours": 0.3
+     "card": 3.76,
+     "cash": null,
+     "posted_at": "2026-10-02T00:01:07.368Z",
+     "age_hours": 1.4
     },
     "midgrade": {
-     "card": 4.28,
-     "cash": 4.28,
-     "posted_at": "2026-09-30T17:52:04.649Z",
-     "age_hours": 0.3
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
     },
     "premium": {
      "card": null,
@@ -162,16 +162,142 @@
      "age_hours": null
     },
     "diesel": {
+     "card": 5.87,
+     "cash": null,
+     "posted_at": "2026-10-02T00:01:07.415Z",
+     "age_hours": 1.4
+    }
+   },
+   "rank": 4,
+   "regular_card": 3.76,
+   "price_posted_at": "2026-10-02T00:01:07.368Z",
+   "price_age_hours": 1.4
+  },
+  {
+   "station_id": "203409",
+   "brand": "Buc-ee's",
+   "name": "Buc-ee's",
+   "membership": false,
+   "address": "6900 Buc-ee's Blvd (along Coosa Ave)",
+   "city": "Leeds",
+   "state": "AL",
+   "zip": "35094",
+   "lat": 33.544185,
+   "lng": -86.585956,
+   "fuels": {
+    "regular": {
+     "card": 3.76,
+     "cash": null,
+     "posted_at": "2026-10-01T22:52:56.883Z",
+     "age_hours": 2.5
+    },
+    "midgrade": {
+     "card": 4.06,
+     "cash": null,
+     "posted_at": "2026-10-01T22:52:56.899Z",
+     "age_hours": 2.5
+    },
+    "premium": {
+     "card": 4.46,
+     "cash": null,
+     "posted_at": "2026-10-01T22:52:56.914Z",
+     "age_hours": 2.5
+    },
+    "diesel": {
+     "card": 5.59,
+     "cash": null,
+     "posted_at": "2026-10-01T22:52:56.946Z",
+     "age_hours": 2.5
+    }
+   },
+   "rank": 5,
+   "regular_card": 3.76,
+   "price_posted_at": "2026-10-01T22:52:56.883Z",
+   "price_age_hours": 2.5
+  },
+  {
+   "station_id": "125141",
+   "brand": "Sunoco",
+   "name": "Sunoco",
+   "membership": false,
+   "address": "1920 Finley Blvd",
+   "city": "Birmingham",
+   "state": "AL",
+   "zip": "35234",
+   "lat": 33.542816489938,
+   "lng": -86.824221611023,
+   "fuels": {
+    "regular": {
+     "card": 3.77,
+     "cash": 3.67,
+     "posted_at": "2026-10-01T19:12:56.723Z",
+     "age_hours": 6.2
+    },
+    "midgrade": {
      "card": null,
      "cash": null,
      "posted_at": null,
      "age_hours": null
+    },
+    "premium": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "diesel": {
+     "card": 5.73,
+     "cash": 5.63,
+     "posted_at": "2026-10-01T19:12:56.847Z",
+     "age_hours": 6.2
     }
    },
-   "rank": 4,
-   "regular_card": 3.83,
-   "price_posted_at": "2026-09-30T17:52:04.634Z",
-   "price_age_hours": 0.3
+   "rank": 6,
+   "regular_card": 3.77,
+   "price_posted_at": "2026-10-01T19:12:56.723Z",
+   "price_age_hours": 6.2
+  },
+  {
+   "station_id": "207936",
+   "brand": "MAPCO",
+   "name": "MAPCO",
+   "membership": false,
+   "address": "1901 Finley Blvd",
+   "city": "Birmingham",
+   "state": "AL",
+   "zip": "35234",
+   "lat": 33.541855,
+   "lng": -86.825042,
+   "fuels": {
+    "regular": {
+     "card": 3.77,
+     "cash": null,
+     "posted_at": "2026-10-01T19:09:39.373Z",
+     "age_hours": 6.2
+    },
+    "midgrade": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "premium": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "diesel": {
+     "card": 5.73,
+     "cash": null,
+     "posted_at": "2026-10-01T16:56:30.184Z",
+     "age_hours": 8.5
+    }
+   },
+   "rank": 7,
+   "regular_card": 3.77,
+   "price_posted_at": "2026-10-01T19:09:39.373Z",
+   "price_age_hours": 6.2
   },
   {
    "station_id": "186175",
@@ -186,232 +312,106 @@
    "lng": -86.520677,
    "fuels": {
     "regular": {
-     "card": 3.83,
+     "card": 3.78,
      "cash": null,
-     "posted_at": "2026-09-30T17:30:35.489Z",
-     "age_hours": 0.7
+     "posted_at": "2026-10-02T00:01:36.594Z",
+     "age_hours": 1.4
     },
     "midgrade": {
-     "card": 4.24,
+     "card": 4.19,
      "cash": null,
-     "posted_at": "2026-09-30T17:30:35.489Z",
-     "age_hours": 0.7
+     "posted_at": "2026-10-02T00:01:36.610Z",
+     "age_hours": 1.4
     },
     "premium": {
-     "card": 4.54,
+     "card": 4.49,
      "cash": null,
-     "posted_at": "2026-09-30T17:30:35.505Z",
-     "age_hours": 0.7
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 5,
-   "regular_card": 3.83,
-   "price_posted_at": "2026-09-30T17:30:35.489Z",
-   "price_age_hours": 0.7
-  },
-  {
-   "station_id": "213149",
-   "brand": "QuikTrip",
-   "name": "QuikTrip",
-   "membership": false,
-   "address": "4824 Industrial Pkwy",
-   "city": "Jasper",
-   "state": "AL",
-   "zip": "35501",
-   "lat": 33.796171,
-   "lng": -87.239595,
-   "fuels": {
-    "regular": {
-     "card": 3.83,
-     "cash": 0,
-     "posted_at": "2026-09-30T11:47:45.690Z",
-     "age_hours": 6.4
-    },
-    "midgrade": {
-     "card": 4.25,
-     "cash": 0,
-     "posted_at": "2026-09-30T11:47:45.706Z",
-     "age_hours": 6.4
-    },
-    "premium": {
-     "card": 4.55,
-     "cash": 0,
-     "posted_at": "2026-09-30T10:51:55.137Z",
-     "age_hours": 7.3
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 6,
-   "regular_card": 3.83,
-   "price_posted_at": "2026-09-30T11:47:45.690Z",
-   "price_age_hours": 6.4
-  },
-  {
-   "station_id": "42822",
-   "brand": "RaceWay",
-   "name": "RaceWay",
-   "membership": false,
-   "address": "802 Allison-Bonnett Memorial Dr",
-   "city": "Hueytown",
-   "state": "AL",
-   "zip": "35023",
-   "lat": 33.458001,
-   "lng": -86.960993,
-   "fuels": {
-    "regular": {
-     "card": 3.84,
-     "cash": null,
-     "posted_at": "2026-09-30T10:26:33.996Z",
-     "age_hours": 7.7
-    },
-    "midgrade": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "premium": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 7,
-   "regular_card": 3.84,
-   "price_posted_at": "2026-09-30T10:26:33.996Z",
-   "price_age_hours": 7.7
-  },
-  {
-   "station_id": "16088",
-   "brand": "Murphy USA",
-   "name": "Murphy USA",
-   "membership": false,
-   "address": "560 Colonial Promenade Pkwy.",
-   "city": "Alabaster",
-   "state": "AL",
-   "zip": "35007",
-   "lat": 33.235745,
-   "lng": -86.803765,
-   "fuels": {
-    "regular": {
-     "card": 3.84,
-     "cash": null,
-     "posted_at": "2026-09-30T17:04:56.508Z",
-     "age_hours": 1.1
-    },
-    "midgrade": {
-     "card": 4.27,
-     "cash": null,
-     "posted_at": "2026-09-30T17:01:35.441Z",
-     "age_hours": 1.1
-    },
-    "premium": {
-     "card": 4.57,
-     "cash": null,
-     "posted_at": "2026-09-30T17:01:35.457Z",
-     "age_hours": 1.1
-    },
-    "diesel": {
-     "card": 5.79,
-     "cash": null,
-     "posted_at": "2026-09-30T17:30:48.208Z",
-     "age_hours": 0.7
-    }
-   },
-   "rank": 8,
-   "regular_card": 3.84,
-   "price_posted_at": "2026-09-30T17:04:56.508Z",
-   "price_age_hours": 1.1
-  },
-  {
-   "station_id": "68521",
-   "brand": "Murphy USA",
-   "name": "Murphy USA",
-   "membership": false,
-   "address": "169 Super Center Drive",
-   "city": "Calera",
-   "state": "AL",
-   "zip": "35040",
-   "lat": 33.145677,
-   "lng": -86.749616,
-   "fuels": {
-    "regular": {
-     "card": 3.86,
-     "cash": null,
-     "posted_at": "2026-09-30T17:01:53.254Z",
-     "age_hours": 1.1
-    },
-    "midgrade": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "premium": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-02T00:01:36.610Z",
+     "age_hours": 1.4
     },
     "diesel": {
      "card": 5.82,
      "cash": null,
-     "posted_at": "2026-09-30T17:01:53.285Z",
-     "age_hours": 1.1
+     "posted_at": "2026-10-02T00:01:36.625Z",
+     "age_hours": 1.4
     }
    },
-   "rank": 9,
-   "regular_card": 3.86,
-   "price_posted_at": "2026-09-30T17:01:53.254Z",
-   "price_age_hours": 1.1
+   "rank": 8,
+   "regular_card": 3.78,
+   "price_posted_at": "2026-10-02T00:01:36.594Z",
+   "price_age_hours": 1.4
   },
   {
-   "station_id": "16132",
-   "brand": "Shell",
-   "name": "Shell",
+   "station_id": "70824",
+   "brand": "RaceWay",
+   "name": "RaceWay",
    "membership": false,
-   "address": "100 Riverchase Pkwy",
-   "city": "Hoover",
+   "address": "1800 Ashville Rd",
+   "city": "Leeds",
    "state": "AL",
-   "zip": "35244",
-   "lat": 33.351913966895,
-   "lng": -86.783645153046,
+   "zip": "35094",
+   "lat": 33.562196,
+   "lng": -86.521881,
    "fuels": {
     "regular": {
-     "card": 3.87,
+     "card": 3.78,
      "cash": null,
-     "posted_at": "2026-09-30T05:19:30.791Z",
-     "age_hours": 12.8
+     "posted_at": "2026-10-02T00:52:21.037Z",
+     "age_hours": 0.5
     },
     "midgrade": {
-     "card": 4.27,
+     "card": 4.19,
      "cash": null,
-     "posted_at": "2026-09-30T05:19:30.806Z",
-     "age_hours": 12.8
+     "posted_at": "2026-10-02T00:52:21.052Z",
+     "age_hours": 0.5
     },
     "premium": {
+     "card": 4.49,
+     "cash": null,
+     "posted_at": "2026-10-02T00:52:21.068Z",
+     "age_hours": 0.5
+    },
+    "diesel": {
      "card": null,
      "cash": null,
      "posted_at": null,
      "age_hours": null
+    }
+   },
+   "rank": 9,
+   "regular_card": 3.78,
+   "price_posted_at": "2026-10-02T00:52:21.037Z",
+   "price_age_hours": 0.5
+  },
+  {
+   "station_id": "76016",
+   "brand": "RaceWay",
+   "name": "RaceWay",
+   "membership": false,
+   "address": "2107 Moody Pkwy",
+   "city": "Moody",
+   "state": "AL",
+   "zip": "35004",
+   "lat": 33.570895,
+   "lng": -86.520444,
+   "fuels": {
+    "regular": {
+     "card": 3.78,
+     "cash": null,
+     "posted_at": "2026-10-02T00:51:12.399Z",
+     "age_hours": 0.5
+    },
+    "midgrade": {
+     "card": 4.18,
+     "cash": null,
+     "posted_at": "2026-10-02T00:51:12.415Z",
+     "age_hours": 0.5
+    },
+    "premium": {
+     "card": 4.48,
+     "cash": null,
+     "posted_at": "2026-10-02T00:51:12.430Z",
+     "age_hours": 0.5
     },
     "diesel": {
      "card": null,
@@ -421,9 +421,9 @@
     }
    },
    "rank": 10,
-   "regular_card": 3.87,
-   "price_posted_at": "2026-09-30T05:19:30.791Z",
-   "price_age_hours": 12.8
+   "regular_card": 3.78,
+   "price_posted_at": "2026-10-02T00:51:12.399Z",
+   "price_age_hours": 0.5
   }
  ]
 }
