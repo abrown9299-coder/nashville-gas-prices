@@ -1,28 +1,31 @@
 #!/usr/bin/env python3
-"""Per-area cheapest gas stations across greater Nashville, from GasBuddy.
+"""Per-area cheapest gas stations across Nashville, Atlanta, and Birmingham,
+from GasBuddy.
 
-usage: nashville_gas_areas.py [fetch|verify]
-  fetch  -> pulls live per-area data into ~/workspace/gas-data/areas/latest.json
-  verify -> checks latest.json, writes verify-report.json (exit 1 on FAIL)
+usage: fetch_areas.py [fetch [metro]|verify]
+  fetch [metro] -> pulls live per-area data into data/areas/<metro>.json
+                   (default: all metros)
+  verify        -> checks data/areas/latest.json (Nashville), writes
+                   verify-report.json (exit 1 on FAIL)
 
 Technique:
-  * 20 areas use GasBuddy area pages (/gasprices/tennessee/<slug>):
+  * Nashville: 20 areas use GasBuddy area pages (/gasprices/tennessee/<slug>):
     page __APOLLO_STATE__ gives station details (incl. lat/lng);
     StationPrices GraphQL x4 fuels gives fresh prices.
-  * 4 areas without GasBuddy slugs (Downtown, Bellevue, West Nashville,
-    Joelton/Whites Creek) use ZIP search (/home?search=<zip>):
-    page __APOLLO_STATE__ gives the station list; SearchPrices GraphQL gives
-    all-fuel prices; one aliased station() batch gives lat/lng.
+    4 areas without GasBuddy slugs (Downtown, Bellevue, West Nashville,
+    Joelton/Whites Creek) use ZIP search (/home?search=<zip>).
+  * Atlanta / Birmingham: all areas use the lat/lng nearest-stations pull
+    (kind="latlng") as the primary fetch.
 """
 import json
 import os
 import re
 import sys
 import time
-import urllib.request
-import urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
+
+from gbhttp import http_get, http_post_json
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0 Safari/537.36")
@@ -34,32 +37,84 @@ FUELS = {1: "regular", 2: "midgrade", 3: "premium", 4: "diesel"}
 MEMBERSHIP_RE = re.compile(r"sam'?s|costco|\bbj'?s\b", re.I)
 
 # (display name, kind, value, center lat, center lng)
-AREAS = [
-    ("Downtown", "zip", "37219", 36.1627, -86.7816),
-    ("Midtown / Vanderbilt", "slug", "midtown", 36.1516, -86.8000),
-    ("East Nashville", "slug", "east-nashville", 36.1800, -86.7500),
-    ("Germantown", "slug", "germantown", 36.1780, -86.7880),
-    ("12 South / Berry Hill", "slug", "berry-hill", 36.1200, -86.7900),
-    ("Green Hills", "slug", "green-hills", 36.1050, -86.8100),
-    ("Belle Meade", "slug", "belle-meade", 36.1050, -86.8600),
-    ("Bellevue", "zip", "37221", 36.0900, -86.9150),
-    ("West Nashville", "zip", "37209", 36.1500, -86.8700),
-    ("Joelton / Whites Creek", "zip", "37080", 36.2300, -86.9200),
-    ("Madison", "slug", "madison", 36.2600, -86.7100),
-    ("Donelson", "slug", "donelson", 36.0700, -86.6700),
-    ("Hermitage", "slug", "hermitage", 36.2000, -86.6100),
-    ("Antioch / Cane Ridge", "slug", "antioch", 36.0600, -86.6700),
-    ("Brentwood", "slug", "brentwood", 36.0300, -86.7900),
-    ("Franklin / Cool Springs", "slug", "franklin", 35.9700, -86.8400),
-    ("Nolensville", "slug", "nolensville", 35.9500, -86.6700),
-    ("Smyrna / La Vergne", "slug", "smyrna", 36.0000, -86.5450),
-    ("Murfreesboro", "slug", "murfreesboro", 35.8450, -86.3900),
-    ("Hendersonville", "slug", "hendersonville", 36.3000, -86.6200),
-    ("Gallatin", "slug", "gallatin", 36.3900, -86.4500),
-    ("Mount Juliet", "slug", "mount-juliet", 36.2000, -86.5200),
-    ("Lebanon", "slug", "lebanon", 36.2100, -86.3300),
-    ("Goodlettsville", "slug", "goodlettsville", 36.3300, -86.7100),
-]
+# kind: "slug" (GasBuddy area page), "zip" (ZIP search), "latlng" (nearest-stations pull)
+METROS = {
+    "nashville": {
+        "label": "Nashville",
+        "state": "TN",
+        "state_slug": "tennessee",
+        "center": [36.1627, -86.7816],
+        "areas": [
+            ("Downtown", "zip", "37219", 36.1627, -86.7816),
+            ("Midtown / Vanderbilt", "slug", "midtown", 36.1516, -86.8000),
+            ("East Nashville", "slug", "east-nashville", 36.1800, -86.7500),
+            ("Germantown", "slug", "germantown", 36.1780, -86.7880),
+            ("12 South / Berry Hill", "slug", "berry-hill", 36.1200, -86.7900),
+            ("Green Hills", "slug", "green-hills", 36.1050, -86.8100),
+            ("Belle Meade", "slug", "belle-meade", 36.1050, -86.8600),
+            ("Bellevue", "zip", "37221", 36.0900, -86.9150),
+            ("West Nashville", "zip", "37209", 36.1500, -86.8700),
+            ("Joelton / Whites Creek", "zip", "37080", 36.2300, -86.9200),
+            ("Madison", "slug", "madison", 36.2600, -86.7100),
+            ("Donelson", "slug", "donelson", 36.0700, -86.6700),
+            ("Hermitage", "slug", "hermitage", 36.2000, -86.6100),
+            ("Antioch / Cane Ridge", "slug", "antioch", 36.0600, -86.6700),
+            ("Brentwood", "slug", "brentwood", 36.0300, -86.7900),
+            ("Franklin / Cool Springs", "slug", "franklin", 35.9700, -86.8400),
+            ("Nolensville", "slug", "nolensville", 35.9500, -86.6700),
+            ("Smyrna / La Vergne", "slug", "smyrna", 36.0000, -86.5450),
+            ("Murfreesboro", "slug", "murfreesboro", 35.8450, -86.3900),
+            ("Hendersonville", "slug", "hendersonville", 36.3000, -86.6200),
+            ("Gallatin", "slug", "gallatin", 36.3900, -86.4500),
+            ("Mount Juliet", "slug", "mount-juliet", 36.2000, -86.5200),
+            ("Lebanon", "slug", "lebanon", 36.2100, -86.3300),
+            ("Goodlettsville", "slug", "goodlettsville", 36.3300, -86.7100),
+        ],
+    },
+    "atlanta": {
+        "label": "Atlanta",
+        "state": "GA",
+        "state_slug": "georgia",
+        "center": [33.7490, -84.3880],
+        "areas": [
+            ("Downtown", "latlng", None, 33.7490, -84.3880),
+            ("Midtown", "latlng", None, 33.7840, -84.3830),
+            ("Buckhead", "latlng", None, 33.9560, -84.3780),
+            ("Virginia-Highland", "latlng", None, 33.7990, -84.3520),
+            ("Decatur", "latlng", None, 33.7748, -84.2963),
+            ("East Atlanta", "latlng", None, 33.7400, -84.3400),
+            ("West End", "latlng", None, 33.7350, -84.4130),
+            ("Sandy Springs", "latlng", None, 33.9304, -84.3733),
+            ("Brookhaven", "latlng", None, 33.8650, -84.3350),
+            ("Marietta", "latlng", None, 33.9526, -84.5499),
+            ("Smyrna-Vinings", "latlng", None, 33.8840, -84.4680),
+            ("Dunwoody", "latlng", None, 33.9460, -84.3340),
+            ("Kennesaw", "latlng", None, 34.0232, -84.6150),
+            ("College Park-Hapeville", "latlng", None, 33.6530, -84.4400),
+        ],
+    },
+    "birmingham": {
+        "label": "Birmingham",
+        "state": "AL",
+        "state_slug": "alabama",
+        "center": [33.5207, -86.8025],
+        "areas": [
+            ("Downtown", "latlng", None, 33.5207, -86.8025),
+            ("Homewood", "latlng", None, 33.4684, -86.8089),
+            ("Hoover", "latlng", None, 33.3760, -86.8110),
+            ("Vestavia Hills", "latlng", None, 33.4480, -86.7780),
+            ("Mountain Brook", "latlng", None, 33.4900, -86.7400),
+            ("Trussville", "latlng", None, 33.6218, -86.6600),
+            ("Gardendale", "latlng", None, 33.6630, -86.8100),
+            ("Bessemer", "latlng", None, 33.4010, -86.9550),
+            ("Hueytown", "latlng", None, 33.4448, -86.9957),
+            ("McCalla", "latlng", None, 33.3510, -86.9350),
+            ("Pelham-Alabaster", "latlng", None, 33.3040, -86.8100),
+            ("Leeds-Moody", "latlng", None, 33.5480, -86.5550),
+        ],
+    },
+}
+AREAS = METROS["nashville"]["areas"]  # kept for the Nashville-only verify
 
 GQL_AREA = ("query StationPrices($area:String,$countryCode:String,$criteria:Criteria,"
             "$fuel:Int,$regionCode:String){locationByArea(area:$area,countryCode:$countryCode,"
@@ -71,39 +126,18 @@ GQL_SEARCH = ("query SearchPrices($fuel:Int,$search:String){locationBySearchTerm
               "results{id prices{cash{price postedTime} credit{price postedTime} fuelProduct}}}}}")
 
 
-def http_get(url, headers=None, tries=4):
-    last = None
-    for i in range(tries):
-        try:
-            req = urllib.request.Request(url, headers=headers or {"User-Agent": UA})
-            return urllib.request.urlopen(req, timeout=25).read().decode("utf-8", "replace")
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
-            last = e
-            time.sleep(2 ** i)
-    raise RuntimeError(f"GET {url} failed after {tries} tries: {last}")
-
-
 def gql(token, referer, operation, query, variables, tries=4):
-    body = json.dumps({"operationName": operation, "query": query,
-                       "variables": variables}).encode()
-    last = None
-    for i in range(tries):
-        try:
-            req = urllib.request.Request(
-                "https://www.gasbuddy.com/graphql", data=body,
-                headers={"User-Agent": UA, "Content-Type": "application/json",
-                         "apollo-require-preflight": "true", "gbcsrf": token,
-                         "Origin": "https://www.gasbuddy.com", "Referer": referer})
-            data = json.loads(urllib.request.urlopen(req, timeout=25).read().decode())
-            errs = data.get("errors") or []
-            if errs:
-                raise RuntimeError(f"GraphQL errors: {errs[0].get('message')}")
-            return data
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError,
-                RuntimeError) as e:
-            last = e
-            time.sleep(2 ** i)
-    raise RuntimeError(f"GraphQL {operation} failed after {tries} tries: {last}")
+    body = {"operationName": operation, "query": query,
+            "variables": variables}
+    headers = {"Content-Type": "application/json",
+               "apollo-require-preflight": "true", "gbcsrf": token,
+               "Origin": "https://www.gasbuddy.com", "Referer": referer}
+    data = http_post_json("https://www.gasbuddy.com/graphql",
+                          headers=headers, payload=body, tries=tries)
+    errs = data.get("errors") or []
+    if errs:
+        raise RuntimeError(f"GraphQL errors: {errs[0].get('message')}")
+    return data
 
 
 def extract_token(html):
@@ -301,8 +335,8 @@ def supplement_latlng(name, clat, clng, have_ids, now):
     return eligible[:TOP_N]
 
 
-def fetch_slug_area(name, slug, clat, clng, now):
-    page_url = f"https://www.gasbuddy.com/gasprices/tennessee/{slug}"
+def fetch_slug_area(name, slug, clat, clng, now, state_code="TN", state_slug="tennessee"):
+    page_url = f"https://www.gasbuddy.com/gasprices/{state_slug}/{slug}"
     html = http_get(page_url, {"User-Agent": UA,
                                "Accept": "text/html,application/xhtml+xml",
                                "Accept-Language": "en-US,en;q=0.9"})
@@ -315,7 +349,7 @@ def fetch_slug_area(name, slug, clat, clng, now):
         data = gql(token, page_url, "StationPrices", GQL_AREA,
                    {"area": slug, "countryCode": "US",
                     "criteria": {"location_type": ["locality", "metro"]},
-                    "fuel": fuel, "regionCode": "TN"})
+                    "fuel": fuel, "regionCode": state_code})
         loc = (data.get("data") or {}).get("locationByArea") or {}
         results = ((loc.get("stations") or {}).get("results")) or []
         by_fuel[fuel] = {str(r["id"]): (r.get("prices") or [{}])[0] for r in results}
@@ -392,6 +426,15 @@ def fetch_zip_area(name, zipc, clat, clng, now):
             "stations": finalize(stations)}
 
 
+def fetch_latlng_area(name, clat, clng, now):
+    """Primary pull for metros without GasBuddy area pages: nearest
+    stations to the area center, ranked to top 10."""
+    stations = supplement_latlng(name, clat, clng, set(), now)
+    return {"name": name, "kind": "latlng", "value": None,
+            "center": [clat, clng], "candidates": len(stations),
+            "stations": finalize(stations)}
+
+
 def rank_top(stations):
     eligible = [s for s in stations
                 if not s["membership"]
@@ -411,17 +454,22 @@ def finalize(stations):
     return out
 
 
-def do_fetch():
+def fetch_one_metro(mkey):
+    cfg = METROS[mkey]
     now = datetime.now(timezone.utc)
     areas = []
-    for name, kind, value, clat, clng in AREAS:
+    for name, kind, value, clat, clng in cfg["areas"]:
         try:
             if kind == "slug":
-                area = fetch_slug_area(name, value, clat, clng, now)
-            else:
+                area = fetch_slug_area(name, value, clat, clng, now,
+                                       cfg["state"], cfg["state_slug"])
+            elif kind == "zip":
                 area = fetch_zip_area(name, value, clat, clng, now)
+            else:
+                area = fetch_latlng_area(name, clat, clng, now)
             # thin areas: supplement with nearest-20 lat/lng pull
-            if len(area["stations"]) < TOP_N:
+            # (skipped for latlng areas — that IS the lat/lng method)
+            if kind != "latlng" and len(area["stations"]) < TOP_N:
                 have = {s["station_id"] for s in area.get("all_stations", [])}
                 try:
                     extra = supplement_latlng(name, clat, clng, have, now)
@@ -442,17 +490,26 @@ def do_fetch():
                           "center": [clat, clng], "candidates": 0,
                           "stations": [], "error": str(e)[:200]})
         time.sleep(1.5)
-    payload = {"fetched_at": now.isoformat(), "areas": areas,
+    payload = {"fetched_at": now.isoformat(), "metro": mkey, "areas": areas,
                "area_count": len(areas)}
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     HIST_DIR.mkdir(parents=True, exist_ok=True)
     ts = now.strftime("%Y%m%d-%H%M")
-    (DATA_DIR / "latest.json").write_text(json.dumps(payload, indent=1))
-    (HIST_DIR / f"areas-{ts}.json").write_text(json.dumps(payload, indent=1))
-    for old in sorted(HIST_DIR.glob("areas-*.json"))[:-10]:
+    (DATA_DIR / f"{mkey}.json").write_text(json.dumps(payload, indent=1))
+    if mkey == "nashville":
+        # backward compat: old readers look at latest.json
+        (DATA_DIR / "latest.json").write_text(json.dumps(payload, indent=1))
+    (HIST_DIR / f"{mkey}-{ts}.json").write_text(json.dumps(payload, indent=1))
+    for old in sorted(HIST_DIR.glob(f"{mkey}-*.json"))[:-28]:
         old.unlink()
-    print(f"\nwrote {DATA_DIR / 'latest.json'}")
+    print(f"\nwrote {DATA_DIR / f'{mkey}.json'}")
+
+
+def do_fetch(metro=None):
+    metros = [metro] if metro else list(METROS)
+    for m in metros:
+        fetch_one_metro(m)
 
 
 # ---------------- verify ----------------
@@ -530,11 +587,15 @@ def do_verify():
 
 
 def main():
-    if len(sys.argv) != 2 or sys.argv[1] not in ("fetch", "verify"):
-        print("usage: nashville_gas_areas.py [fetch|verify]")
+    if len(sys.argv) < 2 or sys.argv[1] not in ("fetch", "verify"):
+        print("usage: fetch_areas.py [fetch [metro]|verify]")
         sys.exit(2)
     if sys.argv[1] == "fetch":
-        do_fetch()
+        metro = sys.argv[2] if len(sys.argv) > 2 else None
+        if metro and metro not in METROS:
+            print(f"unknown metro {metro!r}; choose from {sorted(METROS)}")
+            sys.exit(2)
+        do_fetch(metro)
     else:
         do_verify()
 

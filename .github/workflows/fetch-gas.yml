@@ -1,0 +1,74 @@
+name: fetch-gas
+
+# Fetches GasBuddy station prices from a GitHub Actions runner.
+# GasBuddy's Cloudflare protection blocks the assistant worker's egress IP,
+# so the scheduled refresh dispatches this workflow instead of fetching
+# directly. Triggered by scripts/fetch_via_actions.py (workflow_dispatch only).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install curl_cffi
+
+      - name: Fetch GasBuddy data
+        env:
+          GAS_DATA_ROOT: ${{ github.workspace }}/data
+        run: |
+          python3 scripts/fetch_metro.py fetch
+          python3 scripts/fetch_areas.py fetch
+
+      - name: Sanity check
+        run: |
+          python3 - <<'EOF'
+          import json, sys
+          from datetime import datetime, timezone
+          from pathlib import Path
+          need = ["data/nashville.json", "data/atlanta.json", "data/birmingham.json",
+                  "data/areas/nashville.json", "data/areas/atlanta.json",
+                  "data/areas/birmingham.json"]
+          now = datetime.now(timezone.utc)
+          bad = []
+          for rel in need:
+              p = Path(rel)
+              if not p.exists():
+                  bad.append(f"{rel} MISSING")
+                  continue
+              d = json.loads(p.read_text())
+              try:
+                  age = (now - datetime.fromisoformat(d["fetched_at"])).total_seconds() / 3600
+              except Exception:
+                  age = 1e9
+              n = len(d.get("stations", d.get("areas", [])))
+              print(f"{rel}: fetched {age:.1f}h ago, {n} entries", flush=True)
+              if age > 3 or n == 0:
+                  bad.append(f"{rel} STALE/EMPTY")
+          if bad:
+              print("SANITY FAIL:", bad, flush=True)
+              sys.exit(1)
+          print("SANITY OK", flush=True)
+          EOF
+
+      - name: Commit data
+        run: |
+          git config user.name "Vesper"
+          git config user.email "vesper@local"
+          git add data/nashville.json data/atlanta.json data/birmingham.json data/latest.json
+          git add data/areas/nashville.json data/areas/atlanta.json data/areas/birmingham.json data/areas/latest.json
+          git add data/areas/history/
+          ts=$(date -u +"%Y-%m-%d %H:%M")
+          git commit -m "gas fetch u=$ts UTC" || echo "nothing to commit"
+          git push

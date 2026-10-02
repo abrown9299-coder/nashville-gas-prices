@@ -1,49 +1,44 @@
 #!/usr/bin/env python3
-"""Fetch and verify greater-Nashville cheapest gas stations from GasBuddy.
+"""Fetch and verify metro cheapest gas stations from GasBuddy.
 
-usage: nashville_gas.py [fetch|verify]
-  fetch  -> pulls live data into ~/workspace/gas-data/latest.json
-  verify -> checks latest.json, writes verify-report.json (exit 1 on FAIL)
+usage: fetch_metro.py [fetch [metro]|verify]
+  fetch [metro] -> pulls live data into GAS_DATA_ROOT/<metro>.json
+                   (default: all metros; nashville also writes latest.json)
+  verify        -> checks latest.json (Nashville), writes verify-report.json
 """
 import json
 import os
 import re
 import sys
 import time
-import urllib.request
-import urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
 
+from gbhttp import http_get, http_post_json
+
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0 Safari/537.36")
-AREA = "nashville"
 TOP_N = 10
 DATA_DIR = Path(os.environ.get("GAS_DATA_ROOT", Path.home() / "workspace" / "gas-data"))
 RAW_DIR = DATA_DIR / "raw"
 HIST_DIR = DATA_DIR / "history"
 FUELS = {1: "regular", 2: "midgrade", 3: "premium", 4: "diesel"}
+MEMBERSHIP_RE = re.compile(r"sam'?s|costco|\bbj'?s\b", re.I)
+
+# metro key -> (GasBuddy area name, region code, URL state slug)
+METROS = {
+    "nashville": ("nashville", "TN", "tennessee"),
+    "atlanta": ("atlanta", "GA", "georgia"),
+    "birmingham": ("birmingham", "AL", "alabama"),
+}
 # greater Nashville bounding box: lat 35.85-36.75, lng -87.35 to -85.95
 BBOX = (35.85, 36.75, -87.35, -85.95)
-MEMBERSHIP_RE = re.compile(r"sam'?s|costco|\bbj'?s\b", re.I)
 
 GQL_QUERY = ("query StationPrices($area:String,$countryCode:String,$criteria:Criteria,"
              "$fuel:Int,$regionCode:String){locationByArea(area:$area,countryCode:$countryCode,"
              "criteria:$criteria,regionCode:$regionCode){displayName stations(fuel:$fuel){results{id "
              "prices(fuel:$fuel){cash{nickname postedTime price formattedPrice} "
              "credit{nickname postedTime price formattedPrice} fuelProduct}}}}}")
-
-
-def http_get(url, headers=None, tries=4):
-    last = None
-    for i in range(tries):
-        try:
-            req = urllib.request.Request(url, headers=headers or {"User-Agent": UA})
-            return urllib.request.urlopen(req, timeout=25).read().decode("utf-8", "replace")
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
-            last = e
-            time.sleep(2 ** i)
-    raise RuntimeError(f"GET {url} failed after {tries} tries: {last}")
 
 
 def extract_token(html):
@@ -81,28 +76,20 @@ def extract_apollo_state(html):
     return json.loads(html[start:i + 1])
 
 
-def gql_prices(token, fuel):
-    body = json.dumps({
+def gql_prices(token, area, region, referer, fuel):
+    body = {
         "operationName": "StationPrices",
         "query": GQL_QUERY,
-        "variables": {"area": AREA, "countryCode": "US",
+        "variables": {"area": area, "countryCode": "US",
                       "criteria": {"location_type": ["locality", "metro"]},
-                      "fuel": fuel, "regionCode": "TN"},
-    }).encode()
-    last = None
-    for i in range(4):
-        try:
-            req = urllib.request.Request(
-                "https://www.gasbuddy.com/graphql", data=body,
-                headers={"User-Agent": UA, "Content-Type": "application/json",
-                         "apollo-require-preflight": "true", "gbcsrf": token,
-                         "Origin": "https://www.gasbuddy.com",
-                         "Referer": f"https://www.gasbuddy.com/gasprices/tennessee/{AREA}"})
-            return json.loads(urllib.request.urlopen(req, timeout=25).read().decode())
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
-            last = e
-            time.sleep(2 ** i)
-    raise RuntimeError(f"GraphQL fuel={fuel} failed after 4 tries: {last}")
+                      "fuel": fuel, "regionCode": region},
+    }
+    headers = {"Content-Type": "application/json",
+               "apollo-require-preflight": "true", "gbcsrf": token,
+               "Origin": "https://www.gasbuddy.com",
+               "Referer": referer}
+    return http_post_json("https://www.gasbuddy.com/graphql",
+                          headers=headers, payload=body, tries=4)
 
 
 def is_membership(brand, name):
@@ -118,8 +105,9 @@ def parse_time(s):
         return None
 
 
-def do_fetch():
-    page_url = f"https://www.gasbuddy.com/gasprices/tennessee/{AREA}"
+def fetch_one_metro(mkey):
+    area, region, state_slug = METROS[mkey]
+    page_url = f"https://www.gasbuddy.com/gasprices/{state_slug}/{area}"
     html = http_get(page_url, {"User-Agent": UA,
                                "Accept": "text/html,application/xhtml+xml",
                                "Accept-Language": "en-US,en;q=0.9"})
@@ -131,7 +119,7 @@ def do_fetch():
     # prices per fuel type
     by_fuel = {}
     for fuel in sorted(FUELS):
-        data = gql_prices(token, fuel)
+        data = gql_prices(token, area, region, page_url, fuel)
         errs = data.get("errors") or []
         if errs:
             raise RuntimeError(f"GraphQL errors for fuel={fuel}: {errs[0]['message']}")
@@ -185,7 +173,7 @@ def do_fetch():
                     "price_posted_at": reg["posted_at"],
                     "price_age_hours": reg["age_hours"]})
 
-    payload = {"fetched_at": now.isoformat(), "area": AREA,
+    payload = {"fetched_at": now.isoformat(), "area": area, "metro": mkey,
                "station_count_raw": len(stations),
                "membership_excluded": sum(1 for s in stations if s["membership"]),
                "stations": top}
@@ -193,22 +181,31 @@ def do_fetch():
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     HIST_DIR.mkdir(parents=True, exist_ok=True)
     ts = now.strftime("%Y%m%d-%H%M")
-    (RAW_DIR / f"raw-{ts}.json").write_text(json.dumps(
+    (RAW_DIR / f"raw-{mkey}-{ts}.json").write_text(json.dumps(
         {"fetched_at": payload["fetched_at"], "stations": stations}, indent=1))
-    (DATA_DIR / "latest.json").write_text(json.dumps(payload, indent=1))
-    (HIST_DIR / f"top10-{ts}.json").write_text(json.dumps(payload, indent=1))
-    # prune history to last 30
-    for old in sorted(HIST_DIR.glob("top10-*.json"))[:-30]:
+    (DATA_DIR / f"{mkey}.json").write_text(json.dumps(payload, indent=1))
+    if mkey == "nashville":
+        # backward compat: old readers look at latest.json
+        (DATA_DIR / "latest.json").write_text(json.dumps(payload, indent=1))
+    (HIST_DIR / f"top10-{mkey}-{ts}.json").write_text(json.dumps(payload, indent=1))
+    # prune history to last 30 per metro
+    for old in sorted(HIST_DIR.glob(f"top10-{mkey}-*.json"))[:-30]:
         old.unlink()
-    for old in sorted(RAW_DIR.glob("raw-*.json"))[:-30]:
+    for old in sorted(RAW_DIR.glob(f"raw-{mkey}-*.json"))[:-30]:
         old.unlink()
 
-    print(f"fetched {len(stations)} stations, "
+    print(f"[{mkey}] fetched {len(stations)} stations, "
           f"{payload['membership_excluded']} membership excluded, "
-          f"top {len(top)} written to {DATA_DIR / 'latest.json'}")
+          f"top {len(top)} written to {DATA_DIR / f'{mkey}.json'}")
     for s in top:
         print(f"  {s['rank']}. {s['brand']} — {s['address']}, {s['city']} "
               f"${s['regular_card']:.2f} ({s['price_age_hours']}h ago)")
+
+
+def do_fetch(metro=None):
+    metros = [metro] if metro else list(METROS)
+    for m in metros:
+        fetch_one_metro(m)
 
 
 # ---------------- verify ----------------
@@ -339,11 +336,15 @@ def do_verify():
 
 
 def main():
-    if len(sys.argv) != 2 or sys.argv[1] not in ("fetch", "verify"):
-        print("usage: nashville_gas.py [fetch|verify]")
+    if len(sys.argv) < 2 or sys.argv[1] not in ("fetch", "verify"):
+        print("usage: fetch_metro.py [fetch [metro]|verify]")
         sys.exit(2)
     if sys.argv[1] == "fetch":
-        do_fetch()
+        metro = sys.argv[2] if len(sys.argv) > 2 else None
+        if metro and metro not in METROS:
+            print(f"unknown metro {metro!r}; choose from {sorted(METROS)}")
+            sys.exit(2)
+        do_fetch(metro)
     else:
         do_verify()
 
