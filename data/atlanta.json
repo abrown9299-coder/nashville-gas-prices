@@ -1,33 +1,33 @@
 {
- "fetched_at": "2026-10-03T12:10:39.138219+00:00",
+ "fetched_at": "2026-10-03T18:10:35.091243+00:00",
  "area": "atlanta",
  "metro": "atlanta",
  "station_count_raw": 20,
  "membership_excluded": 7,
  "stations": [
   {
-   "station_id": "154043",
-   "brand": "Murphy USA",
-   "name": "Murphy USA",
+   "station_id": "83204",
+   "brand": "Texaco",
+   "name": "Texaco",
    "membership": false,
-   "address": "4969 Bill Gardner Pkwy.",
-   "city": "Locust Grove",
+   "address": "3129 N Cobb Pkwy  NW",
+   "city": "Kennesaw",
    "state": "GA",
-   "zip": "30248",
-   "lat": 33.354658,
-   "lng": -84.119238,
+   "zip": "30152",
+   "lat": 34.028788854246,
+   "lng": -84.649615287781,
    "fuels": {
     "regular": {
-     "card": 3.46,
+     "card": 3.43,
      "cash": null,
-     "posted_at": "2026-10-03T11:30:39.250Z",
-     "age_hours": 0.7
+     "posted_at": "2026-10-03T15:25:24.188Z",
+     "age_hours": 2.8
     },
     "midgrade": {
-     "card": 3.89,
+     "card": null,
      "cash": null,
-     "posted_at": "2026-10-03T11:30:39.211Z",
-     "age_hours": 0.7
+     "posted_at": null,
+     "age_hours": null
     },
     "premium": {
      "card": null,
@@ -43,33 +43,33 @@
     }
    },
    "rank": 1,
-   "regular_card": 3.46,
-   "price_posted_at": "2026-10-03T11:30:39.250Z",
-   "price_age_hours": 0.7
+   "regular_card": 3.43,
+   "price_posted_at": "2026-10-03T15:25:24.188Z",
+   "price_age_hours": 2.8
   },
   {
-   "station_id": "83204",
-   "brand": "Texaco",
-   "name": "Texaco",
+   "station_id": "154043",
+   "brand": "Murphy USA",
+   "name": "Murphy USA",
    "membership": false,
-   "address": "3129 N Cobb Pkwy  NW",
-   "city": "Kennesaw",
+   "address": "4969 Bill Gardner Pkwy.",
+   "city": "Locust Grove",
    "state": "GA",
-   "zip": "30152",
-   "lat": 34.028788854246,
-   "lng": -84.649615287781,
+   "zip": "30248",
+   "lat": 33.354658,
+   "lng": -84.119238,
    "fuels": {
     "regular": {
      "card": 3.46,
      "cash": null,
-     "posted_at": "2026-10-03T01:38:42.390Z",
-     "age_hours": 10.5
+     "posted_at": "2026-10-03T17:30:34.005Z",
+     "age_hours": 0.7
     },
     "midgrade": {
-     "card": null,
+     "card": 3.89,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-03T17:30:34.021Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": null,
@@ -86,8 +86,8 @@
    },
    "rank": 2,
    "regular_card": 3.46,
-   "price_posted_at": "2026-10-03T01:38:42.390Z",
-   "price_age_hours": 10.5
+   "price_posted_at": "2026-10-03T17:30:34.005Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "14231",
@@ -104,8 +104,8 @@
     "regular": {
      "card": 3.46,
      "cash": null,
-     "posted_at": "2026-10-03T12:00:39.201Z",
-     "age_hours": 0.2
+     "posted_at": "2026-10-03T17:02:37.991Z",
+     "age_hours": 1.1
     },
     "midgrade": {
      "card": null,
@@ -128,8 +128,8 @@
    },
    "rank": 3,
    "regular_card": 3.46,
-   "price_posted_at": "2026-10-03T12:00:39.201Z",
-   "price_age_hours": 0.2
+   "price_posted_at": "2026-10-03T17:02:37.991Z",
+   "price_age_hours": 1.1
   },
   {
    "station_id": "68008",
@@ -147,13 +147,13 @@
      "card": 3.46,
      "cash": null,
      "posted_at": "2026-10-03T01:10:27.283Z",
-     "age_hours": 11.0
+     "age_hours": 17.0
     },
     "midgrade": {
-     "card": null,
+     "card": 3.86,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-03T14:18:19.528Z",
+     "age_hours": 3.9
     },
     "premium": {
      "card": null,
@@ -171,7 +171,7 @@
    "rank": 4,
    "regular_card": 3.46,
    "price_posted_at": "2026-10-03T01:10:27.283Z",
-   "price_age_hours": 11.0
+   "price_age_hours": 17.0
   },
   {
    "station_id": "21132",
@@ -189,13 +189,13 @@
      "card": 3.47,
      "cash": null,
      "posted_at": "2026-10-03T02:26:29.125Z",
-     "age_hours": 9.7
+     "age_hours": 15.7
     },
     "midgrade": {
      "card": 3.87,
      "cash": null,
      "posted_at": "2026-10-03T02:26:29.155Z",
-     "age_hours": 9.7
+     "age_hours": 15.7
     },
     "premium": {
      "card": null,
@@ -213,7 +213,7 @@
    "rank": 5,
    "regular_card": 3.47,
    "price_posted_at": "2026-10-03T02:26:29.125Z",
-   "price_age_hours": 9.7
+   "price_age_hours": 15.7
   },
   {
    "station_id": "42226",
@@ -230,19 +230,19 @@
     "regular": {
      "card": 3.47,
      "cash": null,
-     "posted_at": "2026-10-03T12:00:27.645Z",
+     "posted_at": "2026-10-03T18:00:38.472Z",
      "age_hours": 0.2
     },
     "midgrade": {
      "card": 3.87,
      "cash": null,
-     "posted_at": "2026-10-03T12:00:27.614Z",
+     "posted_at": "2026-10-03T18:00:38.487Z",
      "age_hours": 0.2
     },
     "premium": {
      "card": 4.17,
      "cash": null,
-     "posted_at": "2026-10-03T12:00:27.630Z",
+     "posted_at": "2026-10-03T18:00:38.503Z",
      "age_hours": 0.2
     },
     "diesel": {
@@ -254,7 +254,7 @@
    },
    "rank": 6,
    "regular_card": 3.47,
-   "price_posted_at": "2026-10-03T12:00:27.645Z",
+   "price_posted_at": "2026-10-03T18:00:38.472Z",
    "price_age_hours": 0.2
   },
   {
@@ -272,14 +272,14 @@
     "regular": {
      "card": 3.48,
      "cash": null,
-     "posted_at": "2026-10-03T03:01:34.109Z",
-     "age_hours": 9.2
+     "posted_at": "2026-10-03T16:40:13.298Z",
+     "age_hours": 1.5
     },
     "midgrade": {
      "card": 3.88,
      "cash": null,
-     "posted_at": "2026-10-03T03:01:34.109Z",
-     "age_hours": 9.2
+     "posted_at": "2026-10-03T16:40:13.314Z",
+     "age_hours": 1.5
     },
     "premium": {
      "card": null,
@@ -296,8 +296,8 @@
    },
    "rank": 7,
    "regular_card": 3.48,
-   "price_posted_at": "2026-10-03T03:01:34.109Z",
-   "price_age_hours": 9.2
+   "price_posted_at": "2026-10-03T16:40:13.298Z",
+   "price_age_hours": 1.5
   },
   {
    "station_id": "42335",
@@ -315,19 +315,19 @@
      "card": 3.48,
      "cash": null,
      "posted_at": "2026-10-02T22:03:59.274Z",
-     "age_hours": 14.1
+     "age_hours": 20.1
     },
     "midgrade": {
      "card": 3.83,
      "cash": null,
      "posted_at": "2026-10-02T22:03:59.290Z",
-     "age_hours": 14.1
+     "age_hours": 20.1
     },
     "premium": {
      "card": 4.18,
      "cash": null,
      "posted_at": "2026-10-02T22:03:59.305Z",
-     "age_hours": 14.1
+     "age_hours": 20.1
     },
     "diesel": {
      "card": null,
@@ -339,7 +339,7 @@
    "rank": 8,
    "regular_card": 3.48,
    "price_posted_at": "2026-10-02T22:03:59.274Z",
-   "price_age_hours": 14.1
+   "price_age_hours": 20.1
   },
   {
    "station_id": "70885",
@@ -356,13 +356,13 @@
     "regular": {
      "card": 3.48,
      "cash": null,
-     "posted_at": "2026-10-03T11:30:58.888Z",
+     "posted_at": "2026-10-03T17:30:33.677Z",
      "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.89,
      "cash": null,
-     "posted_at": "2026-10-03T11:30:58.857Z",
+     "posted_at": "2026-10-03T17:30:33.692Z",
      "age_hours": 0.7
     },
     "premium": {
@@ -380,7 +380,7 @@
    },
    "rank": 9,
    "regular_card": 3.48,
-   "price_posted_at": "2026-10-03T11:30:58.888Z",
+   "price_posted_at": "2026-10-03T17:30:33.677Z",
    "price_age_hours": 0.7
   },
   {
@@ -398,13 +398,13 @@
     "regular": {
      "card": 3.48,
      "cash": null,
-     "posted_at": "2026-10-03T12:00:56.551Z",
+     "posted_at": "2026-10-03T18:00:47.800Z",
      "age_hours": 0.2
     },
     "midgrade": {
      "card": 3.88,
      "cash": null,
-     "posted_at": "2026-10-03T12:00:56.483Z",
+     "posted_at": "2026-10-03T18:00:47.816Z",
      "age_hours": 0.2
     },
     "premium": {
@@ -422,7 +422,7 @@
    },
    "rank": 10,
    "regular_card": 3.48,
-   "price_posted_at": "2026-10-03T12:00:56.551Z",
+   "price_posted_at": "2026-10-03T18:00:47.800Z",
    "price_age_hours": 0.2
   }
  ]
