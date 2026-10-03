@@ -1,11 +1,11 @@
 {
- "regular": 3.97,
- "midgrade": 4.47,
- "premium": 4.9,
- "diesel": 6.01,
- "yesterday_regular": 4.01,
- "week_ago_regular": 4.18,
+ "regular": 3.93,
+ "midgrade": 4.42,
+ "premium": 4.87,
+ "diesel": 5.97,
+ "yesterday_regular": 3.97,
+ "week_ago_regular": 4.23,
  "date": "2026-10-03",
- "fetched_at": "2026-10-03T06:12:02.108789+00:00",
+ "fetched_at": "2026-10-03T12:12:19.013461+00:00",
  "source": "AAA (gasprices.aaa.com, GA Atlanta metro)"
 }

@@ -1,11 +1,11 @@
 {
- "regular": 4.01,
- "midgrade": 4.5,
- "premium": 4.89,
- "diesel": 6.03,
- "yesterday_regular": 4.02,
- "week_ago_regular": 4.09,
+ "regular": 3.99,
+ "midgrade": 4.47,
+ "premium": 4.87,
+ "diesel": 6.01,
+ "yesterday_regular": 4.01,
+ "week_ago_regular": 4.08,
  "date": "2026-10-03",
- "fetched_at": "2026-10-03T06:12:02.543824+00:00",
+ "fetched_at": "2026-10-03T12:12:19.588700+00:00",
  "source": "AAA (gasprices.aaa.com, AL Birmingham metro)"
 }
