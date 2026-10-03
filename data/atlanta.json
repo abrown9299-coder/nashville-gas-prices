@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-10-02T18:10:34.386821+00:00",
+ "fetched_at": "2026-10-03T00:10:25.980660+00:00",
  "area": "atlanta",
  "metro": "atlanta",
  "station_count_raw": 20,
- "membership_excluded": 7,
+ "membership_excluded": 5,
  "stations": [
   {
    "station_id": "154043",
@@ -20,13 +20,13 @@
     "regular": {
      "card": 3.46,
      "cash": null,
-     "posted_at": "2026-10-02T17:31:14.770Z",
+     "posted_at": "2026-10-02T23:30:56.000Z",
      "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.89,
      "cash": null,
-     "posted_at": "2026-10-02T17:31:14.786Z",
+     "posted_at": "2026-10-02T23:30:56.016Z",
      "age_hours": 0.7
     },
     "premium": {
@@ -44,7 +44,7 @@
    },
    "rank": 1,
    "regular_card": 3.46,
-   "price_posted_at": "2026-10-02T17:31:14.770Z",
+   "price_posted_at": "2026-10-02T23:30:56.000Z",
    "price_age_hours": 0.7
   },
   {
@@ -62,14 +62,14 @@
     "regular": {
      "card": 3.46,
      "cash": null,
-     "posted_at": "2026-10-02T17:07:25.198Z",
+     "posted_at": "2026-10-02T23:01:36.436Z",
      "age_hours": 1.1
     },
     "midgrade": {
      "card": 3.91,
      "cash": null,
-     "posted_at": "2026-10-02T17:31:40.538Z",
-     "age_hours": 0.6
+     "posted_at": "2026-10-02T23:31:24.385Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": null,
@@ -86,8 +86,50 @@
    },
    "rank": 2,
    "regular_card": 3.46,
-   "price_posted_at": "2026-10-02T17:07:25.198Z",
+   "price_posted_at": "2026-10-02T23:01:36.436Z",
    "price_age_hours": 1.1
+  },
+  {
+   "station_id": "39005",
+   "brand": "Murphy USA",
+   "name": "Murphy USA",
+   "membership": false,
+   "address": "1440 Hudson Bridge Road",
+   "city": "Stockbridge",
+   "state": "GA",
+   "zip": "30281",
+   "lat": 33.505418,
+   "lng": -84.234763,
+   "fuels": {
+    "regular": {
+     "card": 3.46,
+     "cash": null,
+     "posted_at": "2026-10-02T23:01:22.236Z",
+     "age_hours": 1.2
+    },
+    "midgrade": {
+     "card": 3.86,
+     "cash": null,
+     "posted_at": "2026-10-02T23:01:22.251Z",
+     "age_hours": 1.2
+    },
+    "premium": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    }
+   },
+   "rank": 3,
+   "regular_card": 3.46,
+   "price_posted_at": "2026-10-02T23:01:22.236Z",
+   "price_age_hours": 1.2
   },
   {
    "station_id": "21132",
@@ -105,13 +147,13 @@
      "card": 3.47,
      "cash": null,
      "posted_at": "2026-10-02T12:02:28.783Z",
-     "age_hours": 6.1
+     "age_hours": 12.1
     },
     "midgrade": {
-     "card": null,
+     "card": 3.87,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-02T23:21:32.746Z",
+     "age_hours": 0.8
     },
     "premium": {
      "card": null,
@@ -126,10 +168,10 @@
      "age_hours": null
     }
    },
-   "rank": 3,
+   "rank": 4,
    "regular_card": 3.47,
    "price_posted_at": "2026-10-02T12:02:28.783Z",
-   "price_age_hours": 6.1
+   "price_age_hours": 12.1
   },
   {
    "station_id": "42226",
@@ -146,62 +188,20 @@
     "regular": {
      "card": 3.47,
      "cash": null,
-     "posted_at": "2026-10-02T17:31:22.139Z",
+     "posted_at": "2026-10-02T23:31:15.937Z",
      "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.87,
      "cash": null,
-     "posted_at": "2026-10-02T17:31:22.139Z",
+     "posted_at": "2026-10-02T23:31:15.983Z",
      "age_hours": 0.7
     },
     "premium": {
      "card": 4.17,
      "cash": null,
-     "posted_at": "2026-10-02T17:31:22.154Z",
+     "posted_at": "2026-10-02T23:31:16.015Z",
      "age_hours": 0.7
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 4,
-   "regular_card": 3.47,
-   "price_posted_at": "2026-10-02T17:31:22.139Z",
-   "price_age_hours": 0.7
-  },
-  {
-   "station_id": "68008",
-   "brand": "QuikTrip",
-   "name": "QuikTrip",
-   "membership": false,
-   "address": "1614 Hudson Bridge Rd",
-   "city": "Stockbridge",
-   "state": "GA",
-   "zip": "30281",
-   "lat": 33.503545368847,
-   "lng": -84.239248037338,
-   "fuels": {
-    "regular": {
-     "card": 3.47,
-     "cash": null,
-     "posted_at": "2026-10-01T23:30:13.440Z",
-     "age_hours": 18.7
-    },
-    "midgrade": {
-     "card": 3.87,
-     "cash": null,
-     "posted_at": "2026-10-01T23:30:13.440Z",
-     "age_hours": 18.7
-    },
-    "premium": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
     },
     "diesel": {
      "card": null,
@@ -212,8 +212,8 @@
    },
    "rank": 5,
    "regular_card": 3.47,
-   "price_posted_at": "2026-10-01T23:30:13.440Z",
-   "price_age_hours": 18.7
+   "price_posted_at": "2026-10-02T23:31:15.937Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "42431",
@@ -230,14 +230,14 @@
     "regular": {
      "card": 3.48,
      "cash": null,
-     "posted_at": "2026-10-01T19:42:18.719Z",
-     "age_hours": 22.5
+     "posted_at": "2026-10-02T23:21:32.870Z",
+     "age_hours": 0.8
     },
     "midgrade": {
-     "card": null,
+     "card": 3.88,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-02T23:21:32.885Z",
+     "age_hours": 0.8
     },
     "premium": {
      "card": null,
@@ -254,32 +254,32 @@
    },
    "rank": 6,
    "regular_card": 3.48,
-   "price_posted_at": "2026-10-01T19:42:18.719Z",
-   "price_age_hours": 22.5
+   "price_posted_at": "2026-10-02T23:21:32.870Z",
+   "price_age_hours": 0.8
   },
   {
-   "station_id": "42335",
-   "brand": "QuikTrip",
-   "name": "QuikTrip",
+   "station_id": "42430",
+   "brand": "Murphy USA",
+   "name": "Murphy USA",
    "membership": false,
-   "address": "6801 Mt Zion Blvd",
-   "city": "Morrow",
+   "address": "5620 N Henry Blvd",
+   "city": "Stockbridge",
    "state": "GA",
-   "zip": "30260",
-   "lat": 33.568879061555,
-   "lng": -84.315025806427,
+   "zip": "30281",
+   "lat": 33.55377,
+   "lng": -84.258402,
    "fuels": {
     "regular": {
      "card": 3.48,
      "cash": null,
-     "posted_at": "2026-10-02T12:59:06.404Z",
-     "age_hours": 5.2
+     "posted_at": "2026-10-02T23:31:26.021Z",
+     "age_hours": 0.6
     },
     "midgrade": {
-     "card": 3.83,
+     "card": 3.88,
      "cash": null,
-     "posted_at": "2026-10-02T12:59:06.419Z",
-     "age_hours": 5.2
+     "posted_at": "2026-10-02T23:31:26.021Z",
+     "age_hours": 0.6
     },
     "premium": {
      "card": null,
@@ -296,8 +296,8 @@
    },
    "rank": 7,
    "regular_card": 3.48,
-   "price_posted_at": "2026-10-02T12:59:06.404Z",
-   "price_age_hours": 5.2
+   "price_posted_at": "2026-10-02T23:31:26.021Z",
+   "price_age_hours": 0.6
   },
   {
    "station_id": "70885",
@@ -314,13 +314,13 @@
     "regular": {
      "card": 3.48,
      "cash": null,
-     "posted_at": "2026-10-02T17:31:28.543Z",
+     "posted_at": "2026-10-02T23:31:18.040Z",
      "age_hours": 0.7
     },
     "midgrade": {
      "card": 3.89,
      "cash": null,
-     "posted_at": "2026-10-02T17:31:28.559Z",
+     "posted_at": "2026-10-02T23:31:18.056Z",
      "age_hours": 0.7
     },
     "premium": {
@@ -338,38 +338,38 @@
    },
    "rank": 8,
    "regular_card": 3.48,
-   "price_posted_at": "2026-10-02T17:31:28.543Z",
+   "price_posted_at": "2026-10-02T23:31:18.040Z",
    "price_age_hours": 0.7
   },
   {
-   "station_id": "42430",
-   "brand": "Murphy USA",
-   "name": "Murphy USA",
+   "station_id": "42335",
+   "brand": "QuikTrip",
+   "name": "QuikTrip",
    "membership": false,
-   "address": "5620 N Henry Blvd",
-   "city": "Stockbridge",
+   "address": "6801 Mt Zion Blvd",
+   "city": "Morrow",
    "state": "GA",
-   "zip": "30281",
-   "lat": 33.55377,
-   "lng": -84.258402,
+   "zip": "30260",
+   "lat": 33.568879061555,
+   "lng": -84.315025806427,
    "fuels": {
     "regular": {
      "card": 3.48,
      "cash": null,
-     "posted_at": "2026-10-02T17:31:41.857Z",
-     "age_hours": 0.6
+     "posted_at": "2026-10-02T22:03:59.274Z",
+     "age_hours": 2.1
     },
     "midgrade": {
-     "card": 3.88,
+     "card": 3.83,
      "cash": null,
-     "posted_at": "2026-10-02T17:31:41.872Z",
-     "age_hours": 0.6
+     "posted_at": "2026-10-02T22:03:59.290Z",
+     "age_hours": 2.1
     },
     "premium": {
-     "card": null,
+     "card": 4.18,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-02T22:03:59.305Z",
+     "age_hours": 2.1
     },
     "diesel": {
      "card": null,
@@ -380,38 +380,38 @@
    },
    "rank": 9,
    "regular_card": 3.48,
-   "price_posted_at": "2026-10-02T17:31:41.857Z",
-   "price_age_hours": 0.6
+   "price_posted_at": "2026-10-02T22:03:59.274Z",
+   "price_age_hours": 2.1
   },
   {
-   "station_id": "156118",
-   "brand": "BP",
-   "name": "BP",
+   "station_id": "212429",
+   "brand": "GAS 'N GO",
+   "name": "GAS 'N GO",
    "membership": false,
-   "address": "6309 Jonesboro Rd",
-   "city": "Morrow",
+   "address": "1912 Joe Frank Harris Pkwy SE",
+   "city": "Cartersville",
    "state": "GA",
-   "zip": "30260",
-   "lat": 33.582966,
-   "lng": -84.339466,
+   "zip": "30120",
+   "lat": 34.219519803415,
+   "lng": -84.841396316727,
    "fuels": {
     "regular": {
      "card": 3.49,
      "cash": null,
-     "posted_at": "2026-10-01T20:57:26.821Z",
-     "age_hours": 21.2
+     "posted_at": "2026-10-02T21:01:13.623Z",
+     "age_hours": 3.2
     },
     "midgrade": {
-     "card": null,
+     "card": 3.79,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-02T21:01:13.624Z",
+     "age_hours": 3.2
     },
     "premium": {
-     "card": null,
+     "card": 4.09,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-02T21:01:13.639Z",
+     "age_hours": 3.2
     },
     "diesel": {
      "card": null,
@@ -422,8 +422,8 @@
    },
    "rank": 10,
    "regular_card": 3.49,
-   "price_posted_at": "2026-10-01T20:57:26.821Z",
-   "price_age_hours": 21.2
+   "price_posted_at": "2026-10-02T21:01:13.623Z",
+   "price_age_hours": 3.2
   }
  ]
 }
