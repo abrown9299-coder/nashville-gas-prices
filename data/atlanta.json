@@ -1,9 +1,9 @@
 {
- "fetched_at": "2026-10-03T18:10:35.091243+00:00",
+ "fetched_at": "2026-10-04T00:10:50.309726+00:00",
  "area": "atlanta",
  "metro": "atlanta",
  "station_count_raw": 20,
- "membership_excluded": 7,
+ "membership_excluded": 3,
  "stations": [
   {
    "station_id": "83204",
@@ -21,7 +21,7 @@
      "card": 3.43,
      "cash": null,
      "posted_at": "2026-10-03T15:25:24.188Z",
-     "age_hours": 2.8
+     "age_hours": 8.8
     },
     "midgrade": {
      "card": null,
@@ -45,31 +45,31 @@
    "rank": 1,
    "regular_card": 3.43,
    "price_posted_at": "2026-10-03T15:25:24.188Z",
-   "price_age_hours": 2.8
+   "price_age_hours": 8.8
   },
   {
-   "station_id": "154043",
-   "brand": "Murphy USA",
-   "name": "Murphy USA",
+   "station_id": "68008",
+   "brand": "QuikTrip",
+   "name": "QuikTrip",
    "membership": false,
-   "address": "4969 Bill Gardner Pkwy.",
-   "city": "Locust Grove",
+   "address": "1614 Hudson Bridge Rd",
+   "city": "Stockbridge",
    "state": "GA",
-   "zip": "30248",
-   "lat": 33.354658,
-   "lng": -84.119238,
+   "zip": "30281",
+   "lat": 33.503545368847,
+   "lng": -84.239248037338,
    "fuels": {
     "regular": {
-     "card": 3.46,
+     "card": 3.45,
      "cash": null,
-     "posted_at": "2026-10-03T17:30:34.005Z",
-     "age_hours": 0.7
+     "posted_at": "2026-10-03T21:00:19.457Z",
+     "age_hours": 3.2
     },
     "midgrade": {
-     "card": 3.89,
+     "card": 3.85,
      "cash": null,
-     "posted_at": "2026-10-03T17:30:34.021Z",
-     "age_hours": 0.7
+     "posted_at": "2026-10-03T21:00:19.472Z",
+     "age_hours": 3.2
     },
     "premium": {
      "card": null,
@@ -85,8 +85,50 @@
     }
    },
    "rank": 2,
-   "regular_card": 3.46,
-   "price_posted_at": "2026-10-03T17:30:34.005Z",
+   "regular_card": 3.45,
+   "price_posted_at": "2026-10-03T21:00:19.457Z",
+   "price_age_hours": 3.2
+  },
+  {
+   "station_id": "39005",
+   "brand": "Murphy USA",
+   "name": "Murphy USA",
+   "membership": false,
+   "address": "1440 Hudson Bridge Road",
+   "city": "Stockbridge",
+   "state": "GA",
+   "zip": "30281",
+   "lat": 33.505418,
+   "lng": -84.234763,
+   "fuels": {
+    "regular": {
+     "card": 3.45,
+     "cash": null,
+     "posted_at": "2026-10-03T23:30:49.371Z",
+     "age_hours": 0.7
+    },
+    "midgrade": {
+     "card": 3.85,
+     "cash": null,
+     "posted_at": "2026-10-03T23:30:49.387Z",
+     "age_hours": 0.7
+    },
+    "premium": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    }
+   },
+   "rank": 3,
+   "regular_card": 3.45,
+   "price_posted_at": "2026-10-03T23:30:49.371Z",
    "price_age_hours": 0.7
   },
   {
@@ -104,56 +146,14 @@
     "regular": {
      "card": 3.46,
      "cash": null,
-     "posted_at": "2026-10-03T17:02:37.991Z",
-     "age_hours": 1.1
+     "posted_at": "2026-10-03T23:31:07.212Z",
+     "age_hours": 0.7
     },
     "midgrade": {
-     "card": null,
+     "card": 3.91,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "premium": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 3,
-   "regular_card": 3.46,
-   "price_posted_at": "2026-10-03T17:02:37.991Z",
-   "price_age_hours": 1.1
-  },
-  {
-   "station_id": "68008",
-   "brand": "QuikTrip",
-   "name": "QuikTrip",
-   "membership": false,
-   "address": "1614 Hudson Bridge Rd",
-   "city": "Stockbridge",
-   "state": "GA",
-   "zip": "30281",
-   "lat": 33.503545368847,
-   "lng": -84.239248037338,
-   "fuels": {
-    "regular": {
-     "card": 3.46,
-     "cash": null,
-     "posted_at": "2026-10-03T01:10:27.283Z",
-     "age_hours": 17.0
-    },
-    "midgrade": {
-     "card": 3.86,
-     "cash": null,
-     "posted_at": "2026-10-03T14:18:19.528Z",
-     "age_hours": 3.9
+     "posted_at": "2026-10-03T23:31:07.244Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": null,
@@ -170,32 +170,32 @@
    },
    "rank": 4,
    "regular_card": 3.46,
-   "price_posted_at": "2026-10-03T01:10:27.283Z",
-   "price_age_hours": 17.0
+   "price_posted_at": "2026-10-03T23:31:07.212Z",
+   "price_age_hours": 0.7
   },
   {
-   "station_id": "21132",
-   "brand": "QuikTrip",
-   "name": "QuikTrip",
+   "station_id": "154043",
+   "brand": "Murphy USA",
+   "name": "Murphy USA",
    "membership": false,
-   "address": "105 Barrett Pkwy",
-   "city": "Marietta",
+   "address": "4969 Bill Gardner Pkwy.",
+   "city": "Locust Grove",
    "state": "GA",
-   "zip": "30066",
-   "lat": 34.013485043691,
-   "lng": -84.552240371704,
+   "zip": "30248",
+   "lat": 33.354658,
+   "lng": -84.119238,
    "fuels": {
     "regular": {
-     "card": 3.47,
+     "card": 3.46,
      "cash": null,
-     "posted_at": "2026-10-03T02:26:29.125Z",
-     "age_hours": 15.7
+     "posted_at": "2026-10-03T23:54:29.230Z",
+     "age_hours": 0.3
     },
     "midgrade": {
-     "card": 3.87,
+     "card": 3.89,
      "cash": null,
-     "posted_at": "2026-10-03T02:26:29.155Z",
-     "age_hours": 15.7
+     "posted_at": "2026-10-03T23:54:29.245Z",
+     "age_hours": 0.3
     },
     "premium": {
      "card": null,
@@ -211,9 +211,9 @@
     }
    },
    "rank": 5,
-   "regular_card": 3.47,
-   "price_posted_at": "2026-10-03T02:26:29.125Z",
-   "price_age_hours": 15.7
+   "regular_card": 3.46,
+   "price_posted_at": "2026-10-03T23:54:29.230Z",
+   "price_age_hours": 0.3
   },
   {
    "station_id": "42226",
@@ -230,20 +230,20 @@
     "regular": {
      "card": 3.47,
      "cash": null,
-     "posted_at": "2026-10-03T18:00:38.472Z",
-     "age_hours": 0.2
+     "posted_at": "2026-10-03T23:00:32.551Z",
+     "age_hours": 1.2
     },
     "midgrade": {
      "card": 3.87,
      "cash": null,
-     "posted_at": "2026-10-03T18:00:38.487Z",
-     "age_hours": 0.2
+     "posted_at": "2026-10-03T23:00:32.568Z",
+     "age_hours": 1.2
     },
     "premium": {
      "card": 4.17,
      "cash": null,
-     "posted_at": "2026-10-03T18:00:38.503Z",
-     "age_hours": 0.2
+     "posted_at": "2026-10-03T23:00:32.585Z",
+     "age_hours": 1.2
     },
     "diesel": {
      "card": null,
@@ -254,7 +254,91 @@
    },
    "rank": 6,
    "regular_card": 3.47,
-   "price_posted_at": "2026-10-03T18:00:38.472Z",
+   "price_posted_at": "2026-10-03T23:00:32.551Z",
+   "price_age_hours": 1.2
+  },
+  {
+   "station_id": "21132",
+   "brand": "QuikTrip",
+   "name": "QuikTrip",
+   "membership": false,
+   "address": "105 Barrett Pkwy",
+   "city": "Marietta",
+   "state": "GA",
+   "zip": "30066",
+   "lat": 34.013485043691,
+   "lng": -84.552240371704,
+   "fuels": {
+    "regular": {
+     "card": 3.47,
+     "cash": null,
+     "posted_at": "2026-10-03T22:32:54.935Z",
+     "age_hours": 1.6
+    },
+    "midgrade": {
+     "card": 3.87,
+     "cash": null,
+     "posted_at": "2026-10-03T02:26:29.155Z",
+     "age_hours": 21.7
+    },
+    "premium": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    }
+   },
+   "rank": 7,
+   "regular_card": 3.47,
+   "price_posted_at": "2026-10-03T22:32:54.935Z",
+   "price_age_hours": 1.6
+  },
+  {
+   "station_id": "42430",
+   "brand": "Murphy USA",
+   "name": "Murphy USA",
+   "membership": false,
+   "address": "5620 N Henry Blvd",
+   "city": "Stockbridge",
+   "state": "GA",
+   "zip": "30281",
+   "lat": 33.55377,
+   "lng": -84.258402,
+   "fuels": {
+    "regular": {
+     "card": 3.48,
+     "cash": null,
+     "posted_at": "2026-10-04T00:01:03.063Z",
+     "age_hours": 0.2
+    },
+    "midgrade": {
+     "card": 3.88,
+     "cash": null,
+     "posted_at": "2026-10-04T00:01:03.078Z",
+     "age_hours": 0.2
+    },
+    "premium": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    }
+   },
+   "rank": 8,
+   "regular_card": 3.48,
+   "price_posted_at": "2026-10-04T00:01:03.063Z",
    "price_age_hours": 0.2
   },
   {
@@ -273,97 +357,13 @@
      "card": 3.48,
      "cash": null,
      "posted_at": "2026-10-03T16:40:13.298Z",
-     "age_hours": 1.5
+     "age_hours": 7.5
     },
     "midgrade": {
      "card": 3.88,
      "cash": null,
      "posted_at": "2026-10-03T16:40:13.314Z",
-     "age_hours": 1.5
-    },
-    "premium": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 7,
-   "regular_card": 3.48,
-   "price_posted_at": "2026-10-03T16:40:13.298Z",
-   "price_age_hours": 1.5
-  },
-  {
-   "station_id": "42335",
-   "brand": "QuikTrip",
-   "name": "QuikTrip",
-   "membership": false,
-   "address": "6801 Mt Zion Blvd",
-   "city": "Morrow",
-   "state": "GA",
-   "zip": "30260",
-   "lat": 33.568879061555,
-   "lng": -84.315025806427,
-   "fuels": {
-    "regular": {
-     "card": 3.48,
-     "cash": null,
-     "posted_at": "2026-10-02T22:03:59.274Z",
-     "age_hours": 20.1
-    },
-    "midgrade": {
-     "card": 3.83,
-     "cash": null,
-     "posted_at": "2026-10-02T22:03:59.290Z",
-     "age_hours": 20.1
-    },
-    "premium": {
-     "card": 4.18,
-     "cash": null,
-     "posted_at": "2026-10-02T22:03:59.305Z",
-     "age_hours": 20.1
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 8,
-   "regular_card": 3.48,
-   "price_posted_at": "2026-10-02T22:03:59.274Z",
-   "price_age_hours": 20.1
-  },
-  {
-   "station_id": "70885",
-   "brand": "Murphy USA",
-   "name": "Murphy USA",
-   "membership": false,
-   "address": "6025 Jonesboro Road",
-   "city": "Morrow",
-   "state": "GA",
-   "zip": "30260",
-   "lat": 33.590754,
-   "lng": -84.338235,
-   "fuels": {
-    "regular": {
-     "card": 3.48,
-     "cash": null,
-     "posted_at": "2026-10-03T17:30:33.677Z",
-     "age_hours": 0.7
-    },
-    "midgrade": {
-     "card": 3.89,
-     "cash": null,
-     "posted_at": "2026-10-03T17:30:33.692Z",
-     "age_hours": 0.7
+     "age_hours": 7.5
     },
     "premium": {
      "card": null,
@@ -380,38 +380,38 @@
    },
    "rank": 9,
    "regular_card": 3.48,
-   "price_posted_at": "2026-10-03T17:30:33.677Z",
-   "price_age_hours": 0.7
+   "price_posted_at": "2026-10-03T16:40:13.298Z",
+   "price_age_hours": 7.5
   },
   {
-   "station_id": "42430",
-   "brand": "Murphy USA",
-   "name": "Murphy USA",
+   "station_id": "42335",
+   "brand": "QuikTrip",
+   "name": "QuikTrip",
    "membership": false,
-   "address": "5620 N Henry Blvd",
-   "city": "Stockbridge",
+   "address": "6801 Mt Zion Blvd",
+   "city": "Morrow",
    "state": "GA",
-   "zip": "30281",
-   "lat": 33.55377,
-   "lng": -84.258402,
+   "zip": "30260",
+   "lat": 33.568879061555,
+   "lng": -84.315025806427,
    "fuels": {
     "regular": {
      "card": 3.48,
      "cash": null,
-     "posted_at": "2026-10-03T18:00:47.800Z",
-     "age_hours": 0.2
+     "posted_at": "2026-10-03T23:19:58.802Z",
+     "age_hours": 0.8
     },
     "midgrade": {
-     "card": 3.88,
+     "card": 3.83,
      "cash": null,
-     "posted_at": "2026-10-03T18:00:47.816Z",
-     "age_hours": 0.2
+     "posted_at": "2026-10-03T23:19:58.818Z",
+     "age_hours": 0.8
     },
     "premium": {
-     "card": null,
+     "card": 4.18,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-03T23:19:58.834Z",
+     "age_hours": 0.8
     },
     "diesel": {
      "card": null,
@@ -422,8 +422,8 @@
    },
    "rank": 10,
    "regular_card": 3.48,
-   "price_posted_at": "2026-10-03T18:00:47.800Z",
-   "price_age_hours": 0.2
+   "price_posted_at": "2026-10-03T23:19:58.802Z",
+   "price_age_hours": 0.8
   }
  ]
 }
