@@ -1,10 +1,52 @@
 {
- "fetched_at": "2026-10-04T06:10:30.006582+00:00",
+ "fetched_at": "2026-10-04T12:10:32.623339+00:00",
  "area": "nashville",
  "metro": "nashville",
  "station_count_raw": 20,
  "membership_excluded": 6,
  "stations": [
+  {
+   "station_id": "202137",
+   "brand": "RaceTrac",
+   "name": "RaceTrac",
+   "membership": false,
+   "address": "1077 W Main St",
+   "city": "Hendersonville",
+   "state": "TN",
+   "zip": "37075",
+   "lat": 36.306665,
+   "lng": -86.655475,
+   "fuels": {
+    "regular": {
+     "card": 3.49,
+     "cash": null,
+     "posted_at": "2026-10-04T12:01:49.588Z",
+     "age_hours": 0.1
+    },
+    "midgrade": {
+     "card": 3.89,
+     "cash": null,
+     "posted_at": "2026-10-04T12:01:49.588Z",
+     "age_hours": 0.1
+    },
+    "premium": {
+     "card": 4.19,
+     "cash": null,
+     "posted_at": "2026-10-04T12:01:49.619Z",
+     "age_hours": 0.1
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    }
+   },
+   "rank": 1,
+   "regular_card": 3.49,
+   "price_posted_at": "2026-10-04T12:01:49.588Z",
+   "price_age_hours": 0.1
+  },
   {
    "station_id": "167084",
    "brand": "Speedway",
@@ -21,61 +63,19 @@
      "card": 3.51,
      "cash": null,
      "posted_at": "2026-10-04T01:34:48.232Z",
-     "age_hours": 4.6
+     "age_hours": 10.6
     },
     "midgrade": {
      "card": 3.96,
      "cash": null,
      "posted_at": "2026-10-04T01:34:48.232Z",
-     "age_hours": 4.6
+     "age_hours": 10.6
     },
     "premium": {
-     "card": null,
+     "card": 4.31,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 1,
-   "regular_card": 3.51,
-   "price_posted_at": "2026-10-04T01:34:48.232Z",
-   "price_age_hours": 4.6
-  },
-  {
-   "station_id": "202137",
-   "brand": "RaceTrac",
-   "name": "RaceTrac",
-   "membership": false,
-   "address": "1077 W Main St",
-   "city": "Hendersonville",
-   "state": "TN",
-   "zip": "37075",
-   "lat": 36.306665,
-   "lng": -86.655475,
-   "fuels": {
-    "regular": {
-     "card": 3.51,
-     "cash": null,
-     "posted_at": "2026-10-04T06:02:01.715Z",
-     "age_hours": 0.1
-    },
-    "midgrade": {
-     "card": 3.91,
-     "cash": null,
-     "posted_at": "2026-10-04T06:02:01.731Z",
-     "age_hours": 0.1
-    },
-    "premium": {
-     "card": 4.21,
-     "cash": null,
-     "posted_at": "2026-10-04T06:02:01.746Z",
-     "age_hours": 0.1
+     "posted_at": "2026-10-04T01:34:48.248Z",
+     "age_hours": 10.6
     },
     "diesel": {
      "card": null,
@@ -86,8 +86,8 @@
    },
    "rank": 2,
    "regular_card": 3.51,
-   "price_posted_at": "2026-10-04T06:02:01.715Z",
-   "price_age_hours": 0.1
+   "price_posted_at": "2026-10-04T01:34:48.232Z",
+   "price_age_hours": 10.6
   },
   {
    "station_id": "208379",
@@ -105,7 +105,7 @@
      "card": 3.55,
      "cash": null,
      "posted_at": "2026-10-03T20:03:19.400Z",
-     "age_hours": 10.1
+     "age_hours": 16.1
     },
     "midgrade": {
      "card": null,
@@ -129,7 +129,49 @@
    "rank": 3,
    "regular_card": 3.55,
    "price_posted_at": "2026-10-03T20:03:19.400Z",
-   "price_age_hours": 10.1
+   "price_age_hours": 16.1
+  },
+  {
+   "station_id": "208228",
+   "brand": "7-Eleven",
+   "name": "7-Eleven",
+   "membership": false,
+   "address": "1700 W Main St",
+   "city": "Lebanon",
+   "state": "TN",
+   "zip": "37087",
+   "lat": 36.221181202206,
+   "lng": -86.346284453587,
+   "fuels": {
+    "regular": {
+     "card": 3.55,
+     "cash": null,
+     "posted_at": "2026-10-03T18:24:54.761Z",
+     "age_hours": 17.8
+    },
+    "midgrade": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "premium": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    }
+   },
+   "rank": 4,
+   "regular_card": 3.55,
+   "price_posted_at": "2026-10-03T18:24:54.761Z",
+   "price_age_hours": 17.8
   },
   {
    "station_id": "10557",
@@ -147,7 +189,7 @@
      "card": 3.55,
      "cash": null,
      "posted_at": "2026-10-03T21:19:04.913Z",
-     "age_hours": 8.9
+     "age_hours": 14.9
     },
     "midgrade": {
      "card": null,
@@ -165,13 +207,13 @@
      "card": 5.69,
      "cash": null,
      "posted_at": "2026-10-03T21:19:04.932Z",
-     "age_hours": 8.9
+     "age_hours": 14.9
     }
    },
-   "rank": 4,
+   "rank": 5,
    "regular_card": 3.55,
    "price_posted_at": "2026-10-03T21:19:04.913Z",
-   "price_age_hours": 8.9
+   "price_age_hours": 14.9
   },
   {
    "station_id": "160774",
@@ -188,20 +230,20 @@
     "regular": {
      "card": 3.56,
      "cash": null,
-     "posted_at": "2026-10-04T06:02:51.036Z",
-     "age_hours": 0.1
+     "posted_at": "2026-10-04T11:14:08.405Z",
+     "age_hours": 0.9
     },
     "midgrade": {
      "card": 3.86,
      "cash": null,
-     "posted_at": "2026-10-04T06:02:51.051Z",
-     "age_hours": 0.1
+     "posted_at": "2026-10-04T11:14:08.420Z",
+     "age_hours": 0.9
     },
     "premium": {
      "card": 4.16,
      "cash": null,
-     "posted_at": "2026-10-04T06:02:51.067Z",
-     "age_hours": 0.1
+     "posted_at": "2026-10-04T11:14:08.436Z",
+     "age_hours": 0.9
     },
     "diesel": {
      "card": null,
@@ -210,10 +252,10 @@
      "age_hours": null
     }
    },
-   "rank": 5,
+   "rank": 6,
    "regular_card": 3.56,
-   "price_posted_at": "2026-10-04T06:02:51.036Z",
-   "price_age_hours": 0.1
+   "price_posted_at": "2026-10-04T11:14:08.405Z",
+   "price_age_hours": 0.9
   },
   {
    "station_id": "37590",
@@ -231,31 +273,31 @@
      "card": 3.56,
      "cash": null,
      "posted_at": "2026-10-03T17:59:29.900Z",
-     "age_hours": 12.2
+     "age_hours": 18.2
     },
     "midgrade": {
      "card": 3.96,
      "cash": null,
      "posted_at": "2026-10-03T18:32:23.323Z",
-     "age_hours": 11.6
+     "age_hours": 17.6
     },
     "premium": {
      "card": 4.26,
      "cash": null,
      "posted_at": "2026-10-03T18:32:23.340Z",
-     "age_hours": 11.6
+     "age_hours": 17.6
     },
     "diesel": {
      "card": 5.69,
      "cash": null,
      "posted_at": "2026-10-03T18:32:23.308Z",
-     "age_hours": 11.6
+     "age_hours": 17.6
     }
    },
-   "rank": 6,
+   "rank": 7,
    "regular_card": 3.56,
    "price_posted_at": "2026-10-03T17:59:29.900Z",
-   "price_age_hours": 12.2
+   "price_age_hours": 18.2
   },
   {
    "station_id": "162386",
@@ -273,13 +315,13 @@
      "card": 3.56,
      "cash": null,
      "posted_at": "2026-10-03T22:48:45.926Z",
-     "age_hours": 7.4
+     "age_hours": 13.4
     },
     "midgrade": {
      "card": 3.96,
      "cash": null,
      "posted_at": "2026-10-03T22:48:45.942Z",
-     "age_hours": 7.4
+     "age_hours": 13.4
     },
     "premium": {
      "card": null,
@@ -291,13 +333,13 @@
      "card": 5.74,
      "cash": null,
      "posted_at": "2026-10-03T22:48:45.973Z",
-     "age_hours": 7.4
+     "age_hours": 13.4
     }
    },
-   "rank": 7,
+   "rank": 8,
    "regular_card": 3.56,
    "price_posted_at": "2026-10-03T22:48:45.926Z",
-   "price_age_hours": 7.4
+   "price_age_hours": 13.4
   },
   {
    "station_id": "204614",
@@ -314,14 +356,14 @@
     "regular": {
      "card": 3.56,
      "cash": null,
-     "posted_at": "2026-10-03T22:42:44.513Z",
-     "age_hours": 7.5
+     "posted_at": "2026-10-04T08:55:35.065Z",
+     "age_hours": 3.2
     },
     "midgrade": {
      "card": 3.86,
      "cash": null,
-     "posted_at": "2026-10-02T23:20:36.555Z",
-     "age_hours": 30.8
+     "posted_at": "2026-10-04T08:55:35.129Z",
+     "age_hours": 3.2
     },
     "premium": {
      "card": null,
@@ -332,14 +374,14 @@
     "diesel": {
      "card": 5.69,
      "cash": null,
-     "posted_at": "2026-10-03T22:42:44.542Z",
-     "age_hours": 7.5
+     "posted_at": "2026-10-04T08:55:35.146Z",
+     "age_hours": 3.2
     }
    },
-   "rank": 8,
+   "rank": 9,
    "regular_card": 3.56,
-   "price_posted_at": "2026-10-03T22:42:44.513Z",
-   "price_age_hours": 7.5
+   "price_posted_at": "2026-10-04T08:55:35.065Z",
+   "price_age_hours": 3.2
   },
   {
    "station_id": "37587",
@@ -357,13 +399,13 @@
      "card": 3.56,
      "cash": null,
      "posted_at": "2026-10-03T22:50:13.646Z",
-     "age_hours": 7.3
+     "age_hours": 13.3
     },
     "midgrade": {
-     "card": null,
+     "card": 4.06,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-03T22:50:13.646Z",
+     "age_hours": 13.3
     },
     "premium": {
      "card": null,
@@ -376,54 +418,12 @@
      "cash": null,
      "posted_at": null,
      "age_hours": null
-    }
-   },
-   "rank": 9,
-   "regular_card": 3.56,
-   "price_posted_at": "2026-10-03T22:50:13.646Z",
-   "price_age_hours": 7.3
-  },
-  {
-   "station_id": "201917",
-   "brand": "RaceTrac",
-   "name": "RaceTrac",
-   "membership": false,
-   "address": "405 S Cumberland St",
-   "city": "Lebanon",
-   "state": "TN",
-   "zip": "37087",
-   "lat": 36.199548,
-   "lng": -86.291565,
-   "fuels": {
-    "regular": {
-     "card": 3.56,
-     "cash": null,
-     "posted_at": "2026-10-04T06:02:25.040Z",
-     "age_hours": 0.1
-    },
-    "midgrade": {
-     "card": 3.96,
-     "cash": null,
-     "posted_at": "2026-10-04T06:02:25.056Z",
-     "age_hours": 0.1
-    },
-    "premium": {
-     "card": 4.26,
-     "cash": null,
-     "posted_at": "2026-10-04T06:02:25.071Z",
-     "age_hours": 0.1
-    },
-    "diesel": {
-     "card": 5.69,
-     "cash": null,
-     "posted_at": "2026-10-04T06:02:25.102Z",
-     "age_hours": 0.1
     }
    },
    "rank": 10,
    "regular_card": 3.56,
-   "price_posted_at": "2026-10-04T06:02:25.040Z",
-   "price_age_hours": 0.1
+   "price_posted_at": "2026-10-03T22:50:13.646Z",
+   "price_age_hours": 13.3
   }
  ]
 }
