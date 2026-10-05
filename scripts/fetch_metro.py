@@ -173,9 +173,20 @@ def fetch_one_metro(mkey):
                     "price_posted_at": reg["posted_at"],
                     "price_age_hours": reg["age_hours"]})
 
+    # Stations dropped from the metro top-10, with reasons. Kept in the payload
+    # so a membership-driven shortfall (e.g. the 2026-10-04 Atlanta ABORT: 9 of
+    # 20 raw stations membership-excluded) is diagnosable from the committed
+    # data alone — the runner's raw files are never committed.
+    excluded = [{"brand": s["brand"], "name": s["name"], "city": s["city"],
+                 "reason": ("membership" if s["membership"]
+                            else "no_regular_card_price")}
+                for s in stations
+                if s["membership"] or s["fuels"]["regular"]["card"] is None]
+
     payload = {"fetched_at": now.isoformat(), "area": area, "metro": mkey,
                "station_count_raw": len(stations),
                "membership_excluded": sum(1 for s in stations if s["membership"]),
+               "excluded": excluded,
                "stations": top}
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     RAW_DIR.mkdir(parents=True, exist_ok=True)
