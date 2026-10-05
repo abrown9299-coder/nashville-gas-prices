@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-04T18:10:36.735415+00:00",
+ "fetched_at": "2026-10-05T00:10:47.102991+00:00",
  "area": "birmingham",
  "metro": "birmingham",
  "station_count_raw": 20,
@@ -21,19 +21,19 @@
      "card": 3.7,
      "cash": null,
      "posted_at": "2026-10-04T17:48:48.481Z",
-     "age_hours": 0.4
+     "age_hours": 6.4
     },
     "midgrade": {
      "card": 3.95,
      "cash": null,
      "posted_at": "2026-10-04T17:48:48.481Z",
-     "age_hours": 0.4
+     "age_hours": 6.4
     },
     "premium": {
      "card": 4.45,
      "cash": null,
      "posted_at": "2026-10-04T17:48:48.495Z",
-     "age_hours": 0.4
+     "age_hours": 6.4
     },
     "diesel": {
      "card": null,
@@ -45,49 +45,7 @@
    "rank": 1,
    "regular_card": 3.7,
    "price_posted_at": "2026-10-04T17:48:48.481Z",
-   "price_age_hours": 0.4
-  },
-  {
-   "station_id": "215644",
-   "brand": "Speedway",
-   "name": "Speedway",
-   "membership": false,
-   "address": "770 Steele Station Rd",
-   "city": "Steele",
-   "state": "AL",
-   "zip": "35987",
-   "lat": 33.93189597835,
-   "lng": -86.190182943843,
-   "fuels": {
-    "regular": {
-     "card": 3.72,
-     "cash": null,
-     "posted_at": "2026-10-03T18:45:06.404Z",
-     "age_hours": 23.4
-    },
-    "midgrade": {
-     "card": 4.17,
-     "cash": null,
-     "posted_at": "2026-10-03T18:45:06.420Z",
-     "age_hours": 23.4
-    },
-    "premium": {
-     "card": 4.52,
-     "cash": null,
-     "posted_at": "2026-10-03T18:45:06.451Z",
-     "age_hours": 23.4
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 2,
-   "regular_card": 3.72,
-   "price_posted_at": "2026-10-03T18:45:06.404Z",
-   "price_age_hours": 23.4
+   "price_age_hours": 6.4
   },
   {
    "station_id": "211882",
@@ -105,31 +63,31 @@
      "card": 3.72,
      "cash": null,
      "posted_at": "2026-10-04T03:14:13.339Z",
-     "age_hours": 14.9
+     "age_hours": 20.9
     },
     "midgrade": {
      "card": 4.03,
      "cash": null,
      "posted_at": "2026-10-03T19:10:56.357Z",
-     "age_hours": 23.0
+     "age_hours": 29.0
     },
     "premium": {
      "card": 4.33,
      "cash": null,
      "posted_at": "2026-10-04T03:14:13.354Z",
-     "age_hours": 14.9
+     "age_hours": 20.9
     },
     "diesel": {
-     "card": 5.73,
+     "card": null,
      "cash": null,
-     "posted_at": "2026-10-03T19:10:56.373Z",
-     "age_hours": 23.0
+     "posted_at": null,
+     "age_hours": null
     }
    },
-   "rank": 3,
+   "rank": 2,
    "regular_card": 3.72,
    "price_posted_at": "2026-10-04T03:14:13.339Z",
-   "price_age_hours": 14.9
+   "price_age_hours": 20.9
   },
   {
    "station_id": "203409",
@@ -146,32 +104,74 @@
     "regular": {
      "card": 3.72,
      "cash": null,
-     "posted_at": "2026-10-04T16:39:30.110Z",
-     "age_hours": 1.5
+     "posted_at": "2026-10-04T23:16:15.731Z",
+     "age_hours": 0.9
     },
     "midgrade": {
      "card": 4.02,
      "cash": null,
-     "posted_at": "2026-10-04T14:09:25.910Z",
-     "age_hours": 4.0
+     "posted_at": "2026-10-04T23:16:15.749Z",
+     "age_hours": 0.9
     },
     "premium": {
      "card": 4.42,
      "cash": null,
-     "posted_at": "2026-10-04T14:09:25.925Z",
-     "age_hours": 4.0
+     "posted_at": "2026-10-04T23:16:15.763Z",
+     "age_hours": 0.9
     },
     "diesel": {
      "card": 5.39,
      "cash": null,
-     "posted_at": "2026-10-03T21:06:21.959Z",
-     "age_hours": 21.1
+     "posted_at": "2026-10-04T23:16:15.778Z",
+     "age_hours": 0.9
+    }
+   },
+   "rank": 3,
+   "regular_card": 3.72,
+   "price_posted_at": "2026-10-04T23:16:15.731Z",
+   "price_age_hours": 0.9
+  },
+  {
+   "station_id": "215644",
+   "brand": "Speedway",
+   "name": "Speedway",
+   "membership": false,
+   "address": "770 Steele Station Rd",
+   "city": "Steele",
+   "state": "AL",
+   "zip": "35987",
+   "lat": 33.93189597835,
+   "lng": -86.190182943843,
+   "fuels": {
+    "regular": {
+     "card": 3.72,
+     "cash": null,
+     "posted_at": "2026-10-03T18:45:06.404Z",
+     "age_hours": 29.4
+    },
+    "midgrade": {
+     "card": 4.17,
+     "cash": null,
+     "posted_at": "2026-10-03T18:45:06.420Z",
+     "age_hours": 29.4
+    },
+    "premium": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
+    },
+    "diesel": {
+     "card": null,
+     "cash": null,
+     "posted_at": null,
+     "age_hours": null
     }
    },
    "rank": 4,
    "regular_card": 3.72,
-   "price_posted_at": "2026-10-04T16:39:30.110Z",
-   "price_age_hours": 1.5
+   "price_posted_at": "2026-10-03T18:45:06.404Z",
+   "price_age_hours": 29.4
   },
   {
    "station_id": "5085",
@@ -189,19 +189,19 @@
      "card": 3.73,
      "cash": null,
      "posted_at": "2026-10-04T12:19:05.842Z",
-     "age_hours": 5.9
+     "age_hours": 11.9
     },
     "midgrade": {
      "card": 4.12,
      "cash": null,
-     "posted_at": "2026-10-04T17:11:56.996Z",
-     "age_hours": 1.0
+     "posted_at": "2026-10-04T23:15:36.793Z",
+     "age_hours": 0.9
     },
     "premium": {
      "card": 4.45,
      "cash": null,
-     "posted_at": "2026-10-04T17:11:57.017Z",
-     "age_hours": 1.0
+     "posted_at": "2026-10-04T23:15:36.808Z",
+     "age_hours": 0.9
     },
     "diesel": {
      "card": null,
@@ -213,91 +213,7 @@
    "rank": 5,
    "regular_card": 3.73,
    "price_posted_at": "2026-10-04T12:19:05.842Z",
-   "price_age_hours": 5.9
-  },
-  {
-   "station_id": "125709",
-   "brand": "Love's Travel Stop",
-   "name": "Love's Travel Stop",
-   "membership": false,
-   "address": "905 Steele Station Rd",
-   "city": "Steele",
-   "state": "AL",
-   "zip": "35987",
-   "lat": 33.93283219,
-   "lng": -86.19175404,
-   "fuels": {
-    "regular": {
-     "card": 3.73,
-     "cash": 3.73,
-     "posted_at": "2026-10-04T16:51:52.018Z",
-     "age_hours": 1.3
-    },
-    "midgrade": {
-     "card": 4.18,
-     "cash": 4.18,
-     "posted_at": "2026-10-04T16:51:52.049Z",
-     "age_hours": 1.3
-    },
-    "premium": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 6,
-   "regular_card": 3.73,
-   "price_posted_at": "2026-10-04T16:51:52.018Z",
-   "price_age_hours": 1.3
-  },
-  {
-   "station_id": "207936",
-   "brand": "MAPCO",
-   "name": "MAPCO",
-   "membership": false,
-   "address": "1901 Finley Blvd",
-   "city": "Birmingham",
-   "state": "AL",
-   "zip": "35234",
-   "lat": 33.541855,
-   "lng": -86.825042,
-   "fuels": {
-    "regular": {
-     "card": 3.74,
-     "cash": null,
-     "posted_at": "2026-10-03T16:04:02.227Z",
-     "age_hours": 26.1
-    },
-    "midgrade": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "premium": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    },
-    "diesel": {
-     "card": null,
-     "cash": null,
-     "posted_at": null,
-     "age_hours": null
-    }
-   },
-   "rank": 7,
-   "regular_card": 3.74,
-   "price_posted_at": "2026-10-03T16:04:02.227Z",
-   "price_age_hours": 26.1
+   "price_age_hours": 11.9
   },
   {
    "station_id": "143272",
@@ -314,8 +230,8 @@
     "regular": {
      "card": 3.76,
      "cash": null,
-     "posted_at": "2026-10-04T17:32:29.461Z",
-     "age_hours": 0.6
+     "posted_at": "2026-10-04T23:30:20.546Z",
+     "age_hours": 0.7
     },
     "midgrade": {
      "card": null,
@@ -336,10 +252,10 @@
      "age_hours": null
     }
    },
-   "rank": 8,
+   "rank": 6,
    "regular_card": 3.76,
-   "price_posted_at": "2026-10-04T17:32:29.461Z",
-   "price_age_hours": 0.6
+   "price_posted_at": "2026-10-04T23:30:20.546Z",
+   "price_age_hours": 0.7
   },
   {
    "station_id": "186175",
@@ -356,56 +272,140 @@
     "regular": {
      "card": 3.76,
      "cash": null,
-     "posted_at": "2026-10-04T17:33:33.542Z",
-     "age_hours": 0.6
+     "posted_at": "2026-10-04T23:30:32.149Z",
+     "age_hours": 0.7
     },
     "midgrade": {
      "card": 4.16,
      "cash": null,
-     "posted_at": "2026-10-04T17:33:33.542Z",
-     "age_hours": 0.6
+     "posted_at": "2026-10-04T23:30:32.165Z",
+     "age_hours": 0.7
     },
     "premium": {
      "card": 4.46,
      "cash": null,
-     "posted_at": "2026-10-04T17:33:33.562Z",
-     "age_hours": 0.6
+     "posted_at": "2026-10-04T23:30:32.180Z",
+     "age_hours": 0.7
     },
     "diesel": {
      "card": 5.79,
      "cash": null,
-     "posted_at": "2026-10-04T17:33:33.562Z",
-     "age_hours": 0.6
+     "posted_at": "2026-10-04T23:30:32.211Z",
+     "age_hours": 0.7
+    }
+   },
+   "rank": 7,
+   "regular_card": 3.76,
+   "price_posted_at": "2026-10-04T23:30:32.149Z",
+   "price_age_hours": 0.7
+  },
+  {
+   "station_id": "76016",
+   "brand": "RaceWay",
+   "name": "RaceWay",
+   "membership": false,
+   "address": "2107 Moody Pkwy",
+   "city": "Moody",
+   "state": "AL",
+   "zip": "35004",
+   "lat": 33.570895,
+   "lng": -86.520444,
+   "fuels": {
+    "regular": {
+     "card": 3.76,
+     "cash": null,
+     "posted_at": "2026-10-04T19:59:30.465Z",
+     "age_hours": 4.2
+    },
+    "midgrade": {
+     "card": 4.16,
+     "cash": null,
+     "posted_at": "2026-10-04T19:59:30.480Z",
+     "age_hours": 4.2
+    },
+    "premium": {
+     "card": 4.46,
+     "cash": null,
+     "posted_at": "2026-10-04T19:59:30.480Z",
+     "age_hours": 4.2
+    },
+    "diesel": {
+     "card": 5.79,
+     "cash": null,
+     "posted_at": "2026-10-04T19:59:30.499Z",
+     "age_hours": 4.2
+    }
+   },
+   "rank": 8,
+   "regular_card": 3.76,
+   "price_posted_at": "2026-10-04T19:59:30.465Z",
+   "price_age_hours": 4.2
+  },
+  {
+   "station_id": "70824",
+   "brand": "RaceWay",
+   "name": "RaceWay",
+   "membership": false,
+   "address": "1800 Ashville Rd",
+   "city": "Leeds",
+   "state": "AL",
+   "zip": "35094",
+   "lat": 33.562196,
+   "lng": -86.521881,
+   "fuels": {
+    "regular": {
+     "card": 3.76,
+     "cash": null,
+     "posted_at": "2026-10-04T19:14:57.927Z",
+     "age_hours": 4.9
+    },
+    "midgrade": {
+     "card": 4.16,
+     "cash": null,
+     "posted_at": "2026-10-04T17:29:00.736Z",
+     "age_hours": 6.7
+    },
+    "premium": {
+     "card": 4.46,
+     "cash": null,
+     "posted_at": "2026-10-04T17:29:00.752Z",
+     "age_hours": 6.7
+    },
+    "diesel": {
+     "card": 5.79,
+     "cash": null,
+     "posted_at": "2026-10-04T21:21:56.999Z",
+     "age_hours": 2.8
     }
    },
    "rank": 9,
    "regular_card": 3.76,
-   "price_posted_at": "2026-10-04T17:33:33.542Z",
-   "price_age_hours": 0.6
+   "price_posted_at": "2026-10-04T19:14:57.927Z",
+   "price_age_hours": 4.9
   },
   {
-   "station_id": "92379",
+   "station_id": "108731",
    "brand": "Circle K",
    "name": "Circle K",
    "membership": false,
-   "address": "1816 Crestwood Blvd",
-   "city": "Irondale",
+   "address": "2110 Moody Pkwy",
+   "city": "Leeds",
    "state": "AL",
-   "zip": "35210",
-   "lat": 33.533073417631,
-   "lng": -86.704396605492,
+   "zip": "35004",
+   "lat": 33.570416641695,
+   "lng": -86.519587039948,
    "fuels": {
     "regular": {
-     "card": 3.77,
+     "card": 3.76,
      "cash": null,
-     "posted_at": "2026-10-04T14:21:41.644Z",
-     "age_hours": 3.8
+     "posted_at": "2026-10-04T19:14:35.211Z",
+     "age_hours": 4.9
     },
     "midgrade": {
-     "card": null,
+     "card": 4.16,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-04T07:35:26.379Z",
+     "age_hours": 16.6
     },
     "premium": {
      "card": null,
@@ -414,16 +414,16 @@
      "age_hours": null
     },
     "diesel": {
-     "card": null,
+     "card": 5.79,
      "cash": null,
-     "posted_at": null,
-     "age_hours": null
+     "posted_at": "2026-10-04T07:35:26.395Z",
+     "age_hours": 16.6
     }
    },
    "rank": 10,
-   "regular_card": 3.77,
-   "price_posted_at": "2026-10-04T14:21:41.644Z",
-   "price_age_hours": 3.8
+   "regular_card": 3.76,
+   "price_posted_at": "2026-10-04T19:14:35.211Z",
+   "price_age_hours": 4.9
   }
  ]
 }
